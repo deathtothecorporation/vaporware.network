@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'JetBrains Mono';
+    src: url('./assets/fonts/JetBrainsMono-VariableFont_wght.ttf');
+    /*font-weight: 100 1000;*/
+    /*font-stretch: 25% 151%;*/
+  }
+}
+
+p {
+  @apply mb-8;
+}
+
+ul {
+  @apply list-disc;
+  @apply mb-8;
+}
+
+li {
+  @apply ml-6;
+  @apply pl-2;
+}
+
+li ul {
+  @apply ml-4;
+  @apply pl-2;
+}

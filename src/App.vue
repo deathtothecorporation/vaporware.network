@@ -4,7 +4,7 @@
     <div class="w-full h-[100vh] flex flex-col justify-around">
       <video
         poster="./assets/vapor-static.png"
-        class="relative w-full h-32 mx-auto lg:h-96"
+        class="relative w-full h-32 px-8 mx-auto lg:h-96"
         src="./assets/vapor-loop.mp4"
         loop=""
         autoplay=""

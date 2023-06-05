@@ -1,24 +1,16 @@
-# vaporware.network
+# vaporware.network site
 
-## Project setup
-```
-yarn install
-```
+Uses...
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+- Vue 3.2 (a little overkill for now, but it was fast and easy to start and will
+be extensible)
+- Tailwindcss
+- npm
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## Install and Build
 
-### Lints and fixes files
-```
-yarn lint
-```
+- run `bin/install-js-dependencies.sh` to install npm packages
+- run `bin/server-interface.sh` to start the dev server
+- To build the site, run `bin/build-interface.sh`. The built site will be in
+`dist` (not checked into git)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

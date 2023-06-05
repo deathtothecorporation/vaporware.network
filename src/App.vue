@@ -199,8 +199,8 @@
 
     <footer class="border-t bg-card">
       <div class="flex flex-col py-8 mx-8 md:container md:mx-auto">
-        <a class="text-black underline" href="https://twitter.com/a_vapor_network" target="_blank">
-          @a_vapor_network
+        <a class="text-black underline" href="https://twitter.com/__vaporware__" target="_blank">
+          @__vaporware__
         </a>
       </div>
     </footer>

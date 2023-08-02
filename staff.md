@@ -9,6 +9,7 @@ permalink: /staff/
   {% for author in site.authors %}
     <li>
       <h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
+      <img src="{{ site.baseurl }}/assets/authors/{{ author.avatar }}" alt="{{ author.name }}">
       <h3>{{ author.position }}</h3>
       <p>{{ author.content | markdownify }}</p>
     </li>

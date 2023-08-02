@@ -6,5 +6,5 @@ layout: default
 title: Home
 ---
 
-<h1>Hello</h1>
+<h1>Test Hello</h1>
 

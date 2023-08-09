@@ -10,6 +10,6 @@ title: Home
 **this is bold in markdown**
 
 <ul>
-  <li>test</li>
+  <li class="text-red-300">test</li>
   <li>test2</li>
 </ul>

@@ -7,6 +7,9 @@ title: Home
 ---
 
 <h1>Test Hello</h1>
+**this is bold in markdown**
 
-<div id="app"></div>
-
+<ul>
+  <li>test</li>
+  <li>test2</li>
+</ul>

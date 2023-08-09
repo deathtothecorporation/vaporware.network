@@ -6,3 +6,10 @@ console.log('Vite ⚡️ Ruby')
 
 // Example: Import a stylesheet in <sourceCodeDir>/index.css
 // import '~/index.css'
+
+import '../src/assets/index.scss'
+
+import { createApp } from 'vue'
+import App from '../src/App.vue'
+
+createApp(App).mount('#app')

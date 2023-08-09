@@ -11,5 +11,13 @@ import '~/src/assets/index.scss'
 
 import { createApp } from 'vue'
 import App from '~/src/App.vue'
+import Post from '~/src/Post.vue'
 
 createApp(App).mount('#app')
+
+const postElement = document.querySelector('#post')
+const title = postElement.dataset.title
+const post = createApp(Post, {
+  title
+});
+post.mount('#post')

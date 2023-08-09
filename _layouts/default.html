@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
+      {% vite_client_tag %}
+      {% vite_javascript_tag application %}
   </head>
   <body>
     {% include navigation.html %}
     {{ content }}
-    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

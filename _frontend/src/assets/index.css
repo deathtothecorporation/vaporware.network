@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    /*
+    font-family: 'Source Code Pro', monospace;
+    src: url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;600;700&display=swap');
+    font-display: swap;
+    */
+  }
+  /*
+  @font-face {
+    font-family: 'Inter UI', sans;
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700');
+    font-display: swap;
+  }
+  */
+}
+

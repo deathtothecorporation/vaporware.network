@@ -6,18 +6,190 @@
   @font-face {
     font-family: 'Inter', sans-serif;
     font-family: 'Source Code Pro', monospace;
-    /*
-    font-family: 'Source Code Pro', monospace;
-    src: url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500;600;700&display=swap');
-    font-display: swap;
-    */
   }
-  /*
-  @font-face {
-    font-family: 'Inter UI', sans;
-    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700');
-    font-display: swap;
-  }
-  */
+}
+
+h1 {
+  @apply text-5xl; // 48px
+  @apply font-normal;
+}
+h2 {
+  @apply text-xl;  // 28px
+  @apply font-normal;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  @apply font-sans;
+  @apply font-light;
+  @apply bg-black;
+  @apply text-white;
+  @apply text-base;
+}
+
+
+#app {
+  height: 100%;
+}
+
+#container {
+  height: 100vh;
+  @apply flex;
+  @apply flex-col;
+  @apply justify-between;
+}
+
+.vcontainer {
+  @apply max-w-[1024px];
+}
+
+main {
+}
+
+.cta {
+  @apply rounded-full;
+  @apply border;
+  @apply border-white;
+  @apply py-1.5;
+  @apply pl-3;
+  @apply pr-3;
+  display: inline-flex; /* Using flexbox to align content */
+  align-items: center; /* Centers content vertically */
+}
+
+.cta.disabled {
+  @apply text-black-50;
+  @apply border-black-50;
+}
+
+.cta:hover {
+  @apply cursor-pointer;
+}
+.cta.disabled:hover {
+  @apply cursor-not-allowed;
+}
+
+.cta input {
+  @apply ring-0;
+  @apply ring-offset-0;
+  @apply bg-transparent;
+  color: white !important;
+  @apply h-4;
+  @apply my-1;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: black;
+    color: white;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-moz-autofill,
+input:-moz-autofill:hover, 
+input:-moz-autofill:focus {
+    color: white !important;
+    background-color: black !important;
+}
+
+/* Webkit browsers (Safari, Chrome) */
+.cta input::-webkit-input-placeholder {
+  @apply text-white;
+}
+
+/* Mozilla Firefox */
+.cta input::-moz-placeholder {
+  @apply text-white;
+  opacity: 1; /* Firefox reduces opacity by default, so set it to 1 if needed */
+}
+
+/* Internet Explorer */
+.cta input:-ms-input-placeholder {
+  @apply text-white;
+}
+
+/* Edge */
+.cta input::-ms-input-placeholder {
+  @apply text-white;
+}
+
+/* Standard (currently in the specification process) */
+.cta input::placeholder {
+  @apply text-white;
+}
+
+.cta input:focus {
+  @apply ring-0;
+  @apply ring-offset-0;
+}
+
+.cta:hover span.text {
+  @apply underline;
+  @apply underline-offset-2;
+  @apply cursor-pointer;
+}
+.cta.disabled:hover span.text {
+  @apply cursor-not-allowed;
+  @apply no-underline;
+}
+
+.cta:active span.text {
+  @apply underline;
+  @apply underline-offset-2;
+  @apply italic;
+}
+.cta.disabled:active span.text {
+  @apply cursor-not-allowed;
+  @apply no-underline;
+  @apply not-italic;
+}
+
+.cta-arrow {
+  @apply text-xl;
+  line-height: 0;
+  @apply py-0;
+  @apply mb-0.5;
+  @apply ml-1;
+}
+
+.cta-arrow.disabled {
+  @apply text-red;
+}
+
+a:hover {
+  @apply underline;
+}
+
+button {
+}
+button:hover {
+}
+button:active {
+}
+button {
+  @apply transition-opacity;
+  @apply ease-in-out;
+}
+
+footer {
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 

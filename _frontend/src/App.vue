@@ -1,47 +1,38 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import { ref, onMounted } from 'vue'
+
+const placeholderImage = 'data:image/png;base64,...';  // your base64 encoded image
+const fullImageURL = '../../assets/images/backgrounds/carless-city.png';
+
+const bgImage = ref(placeholderImage);
+const bgStyle = ref(`background-image: url('${bgImage.value}')`);
+
+onMounted(() => {
+  const image = new Image();
+  image.src = fullImageURL;
+  image.onload = () => {
+    bgImage.value = fullImageURL;
+    bgStyle.value = `background-image: url('${bgImage.value}')`;
+  };
+});
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <main  class="container mx-auto h-full flex flex-col justify-end">
+    <div class="flex flex-row justify-between">
+      <div class="text-3xl max-w-xl">
+        programmable identity-linked licensing for monetization of  open-source software on distributed networks.
+      </div>
+
+      <div>
+        <CTA title="signup" />
+      </div>
+
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
   </main>
+
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>

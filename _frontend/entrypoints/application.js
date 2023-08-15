@@ -12,12 +12,18 @@ import '~/src/assets/index.scss'
 import { createApp } from 'vue'
 import App from '~/src/App.vue'
 import Post from '~/src/Post.vue'
+import Cta from '~/src/components/Cta.vue'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+app.component("CTA", Cta);
+app.mount('#app')
 
 const postElement = document.querySelector('#post')
-const title = postElement.dataset.title
-const post = createApp(Post, {
-  title
-});
-post.mount('#post')
+
+if (postElement) {
+  const title = postElement.dataset.title
+  const post = createApp(Post, {
+    title
+  });
+  post.mount('#post')
+}

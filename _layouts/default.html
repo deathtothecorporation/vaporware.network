@@ -2,9 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
+    {% include custom-head.html %}
     <title>{{ page.title }}</title>
-      {% vite_client_tag %}
-      {% vite_javascript_tag application %}
   </head>
   <body>
     {% include navigation.html %}

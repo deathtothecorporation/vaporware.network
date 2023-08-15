@@ -1,5 +1,5 @@
 <template>
-    <div @click="onClick" class='cta' :class="disabled ? '' : 'disabled'">
+    <div @click="onClick" class='cta' :class="!disabled ? '' : 'disabled'">
       <span class="text">
         {{ title }}
       </span>

@@ -1,10 +1,12 @@
-<nav class="border h-12 flex flex-row items-center w-full justify-around">
+<nav>
   <div class="grow text-center">
-    V
+    <img src="../assets/vapor-v.svg" />
   </div>
 
   <div class="grow text-center">
-    countdown
+    <div id="countdown">
+    <span id="days"></span>:<span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
+</div>
     <!--
       <a href="/">Home</a>
       <a href="/about">About</a>
@@ -16,3 +18,50 @@
   <div class="grow text-center">
   </div>
 </nav>
+
+<script>
+  let countdownLoaded = false;
+      const targetDate = new Date('September 1, 2023 12:00:00 GMT-0700');
+
+      function padWithZeros(number) {
+    return String(number).padStart(2, '0');
+}
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeDifference = targetDate - now;
+
+        if (timeDifference <= 0) {
+            document.getElementById("countdown").innerHTML = "Countdown completed!";
+            clearInterval(interval);
+            return;
+        }
+
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = padWithZeros(Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+        const minutes = padWithZeros(Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60)));
+        const seconds = padWithZeros(Math.floor((timeDifference % (1000 * 60)) / 1000));
+
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
+
+        const countdownDiv = document.getElementById("countdown");
+        countdownDiv.style.display = "block";
+        setTimeout(() => {
+            countdownDiv.style.opacity = "1";
+        }, 50);
+    }
+
+    // Update the countdown every second
+    const interval = setInterval(updateCountdown, 1000);
+</script>
+
+<style>
+#countdown {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+</style>

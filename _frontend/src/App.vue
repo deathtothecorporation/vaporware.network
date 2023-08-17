@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
+import SignUp from './components/SignUp.vue'
 const placeholderImage = 'data:image/png;base64,...';  // your base64 encoded image
 const fullImageURL = '../../assets/images/backgrounds/carless-city.png';
 
@@ -21,12 +22,12 @@ onMounted(() => {
 
   <main  class="container mx-auto h-full flex flex-col justify-end">
     <div class="flex flex-row mb-16 items-end justify-between">
-      <div class="text-3xl max-w-xl">
+      <div class="text-3xl max-w-xl leading-tight">
         programmable identity-linked licensing for monetization of  open-source software on distributed networks.
       </div>
 
       <div>
-        <CTA title="signup" :disabled="false" />
+        <SignUp />
       </div>
 
     </div>

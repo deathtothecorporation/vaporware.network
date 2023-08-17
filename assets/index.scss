@@ -193,6 +193,14 @@ button {
 }
 
 footer {
+  @apply px-2;
+  @apply h-24;
+  @apply border;
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply w-full;
+  @apply justify-between;
 }
 
 .fade-enter-active,
@@ -203,4 +211,3 @@ footer {
 .fade-leave-to {
   opacity: 0;
 }
-

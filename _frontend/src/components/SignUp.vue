@@ -4,6 +4,8 @@
     <form ref="waitlistForm" @submit.prevent="submitForm" class="flex flex-row items-center">
       <input
         type="text"
+        autocomplete="off"
+        spellcheck="off"
         placeholder="Enter your email or Urbit ID"
         v-model="signupEntry"
         name="entry.1987957812"

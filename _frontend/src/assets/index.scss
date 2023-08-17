@@ -20,6 +20,21 @@ nav {
   @apply justify-between;
 }
 
+footer {
+  @apply px-4;
+  @apply h-16;
+  @apply border;
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply w-full;
+  @apply justify-between;
+}
+
+footer .icons {
+  @apply space-x-4;
+}
+
 h1 {
   @apply text-5xl; // 48px
   @apply font-normal;
@@ -192,8 +207,6 @@ button {
   @apply ease-in-out;
 }
 
-footer {
-}
 
 .fade-enter-active,
 .fade-leave-active {

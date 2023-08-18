@@ -20,13 +20,13 @@ onMounted(() => {
 
 <template>
 
-  <main  class="container mx-4 md:mx-auto h-full flex flex-col justify-end">
-    <div class="flex flex-col mx-auto md:mx-0 md:flex-row mb-16 items-end justify-between">
-      <div class="text-lg md:text-3xl md:max-w-xl leading-tight">
-        programmable identity-linked licensing for monetization of  open-source software on distributed networks.
+  <main  class="container mx-4 sm:mx-auto lg:mx-auto h-full flex flex-col justify-end">
+    <div class="flex flex-col mx-auto lg:mx-0 md:flex-row mb-16 items-end justify-between">
+      <div class="mx-4 lg:mx-0 text-lg lg:text-3xl lg:max-w-xl leading-tight">
+        programmable identity-linked licensing for monetization of open-source software on distributed networks.
       </div>
 
-      <div class="mx-auto mt-4 md:mx-0">
+      <div class="mx-auto mt-4 lg:mx-0">
         <SignUp />
       </div>
 

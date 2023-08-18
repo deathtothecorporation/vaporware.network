@@ -29,6 +29,21 @@ footer {
   @apply items-center;
   @apply w-full;
   @apply justify-between;
+  @apply text-sm;
+}
+
+@media (min-width: 640px) {
+  footer {
+    @apply px-4;
+    @apply h-16;
+    @apply border;
+    @apply flex;
+    @apply flex-row;
+    @apply items-center;
+    @apply w-full;
+    @apply justify-between;
+    @apply text-base;
+  }
 }
 
 footer .icons {
@@ -50,8 +65,8 @@ html {
 
 body {
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   @apply font-sans;
   @apply font-light;
   @apply bg-black;

@@ -96,7 +96,3 @@ const submitForm = () => {
     });
 };
 </script>
-
-<style scoped>
-/* code... */
-</style>

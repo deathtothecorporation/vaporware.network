@@ -1,7 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-   purge: ['./index.html', './_frontend/src/**/*.{vue,js,ts,jsx,tsx}'],
+   // purge: ['./index.html', './_frontend/src/**/*.{vue,js,ts,jsx,tsx}'],
   content: [
     'index.html',
     './_frontend/src/**/*.{js,jsx,ts,tsx,vue,html}',

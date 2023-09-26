@@ -1,19 +1,84 @@
 ---
 layout: default
 ---
-
-<img src="{{ page.header_image }}" alt="{{ page.title }}">
-<h1>{{ page.title }}</h1>
-
-<p>
-  {{ page.date | date_to_string }}
-  {% assign author = site.authors | where: 'short_name', page.author | first %}
-  {% if author %}
-    - <a href="{{ author.url }}">{{ author.name }}</a>
-    <img src="{{ site.baseurl }}/assets/authors/{{ author.avatar }}" alt="{{ author.name }}">
-  {% endif %}
-</p>
-
-{{ content }}
-
-<div id="post" data-title="{{ page.title }}"></div>
+<div class="main-blog-post-page bg-dark-100">
+   <!--  ====================== Header Area Start =============================  -->
+   {% include header.html match="two" %}
+   <!--  ====================== Header Area End =============================  -->
+   <div class="main-blog-post-box">
+      <div class=" gh-content gh-canvas  typofix">
+         {% if page.featured_image %}
+         <div class="featured-images kg-card kg-image-card kg-width-full">
+            <img class="h-[375px] object-cover" src=" {{page.featured_image}} " alt="images">
+         </div>
+         {% endif %}
+      </div>
+      <div class="gh-canvas">
+         <div class="top-box mt-6">
+            <h2 class="text-white text-[28px] font-bold"> {{page.title}} </h2>
+            <div class="post-author-info flex gap-12 text-white mt-2">
+               <div class="author-name">
+                  <p>{{page.author_name}}</p>
+               </div>
+               <div class="author-date">
+                  <p>{{page.date  | date: "%-d %B %Y"}} </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="entry-content-area mt-6">
+         <div class=" gh-content gh-canvas  typofix">
+            {{page.content}}
+         </div>
+         <div class="next-post-prv-post-box w-full max-w-[640px]  m-auto mt-10">
+            <div class="main-box flex justify-between px-4 sm:px-0 gap-2">
+               {% if page.previous.url %}
+               <div class="prev-post">
+                  <a class="text-white hover:underline" href="{{page.previous.url}}">
+                  &lt;- prev post
+                  </a>
+               </div>
+               <div class="border-r">
+               </div>
+               <div class="next-post">
+                  <a class="text-white hover:underline" href="/">
+                  return to index
+                  </a>
+               </div>
+               <div class="border-r">
+               </div>
+               <div class="next-post">
+                  <a class="text-white hover:underline" href="{{page.previous.url}}">
+                  next post -&gt;
+                  </a>
+               </div>
+               {% endif %}
+            </div>
+         </div>
+      </div>
+      <div class="line-divider py-12">
+         <img class="w-full" src="/assets/images/line-divider.png" alt="images">
+      </div>
+      <div class="container">
+         <div class="author-profile-box mt-10">
+            <div class="main-box sm:flex flex-wrap gap-6">
+               <div class="author-man min-w-[100px]">
+                  <img class="sm:w-[100px] w-full mb-3 sm:mb-0"src="{{page.author_images}}" alt="{{page.author_name}}">
+               </div>
+               <div class="author-info max-w-[676px]">
+                  <div class="author-man">
+                     <h2 class="text-[28px] font-medium text-white">~sarlev-sarsen</h2>
+                     <p class="text-white mt-3">Bacon ipsum dolor amet shoulder kielbasa pancetta, filet mignon turducken shankle short ribs. T-bone leberkas porchetta, pastrami picanha beef ribs sausage tri-tip ground round jowl meatloaf buffalo ball tip brisket.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="line-divider py-12">
+      <img class="w-full" src="/assets/images/line-divider.png" alt="images">
+   </div>
+   {% for footer in site.data.footer.footer %}
+   {% include footer.html %}
+   {% endfor %}
+</div>

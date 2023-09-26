@@ -1,0 +1,87 @@
+---
+layout: default
+---
+<div class="main-body bg-cover bg-top" style="background-image: url(/assets/images/missives-bg.png);">
+   <!--  ====================== Header Area Start =============================  -->
+   {% include header.html match="one" %}
+   <!--  ====================== Header Area End =============================  -->
+   <!--  ====================== Hero Area Start =============================  -->
+   <div class="main-container">
+      <div class="hero-area  missives-hero-area  flex items-end ">
+         <div class=" main-hero">
+            {% for post in site.posts %}
+            {% if post.featured %}
+            <div class="blog-post-item max-w-[480px]">
+               <div class="blog-title">
+                  <h2>
+                     <a class="text-[28px] text-white hover:underline" href="{{post.url}}"> {{post.title}}  </a>
+                  </h2>
+               </div>
+               <div class="author-box flex flex-wrap sm:gap-10 gap-2">
+                  <div class="autor-name flex text-white text-sm gap-2 mt-1">
+                     <p> author: </p>
+                     <p>~{{post.author_name}}</p>
+                  </div>
+                  <div class="published-date flex text-white text-sm gap-2 mt-1">
+                     <p> published :   </p>
+                     <p>{{post.date  | date: "%-d %B %Y"}}</p>
+                  </div>
+               </div>
+               <div class="text-exept mt-3">
+                  <p class="text-white"> 
+                     {{ post.exptcerpt|truncate: 230 }}
+                  </p>
+               </div>
+               <div class="right-box  text-right mt-3">
+                  <div class="inline-block">
+                     <a class="border  py-[10px] px-[15px] text-white hover:bg-dark-100 hover:border-dark-100 duration-500 text-[14px] gap-[50px]  rounded-full flex items-center  justify-between" href="{{post.url}}">
+                        read more
+                        <span>
+                           <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12.7841 11L12.1136 10.3295L16.0682 6.38636H0V5.43182H16.0682L12.1136 1.47727L12.7841 0.818182L17.875 5.90909L12.7841 11Z" fill="white"></path>
+                           </svg>
+                        </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            {% endif %}
+            {% endfor %}   
+         </div>
+      </div>
+   </div>
+   <!--  ====================== Hero Area End =============================  -->
+   <div class="line-divider pt-8">
+      <img class="w-full" src="assets/images/line-divider.png" alt="images">
+   </div>
+   <div class="blog-main-items-box mt-6  ">
+      <div class="main-container">
+         <div class="sm:grid sm:grid-cols-2 sm:gap-12 gap-4 flex flex-col" id="post-container">
+            <!-- All posts will be loaded here initially -->
+            {% for post in site.posts %}
+            <div class="post">
+               {% include blog-grid-card.html %}
+            </div>
+            {% endfor %}
+         </div>
+         <div class="load-more-button  text-center mt-10">
+            <div class="inline-block">
+               <button class="border  py-[10px] px-[15px] text-white hover:bg-dark-100 hover:border-dark-100 duration-500 text-[14px] gap-[50px]  rounded-full flex items-center  justify-between" id="load-more-button">
+                  Load Posts   
+                  <span>
+                     <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.7841 11L12.1136 10.3295L16.0682 6.38636H0V5.43182H16.0682L12.1136 1.47727L12.7841 0.818182L17.875 5.90909L12.7841 11Z" fill="white"></path>
+                     </svg>
+                  </span>
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="line-divider py-12">
+      <img class="w-full" src="assets/images/line-divider.png" alt="images">
+   </div>
+   {% for footer in site.data.footer.footer %}
+   {% include footer.html %}
+   {% endfor %}
+</div>

@@ -1,0 +1,5 @@
+---
+layout: missives
+permalink: missives
+
+---

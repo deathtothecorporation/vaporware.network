@@ -1,12 +1,69 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    {% include custom-head.html %}
-    <title>{{ page.title }}</title>
-  </head>
-  <body>
-    {% include navigation.html %}
-    {{ content }}
-  </body>
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" href="{{'/assets/images/favicon-32x32.png' | relative_url}}">
+   {% seo %}
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+   <!-- gulp:css -->
+   <link rel="stylesheet" href="{{'/assets/css/app.min.css' | relative_url}}">
+   <link rel="stylesheet" href="{{'/assets/css/custom-jekyll.css' | relative_url}}">
+   <!-- endgulp -->
+</head>
+<body class="font-body_font leading-1.6">
+   {{content}}
+   <script>
+      // load-more.js
+      document.addEventListener("DOMContentLoaded", function () {
+      const loadMoreButton = document.getElementById("load-more-button");
+      const postContainer = document.getElementById("post-container");
+      
+      // Set the number of initially visible posts and increment
+      let visiblePosts = 6;
+      const increment = 6; // Number of posts to load at a time
+      
+      // Function to toggle the visibility of posts
+      function togglePosts() {
+       const posts = postContainer.querySelectorAll(".post");
+       posts.forEach((post, index) => {
+           if (index < visiblePosts) {
+               post.style.display = "block"; // Show the post
+           } else {
+               post.style.display = "none"; // Hide the post
+           }
+       });
+      }
+      
+      // Initial toggle
+      togglePosts();
+      
+      loadMoreButton.addEventListener("click", function loadMorePosts() {
+       visiblePosts += increment;
+       togglePosts();
+      
+       // Check if all posts are shown
+       if (visiblePosts >= postContainer.querySelectorAll(".post").length) {
+           loadMoreButton.style.display = "none"; // Hide the button when all posts are shown
+      
+           // Display a message when all posts are loaded message show
+        //    const noMorePostsMessage = document.createElement("p");
+        //    noMorePostsMessage.textContent = "No more posts to show.";
+        //    postContainer.appendChild(noMorePostsMessage);
+      
+           // Remove the event listener when all posts are displayed
+           loadMoreButton.removeEventListener("click", loadMorePosts);
+       }
+      });
+      });
+      
+      
+   </script>
+   <!-- gulp:js -->
+   <script src="/assets/js/build.min.js"></script>
+   <!-- endgulp -->
+</body>
 </html>

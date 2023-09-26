@@ -1,0 +1,47 @@
+.main-container {
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+
+header.header-area {
+    border-left: 0;
+    border-right: 0;
+}
+
+.social-bottom {
+    border-left: 0;
+    border-right: 0;
+}
+
+.missives-hero-area {
+    padding-top: 400px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .missives-hero-area {
+        padding-top: 150px;
+    }
+  }
+
+.button-item:hover {
+    background: white;
+    color: #040c0d;
+}
+.button-item{
+    transition: .5s;
+}
+
+.button-item:hover path {
+    fill: #040c0d;
+}
+
+
+
+.gh-content>dl, .gh-content>ol, .gh-content>p, .gh-content>ul {
+    font-size: 16px!important;
+    
+}

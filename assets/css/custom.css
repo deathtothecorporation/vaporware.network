@@ -1,0 +1,135 @@
+/*
+=====================
+CSS Table of Conttent 
+=====================
+01. All Variable
+
+/*
+------------------------
+01. All Variable
+--------------------------
+*/
+
+:root {
+    --heading_font:'Readex Pro', sans-serif;
+    --dark-700:"#242F41";
+
+
+}
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+font-family:var(--heading_font);
+line-height: 1.2;
+color: var(--dark-700);
+}
+
+/*
+------------------------  
+ 02.  Menu Css
+--------------------------
+*/
+.mobile-toggle {
+    width: 40px;
+    height: 40px;
+    padding: 15px;
+    right: 0;
+    position: absolute;
+}
+.mobile-toggle span {
+    width: 25px;
+    height: 2px;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    border-radius: 10px;
+}
+.mobile-toggle span:nth-child(2) {
+    top: 19px;
+}
+.mobile-toggle span:nth-child(3) {
+    top: 28px;
+}
+.mobile-toggle.open span:nth-child(1) {
+    top: 20px;
+    transform: rotate(-45deg);
+}
+.mobile-toggle.open span:nth-child(2) {
+    top: 20px;
+    opacity: 0;
+}
+.mobile-toggle.open span:nth-child(3) {
+    top: 20px;
+    transform: rotate(45deg);
+}
+@media only screen and (max-width: 976px) {
+    .toggle-menu-class {
+        overflow-y: auto;
+        max-height: 26rem;
+    }
+}
+@media only screen and (min-width: 976px) {
+    .dropdown-menu .dropdown .submenu,
+    .dropdown-menu .dropdown .author-submenu {
+        opacity: 0;
+        visibility: hidden;
+        top: calc(100% + 20px);
+        transition: .5s;
+    }
+    .dropdown-menu .dropdown:hover>.submenu {
+        opacity: 1;
+        visibility: visible;
+       top: 100%;
+    }
+    .dropdown-menu .dropdown:hover>.dropdown-submenu {
+       top: 20px;
+    }
+    .dropdown-menu .dropdown:hover>.author-submenu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(5%);
+    }
+}
+
+.submenu li:last-child {
+    padding-bottom: 20px;}
+@keyframes headerSlideDown {
+    0% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+.header-sticky {
+    background-color: #ffffff;
+    position: fixed;
+    top: 0 !important;
+    animation: headerSlideDown 0.5s ease;
+    right: 0 !important;
+    left: 0 !important;
+    z-index: 99;
+    opacity: 9999 !important;
+}
+
+
+  @media (max-width: 1024px){
+    .mobile-device-active{
+    display: block;
+    }
+    }
+
+    .is-active .dropdown-menu {
+  display: block;
+}
+

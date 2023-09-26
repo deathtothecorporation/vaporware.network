@@ -1,0 +1,10 @@
+#Please use the main menu items under the "text"
+
+- text: experiments
+  url: /experiments
+  
+- text: missives
+  url: /missives.html
+
+- text: developers
+  url: /#

@@ -1,0 +1,741 @@
+
+
+/* Content grid
+/* ---------------------------------------------------------- */
+/* 
+ Listing Adjustment 
+*/
+:root {
+  --heading_font:'Work Sans', sans-serif;
+  --body_font: 'DM Sans', sans-serif;
+  --gray-600:#A3A3A3
+
+} 
+.gh-content a,
+.gh-content abbr,
+.gh-content acronym,
+.gh-content address, 
+.gh-content b,
+.gh-content big,
+.gh-content cite,
+.gh-content code,
+.gh-content del,
+.gh-content em,
+.gh-content i,
+.gh-content ins,
+.gh-content kbd,
+.gh-content mark,
+.gh-content output,
+.gh-content q,
+.gh-content ruby,
+.gh-content s,
+.gh-content samp,
+.gh-content small,
+.gh-content strike,
+.gh-content strong,
+.gh-content sub,
+.gh-content sup,
+.gh-content time,
+.gh-content tt,
+.gh-content u,
+.gh-content var,
+.gh-content dfn,
+.gh-content dl,
+.gh-content dt,
+.gh-content dd,
+.gh-content ol,
+.gh-content ul,
+.gh-content li,
+.gh-content blockquote,
+.gh-content p,
+.gh-content pre,
+.gh-content table,
+.gh-content caption,
+.gh-content tbody,
+.gh-content tfoot,
+.gh-content thead,
+.gh-content tr,
+.gh-content th,
+.gh-content td,
+.gh-content applet,
+.gh-content canvas,
+.gh-content embed,
+.gh-content figure,
+.gh-content figcaption,
+.gh-content iframe,
+.gh-content img,
+.gh-content object {
+  color: var(--gray-400); 
+  font-family: var(--inter); 
+  
+}
+
+/*
+  Initialize spacing and colors
+*/
+.gh-content pre,
+.gh-content table,
+.gh-content th,
+.gh-content td {
+  border: 1px solid #DBE2F2;
+}
+
+/*
+  Inline elements
+*/
+.gh-content a{
+  color: #273049;
+  font-weight: 600;
+
+}
+.gh-content strong,
+.gh-content b {
+  font-weight: bolder;
+}
+
+.gh-content u,
+.gh-content em,
+.gh-content i {
+  font-style: italic;
+  text-decoration: none;
+}
+
+.gh-content abbr[title] {
+  border-bottom: 1px dotted gray;
+}
+
+blockquote {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gh-content cite {
+  font-style: italic;
+}
+
+.gh-content code {
+  padding: 0.1em 0.2em;
+  text-shadow: none;
+} 
+
+.gh-content del {
+  color: red;
+  text-decoration: line-through;
+
+
+
+}
+
+.gh-content ins {
+  color: green;
+  text-decoration: none;
+}
+
+.gh-content kbd {
+  padding: 2px 4px;
+  font-size: .875em;
+  color: #fff;
+  background-color: #212529;
+  border-radius: 0;
+}
+
+.gh-content mark {
+  background-color: rgba(0, 140, 255, 0.1);
+  background-color: #DBE2F2;
+}
+
+.gh-content small {
+  font-size: .75em;
+}
+
+.gh-content s {
+  text-decoration: line-through;
+}
+
+.gh-content sub {
+  font-size: 80%;
+  vertical-align: sub;
+}
+
+.gh-content sup {
+  font-size: .75em;
+  vertical-align: super;
+}
+
+.gh-content var {
+  font-style: italic;
+}
+
+/*
+  Lists
+*/
+.gh-content ol {
+  list-style: decimal;
+}
+
+.gh-content ol ol {
+  list-style: lower-alpha;
+  padding-left: 2em; 
+}
+
+.gh-content ol ol ol {
+  list-style: lower-roman;
+}
+
+.gh-content ol ol ol ol {
+  list-style: decimal;
+}
+
+.gh-content ul {
+  list-style: disc;
+}
+.gh-content ul ul{
+  list-style: circle;
+  padding-left: 2em;
+}
+
+.gh-content dt {
+  font-weight: bold;
+  /* line-height set above */
+}
+
+.gh-content dd {
+  /* line-height set above */
+  margin-top: 0;
+}
+
+/*
+  Media
+*/
+.gh-content embed,
+.gh-content iframe,
+.gh-content figure img,
+.gh-content object {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.gh-content figcaption {
+  font-size: .75em;
+  line-height: 2;
+} 
+
+/* Canvas creates a multi-column, centered grid which the post
+is laid out on top of. Canvas just defines the grid, we don't
+use it for applying any other styles. */
+.gh-canvas { 
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(max(4vmin, 20px), auto) [wide-start] minmax(auto, 240px) [main-start] min(1024px, calc(100% - max(8vmin, 40px))) [main-end] minmax(auto, 240px) [wide-end] minmax(max(4vmin, 20px), auto) [full-end];
+}
+
+.gh-canvas>* {
+  grid-column: main-start / main-end;
+}
+
+.kg-width-wide {
+  grid-column: wide-start / wide-end;
+}
+
+.kg-width-full {
+  grid-column: full-start / full-end;
+}
+
+.kg-width-full img {
+  width: 100%;
+}
+
+/* Default vertical spacing */
+.gh-content > *:first-child{
+  margin-top: 0!important;    
+}
+.gh-content>*+* {
+  margin-top: max(3.2vmin, 24px)!important; 
+  margin-bottom: 0; 
+}
+
+/* [id] represents all headings h1-h6, reset all margins */
+.gh-content>[id] {
+  margin: 0;
+}
+
+.has-serif-title .gh-content>[id] {
+  font-family: inherit;
+}
+
+/* Add back a top margin to all headings, unless a heading
+is the very first element in the post content */
+.gh-content>[id]:not(:first-child) {
+  margin: 2em 0 0;
+}
+
+/* Add a small margin between a heading and anything after it */
+.gh-content>[id]+* {
+  margin-top: 1em !important;
+}
+
+/* A larger margin before/after HRs and blockquotes */
+.gh-content>hr,
+.gh-content>blockquote {
+  position: relative;
+  margin-top: max(3.2vmin, 24px);
+}
+
+.gh-content>hr+*,
+.gh-content>blockquote+* {
+  margin-top: max(3.2vmin, 24px) !important;
+}
+
+/* Now the content typography styles */
+.gh-content>ol,
+.gh-content>ul, 
+.gh-content>dl,
+.gh-content>p {
+  font-size: 1.15em;
+  line-height: 1.6em;
+}
+
+.gh-content .kg-callout-card .kg-callout-text,
+.gh-content .kg-toggle-card .kg-toggle-content>ol,
+.gh-content .kg-toggle-card .kg-toggle-content>ul,
+.gh-content .kg-toggle-card .kg-toggle-content>p {
+  font-size: 1.15em;
+  line-height: 1.6em;
+}
+
+.gh-content .kg-product-card .kg-product-card-description>p,
+.gh-content .kg-product-card .kg-product-card-description>ol,
+.gh-content .kg-product-card .kg-product-card-description>ul {
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+.gh-content .kg-callout-card .kg-callout-emoji {
+  font-size: 1.15em;
+  line-height: 1.4em;
+}
+
+.gh-content .kg-toggle-card .kg-toggle-heading-text {
+  font-size: 1.2em;
+}
+
+.has-sans-body .gh-content>blockquote,
+.has-sans-body .gh-content>ol,
+.has-sans-body .gh-content>ul,
+.has-sans-body .gh-content>dl,
+.has-sans-body .gh-content>p,
+.has-sans-body .gh-content .kg-callout-card .kg-callout-text,
+.has-sans-body .gh-content .kg-toggle-card .kg-toggle-content>ol,
+.has-sans-body .gh-content .kg-toggle-card .kg-toggle-content>ul,
+.has-sans-body .gh-content .kg-toggle-card .kg-toggle-content>p {
+  font-family: inherit;
+}
+
+.gh-content>ul,
+.gh-content>ol,
+.gh-content>dl,
+.gh-content .kg-toggle-card .kg-toggle-content>ol,
+.gh-content .kg-toggle-card .kg-toggle-content>ul,
+.gh-content .kg-product-card .kg-product-card-description>ol,
+.gh-content .kg-product-card .kg-product-card-description>ul {
+  padding-left:80px;
+}
+
+/* Now the content adjustment blockqoute styles */
+
+.gh-content>blockquote{
+  position: relative;
+  font-size:18px;
+  padding: 0em 2em;  
+  color: white;   
+  text-align:left;
+  font-weight: 400;
+  margin-top: 40px!important;
+ padding-left: 48px!important;
+}
+@media (max-width: 650px) {  
+   
+}  
+.gh-content>blockquote:not([class]) { 
+  border-left: 0;
+}  
+.gh-content>blockquote:not([class])::before {
+  content: "";
+  position: absolute; 
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 45px;
+ 
+  background-image: url("../images/quote.svg");
+  width: 100%;
+  height: 100%;
+  max-width: 128px;
+  max-height: 109px;
+  background-repeat: no-repeat;
+  
+}
+
+.gh-content pre {
+  overflow: auto;
+  padding: 16px 20px;
+  color: white;
+  font-size: 0.875em;
+  line-height: 1.5em;
+  background:#1F1F1F;
+  border-radius: 5px;
+  border: 1px solid #1F1F1F!important;
+}
+
+@media (max-width: 650px) {
+  .gh-content>blockquote:not([class]),
+  .gh-content>ol,
+  .gh-content>ul,
+  .gh-content>dl,
+  .gh-content>p,
+  .gh-content .kg-callout-card .kg-callout-text,
+  .gh-content .kg-toggle-card .kg-toggle-content>ol,
+  .gh-content .kg-toggle-card .kg-toggle-content>ul,
+  .gh-content .kg-toggle-card .kg-toggle-content>p {
+    font-size: 1.1em;
+  }
+
+  .gh-content .kg-product-card .kg-product-card-description>p,
+  .gh-content .kg-product-card .kg-product-card-description>ol,
+  .gh-content .kg-product-card .kg-product-card-description>ul {
+    font-size: 1.1em;
+  } 
+}
+
+/* Cards
+/* ---------------------------------------------------------- */
+
+/* Cards are dynamic blocks of content which appear within Ghost
+posts, for example: embedded videos, tweets, galleries, or
+specially styled bookmark links. We add extra styling here to
+make sure they look good, and are given a bit of extra spacing. */
+
+/* Add extra margin before/after any cards,
+except for when immediately preceeded by a heading */
+.gh-content :not(.kg-card):not([id])+.kg-card {
+  margin-top: max(3.2vmin, 24px);
+  margin-bottom: 0;
+}
+
+.gh-content .kg-card+ :not(.kg-card) {
+  margin-top: max(3.2vmin, 24px);
+  margin-bottom: 0;
+}
+
+.kg-bookmark-title {
+  font-size: 1.25em;
+  color: #06283D; 
+} 
+
+.kg-bookmark-description {
+  font-size: 1em;
+}
+
+.kg-bookmark-author,
+.kg-bookmark-metadata>span:last-of-type {
+  font-size: 1rem;
+}
+
+/* This keeps small embeds centered */
+.kg-embed-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* This keeps small iamges centered */
+.kg-iframe-card {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.kg-iframe-card iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important; 
+  height: 100% !important; 
+}
+/* This keeps small iamges centered */
+.kg-image-card img {
+  margin: auto;
+}
+.has-serif-title .kg-toggle-card .kg-toggle-heading-text {
+  font-family: inherit;
+}
+
+.gh-content .kg-callout-card-accent a {
+  text-decoration: underline;
+}
+
+.kg-blockquote-alt {
+  font-family: inherit;
+  color: inherit;
+}
+
+.has-sans-body .kg-blockquote-alt {
+  font-family: inherit;
+}
+
+.kg-card.kg-header-card.kg-style-dark {
+  background: inherit;
+}
+
+.kg-header-card.kg-style-light h2.kg-header-card-header {
+  color: 1px dotted gray;
+}
+
+.has-serif-title .kg-header-card h2.kg-header-card-header {
+  font-family: inherit;
+}
+
+/* Buttons */
+.gh-content button {
+  display: inline-block;
+  background-color: #15171A;
+  color: #ffffff;
+  border: 1px solid #DBE2F2;
+  padding: 1rem;
+}
+
+/* Captions */
+.gh-content figcaption {
+  padding: 1em 1em 0;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: .875em;
+  line-height: 1.4em;
+}
+
+.gh-content  strong {
+  color: #06283D;
+} 
+/* Highly specific styles for traditional Instagram embeds */
+iframe.instagram-media {
+  margin-top: max(3.2vmin, 24px) !important; 
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 0 !important;
+}
+
+iframe.instagram-media+script+ :not([id]) {
+  margin-top: max(3.2vmin, 24px);
+}
+
+/* Card captions
+/* ---------------------------------------------------------- */
+
+.kg-width-full.kg-card-hascaption {
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+.kg-width-wide.kg-card-hascaption img {
+  grid-column: wide-start / wide-end;
+}
+
+.kg-width-full.kg-card-hascaption img {
+  grid-column: 1 / -1;
+}
+
+.kg-width-full.kg-card-hascaption figcaption {
+  grid-column: main-start / main-end;
+}
+
+.article-comments {
+  margin: 4vmin 0 0 0;
+}
+
+/* -----old------ */
+
+.footnotes-sep {
+  margin-bottom: 30px;
+}
+
+.footnotes {
+  font-size: 0.875em;
+}
+
+.footnotes p {
+  margin: 0;
+}
+
+.footnote-backref {
+  font-size: 0.75em;
+  font-weight: bold;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+/* Tables */
+.gh-content table {
+  display: inline-block;
+  overflow-x: auto;
+  max-width: 100%;
+  width: auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-family: inherit;
+  font-size: 1em;
+  white-space: nowrap; 
+  vertical-align: top;  
+  border: none;
+}
+.gh-content table td:first-child {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+  background-size: 20px 100%;
+  background-repeat: no-repeat;
+}
+
+.gh-content table td:last-child {
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+  background-position: 100% 0;
+  background-size: 20px 100%;
+  background-repeat: no-repeat;
+}
+
+.gh-content table th {
+  color: inherit;
+  font-size: 1.1em;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.gh-content table th,
+.gh-content table td {
+  padding: 6px 12px;
+  border: 1px dotted gray;
+}
+
+/* 
+1.1 Heading Adjustment 
+*/
+.gh-content h1,
+.gh-content h2,
+.gh-content h3,
+.gh-content h4,
+.gh-content h5,
+.gh-content h6 {
+  margin-top: 0;
+  line-height: 1.15;
+  font-weight: inherit; 
+  text-rendering: optimizeLegibility;
+  font-weight: 300;
+  color: white;
+  font-family: var(--heading_font); 
+  text-decoration: underline;
+}
+
+.dark .dark .gh-content h1,
+.dark .gh-content h2,
+.dark .gh-content h3,
+.dark .gh-content h4,
+.dark .gh-content h5,
+.dark .gh-content h6 {
+
+  color: white;
+
+}
+
+.gh-content h1 {
+  margin: 0 0 0.5em 0;
+  font-size: 3em;
+}
+
+@media (max-width: 600px) {
+  .gh-content h1 {
+    font-size: 2.5em;
+  }
+}
+
+.gh-content h2 {
+  margin: 1.5em 0 0.5em 0;
+  font-size: 2.25em;
+}
+
+@media (max-width: 600px) {
+  .gh-content h2 {
+    font-size: 2em;
+  }
+}
+
+.gh-content h3 {
+  margin: 1.5em 0 0.5em 0;
+  font-size: 1.875em;
+}
+
+@media (max-width: 600px) {
+  .gh-content h3 {
+    font-size: 1.5em;
+  }
+}
+
+.gh-content h4 {
+  margin: 1.5em 0 0.5em 0;
+  font-size: 1.5em;
+}
+
+@media (max-width: 600px) {
+  .gh-content h4 {
+    font-size: 1.5em;
+  }
+}
+
+.gh-content h5 {
+  margin: 1.5em 0 0.5em 0;
+  font-size: 1.25em;
+}
+
+.gh-content h6 {
+  margin: 1.5em 0 0.5em 0;
+  font-size: 1em; 
+}
+
+blockquote p{
+  position: relative;
+  z-index: 999;
+}
+
+.entry-content {
+  max-width: 830px;
+  margin: auto;
+}
+
+
+
+.entry-content-area {
+  color: white;
+}
+
+
+
+
+@media (max-width: 650px){
+.gh-content .kg-callout-card .kg-callout-text, .gh-content .kg-toggle-card .kg-toggle-content>ol, .gh-content .kg-toggle-card .kg-toggle-content>p, .gh-content .kg-toggle-card .kg-toggle-content>ul, .gh-content>blockquote:not([class]), .gh-content>dl, .gh-content>ol, .gh-content>p, .gh-content>ul {
+    font-size: 1.1em;
+    padding: 0;
+    padding-left: 0px!important;
+}
+
+
+
+.gh-content>ol, .gh-content>ul {
+    font-size: 1.1em;
+    padding: 0;
+    padding-left: 20px!important;
+}
+}
+
+
+
+

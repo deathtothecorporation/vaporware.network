@@ -1,28 +1,71 @@
-<footer style='backdrop-filter: blur(10px); background-color: rgba(0,0,0, 0.15);'>
-  <div class="flex flex-row items-center text-left shrink">
-    <div class="flex flex-row items-center">
-    death to the, corporation - 2023 - all rights reversed
-      <div style="margin-left: 0.5em;" class="ml-2">
-        <img src="../assets/copyleft.svg" />
-      </div>
-    </div>
-  </div>
 
-  <div class="flex flex-row justify-end text-right icons grow">
-    <div>
-    <a href="https://urbit.org/" target="_blank">
-      <img src="../assets/urbit-logo.svg" />
-    </a>
-    </div>
-    <div>
-    <a href="https://twitter.com/__vaporware__" target="_blank">
-      <img src="../assets/x-logo.svg" />
-    </a>
-    </div>
-    <div>
-    <a href="https://github.com/deathtothecorporation" target="_blank">
-      <img src="../assets/github-logo.svg" />
-    </a>
+
+ <div class="main-container">
+
+           
+    <div class="grid md:grid-cols-2 grid-cols items-end gap-10 md:gap-0">
+        <div class="left-box md:max-w-[400px]">
+           <h2 class="text-white md:text-[28px] sm:text-[20] text-[18px]">{{footer.title_text}} </h2>
+        </div>
+        <div class="right-box max-w-[465px] ml-auto">
+           <a class="border py-[10px] px-[15px] text-white hover:bg-dark-100 hover:border-dark-100 duration-500 text-[14px] gap-[50px]  rounded-full flex items-center  justify-between" href=" {{footer.btn_url}}">
+              {{footer.btn_label}}
+              <span>
+                 <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.7841 11L12.1136 10.3295L16.0682 6.38636H0V5.43182H16.0682L12.1136 1.47727L12.7841 0.818182L17.875 5.90909L12.7841 11Z" fill="white"/>
+                 </svg>
+              </span>
+           </a>
+        </div>
+     </div>
+    
+            
+ </div>
+
+<div class="social-bottom mt-[48px]  border  py-5">
+    <div class="main-container">
+     <div class="grid md:grid-cols-2 grid-cols-1 gap-8 md:gap-0">
+        <div class="left-box order-last md:order-first">
+           <p class="text-white text-sm">  {{footer.copyright-text}} </p>
+        </div>
+        <div class="right-box">
+           <div class="social-link">
+              <ul class="flex items-center gap-[14px] md:justify-end">
+                 <li>
+                    <a href="{{footer.handlebars_url}}">
+                       <span>
+                          <svg width="20" height="8" viewBox="0 0 20 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M0.00215433 6.79216C-0.0265727 5.15811 0.231997 3.84398 0.777851 2.84977C1.3237 1.85554 2.03237 1.13203 2.90382 0.679214C3.78488 0.226402 4.71377 0 5.6906 0C6.66739 0 7.55799 0.221482 8.36243 0.66445C9.17644 1.09757 10.1054 1.78171 11.1492 2.71685C11.8578 3.34685 12.4229 3.78982 12.8442 4.04578C13.2752 4.3017 13.7444 4.42966 14.252 4.42966C15.0756 4.42966 15.7267 4.1245 16.2056 3.51421C16.6844 2.89405 16.9142 1.99828 16.8951 0.826871H19.9978C20.0266 2.46093 19.768 3.77506 19.2222 4.76927C18.6859 5.76351 17.9772 6.487 17.0962 6.93981C16.2152 7.39264 15.2862 7.61905 14.3094 7.61905C13.3326 7.61905 12.442 7.40249 11.6376 6.96936C10.8331 6.5264 9.90425 5.83731 8.85084 4.90218C8.15175 4.27218 7.58674 3.82922 7.15581 3.57326C6.72483 3.31733 6.2556 3.18937 5.74804 3.18937C4.97236 3.18937 4.33074 3.4699 3.82318 4.03102C3.32519 4.58226 3.08579 5.50263 3.10493 6.79216H0.00215433Z" fill="white"/>
+                          </svg>
+                       </span>
+                    </a>
+                 </li>
+                 <li>
+                    <a href="{{footer.twitter_url}}">
+                       <span>
+                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <g clip-path="url(#clip0_715_397)">
+                                <path d="M9.28412 6.77143L15.0916 0H13.7154L8.67278 5.87954L4.64526 0H0L6.0904 8.8909L0 15.9918H1.37626L6.70138 9.78279L10.9547 15.9918H15.6L9.28378 6.77143H9.28412ZM7.39915 8.96923L6.78206 8.0839L1.87214 1.03921H3.986L7.94836 6.7245L8.56544 7.60983L13.716 14.9998H11.6022L7.39915 8.96957V8.96923Z" fill="white"/>
+                             </g>
+                             <defs>
+                                <clipPath id="clip0_715_397">
+                                   <rect width="15.6" height="16" fill="white"/>
+                                </clipPath>
+                             </defs>
+                          </svg>
+                       </span>
+                    </a>
+                 </li>
+                 <li>
+                    <a href="{{footer.github_url}}">
+                       <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M8.27158 0C3.69761 0 0 3.66667 0 8.20283C0 11.8288 2.36918 14.8982 5.65587 15.9845C6.06679 16.0662 6.21731 15.808 6.21731 15.5908C6.21731 15.4007 6.20377 14.7488 6.20377 14.0697C3.90281 14.5587 3.42366 13.0918 3.42366 13.0918C3.05388 12.1412 2.50599 11.8968 2.50599 11.8968C1.75289 11.3943 2.56085 11.3943 2.56085 11.3943C3.39623 11.4487 3.83458 12.2363 3.83458 12.2363C4.57397 13.4857 5.76542 13.1327 6.24474 12.9153C6.31314 12.3857 6.5324 12.019 6.76521 11.8153C4.93003 11.6252 2.9992 10.919 2.9992 7.76817C2.9992 6.87183 3.32766 6.1385 3.84813 5.56817C3.76601 5.3645 3.47835 4.52233 3.93041 3.39517C3.93041 3.39517 4.62883 3.17783 6.2036 4.23717C6.87781 4.05761 7.57312 3.96627 8.27158 3.9655C8.96999 3.9655 9.68195 4.06067 10.3394 4.23717C11.9143 3.17783 12.6127 3.39517 12.6127 3.39517C13.0648 4.52233 12.777 5.3645 12.6949 5.56817C13.229 6.1385 13.544 6.87183 13.544 7.76817C13.544 10.919 11.6131 11.6115 9.76423 11.8153C10.0656 12.0733 10.3257 12.5622 10.3257 13.3363C10.3257 14.4363 10.3121 15.3192 10.3121 15.5907C10.3121 15.808 10.4628 16.0662 10.8736 15.9847C14.1603 14.898 16.5294 11.8288 16.5294 8.20283C16.543 3.66667 12.8318 0 8.27158 0Z" fill="white"/>
+                       </svg>
+                    </a>
+                 </li>
+              </ul>
+           </div>
+        </div>
+     </div>
     </div>
   </div>
-</footer>

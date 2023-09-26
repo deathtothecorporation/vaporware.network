@@ -1,54 +1,98 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-   // purge: ['./index.html', './_frontend/src/**/*.{vue,js,ts,jsx,tsx}'],
-  content: [
-    'index.html',
-    './_frontend/src/**/*.{js,jsx,ts,tsx,vue,html}',
-    // "./node_modules/flowbite/**/*.js",
+  mode: 'jit',
+  purge: ['./*.html'],
+  darkMode: "class",
+  corePlugins: {
+    container: true
+  },
+
+
+  plugins: [
+    
+    function ({ addComponents }) {
+      addComponents({
+
+        '.container': {
+          maxWidth: '100%',
+          '@screen sm': {
+            maxWidth: '640px',
+          },
+          '@screen md': {
+            maxWidth: '768px',
+          },
+          '@screen lg': {
+            maxWidth: '1080px', 
+          },
+          '@screen xl': {
+            maxWidth: '1150px',
+          },
+          '@screen 2xl': {
+            maxWidth: '1200px',
+          },
+
+
+        }
+
+      })
+    }
   ],
+
   theme: {
+
     extend: {
-      fontSize: {
-        'xs': '0.5rem',
-        'sm': '0.65rem',
-        base: '1.00rem',
-        lg: '1.3rem',
-        xl: '1.75rem',
-        '2xl': '1.85',
-        '3xl': '2.441rem',
-        '4xl': '3.052rem',
+      container: {
+        center: true,
+        padding: '1rem',
       },
       colors: {
-        'black': '#000000',
-        'blue': '#008EFF',
-        'soft-blue': '#E5F4FF',
-        'green': '#2AD546',
-        'soft-green': '#EAFBEC',
-        'indigo': '#615FD3',
-        'soft-indigo': '#EFEFFB',
-        'orange': '#FF9040',
-        'soft-orange': '#FFF4EC',
-        'red': '#FF6240',
-        'soft-red': '#FFEFEC',
-        'yellow': '#FADE7A',
-        'soft-yellow': '#FAF5D9',
-        'black-100': '#000000',
-        'black-04': '#F5F5F5',
-        'black-19': '#E5E5E5',
-        'black-20': '#CCCCCC',
-        'black-30': '#B3B3B3',
-        'black-40': '#999999',
-        'black-50': '#808080',
-        'black-60': '#666666',
-        'black-70': '#4C4C4C',
-        'black-80': '#333333',
+       
+        dark: {
+          100: '#040c0d', 
+          200: '#120906', 
+          
+        },
+       
       },
       fontFamily: {
-        'sans': ['Inter', ...defaultTheme.fontFamily.sans],
-        'mono': ['Ubuntu Mono', ...defaultTheme.fontFamily.mono],
-      }
+        heading_font: [
+          '"Inter", sans-serif',
+        ],
+
+        body_font: [
+    
+          '"Inter", sans-serif',
+        ],
+      },
+
+
+
+      backgroundImage: {
+        "curved-blue-gradient": "url(/imagenes/precios/curved-blue-gradient-bg.svg)",
+        "border-gradient": "linear-gradient(90deg, #C84E89 0%, #F15F79 100%);",
+        "gradient-m": "linear-gradient(90.18deg, rgba(255, 255, 255, 0.6) 0.13%, rgba(255, 255, 255, 0) 139.11%);",
+        "gradient-lg": "linear-gradient(90deg, rgba(43, 192, 228, 0.1) 0%, rgba(234, 236, 198, 0.1) 100%)",
+        "gradient-xl": "linear-gradient(98.44deg, rgba(255, 223, 162, 0.4) -1.68%, rgba(132, 195, 238, 0.4) 95.72%)"
+        
+      },
+
+      placeholderColor: theme => theme('colors'),
+      placeholderColor: {
+        "coolGray-600": "#4B5563",
+      },
+      borderColor: theme => ({
+        ...theme('colors'),
+        DEFAULT: theme('colors.gray.300', 'currentColor'),
+
+      }),
+     
+     
+      boxShadow: {
+        base: '0px 51.111106872558594px 40.888885498046875px 0px #3131311A',
+ 
+      },
+     
+     
     },
   },
-  plugins: [],
-}
+  // Other stuff
+};

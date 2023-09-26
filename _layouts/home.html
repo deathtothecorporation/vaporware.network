@@ -1,43 +1,11 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    {% include custom-head.html %}
-    <title>{{ page.title }}</title>
-  </head>
-  <body>
-    <div class="h-full overflow-hidden">
-      <main id="image-bleed" style="height: 100%; background-size: cover; background-position: center center; transition: background-image 0.5s;" class="flex flex-col justify-end h-full mx-auto">
-          {% include navigation.html %}
-          {{ content }}
-          {% include footer.html %}
-      </main>
-    </div>
+---
+layout: default
+---
 
-<script>
-      const fullImageURL = 'assets/images/backgrounds/homepage-image-2.png';
-      const imageBleed = document.getElementById('image-bleed');
-
-      const loadImage = (src, callback) => {
-        const img = new Image();
-        img.onload = callback;
-        img.src = src;
-      };
-
-      // Load the full image in the background
-      loadImage(fullImageURL, () => {
-        // Once the full image is loaded, update the background
-        imageBleed.style.backgroundImage = `url('${fullImageURL}')`;
-      });
-    </script>
+  <!--  ====================== Header Area Start =============================  -->
+ {% include header.html match="one" %}
+ <!--  ====================== Header Area End =============================  -->
+  {% include hero-banner.html %}
 
 
-  </body>
-</html>
-
-<style>
-  #image-bleed {
-    background-image: url('data:image/png;base64,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');
-  }
-</style>
 

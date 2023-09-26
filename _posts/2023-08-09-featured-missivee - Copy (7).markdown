@@ -1,0 +1,100 @@
+---
+layout: post
+post_id: 2
+title:  " featured missive"
+exptcerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate feugiat diam, vel tristique purus ultricies vitae. Praesent pretium, felis ac volutpat tincidunt, enim ante fringilla ligula, sed consequat nunc diam eget velit. Mauris ac eleifend orci hocus pocus..."
+date:   2023-08-09 08:55:53 +0600
+author_name: "~sarlev-sarsen"
+categories: jekyll update
+tag:  Ui design 
+author_images: "/assets/images/author-man.webp"
+blog_image: "assets/images/blog-preview-image.webp"
+featured_image: "/assets/images/featured-images.webp"
+bookmark_image: "/assets/images/bookmark.webp"
+blog_post_full_image: "/assets/images/blog-post-full-width.webp"
+blog_post_middle_image: "/assets/images/blog-post-middle.webp"
+---
+
+<p>Bacon ipsum dolor amet shoulder kielbasa pancetta, filet mignon turducken shankle short ribs. T-bone leberkas porchetta, pastrami picanha beef ribs sausage tri-tip ground round jowl meatloaf buffalo ball tip brisket. Pig picanha rump hamburger ham hock doner, prosciutto landjaeger pork meatball pork chop. Venison cow jowl jerky, pork ham hock beef ribs boudin buffalo doner shoulder turkey. Pork belly beef landjaeger kevin buffalo biltong tri-tip. Rump shankle ribeye, ham porchetta cow strip steak tri-tip fatback.
+</p>
+<p> Sirloin chop salami leberkas tongue t-bone. Beef ribs andouille chicken, bacon biltong pork loin flank venison. Pork belly porchetta cow prosciutto fatback venison jerky. Tri-tip ham hock kevin, bacon pancetta cupim leberkas salami. Tenderloin ham hock leberkas kevin beef, beef ribs chicken capicola meatloaf jowl pork loin short ribs. Beef ribs meatball pork loin rump prosciutto sausage. Pancetta beef cow filet mignon, sausage doner landjaeger pork loin flank turkey drumstick cow picanha ground round fatback.</p>
+<p>Bacon ipsum dolor amet shoulder kielbasa pancetta, filet mignon turducken shankle short ribs. T-bone leberkas porchetta, pastrami picanha beef ribs sausage tri-tip ground round jowl meatloaf buffalo ball tip brisket. Pig picanha rump hamburger ham hock doner, prosciutto landjaeger pork meatball pork chop. Venison cow jowl jerky, pork ham hock beef ribs boudin buffalo doner shoulder turkey. Pork belly beef landjaeger kevin buffalo biltong tri-tip. Rump shankle ribeye, ham porchetta cow strip steak tri-tip fatback.</p>
+<div class="book-mark-box">
+   <div class="grid sm:grid-cols-2 grid-cols-1 border p-6 gap-6">
+      <div class="book-mark-images">
+         <img class="w-full h-full object-cover" src="{{ page.bookmark_image | relative_url }}" alt="{{page.title}}">
+      </div>
+      <div class="book-mark-content">
+         <p>This is some sort of callout box. It should probably support an image or other visual mechanism that we might want to display in a blog post as an aside to the main content of the post. There might also be a place in the ‘Experiments’ page where a callout box like this would be useful. For example, as a way to mention specific results achieved by a given project.</p>
+      </div>
+   </div>
+</div>
+<p>Bacon ipsum dolor amet shoulder kielbasa pancetta, filet mignon turducken shankle short ribs. T-bone leberkas porchetta, pastrami picanha beef ribs sausage tri-tip ground round jowl meatloaf buffalo ball tip brisket. Pig picanha rump hamburger ham hock doner, prosciutto landjaeger pork meatball pork chop. Venison cow jowl jerky, pork ham hock beef ribs boudin buffalo doner shoulder turkey. Pork belly beef landjaeger kevin buffalo biltong tri-tip. Rump shankle ribeye, ham porchetta cow strip steak tri-tip fatback.</p>
+<pre data-language="javascript">
+   (foobar a)
+   |=(a -(a 1))
+   ++(a 2)
+   /^([% [0 1] 2])
+   @z
+   /@p
+   ^-*(a b)
+   |=(a +(a 1))
+   [1 2 3]
+   ?-=(a b)
+</pre>
+<div class="full-width-images kg-card kg-image-card kg-width-full">
+   <img  src="{{ page.blog_post_full_image | relative_url }}" alt="{{page.title}}">
+</div>
+<p>Bacon ipsum dolor amet shoulder kielbasa pancetta, filet mignon turducken shankle short ribs. T-bone leberkas porchetta, pastrami picanha beef ribs sausage tri-tip ground round jowl meatloaf buffalo ball tip brisket. Pig picanha rump hamburger ham hock doner, prosciutto landjaeger pork meatball pork chop. Venison cow jowl jerky, pork ham hock beef ribs boudin buffalo doner shoulder turkey. Pork belly beef landjaeger kevin buffalo biltong tri-tip. Rump shankle ribeye, ham porchetta cow strip steak tri-tip fatback.</p>
+
+<blockquote>
+“The Spartan army was known for its exceptional discipline, rigorous training, and a culture of militarism that emphasized strength, endurance, and combat prowess. The brutality of the Spartan army stemmed from their intense training methods and the harsh conditions that soldiers had to endure during their military service. From an early age, Spartan boys were subjected to a grueling education system known as the agoge, which aimed to produce hardened warriors. This involved physical and mental challenges, including relentless physical exercise, combat training, and exposure to harsh living conditions. The goal was to create soldiers who were fearless, disciplined, and efficient in battle.” - ChatGPT, GPT 3.5 Model
+</blockquote>
+
+<p>Sirloin chop salami leberkas tongue t-bone. Beef ribs andouille chicken, bacon biltong pork loin flank venison. Pork belly porchetta cow prosciutto fatback venison jerky. Tri-tip ham hock kevin, bacon pancetta cupim leberkas salami. Tenderloin ham hock leberkas kevin beef, beef ribs chicken capicola meatloaf jowl pork loin short ribs. Beef ribs meatball pork loin rump prosciutto sausage. Pancetta beef cow filet mignon, sausage doner landjaeger pork loin flank turkey drumstick cow picanha ground round fatback.</p>
+<div class="blog-post-images">
+   <img class="w-full" src="{{ page.blog_post_middle_image | relative_url }}" alt="{{page.title}}">
+</div>
+<p>Bacon ipsum dolor amet shoulder kielbasa pancetta, filet mignon turducken shankle short ribs. T-bone leberkas porchetta, pastrami picanha beef ribs sausage tri-tip ground round jowl meatloaf buffalo ball tip brisket. Pig picanha rump hamburger ham hock doner, prosciutto landjaeger pork meatball pork chop. Venison cow jowl jerky, pork ham hock beef ribs boudin buffalo doner shoulder turkey. Pork belly beef landjaeger kevin buffalo biltong tri-tip. Rump shankle ribeye, ham porchetta cow strip steak tri-tip fatback.
+   Sirloin chop salami leberkas tongue t-bone. Beef ribs andouille chicken, bacon biltong pork loin flank venison. Pork belly porchetta cow prosciutto fatback venison jerky. Tri-tip ham hock kevin, bacon pancetta cupim leberkas salami. Tenderloin ham hock leberkas kevin beef, beef ribs chicken capicola meatloaf jowl pork loin short ribs. Beef ribs meatball pork loin rump prosciutto sausage. Pancetta beef cow filet mignon, sausage doner landjaeger pork loin flank turkey drumstick cow picanha ground round fatback.
+</p>
+<ul>
+   <li>Lorem ipsum dolor sit amet
+   </li>
+   <li>Lorem ipsum dolor sit amet</li>
+   <li>Consectetur adipiscing elit</li>
+   <li>Sed do eiusmod tempor incididunt</li>
+   <li>Ut labore et dolore magna aliqua</li>
+   <li>
+      Ut enim ad minim veniam
+   </li>
+   <li>Quis nostrud exercitation ullamco</li>
+   <li>
+      Laboris nisi ut aliquip ex ea commodo consequat
+   </li>
+   <li>Duis aute irure dolor in reprehenderit</li>
+   <li>
+      Voluptate velit esse cillum dolore
+   </li>
+   <li>Eu fugiat nulla pariatur</li>
+   <li>Excepteur sint occaecat cupidatat non proident</li>
+   <li>
+      Sunt in culpa qui officia deserunt mollit anim id est laborum
+   </li>
+</ul>
+<p>Bacon ipsum dolor amet shoulder kielbasa pancetta, filet mignon turducken shankle short ribs. T-bone leberkas porchetta, pastrami picanha beef ribs sausage tri-tip ground round jowl meatloaf buffalo ball tip brisket. Pig picanha rump hamburger ham hock doner, prosciutto landjaeger pork meatball pork chop. Venison cow jowl jerky, pork ham hock beef ribs boudin buffalo doner shoulder turkey. Pork belly beef landjaeger kevin buffalo biltong tri-tip. Rump shankle ribeye, ham porchetta cow strip steak tri-tip fatback.</p>
+<ol>
+   <li>   Lorem ipsum dolor sit amet</li>
+   <li>Consectetur adipiscing elit</li>
+   <li>Sed do eiusmod tempor incididunt</li>
+   <li>Ut labore et dolore magna aliqua</li>
+   <li>Ut enim ad minim veniam</li>
+   <li>Quis nostrud exercitation ullamco</li>
+   <li>Laboris nisi ut aliquip ex ea commodo consequat</li>
+   <li>Duis aute irure dolor in reprehenderit</li>
+   <li>Voluptate velit esse cillum dolore</li>
+   <li>Eu fugiat nulla pariatur</li>
+   <li>Excepteur sint occaecat cupidatat non proident</li>
+   <li>Sunt in culpa qui officia deserunt mollit anim id est laborum</li>
+</ol>
+<p>Sirloin chop salami leberkas tongue t-bone. Beef ribs andouille chicken, bacon biltong pork loin flank venison. Pork belly porchetta cow prosciutto fatback venison jerky. Tri-tip ham hock kevin, bacon pancetta cupim leberkas salami. Tenderloin ham hock leberkas kevin beef, beef ribs chicken capicola meatloaf jowl pork loin short ribs. Beef ribs meatball pork loin rump prosciutto sausage. Pancetta beef cow filet mignon, sausage doner landjaeger pork loin flank turkey drumstick cow picanha ground round fatback.</p>

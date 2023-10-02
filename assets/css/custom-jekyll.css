@@ -45,3 +45,80 @@ header.header-area {
     font-size: 16px!important;
     
 }
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .right-box {
+        margin: unset;
+    }
+
+  }
+
+
+  @media (max-width:1096px){
+.md\:grid-cols-2 {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    display: flex;
+    flex-direction: column;
+}
+  }
+
+
+  @media (max-width:640px){
+    .border-left {
+        border-left: 1px solid unset!important;
+    }
+      }
+
+      @media (min-width:640px){
+        .border-right{
+            border-right: unset;
+        }
+          }
+    
+
+  .blog-grid-button{
+    margin-top: 24px;
+  }
+
+  .missive-title{
+    margin-bottom:40px;
+  }
+
+
+  .border-left {
+    border-left: 1px solid white;
+}
+
+
+.autor-name p {
+    font-size: 13px;
+}
+.published-date p {
+    font-size: 13px;
+}
+
+
+.header-one {
+    position: fixed;
+}
+.border-sep {
+    border-top:1px solid #fff;
+    position: relative;
+}
+.border-sep:before {
+ 
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 100%;
+    border-top: 1px dashed #ffffff87;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #ffffff87;
+}
+.main-body.bg-cover {
+    background-attachment: fixed;
+} 

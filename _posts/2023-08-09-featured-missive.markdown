@@ -2,10 +2,11 @@
 layout: post
 post_id: 1
 featured: true
-title:  " featured missive"
+title:  " featured missive 1"
 exptcerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vulputate feugiat diam, vel tristique purus ultricies vitae. Praesent pretium, felis ac volutpat tincidunt, enim ante fringilla ligula, sed consequat nunc diam eget velit. Mauris ac eleifend orci hocus pocus..."
 date:   2023-08-09 08:55:53 +0600
 author_name: "~sarlev-sarsen"
+author_bio: "Sirloin chop salami leberkas tongue t-bone. Beef ribs andouille chicken, bacon biltong pork loin flank venison. Pork belly porchetta cow prosciutto fatback venison jerky. Tri-tip ham hock kevin"
 categories: jekyll update
 tag:  Ui design 
 author_images: "/assets/images/author-man.png"

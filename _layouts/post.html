@@ -57,7 +57,7 @@ layout: default
          </div>
       </div>
       <div class="line-divider py-12">
-         <img class="w-full" src="/assets/images/line-divider.png" alt="images">
+         <div class="border-sep"></div>
       </div>
       <div class="container">
          <div class="author-profile-box mt-10">
@@ -67,8 +67,8 @@ layout: default
                </div>
                <div class="author-info max-w-[676px]">
                   <div class="author-man">
-                     <h2 class="text-[28px] font-medium text-white">~sarlev-sarsen</h2>
-                     <p class="text-white mt-3">Bacon ipsum dolor amet shoulder kielbasa pancetta, filet mignon turducken shankle short ribs. T-bone leberkas porchetta, pastrami picanha beef ribs sausage tri-tip ground round jowl meatloaf buffalo ball tip brisket.</p>
+                     <h2 class="text-[28px] font-medium text-white">{{page.author_name}}</h2>
+                     <p class="text-white mt-3">{{page.author_bio}}</p>
                   </div>
                </div>
             </div>
@@ -76,7 +76,7 @@ layout: default
       </div>
    </div>
    <div class="line-divider py-12">
-      <img class="w-full" src="/assets/images/line-divider.png" alt="images">
+      <div class="border-sep"></div>
    </div>
    {% for footer in site.data.footer.footer %}
    {% include footer.html %}

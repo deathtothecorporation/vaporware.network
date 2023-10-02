@@ -1,13 +1,13 @@
 ---
 layout: default
 ---
-{% assign author_posts = site.posts | where: 'author_id', page.author_id %}
-<main  class=" bg-cover" style="background-image: url(/assets/images/author-bg.webp);">
+{% assign author_posts = site.experiment | where: 'experiment_id', page.experiment_id %}
+<main  class=" bg-cover bg-fixed" style="background-image: url(/assets/images/author-bg.webp);">
    <!--  ====================== Header Area Start =============================  -->
    {% include header.html match="two" %}
    <!--  ====================== Header Area End =============================  -->
    <div class=" gh-canvas  typofix">
-      <div class="autor-box border p-6 mt-3">
+      <div class="autor-box border p-6 my-6">
          <div class="grid md:grid-cols-2 grid-cols-1 gap-6 items-center">
             <div class="left-box">
                <img class="w-full object-cover" src="{{page.image | relative_url}}" alt="{{page.title}}">
@@ -71,13 +71,17 @@ layout: default
    </div>
    <div class="entry-content-area">
       <div class="gh-content gh-canvas  typofix">
-         {% for post in site.posts %}
-         {% if post.author_id == page.author_id %}
-         <p>{{ post.content }}</p>
+         {% for post in site.experiments %}
+         {% if post.experiment_id == page.experiment_id %}
+         {{ post.content }} 
          {% endif %}
          {% endfor %}
       </div>
    </div>
+   <div class="line-divider pt-8 pb-8">
+      <div class="border-sep"></div>
+   </div>
+
    <footer class="main-box mt-10">
       {% for footer in site.data.footer.footer %}
       {% include footer.html %}

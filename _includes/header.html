@@ -1,9 +1,9 @@
 {% if include.match == "one" %}
-   <header class="header-area border lg:py-0 py-3 absolute left-0 right-0 top-0 z-[9]">
+   <header class="header-area border lg:py-0 py-3 absolute left-0 right-0 top-0 z-[9] header-one">
       <div class="main-container">
          <div class="p-3 relative z-999">
             <div class="header-logo float-left mt-[-12px] lg:mt-0">
-               <a class="py-8" href="{{ site.url }}">
+               <a class="py-8" href="{{site.url}}">
                   <img src="{{ '/assets/images/header-logo.png' | relative_url }}" alt="{{ site.url }}">
                </a>
             </div>
@@ -25,11 +25,11 @@
 
 
 {% if include.match == "two" %}
-<header class="header-area border  lg:py-0 py-3  z-[9]">
+<header class="header-area border  lg:py-0 py-3  z-[9] header-2">
 <div class="main-container">
    <div class=" p-3 relative z-999">
       <div class="header-logo float-left mt-[-12px] lg:mt-0">
-         <a class="py-8" href="{{ site.url }}">
+         <a class="py-8" href="{{site.url}}">
             <img src="{{ '/assets/images/header-logo.png' | relative_url }}" alt="{{ site.url }}">
          </a>
       </div>

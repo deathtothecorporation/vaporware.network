@@ -1,15 +1,15 @@
 ---
 layout: default
 ---
-<div class="main-body bg-cover bg-top" style="background-image: url(/assets/images/missives-bg.png);">
+<div class="main-body bg-cover bg-top bg-fixed" style="background-image: url({{page.cover_image}});">
    <!--  ====================== Header Area Start =============================  -->
    {% include header.html match="one" %}
    <!--  ====================== Header Area End =============================  -->
    <!--  ====================== Hero Area Start =============================  -->
    <div class="main-container">
-      <div class="hero-area  missives-hero-area  flex items-end ">
+      <div class="hero-area  missives-hero-area bg-fixed flex items-end ">
          <div class=" main-hero">
-            {% for post in site.posts %}
+            {% for post in site.posts %} 
             {% if post.featured %}
             <div class="blog-post-item max-w-[480px]">
                <div class="blog-title">
@@ -52,11 +52,18 @@ layout: default
    </div>
    <!--  ====================== Hero Area End =============================  -->
    <div class="line-divider pt-8">
-      <img class="w-full" src="assets/images/line-divider.png" alt="images">
+      <div class="border-sep"></div>
    </div>
    <div class="blog-main-items-box mt-6  ">
       <div class="main-container">
-         <div class="sm:grid sm:grid-cols-2 sm:gap-12 gap-4 flex flex-col" id="post-container">
+
+
+         <div class="blog-title missive-title">
+            <h2 class="text-[28px] text-white underline">
+               missive depository
+            </h2>
+         </div>
+         <div class="sm:grid md:grid-cols-2 sm:gap-12 gap-4 flex flex-col" id="post-container">
             <!-- All posts will be loaded here initially -->
             {% for post in site.posts %}
             <div class="post">
@@ -79,7 +86,7 @@ layout: default
       </div>
    </div>
    <div class="line-divider py-12">
-      <img class="w-full" src="assets/images/line-divider.png" alt="images">
+      <div class="border-sep"></div>
    </div>
    {% for footer in site.data.footer.footer %}
    {% include footer.html %}

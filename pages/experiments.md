@@ -1,6 +1,8 @@
 ---
 layout: experiments
 permalink: experiments
+title: Experiments
+cover_image: "/assets/images/experiments-bg.webp"
 
 
 

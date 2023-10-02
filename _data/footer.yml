@@ -1,15 +1,15 @@
 
 footer:
 - {
- title_text: "programmable identity-linked licensing for monetization of  open-source software on distributed networks  is vaporware.", 
+ title_text: "programmable identity-linked licensing for monetization of open-source software on distributed networks is vaporware.", 
  copyright-text:  "death to the, corporation - 2023 - all rights reversed", 
  btn_label: "want activity updates? share a valid email or @p",
- btn_url: "mailto:sunnait@gmail.com",
- handlebars_url: https://handlebarsjs.com/,
- twitter_url: https://twitter.com/themeix,
- github_url: http://github.com/,
+ btn_url: "#",
+ handlebars_url: "#",
+ twitter_url: "#",
+ github_url: "#",
  label: "Themeix",
- link : http://themeix.com/,
+ link : "#",
 
 }
 

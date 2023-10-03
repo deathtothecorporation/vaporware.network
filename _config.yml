@@ -62,9 +62,9 @@ collections:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-baseurl: ""
-facebook_url: https://facebook.com/themeix
-linkedin_url: https://linkedin.com/themeix
-twitter_url: https://twitter.com/themeix
-pinterest_url: https://www.pinterest.com/themeix/
+      # baseurl: ""
+      # facebook_url: https://facebook.com/themeix
+      # linkedin_url: https://linkedin.com/themeix
+      # twitter_url: https://twitter.com/themeix
+      # pinterest_url: https://www.pinterest.com/themeix/
 

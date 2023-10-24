@@ -1,15 +1,15 @@
-/*
+/* 
 =====================
 CSS Table of Conttent 
 =====================
-01. All Variable
+01. All Variable 
 
-/*
+/* 
 ------------------------
 01. All Variable
 --------------------------
-*/
-
+*/   
+  
 :root {
     --heading_font:'Readex Pro', sans-serif;
     --dark-700:"#242F41";
@@ -32,11 +32,11 @@ line-height: 1.2;
 color: var(--dark-700);
 }
 
-/*
+/* 
 ------------------------  
- 02.  Menu Css
---------------------------
-*/
+ 02.  Menu Css 
+---------------  -----------
+*/ 
 .mobile-toggle {
     width: 40px;
     height: 40px;

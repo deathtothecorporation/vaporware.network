@@ -3,12 +3,12 @@
  <div class="main-container">
 
            
-    <div class="flex flex-wrap items-end gap-10 lg:gap-0">
-        <div class="left-box md:max-w-[400px]">
-           <h2 class="text-white md:text-[28px] sm:text-[20] text-[18px]">{{footer.title_text}} </h2>
-        </div>
-        <div class="right-box footer-btn max-w-[465px] ml-auto">
-           <a class="border py-[10px] px-[15px] text-white hover:bg-dark-100 hover:border-dark-100 duration-500 text-[14px] gap-[50px]  rounded-full flex items-center  justify-between" href=" {{footer.btn_url}}">
+    <div class="flex flex-wrap items-end gap-10  lg:gap-0">
+        <div class="left-box max-w-[400px]">
+           <h2 class="text-white md:text-[28px] text-[24px]">{{footer.title_text}}  </h2>
+        </div>     
+        <div class="right-box footer-btn  max-w-full  lg:max-w-[465px] ml-auto"> 
+           <a class="border py-[10px] px-[15px] text-white truncate hover:bg-dark-100 hover:border-white duration-500 text-[14px] gap-[50px]  rounded-full flex items-center  justify-between" href=" {{footer.btn_url}}">
               {{footer.btn_label}}
               <span>
                  <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,15 +31,7 @@
         <div class="right-box">
            <div class="social-link">
               <ul class="flex items-center gap-[14px] md:justify-end">
-                 <li>
-                    <a href="{{footer.handlebars_url}}">
-                       <span>
-                          <svg width="20" height="8" viewBox="0 0 20 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                             <path d="M0.00215433 6.79216C-0.0265727 5.15811 0.231997 3.84398 0.777851 2.84977C1.3237 1.85554 2.03237 1.13203 2.90382 0.679214C3.78488 0.226402 4.71377 0 5.6906 0C6.66739 0 7.55799 0.221482 8.36243 0.66445C9.17644 1.09757 10.1054 1.78171 11.1492 2.71685C11.8578 3.34685 12.4229 3.78982 12.8442 4.04578C13.2752 4.3017 13.7444 4.42966 14.252 4.42966C15.0756 4.42966 15.7267 4.1245 16.2056 3.51421C16.6844 2.89405 16.9142 1.99828 16.8951 0.826871H19.9978C20.0266 2.46093 19.768 3.77506 19.2222 4.76927C18.6859 5.76351 17.9772 6.487 17.0962 6.93981C16.2152 7.39264 15.2862 7.61905 14.3094 7.61905C13.3326 7.61905 12.442 7.40249 11.6376 6.96936C10.8331 6.5264 9.90425 5.83731 8.85084 4.90218C8.15175 4.27218 7.58674 3.82922 7.15581 3.57326C6.72483 3.31733 6.2556 3.18937 5.74804 3.18937C4.97236 3.18937 4.33074 3.4699 3.82318 4.03102C3.32519 4.58226 3.08579 5.50263 3.10493 6.79216H0.00215433Z" fill="white"/>
-                          </svg>
-                       </span>
-                    </a>
-                 </li>
+                  <li><a class="text-white" href=" {{footer.text-link}} "> {{footer.text-link-label}} </a></li>
                  <li>
                     <a href="{{footer.twitter_url}}">
                        <span>

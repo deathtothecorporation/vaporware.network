@@ -30,7 +30,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
  
-paginate: 6
+ 
 
 
 
@@ -41,6 +41,10 @@ collections:
   experiments:
     output: true
     permalink: /experiments/:path/
+    
+  authors:
+    output: true
+    permalink: /author/:path/  
 
 # Exclude from processing.
 # The following items will not be processed, by default.

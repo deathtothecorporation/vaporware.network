@@ -1,6 +1,11 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['./*.html', './**/*.html'],
+  content: [
+    './_includes/**/*.html',
+    './_layouts/**/*.html',
+    './_posts/*.md',
+    './*.md',
+    './*.html',
+  ],
   darkMode: "class",
   corePlugins: {
     container: true

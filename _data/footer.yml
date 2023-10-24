@@ -5,10 +5,11 @@ footer:
  copyright-text:  "death to the, corporation - 2023 - all rights reversed", 
  btn_label: "want activity updates? share a valid email or @p",
  btn_url: "#",
- handlebars_url: "#",
+
+ text-link-label: "Developer Docs",
+ text-link: "#",
  twitter_url: "#",
  github_url: "#",
- label: "Themeix",
  link : "#",
 
 }

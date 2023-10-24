@@ -18,7 +18,16 @@ layout: default
             <h2 class="text-white text-[28px] font-bold"> {{page.title}} </h2>
             <div class="post-author-info flex gap-12 text-white mt-2">
                <div class="author-name">
-                  <p>{{page.author_name}}</p>
+                
+                  {% assign author = site.authors | where: 'author_id', page.author | first %}
+                
+                  {% if author %}               
+                        <p>{{author.name}}</p>               
+         
+                    {% endif %}  
+
+
+                 
                </div>
                <div class="author-date">
                   <p>{{page.date  | date: "%-d %B %Y"}} </p>
@@ -41,7 +50,7 @@ layout: default
                <div class="border-r">
                </div>
                <div class="next-post">
-                  <a class="text-white hover:underline" href="/">
+                  <a class="text-white hover:underline" href="/missives/">
                   return to index
                   </a>
                </div>
@@ -56,24 +65,32 @@ layout: default
             </div>
          </div>
       </div>
-      <div class="line-divider py-12">
-         <div class="border-sep"></div>
-      </div>
-      <div class="container">
-         <div class="author-profile-box mt-10">
-            <div class="main-box sm:flex flex-wrap gap-6">
-               <div class="author-man min-w-[100px]">
-                  <img class="sm:w-[100px] w-full mb-3 sm:mb-0"src="{{page.author_images}}" alt="{{page.author_name}}">
-               </div>
-               <div class="author-info max-w-[676px]">
-                  <div class="author-man">
-                     <h2 class="text-[28px] font-medium text-white">{{page.author_name}}</h2>
-                     <p class="text-white mt-3">{{page.author_bio}}</p>
+
+
+      {% assign author = site.authors | where: 'author_id', page.author | first %}                
+      {% if author %}               
+                       
+            <div class="line-divider py-12">
+               <div class="border-sep"></div>
+            </div>
+            <div class="container">
+               <div class="author-profile-box ">
+                  <div class="main-box sm:flex flex-wrap gap-6">
+                     <div class="author-man min-w-[100px]">
+                        <img class="sm:w-[100px] w-full mb-3 sm:mb-0"src="{{author.image}}" alt="{{author.name}}">
+                     </div>
+                     <div class="author-info max-w-[676px]">
+                        <div class="author-man">
+                           <h2 class="text-[28px] font-medium text-white">{{author.name}}</h2>
+                           <p class="text-white mt-3">{{author.bio}}</p>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
-      </div>
+     {% endif %}  
+
+     
    </div>
    <div class="line-divider py-12">
       <div class="border-sep"></div>

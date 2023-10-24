@@ -9,6 +9,7 @@
 header.header-area {
     border-left: 0;
     border-right: 0;
+    background: #000;
 }
 
 .social-bottom {
@@ -48,13 +49,7 @@ header.header-area {
 
 
 
-
-@media only screen and (max-width: 768px) {
-    .right-box {
-        margin: unset;
-    }
-
-  }
+ 
 
 
   @media (max-width:1096px){

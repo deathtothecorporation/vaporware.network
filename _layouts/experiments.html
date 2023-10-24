@@ -34,20 +34,20 @@ layout: default
    <!--  ====================== Hero Area End =============================  -->
    <div class="main-card-box pt-5">
       <div class="main-container">
-         <div class="grid md:grid-cols-2 grid-cols-1 gap-6">
+         <div class="grid sm:grid-cols-2 grid-cols-1 gap-6">
             {% for experiment in site.experiments %}
             <div class="blog-card-item border">
                <div class="blog-card-images">
-                  <img class="w-full max-h-[548px]" src="{{experiment.image | relative_url}}" alt="{{experiment.name}}">
+                  <img class="w-full sm:max-h-[548px] h-auto" src="{{experiment.image | relative_url}}" alt="{{experiment.name}}">
                </div>
                <div class="content-box bg-dark-200 p-6 border-t">
                   <div class="title-box">
                      <h2><a class="text-[20px] font-bold text-white hover:underline" href="{{experiment.url}}"> {{experiment.name}} </a></h2>
                   </div>
                   <p class="text-white text-sm mt-2">{{experiment.bio}}</p>
-                  <div class="right-box  text-right mt-4">
+                  <div class="right-box  text-right block pt-4">
                      <div class="inline-block">
-                        <a class="border  py-[10px]  px-[15px] text-white hover:bg-dark-100 hover:border-dark-100 duration-500 text-[14px] gap-[50px]  rounded-full flex items-center  justify-between" href="{{experiment.url}}">
+                        <a class="border  py-[10px]  px-[15px] text-white hover:bg-dark-100 hover:border-white duration-500 text-[14px] gap-[50px]  rounded-full flex items-center  justify-between" href="{{experiment.url}}">
                            {{experiment.label}}
                            <span>
                               <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">

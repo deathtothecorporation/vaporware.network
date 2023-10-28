@@ -1,4 +1,4 @@
-<nav class="backdrop-blur" style='backdrop-filter: blur(10px); background-color: rgba(0,0,0, 0.15);'>
+<nav class="backdrop-blur flex items-center" style='backdrop-filter: blur(10px); background-color: rgba(0,0,0, 0.15);'>
   <div class="text-center grow">
     <a href="https://vaporware.network">
       <img src="../assets/vapor-v.svg" />
@@ -17,8 +17,17 @@
     -->
   </div>
 
-  <div class="text-center grow">
-    <img style="visibility: hidden;" src="../assets/vapor-v.svg" />
+  <div class="text-center grow items-center">
+    <a href="2023/10/28/explainer" class='cta' :class="!disabled ? '' : 'disabled'">
+      <div>
+        <span class="text">
+          read the explainer
+        </span>
+      </div>
+        <div>
+        <span class="cta-arrow">→</span>
+      </div>
+    </a>
   </div>
 </nav>
 

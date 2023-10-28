@@ -22,8 +22,9 @@ const postElement = document.querySelector('#post')
 
 if (postElement) {
   const title = postElement.dataset.title
+  const content = postElement.dataset.content
   const post = createApp(Post, {
-    title
+    title, content
   });
   post.mount('#post')
 }

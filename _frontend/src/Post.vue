@@ -4,6 +4,7 @@ import { ref } from 'vue'
 const test = ref('hello world')
 const props = defineProps<{
   title: string;
+  content: string;
 }>()
 
 
@@ -16,6 +17,7 @@ const props = defineProps<{
     <pre>
       hi: {{ test }}
       title: {{ title }}
+      content: {{ content }}
     </pre>
 
   </main>

@@ -15,6 +15,10 @@ p {
   @apply mb-8;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  @apply mb-8;
+}
+
 ul {
   @apply list-disc;
   @apply mb-8;

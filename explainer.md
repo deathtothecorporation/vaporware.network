@@ -121,7 +121,7 @@ Some of the affordances of a solid state interpreter with cryptographically-link
 
 The big takeaway here for application creators it that they get to _give up control of user data_. This is, in some sense, anathema to current application monetization practices, but for new entrants into the software industry it offers a crack in the armor to the technology landscape. Without vaporware, successfully launching a software application is an arms race of collecting every possible piece of data about a user and trying to do a better job at it than Google or Facebook. By extracting the liability of collecting and handling user data (see: GDPR, CCPA, etc), vaporware creates an arbitrage opportunity to developers who can now create a whole new class of applications that are impossible in the world of centralized SaaS computing due to regulatory compliance requirements.
 
-Vaporware Protocol for sharing data and code based on chain state.
+## Vaporware Protocol for sharing data and code based on chain state.
 
 Of course, Web3 native sign-in and smooth Urbit onboarding flows are table stakes to deliver a robust customer experience, but if we believe NFTs are the tamper-proof ledger of data and code _permissions_, there needs to be an off-chain mechanism for programmatic actions taken on those permissions. Vaporware aims to further improve the lives of software operators by creating a set of Urbit applications that watch chain state and support the distribution of data and code based on that state. 
 

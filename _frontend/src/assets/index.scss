@@ -97,9 +97,10 @@ main {
   @apply rounded-full;
   @apply border;
   @apply border-white;
-  @apply py-1.5;
   @apply pl-3;
   @apply pr-3;
+  @apply flex;
+  @apply items-center;
   display: inline-flex; /* Using flexbox to align content */
   align-items: center; /* Centers content vertically */
 }
@@ -172,6 +173,12 @@ input:-moz-autofill:focus {
 .cta input:focus {
   @apply ring-0;
   @apply ring-offset-0;
+  @apply outline-none;
+}
+.cta input:focus-visible {
+  @apply ring-0;
+  @apply ring-offset-0;
+  @apply outline-none;
 }
 
 .cta:hover span.text {
@@ -196,9 +203,9 @@ input:-moz-autofill:focus {
 }
 
 .cta-arrow {
-  @apply text-xl;
-  line-height: 0;
-  @apply py-0;
+  @apply no-underline;
+  @apply text-lg;
+  line-height: -1px;
   @apply mb-0.5;
   @apply ml-1;
 }
@@ -280,4 +287,7 @@ blockquote {
 
 a {
   @apply underline;
+}
+a.cta {
+  @apply no-underline;
 }

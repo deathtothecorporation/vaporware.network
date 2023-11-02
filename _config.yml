@@ -22,6 +22,8 @@ collections:
   authors:
     output: true
 
+permalink: pretty
+
 defaults:
   - scope:
       path: ""

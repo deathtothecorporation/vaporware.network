@@ -265,3 +265,19 @@ li ul {
   @apply ml-4;
   @apply pl-2;
 }
+
+blockquote {
+  @apply pl-4;
+  @apply py-6;
+  @apply my-8;
+  @apply border-l-4;
+  @apply border-black-40;
+  @apply bg-black-80;
+  p {
+    @apply mb-0;
+  }
+}
+
+a {
+  @apply underline;
+}

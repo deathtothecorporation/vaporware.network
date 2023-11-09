@@ -32,8 +32,8 @@
 </nav>
 
 <script>
-  let countdownLoaded = false;
-      const targetDate = new Date('October 27, 2023 12:00:00 GMT-0700');
+  let countdownLoaded = true;
+      const targetDate = new Date('November 27, 2023 12:00:00 GMT-0700');
 
       function padWithZeros(number) {
     return String(number).padStart(2, '0');
@@ -72,7 +72,7 @@
 
 <style>
 #countdown {
-  opacity: 0;
+  opacity: 1;
   display: none;
   transition: opacity 0.5s ease-in-out;
 }

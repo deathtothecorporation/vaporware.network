@@ -1,9 +1,6 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
-title: Vaporware
+layout: default
+title: "the rooftop"
 ---
 
-<div id="app">app</div>
+![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)

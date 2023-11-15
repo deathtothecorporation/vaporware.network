@@ -1,0 +1,115 @@
+---
+---
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* rest of your CSS styles */
+
+h1 {
+    @apply text-4xl font-bold text-blue-500;
+}
+
+h2 {
+    @apply text-3xl font-bold text-blue-400;
+}
+
+h3 {
+    @apply text-2xl font-bold text-blue-300;
+}
+
+h4 {
+    @apply text-xl font-bold text-blue-200;
+}
+
+h5 {
+    @apply text-lg font-bold text-blue-100;
+}
+
+h6 {
+    @apply text-base font-bold text-blue-50;
+}
+
+p {
+    @apply text-base text-gray-700;
+}
+
+a {
+    @apply text-blue-500;
+}
+
+img {
+  @apply border-2 border-black rounded-lg;
+}
+
+code {
+    @apply bg-gray-200 p-1 rounded text-sm;
+}
+/* Added support for all markdown element types */
+ul {
+    @apply list-disc list-inside;
+}
+
+ol {
+    @apply list-decimal list-inside;
+}
+
+li {
+    @apply mb-1;
+}
+
+blockquote {
+    @apply border-l-4 border-gray-300 italic my-4 pl-4 py-2;
+}
+
+pre {
+    @apply bg-gray-200 p-4 rounded;
+}
+
+pre code {
+    @apply bg-transparent p-0;
+}
+
+table {
+    @apply border-collapse w-full;
+}
+
+th,
+td {
+    @apply border border-gray-400 p-2;
+}
+
+th {
+    @apply bg-gray-200 font-bold text-left;
+}
+
+thead {
+    @apply bg-gray-300;
+}
+
+tbody tr:nth-child(even) {
+    @apply bg-gray-100;
+}
+
+body {
+    @apply flex flex-col min-h-screen;
+}
+
+.btn-nav {
+    @apply bg-blue-500 text-white py-2 px-4 rounded;
+}
+  
+.btn-nav:hover {
+    @apply bg-blue-700;
+}
+  
+.btn-action {
+    @apply bg-black border border-white text-white py-2 px-4 rounded-full;
+}
+  
+.btn-action:hover {
+    @apply border-2
+}

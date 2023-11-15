@@ -10,32 +10,21 @@
 /* rest of your CSS styles */
 
 h1 {
-    @apply text-4xl font-bold text-blue-500;
-}
+    @apply text-5xl;
+    @apply font-normal;
+  }
+  h2 {
+    @apply text-xl;
+    @apply font-normal;
+  }
 
-h2 {
-    @apply text-3xl font-bold text-blue-400;
-}
-
-h3 {
-    @apply text-2xl font-bold text-blue-300;
-}
-
-h4 {
-    @apply text-xl font-bold text-blue-200;
-}
-
-h5 {
-    @apply text-lg font-bold text-blue-100;
-}
-
-h6 {
-    @apply text-base font-bold text-blue-50;
-}
+h3, h4, h5, h6 {
+    @apply mb-8;
+  }
 
 p {
-    @apply text-base text-gray-700;
-}
+    @apply mb-8;
+  }
 
 a {
     @apply text-blue-500;
@@ -95,7 +84,14 @@ tbody tr:nth-child(even) {
 }
 
 body {
-    @apply flex flex-col min-h-screen;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  @apply font-sans;
+  @apply font-light;
+  @apply bg-black;
+  @apply text-white;
+  @apply text-base;
 }
 
 .btn-nav {
@@ -113,3 +109,21 @@ body {
 .btn-action:hover {
     @apply border-2
 }
+
+.cta {
+    @apply rounded-full;
+    @apply border;
+    @apply border-white;
+    @apply py-1.5;
+    @apply pl-3;
+    @apply pr-3;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .cta:hover {
+    @apply cursor-pointer;
+  }
+  .cta.disabled:hover {
+    @apply cursor-not-allowed;
+  }

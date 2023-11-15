@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  </head>
-  <body class="flex flex-col min-h-screen bg-cover bg-center" style="background-image: url('https://sfo3.digitaloceanspaces.com/sarlev-sarsen/sarlev-sarsen/2023.11.11..1.33.34..19db.22d0.e560.4189-image.png');">
-    {% include navbar.html %}
+---
+layout: default
+---
 
-    <div class="flex-grow">
-      {{ content | markdownify }}
-    </div>
-    {% include cta.html %}
-    {% include footer.html %}
-  </body>
-</html>
+<div style="max-width: 60em; margin: 5em auto; padding: 0 1em;">
+{{ content }}
+</div>
+

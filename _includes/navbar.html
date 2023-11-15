@@ -1,12 +1,32 @@
-
-<nav class="relative border-2 border-white bg-transparent">
-  <div class="w-full backdrop-blur-sm">
-      <div class="relative z-1 h-16 mx-auto px-16 max-w-7xl flex items-center justify-between text-white">
-          <a class="btn-nav btn-nav:hover" href="/">the rooftop</a>
-
-          <div class="flex items-center gap-5">
-              <button><a class="btn-action btn-action:hover" href="/post.html">Post</a></button>
-          </div>
-      </div>
+<nav class="flex items-center backdrop-blur" style='backdrop-filter: blur(10px); background-color: rgba(0,0,0, 0.15);'>
+    <div class="text-center grow">
+      <a href="/">
+        <img src="../assets/vapor-v.svg" />
+      </a>
+    </div>
+  
+    <div class="text-center shrink">
+      <div id="countdown">
+      <span id="days"></span>:<span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
   </div>
-</nav>
+      <!--
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/blog">Blog</a>
+        <a href="/staff">Staff</a>
+      -->
+    </div>
+  
+    <div class="items-center text-center grow">
+      <a href="/explainer" class='cta' :class="!disabled ? '' : 'disabled'">
+        <div>
+          <span class="text">
+            read the explainer
+          </span>
+        </div>
+        <div>
+          <span class="cta-arrow">→</span>
+        </div>
+      </a>
+    </div>
+  </nav>

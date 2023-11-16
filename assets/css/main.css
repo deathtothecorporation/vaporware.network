@@ -13,7 +13,7 @@ h1 {
     @apply text-5xl;
     @apply font-normal;
   }
-  h2 {
+h2 {
     @apply text-xl;
     @apply font-normal;
   }
@@ -27,11 +27,18 @@ p {
   }
 
 a {
-    @apply text-blue-500;
+    @apply text-white;
 }
 
-img {
-  @apply border-2 border-black rounded-lg;
+img-frame {
+    @apply block;
+    @apply mx-auto;
+    @apply mb-8;
+    @apply border-2;
+    @apply border-gray-300;
+    @apply rounded;
+    @apply overflow-hidden;
+  
 }
 
 code {

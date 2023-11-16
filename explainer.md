@@ -1,8 +1,8 @@
 ---
 layout: blog
-background_image: /assets/images/backgrounds/carless-city.png
+background_image:
 header_image: /assets/images/headers/kiwi.jpg
-title: Vaporware Explained
+title: vaporware explained
 author: ~sarlev-sarsen
 date: October 27, 2023
 hide_nav: true

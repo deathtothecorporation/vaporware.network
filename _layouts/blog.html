@@ -1,8 +1,14 @@
 ---
 layout: default
 ---
-
-<div style="max-width: 60em; margin: 5em auto; padding: 0 1em;">
-{{ content }}
+<div>
+    <img class="" src="{{ page.header_image }}" alt="Header image">
 </div>
-
+<div class=""> {{page.title}} </div>
+<div class="flex">
+    <div class=""> {{page.author}} </div>
+    <div class=""> {{page.date}} </div>
+</div>
+<div class="mx-20">
+    {{ content | markdownify }}
+</div>

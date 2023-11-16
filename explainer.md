@@ -1,8 +1,12 @@
 ---
 layout: blog
+background_image: /assets/images/backgrounds/carless-city.png
+header_image: /assets/images/headers/kiwi.jpg
+title: Vaporware Explained
+author: ~sarlev-sarsen
+date: October 27, 2023
+hide_nav: true
 ---
-
-# Vaporware Explained
 
 Plainly stated, `vaporware` is a new kind of peer-to-peer web application. It is
 a construction of the elements necessary for a better user -- or shall we say,

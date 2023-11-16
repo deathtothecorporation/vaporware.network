@@ -109,21 +109,3 @@ body {
 .btn-action:hover {
     @apply border-2
 }
-
-.cta {
-    @apply rounded-full;
-    @apply border;
-    @apply border-white;
-    @apply py-1.5;
-    @apply pl-3;
-    @apply pr-3;
-    display: inline-flex;
-    align-items: center;
-  }
-  
-  .cta:hover {
-    @apply cursor-pointer;
-  }
-  .cta.disabled:hover {
-    @apply cursor-not-allowed;
-  }

@@ -1,6 +1,6 @@
-url: 'rooftopdao.io'
+url: 'vaporware.network'
 baseurl: ''
-title: 'Jekyllwind'
+title: 'VAPORWARE'
 
 plugins:
   - jekyll-postcss
@@ -13,3 +13,10 @@ exclude:
   - postcss.config.js
   - tailwind.config.js
   - yarn.lock
+
+defaults:
+  - scope:
+      type: "pages"
+      path: "_layouts/blog"
+    values:
+      hide_nav: true

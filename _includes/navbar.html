@@ -6,9 +6,6 @@
     </div>
   
     <div class="text-center shrink">
-      <div id="countdown">
-      <span id="days"></span>:<span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span>
-  </div>
       <!--
         <a href="/">Home</a>
         <a href="/about">About</a>
@@ -16,9 +13,10 @@
         <a href="/staff">Staff</a>
       -->
     </div>
-  
+
     <div class="items-center text-center grow">
-      <a href="/explainer" class='cta' :class="!disabled ? '' : 'disabled'">
+        {% unless page.hide_nav %}
+        <a href="/explainer" class='cta' :class="!disabled ? '' : 'disabled'">
         <div>
           <span class="text">
             read the explainer
@@ -28,5 +26,6 @@
           <span class="cta-arrow">→</span>
         </div>
       </a>
+    {% endunless %}
     </div>
   </nav>

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "the rooftop"
+title: "vaporware"
+background_image: /assets/images/backgrounds/home-background.png
 ---
 
-![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)

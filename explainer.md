@@ -29,7 +29,7 @@ The Vaporware ecosystem is comprised of the following components:
 Read on to learn more about how these systems work to deliver unique affordances
 to developers and novel experiences to the world.
 
-## NFTs as distribution channel and software 'licensing' scheme
+# NFTs as distribution channel and software 'licensing' scheme
 
 Million dollar pictures of rocks or monkeys notwithstanding, Non-Fungible Tokens
 (NFTs) represent a particularly interesting technological affordance: 
@@ -75,7 +75,7 @@ these tokens for content access, we envision future applications making use of
 NFTs for dependency management, open-source library monetization, and even
 access to computational resources.
 
-## End-running centralized app stores
+# End-running centralized app stores
 
 As crypto gives software developers a more direct path to customers, the current
 Megacorps are trying to protect their domain. Google and Apple’s app store
@@ -121,7 +121,7 @@ EIP-6551), having an ecosystem of NFTs that represent your software and
 individual features affords both developers and software operators capabilities
 not previously possible in crypto or the broader software world.
 
-## Token Gated Accounts grow the design space
+# Token Gated Accounts grow the design space
 
 Stand-alone NFTs have support from marketplaces and decent adoption among crypto
 operators, but once you try using them for anything more than monkey pictures it
@@ -172,7 +172,7 @@ bonding entirely, and execute contract actions directly with their top-level
 keys. In short, they retain the optionality to meet their appetite for security and UX tradeoffs
 ([`#friendtechbtfo`](https://cointelegraph.com/news/friendtech-sim-swap-attack-string-of-hacks)).
 
-## Hosted Urbit ships for streamlined onboarding with a "right to exit"
+# Hosted Urbit ships for streamlined onboarding with a "right to exit"
 
 Partnering with [Red Horizon](redhorizon.com), we offer web3 native onboarding
 to sovereign Urbit applications. Given the early adopters of vaporware are
@@ -208,7 +208,7 @@ Experienced Urbiters will look at this and ask, "but, how do they get their
 
 Our answer? They don't.
 
-## Crypto wallets as the authentication mechanism to sovereign digital identities and cloud computers
+# Crypto wallets as the authentication mechanism to sovereign digital identities and cloud computers
 
 Web3 users are accustomed to signing in to "dApps" using a crypto wallet and
 signed messages (Not going to litigate the case here for how these aren't
@@ -238,7 +238,7 @@ their sovereign cloud computer without needing to sign in again.
 > For existing Urbiters, this functionality is available from %mask; `|install
   ~ligbel %mask`
 
-## Urbit: A Solid State Interpreter for magic and arbitrage.
+# Urbit: A Solid State Interpreter for magic and arbitrage.
 
 What makes this sovereignty in cloud computing possible? Vaporware is built on
 top of [Urbit, the first-of-it's-kind Solid State
@@ -275,7 +275,7 @@ developers who can now create a whole new class of applications that are
 impossible in the world of centralized SaaS computing due to regulatory
 compliance requirements.
 
-## Vaporware Protocol for sharing data and code based on chain state
+# Vaporware Protocol for sharing data and code based on chain state
 
 Of course, Web3 native sign-in and smooth Urbit onboarding flows are table
 stakes to deliver a robust customer experience, but if we believe NFTs are the
@@ -310,7 +310,7 @@ option to check veracity of their blockchain state data source, nor to switch
 providers if they become unreliable. With vaporware, it becomes as simple as
 flipping a switch.
 
-## Vaporware as hyperstition
+# Vaporware as hyperstition
 
 Vaporware is all of these things and none of these things. In its full form, all
 of these elements will be composable with one another. Developers may utilize

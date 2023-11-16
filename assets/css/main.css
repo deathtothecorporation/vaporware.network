@@ -10,8 +10,9 @@
 /* rest of your CSS styles */
 
 h1 {
-    @apply text-5xl;
+    @apply text-3xl;
     @apply font-normal;
+    @apply pt-4
   }
 h2 {
     @apply text-xl;
@@ -23,7 +24,7 @@ h3, h4, h5, h6 {
   }
 
 p {
-    @apply mb-8;
+    @apply mt-6;
   }
 
 a {
@@ -42,7 +43,7 @@ img-frame {
 }
 
 code {
-    @apply bg-gray-200 p-1 rounded text-sm;
+    @apply bg-gray-700 p-1 rounded text-sm;
 }
 /* Added support for all markdown element types */
 ul {
@@ -58,7 +59,7 @@ li {
 }
 
 blockquote {
-    @apply border-l-4 border-gray-300 italic my-4 pl-4 py-2;
+    @apply border-l-4 border-gray-300 italic my-6 pl-4;
 }
 
 pre {

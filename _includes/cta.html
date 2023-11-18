@@ -1,5 +1,5 @@
-<div class="p-6 max-w-5xl justify-center lg:flex lg:justify-stretch lg:relative">
-    <div class="lg:relative lg:left-0 lg:top-0 text-shadow-default py-4 text-3xl text-balance max-w-2xl leading-tight lg:text-4xl">
+<div class="p-6 max-w-5xl justify-center lg:flex lg:justify-stretch lg:relative 2xl:max-w-[1550px]">
+    <div class="text-shadow-default py-4 text-3xl text-balance leading-tight lg:relative lg:left-0 lg:top-0 lg:text-4xl 2xl:text-5xl">
         {% include content/cta.md %}
     </div>
     <!-- <div class="">
@@ -20,7 +20,7 @@
         <div class="rounded-full p-1 text-lg border-2 border-white bg-transparent max-w-sm min-w-fit lg:mx-6 lg:min-w-[300px]" id="cta-div">
             <form id="waitlistForm" class="flex justify-items-end items-center" onsubmit="submitForm(event)">
                 <input
-                class="pl-4 pr-1 bg-transparent tracking-wide w-full grow text-white placeholder-white"
+                class="focus:outline-none pl-4 pr-1 bg-transparent tracking-wide w-full grow text-white placeholder-white"
                 id="input-entry"
                 type="text"
                 autocomplete="off"
@@ -32,8 +32,8 @@
                 <span onclick="submitForm(event)" class="p-1 pr-4 justify-items-end grow-0">→</span>
             </form>
         </div>
-        <div id="thanks" class="px-6 pt-2" style="display: none;">thanks, you're on the waitlist!</div>
-        <div id="error" class="px-6 pt-2" style="display: none;">something went wrong...</div>
-        <div id="secretdm" class="px-6 pt-2 lg:mx-6" style="display: block;">dm ~sarlev-sarsen if you find this</div>
+        <div id="thanks" class="px-6 pt-2 lg:mx-6 lg:pb-2" style="display: none;">thanks, you're on the waitlist!</div>
+        <div id="error" class="px-6 pt-2 lg:mx-6 lg:pb-2" style="display: none;">enter a valid email or @p</div>
+        <div id="secretdm" class="px-6 pt-2 lg:mx-6 lg:pb-2 text-transparent" style="display: block;">dm ~sarlev-sarsen if you find this</div>
     </div>    
 </div>

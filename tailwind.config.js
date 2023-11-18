@@ -12,6 +12,9 @@ module.exports = {
   theme: {
     theme: {
       extend: {
+        backdropFilter: {
+          'blur': 'blur(10px)'
+        },
         transform: ['hover', 'focus'],
         fontFamily: {
           'sans': ['Inter', ...defaultTheme.fontFamily.sans],
@@ -53,6 +56,11 @@ module.exports = {
           'black-80': '#333333',
         },
       },
+    },
+  },
+  variants: {
+    extend: {
+      backdropFilter: ['responsive'],
     },
   },
   plugins: [

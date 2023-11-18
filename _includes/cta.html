@@ -1,8 +1,8 @@
-<div class="lg:flex lg:justify-stretch p-6">
-    <div class="py-4 text-3xl lg:text-4xl leading-tight">
+<div class="p-6 max-w-5xl justify-center lg:flex lg:justify-stretch lg:relative">
+    <div class="lg:relative lg:left-0 lg:top-0 text-shadow-default py-4 text-3xl text-balance max-w-2xl leading-tight lg:text-4xl">
         {% include content/cta.md %}
     </div>
-    <div class="">
+    <!-- <div class="">
         <form>
             <div class="rounded-full p-1 min-w-fit max-w-3/4 text-lg border-2 border-white bg-transparent">
                 <div class="flex justify-between pr-2">
@@ -15,5 +15,25 @@
                 </div>
             </div>
         </form>
-    </div>
+    </div> -->
+    <div class="lg:flex lg:flex-col-reverse lg:items-baseline lg:justify-start lg:mb-5">
+        <div class="rounded-full p-1 text-lg border-2 border-white bg-transparent max-w-sm min-w-fit lg:mx-6 lg:min-w-[300px]" id="cta-div">
+            <form id="waitlistForm" class="flex justify-items-end items-center" onsubmit="submitForm(event)">
+                <input
+                class="pl-4 pr-1 bg-transparent tracking-wide w-full grow text-white placeholder-white"
+                id="input-entry"
+                type="text"
+                autocomplete="off"
+                spellcheck="off"
+                placeholder="enter your email or urbit @p"
+                name="entry.1987957812"
+                onkeydown="resetFlags()"
+                />
+                <span onclick="submitForm(event)" class="p-1 pr-4 justify-items-end grow-0">→</span>
+            </form>
+        </div>
+        <div id="thanks" class="px-6 pt-2" style="display: none;">thanks, you're on the waitlist!</div>
+        <div id="error" class="px-6 pt-2" style="display: none;">something went wrong...</div>
+        <div id="secretdm" class="px-6 pt-2 lg:mx-6" style="display: block;">dm ~sarlev-sarsen if you find this</div>
+    </div>    
 </div>

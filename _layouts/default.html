@@ -6,13 +6,16 @@
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   </head>
-  <body class="text-white flex flex-col min-h-screen bg-cover bg-center" style="background-image: url('{{ page.background_image }}');">
-    {% include navbar.html %}
+  <body class="text-white flex flex-col min-h-screen bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .35)), url('{{ page.background_image }}');"> 
+      {% include navbar.html %}
 
     <div class="flex-grow">
       {{ content | markdownify }}
     </div>
+    <div class="justify-center flex items-center">
     {% include cta.html %}
+    <script src="/assets/js/signup.js"></script>
+    </div>
     {% include footer.html %}
   </body>
 </html>

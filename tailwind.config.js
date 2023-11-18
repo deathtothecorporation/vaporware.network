@@ -12,6 +12,9 @@ module.exports = {
   theme: {
     theme: {
       extend: {
+        textIndent: {
+          '1': '1em',
+        },
         backdropFilter: {
           'blur': 'blur(10px)'
         },
@@ -61,6 +64,7 @@ module.exports = {
   variants: {
     extend: {
       backdropFilter: ['responsive'],
+      textIndent: ['responsive'],
     },
   },
   plugins: [

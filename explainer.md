@@ -1,7 +1,7 @@
 ---
 layout: blog
 background_image:
-header_image: /assets/images/headers/kiwi.jpg
+header_image: /assets/images/headers/vaporware-explained-header.png
 title: vaporware explained
 author: ~sarlev-sarsen
 date: October 27, 2023

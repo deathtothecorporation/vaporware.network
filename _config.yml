@@ -20,3 +20,5 @@ defaults:
       path: "_layouts/blog"
     values:
       hide_nav: true
+
+permalink: pretty

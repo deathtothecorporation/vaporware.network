@@ -9,8 +9,8 @@ hide_nav: true
 ---
 
 Plainly stated, `vaporware` is a new kind of peer-to-peer web application. It is
-a construction of the elements necessary for a better user -- or shall we say,
-*operator* -- experience with crypto, and more broadly, a sovereign digital
+a construction of the elements necessary for better user experience -- or shall 
+we say, *operator* experience -- with crypto, and more broadly, a sovereign digital
 life. These applications offer similar functionality as existing websites and
 apps, but are served in a way that preserves the privacy of the operator and
 obviates the liability traps that drown developers in compliance policies and
@@ -53,10 +53,12 @@ cost? Us too.
 Vaporware always comes as an operator-ownable NFT with all of the on-chain
 affordances of that digital asset class: provenance, cryptographic ownership,
 composability, etc. The main differentiator for Vaporware NFTs from the current
-landscape is the mechanism of access to off-chain data, _running code and
-application state_, and the way that they are linked to digital identities. This
-enables a mechanism for taking the ‘programmability’ of crypto asset ownership,
-to use as a licensing layer for cloud software, linked to on-chain identity.
+landscape is the mechanism of access to off-chain resources and the way that they 
+are linked to digital identities. Specifically, Vaporware gives sovereign access
+to _running code and p2p data transfer_ which provides for decentralized local 
+consensus about application state. This enables a mechanism for taking the 
+‘programmability’ of crypto asset ownership, to use as a licensing layer for cloud 
+software, linked to on-chain identity.
 
 In our initial implementation of "NFTs as programmable identity-linked
 licenses", with MiladyOS we are taking a three part approach:
@@ -64,7 +66,7 @@ licenses", with MiladyOS we are taking a three part approach:
 * Privileged mint access to current holders of the Milady Maker PFP ERC-721 to
   receive a sovereign cloud computer, utilizing the PFP as the actual *profile
   access token* 
-* Open Edition mOS ERC-721 NFT mint for purchasing a software license to receive
+* Open Edition MiladyOS (mOS) ERC-721 NFT mint for purchasing a software license to receive
   ongoing updates to the miladyOS application
 * Token gated content access via ERC-1155 tokens that can be bought from and
   sold into a bonding curve and staking mechanics for earning yield.
@@ -98,7 +100,7 @@ The upshot: each new technical feature these giants implement exposes new cracks
 in the monopoly. One such crack is the UX affordances of the Progressive Web App
 (PWA). For Megacorps, the goal of PWAs is to combine the reach and accessibility
 of the web with the engaging and feature-rich experience of native apps. Of
-course, with new functionality comes new opportunities and Vaporware is designed
+course, with new functionality comes new opportunities and vaporware is designed
 to expand into the gaps created by these implementations.  
 
 Key characteristics of PWAs include:
@@ -125,7 +127,7 @@ not previously possible in crypto or the broader software world.
 
 Stand-alone NFTs have support from marketplaces and decent adoption among crypto
 operators, but once you try using them for anything more than monkey pictures it
-get’s tricky. You can’t sell a classical crypto address (e.g an Externally Owned
+gets tricky. You can’t sell a classical crypto address (e.g an Externally Owned
 Account or EOA) and the variety of assets or permissions that it controls. But
 by building on the [EIP6551 Token Bound Account (TBA)
 standard](https://eips.ethereum.org/EIPS/eip-6551), Vaporware’s Token Gated
@@ -152,18 +154,18 @@ top-level EOA, potentially secured via a hardware wallet, and has "admin
 privileges" to control all the other accounts in the system. This is fairly
 standard for Token Bound Accounts based on the EIP6551 Standard. 
 
-But here is where things get interesting... For Vaporware Token Gated Accounts
-we have added a specific functionality: The ability to pair your in-app wallet
-with your top-level ethereum wallet
+But here is where things get interesting… For Vaporware Token *Gated* Accounts 
+we have added a specific functionality: The ability to "bond" your in-app, mobile 
+wallet to the top level NFT - in the case of MiladyOS, the Milady Maker token.
 
-MiladyOS operators can take their PWA's embedded MPC Wallet and, by signing
-transactions, grant access permissions to a subset of actions on behalf of
-multiple TBAs in their personal MiladyOS Account ecosystem. By doing this, we do
-not need to ask holders of high-value PFP tokens to move their tokens in order
-to access novel digital experiences. Retaining a single mobile account affords
-execution of a subset of buy/sell actions and inventory changes. And if that
-mobile wallet ever gets lost or compromised, the top level EOA that holds the
-PFP can always revoke permissions and grant them to a newly-generated wallet.
+This "bonded address" can perform certain on-chain actions within the MiladyOS 
+system on behalf of your Milady - while the Milady itself never moves from where 
+the user had it originally (Metamask, ledger, whatever). This bond can be removed 
+or modified by the Milady holder at any point, and expires if the Milady moves. In 
+the end, this means that the security of the underlying asset is not impacted, and 
+yet the mobile app is released from the awkward flow of signing transactions outside 
+the app. Want to buy a new hat and equip it? You can do this right from your phone, 
+in four taps, without leaving the app.
 
 We can now bring the longstanding 'principle of least permissions' into the
 crypto software world -- instead of all access defacto running as `root`. Or, a
@@ -257,7 +259,7 @@ Some of the affordances of a solid state interpreter with
 cryptographically-linked identity:
 * Software is run by individual "operators" instead of consumer "users".
 * Communication and application distribution is directly peer-to-peer
-* Data and code are physically portable
+* Data and code are trivially portable between physical machines
 * Developers don’t need to worry about the liability of hosting front ends to
   blockchain networks
 * Operators control their own data and it all lives in one place, instead of
@@ -275,7 +277,7 @@ developers who can now create a whole new class of applications that are
 impossible in the world of centralized SaaS computing due to regulatory
 compliance requirements.
 
-# Vaporware Protocol for sharing data and code based on chain state
+# Vaporware Namespacing Protocol for sharing data and code
 
 Of course, Web3 native sign-in and smooth Urbit onboarding flows are table
 stakes to deliver a robust customer experience, but if we believe NFTs are the
@@ -288,9 +290,10 @@ data and code based on that state.
 The first iteration of this vision appears in MiladyOS where our chain watcher,
 `%make`, watches pre-specified contracts for the movement of relevant tokens and
 their relationships to other addresses -- particularly those relating to an Urbit
-ID -- and shares a subscription of that data to all MiladyOS holders. Based on the
-relationship of an Urbit ID to specific tokens in the collection, an urbit can
-modify the way it shares or receives messages from other miladyOS instances. 
+ID -- tracking them in a structured namespace and sharing a subscription of 
+this data to all MiladyOS holders. Based on the relationship of an Urbit ID to 
+specific tokens in the collection, an urbit can modify the way it shares or receives 
+messages from other miladyOS instances. 
 
 This understanding of chain state is shared between permissioned provider nodes,
 but as the product evolves, these permissioned nodes will merely be a default

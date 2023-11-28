@@ -1,22 +1,16 @@
-# Setup
+This site is built based on the boilerplate provided by @mzrnsh's jekyllwind repo: https://github.com/mzrnsh/jekyllwind
 
-- Ruby 3.2.2 (or close)
-  - Have bundler installed (`gem install bundler`)
-- Node 18.17.0
+It uses Jekyll and Tailwind CSS to generate a static site for https://vaporware.network
 
-- `bundle install`
-- `npm install` (maybe don't do this from root)
-- `cd _frontend && npm install`
+Have the following installed in your dev environment:
+- Ruby 3.1.0p0 (or higher?)
+- gem & bundler
+- yarn
 
-## What's where
-
-- `_frontend` holds vue components loaded by div id in layouts
-- `_frontend/entrypoints/application.js` is basically the Vue `main.js`
-- `root` directory tailwind configs are the real tailwind configs
-  - but use `_frontend/src/assets/index.scss` for any customization
-
-# Running the app
-
-- `bin/vite dev` then
-- `bin/jekyll-vite wait && bundle exec jekyll serve --livereload`
-- go to the jekyll port reported by the prior command
+To get running on your local machine: 
+```
+git clone https://github.com/deathtothecorporation/vaporware.network.git
+cd ./vaporware.network
+bundle exec jekyll build
+bundle exec jekyll serve --livereload
+```

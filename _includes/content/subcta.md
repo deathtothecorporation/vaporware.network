@@ -1,0 +1,2 @@
+vaporware is a peer-to-peer cloud operating system as end-user application target.
+through cryptographic ownership over vaporware NFTs, network participants can stake tokens on developers and software--enabling new liquidity mechnisms for funding technology creation.

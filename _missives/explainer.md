@@ -297,7 +297,7 @@ messages from other miladyOS instances.
 
 This understanding of chain state is shared between permissioned provider nodes,
 but as the product evolves, these permissioned nodes will merely be a default
-option. By giving every vaporware operators an always-running cloud computer it
+option. By giving every vaporware operator an always-running cloud computer it
 becomes possible to receive and verify the state of global consensus through a
 larger multitude of options:
 * Trust a developer to provide an accurate preset

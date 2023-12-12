@@ -8,15 +8,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 
+
+/* testing classes */
+
 /* rest of your CSS styles */
 
 h1 {
     @apply text-3xl;
+    @apply lg:text-4xl;
+    @apply xl:text-5xl;
+    @apply 2xl:text-6xl;
+    @apply leading-none; /*to make sure the line spacing is acceptable for the font size as controlled by viewport width */
     @apply font-normal;
-    @apply pt-4
+    @apply pt-8;
+    @apply lg:pt-12;
+    @apply xl:pt-16;
   }
 h2 {
     @apply text-xl;
+    @apply lg:text-2xl; /* 2xl breakpoint is 1536px */
+    @apply xl:text-3xl;
+    @apply 2xl:text-4xl;
     @apply font-normal;
   }
 
@@ -26,6 +38,18 @@ h3, h4, h5, h6 {
 
 p {
     @apply mt-6;
+  }
+
+  body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    @apply font-sans;
+    @apply font-light;
+    @apply bg-black;
+    @apply text-white;
+    @apply text-base;
+    @apply lg:text-2xl;
   }
 
 a {
@@ -45,6 +69,7 @@ img-frame {
 
 code {
     @apply bg-zinc-700 p-1 rounded text-sm;
+    @apply lg:text-2xl;
 }
 /* Added support for all markdown element types */
 ul {
@@ -91,31 +116,4 @@ thead {
 
 tbody tr:nth-child(even) {
     @apply bg-gray-100;
-}
-
-body {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  @apply font-sans;
-  @apply font-light;
-  @apply bg-black;
-  @apply text-white;
-  @apply text-base;
-}
-
-.btn-nav {
-    @apply bg-blue-500 text-white py-2 px-4 rounded;
-}
-  
-.btn-nav:hover {
-    @apply bg-blue-700;
-}
-  
-.btn-action {
-    @apply bg-black border border-white text-white py-2 px-4 rounded-full;
-}
-  
-.btn-action:hover {
-    @apply border-2
 }

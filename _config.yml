@@ -22,3 +22,8 @@ defaults:
       hide_nav: true
 
 permalink: pretty
+
+collections:
+  missives:
+    output: true
+    permalink: /:name/

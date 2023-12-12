@@ -20,14 +20,15 @@
         <div class="rounded-full p-1 text-lg border-2 border-white bg-transparent max-w-sm min-w-fit lg:mx-6 lg:min-w-[300px]" id="cta-div">
             <form id="waitlistForm" class="flex justify-items-end items-center" onsubmit="submitForm(event)">
                 <input
-                class="focus:outline-none pl-4 pr-1 bg-transparent tracking-wide w-full grow text-white placeholder-white"
-                id="input-entry"
-                type="text"
-                autocomplete="off"
-                spellcheck="off"
-                placeholder="enter your email or urbit @p"
-                name="entry.1987957812"
-                onkeydown="resetFlags()"
+                    class="focus:outline-none pl-4 pr-1 bg-transparent tracking-wide w-full grow text-white placeholder-white focus:placeholder-zinc-700 focus:caret-white"
+                    id="input-entry"
+                    type="text"
+                    autocomplete="off"
+                    spellcheck="off"
+                    placeholder="enter your email or urbit @p"
+                    name="entry.1987957812"
+
+                    onkeydown="resetFlags()"
                 />
                 <span onclick="submitForm(event)" class="p-1 pr-4 justify-items-end grow-0">→</span>
             </form>

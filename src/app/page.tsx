@@ -88,6 +88,8 @@ export default function Home() {
             height="40"
             poster="/images/vaporware-devices-preview.png"
             preload="none"
+            autoPlay
+            playsInline
             loop
             muted
           >
@@ -112,6 +114,8 @@ export default function Home() {
             height="194"
             poster="/images/vaporware-devices-preview.png"
             preload="none"
+            autoPlay
+            playsInline
             loop
             muted
           >

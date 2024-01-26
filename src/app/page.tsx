@@ -91,7 +91,7 @@ export default function Home() {
             width="40"
             height="40"
             poster="/images/vaporware-devices-preview.png"
-            src="/images/vaporware-devices-preview-194.mp4"
+            src="/images/vaporware-devices-preview-194.webm"
             preload="none"
             autoPlay
             playsInline
@@ -117,7 +117,7 @@ export default function Home() {
             width="194"
             height="194"
             poster="/images/vaporware-devices-preview.png"
-            src="/images/vaporware-devices-preview-194.mp4"
+            src="/images/vaporware-devices-preview-194.webm"
             preload="none"
             autoPlay
             playsInline
@@ -129,11 +129,11 @@ export default function Home() {
 
           <h1 className="hero mb-4">
             This website is<br/>
-            <span>vaporware</span>,
+            <span className="font-bold">vaporware</span>,
           </h1>
 
           <aside className="text-center">
-            <p>
+            <p className="mb-2">
               a web application running on a Solid-State Interpreter Virtual Machine. Last updated: 1/26/24
             </p>
 
@@ -149,7 +149,7 @@ export default function Home() {
           </p>
 
           <p>
-Ships combine the functionality of wallets, large file storage, encrypted p2p networking, and full stack web applications into a single framework. They are designed to run in the cloud, but are owned cryptographically by people. Ships are internet appliances.
+            Ships combine the functionality of wallets, large file storage, encrypted p2p networking, and full stack web applications into a single framework. They are designed to run in the cloud, but are owned cryptographically by people. Ships are <em>internet appliances</em>.
           </p>
         </section>
 
@@ -160,20 +160,20 @@ Ships combine the functionality of wallets, large file storage, encrypted p2p ne
             <div className="horizontal-bars shrink ml-4"></div>
           </header>
 
-          <p>
+          <p className="mb-2">
             The Vaporware ship is composed of three closely related systems:
-            <ul>
-              <li>
-                a purely functional virtual machine 
-              </li>
-              <li>
-                a tokenized application and package registry 
-              </li>
-              <li>
-                an app store and package management program
-              </li>
-            </ul>
           </p>
+          <ul>
+            <li>
+              a purely functional virtual machine 
+            </li>
+            <li>
+              a tokenized application and package registry 
+            </li>
+            <li>
+              an app store and package management program
+            </li>
+          </ul>
           <p>
             Vaporware is developed as <em>Free and Open Source Software</em> and respects the <a href="https://www.gnu.org/philosophy/free-sw.en.html" target="_blank">four essential freedoms</a>.
           </p>

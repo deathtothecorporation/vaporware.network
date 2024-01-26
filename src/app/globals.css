@@ -11,15 +11,33 @@
 }
 
 @font-face {
-  font-family: 'Berkeley';
-  src: url('/fonts/BerkeleyMonoTrial-Regular.otf') format('opentype'),
-       url('/fonts/BerkeleyMonoTrial-Regular.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'BerkeleyMono';
+  src: url('/fonts/BerkeleyMonoVariable-Italic.woff2') format('woff2'),
+       url('/fonts/BerkeleyMonoVariable-Italic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* Define @font-face for Berkeley Mono Regular (variable) */
+@font-face {
+  font-family: 'BerkeleyMono';
+  src: url('/fonts/BerkeleyMonoVariable-Regular.woff2') format('woff2'),
+       url('/fonts/BerkeleyMonoVariable-Regular.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'BerkeleyMono';
+  src: url('/fonts/BerkeleyMonoVariable-Regular.woff2') format('woff2'),
+       url('/fonts/BerkeleyMonoVariable-Regular.woff') format('woff');
+  font-weight: 700;
   font-style: normal;
 }
 
 body {
-  font-family: 'Berkeley', monospace;
+  font-family: 'BerkeleyMono', monospace;
 }
 
 .hero {
@@ -72,15 +90,17 @@ section header {
 
 section p {
   @apply mb-4;
+  @apply text-justify;
 }
 
 ul {
-  @apply my-2;
+  @apply mb-4;
 }
 
 li {
   @apply list-disc;
-  @apply ml-8
+  @apply ml-8;
+  @apply text-left;
 }
 
 footer ul {

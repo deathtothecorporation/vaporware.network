@@ -91,13 +91,14 @@ export default function Home() {
             width="40"
             height="40"
             poster="/images/vaporware-devices-preview.png"
-            src="/images/vaporware-devices-preview-194.webm"
             preload="none"
             autoPlay
             playsInline
             loop
             muted
           >
+            <source src="/images/vaporware-devices-preview-194.webm" type="video/webm" />
+            <source src="/images/vaporware-devices-preview-194.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -117,13 +118,14 @@ export default function Home() {
             width="194"
             height="194"
             poster="/images/vaporware-devices-preview.png"
-            src="/images/vaporware-devices-preview-194.webm"
             preload="none"
             autoPlay
             playsInline
             loop
             muted
           >
+            <source src="/images/vaporware-devices-preview-194.webm" type="video/webm" />
+            <source src="/images/vaporware-devices-preview-194.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 

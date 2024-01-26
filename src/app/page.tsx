@@ -29,7 +29,7 @@ export default function Home() {
 
     useEffect(() => {
       const handleCanPlayThrough = () => {
-        if (videoElement.paused) { // Check if the video is not already playing
+        if (videoElement && videoElement.paused) { // Check if the video is not already playing
           console.log('playing... ', videoElement);
           videoElement.play();
         } else {
@@ -38,7 +38,7 @@ export default function Home() {
       };
 
       const navHandleCanPlayThrough = () => {
-        if (navVideoElement.paused) { // Check if the video is not already playing
+        if (navVideoElement && navVideoElement.paused) { // Check if the video is not already playing
           console.log('playing nav... ', navVideoElement);
           navVideoElement.play();
         } else {
@@ -46,8 +46,8 @@ export default function Home() {
         }
       };
 
-      const videoElement = document.getElementById('vaporwareDevicesVideo');
-      const navVideoElement = document.getElementById('vaporwareDevicesVideoNav');
+      const videoElement = document.getElementById('vaporwareDevicesVideo') as HTMLVideoElement;
+      const navVideoElement = document.getElementById('vaporwareDevicesVideoNav') as HTMLVideoElement;
       console.log('checking for ', videoElement)
 
       if (videoElement) {

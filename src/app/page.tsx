@@ -31,6 +31,7 @@ export default function Home() {
       const handleCanPlayThrough = () => {
         if (videoElement && videoElement.paused) { // Check if the video is not already playing
           console.log('playing... ', videoElement);
+          videoElement.muted = true;
           videoElement.play();
         } else {
           console.log('Video is already playing');
@@ -40,6 +41,7 @@ export default function Home() {
       const navHandleCanPlayThrough = () => {
         if (navVideoElement && navVideoElement.paused) { // Check if the video is not already playing
           console.log('playing nav... ', navVideoElement);
+          navVideoElement.muted = true;
           navVideoElement.play();
         } else {
           console.log('nav Video is already playing');
@@ -54,6 +56,7 @@ export default function Home() {
         console.log('have it')
         videoElement.addEventListener('canplaythrough', handleCanPlayThrough);
 
+        videoElement.muted = true;
         videoElement.play().catch(e => console.log('Error trying to play video: ', e.message));
 
         // Cleanup function to remove the event listener
@@ -67,6 +70,7 @@ export default function Home() {
         console.log('have it')
         navVideoElement.addEventListener('canplaythrough', navHandleCanPlayThrough);
 
+        navVideoElement.muted = true;
         navVideoElement.play().catch(e => console.log('Error trying to play video: ', e.message));
 
         // Cleanup function to remove the event listener
@@ -87,13 +91,13 @@ export default function Home() {
             width="40"
             height="40"
             poster="/images/vaporware-devices-preview.png"
+            src="/images/vaporware-devices-preview-194.mp4"
             preload="none"
             autoPlay
             playsInline
             loop
             muted
           >
-            <source src="/images/vaporware-devices-preview-194.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -113,13 +117,13 @@ export default function Home() {
             width="194"
             height="194"
             poster="/images/vaporware-devices-preview.png"
+            src="/images/vaporware-devices-preview-194.mp4"
             preload="none"
             autoPlay
             playsInline
             loop
             muted
           >
-            <source src="/images/vaporware-devices-preview-194.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
@@ -225,7 +229,8 @@ Rather than relying on a central company (like Apple or Steam) to host and monet
 
 
       </main>
-      <footer className="text-right z-50 bg-white py-4 mx-auto md:max-w-xl md:px-0 px-8">
+      <footer className="text-right sticky bottom-0 z-50 bg-white py-2 text-[13px] mx-auto md:max-w-xl md:px-0 px-8"
+      >
         <ul>
           <li><a href="#" target="_blank">Twitter</a></li>
           <li><a href="#" target="_blank">Farcaster</a></li>

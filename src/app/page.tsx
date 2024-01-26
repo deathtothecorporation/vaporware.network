@@ -1,23 +1,124 @@
+'use client'
+import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 
 export default function Home() {
+    const [isHeroBehindNav, setIsHeroBehindNav] = useState(false);
+
+      useEffect(() => {
+      const handleScroll = () => {
+        const heroSection = document.getElementById('vaporwareDevicesVideo'); // Add an ID to your hero section
+        const navBar = document.getElementById('nav'); // Add an ID to your navbar
+        if (heroSection && navBar) {
+          const heroBottom = heroSection.getBoundingClientRect().bottom;
+          const navBottom = navBar.getBoundingClientRect().bottom;
+          
+          // Set state based on scroll position
+          setIsHeroBehindNav(heroBottom < navBottom);
+        }
+      };
+
+      // Set up event listener
+      window.addEventListener('scroll', handleScroll);
+
+      // Clean up event listener
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+
+    useEffect(() => {
+      const handleCanPlayThrough = () => {
+        if (videoElement.paused) { // Check if the video is not already playing
+          console.log('playing... ', videoElement);
+          videoElement.play();
+        } else {
+          console.log('Video is already playing');
+        }
+      };
+
+      const navHandleCanPlayThrough = () => {
+        if (navVideoElement.paused) { // Check if the video is not already playing
+          console.log('playing nav... ', navVideoElement);
+          navVideoElement.play();
+        } else {
+          console.log('nav Video is already playing');
+        }
+      };
+
+      const videoElement = document.getElementById('vaporwareDevicesVideo');
+      const navVideoElement = document.getElementById('vaporwareDevicesVideoNav');
+      console.log('checking for ', videoElement)
+
+      if (videoElement) {
+        console.log('have it')
+        videoElement.addEventListener('canplaythrough', handleCanPlayThrough);
+
+        videoElement.play().catch(e => console.log('Error trying to play video: ', e.message));
+
+        // Cleanup function to remove the event listener
+        // return () => {
+        //   videoElement.removeEventListener('canplaythrough', handleCanPlayThrough);
+        // };
+      }
+
+      console.log('checking for nav', navVideoElement)
+      if (navVideoElement) {
+        console.log('have it')
+        navVideoElement.addEventListener('canplaythrough', navHandleCanPlayThrough);
+
+        navVideoElement.play().catch(e => console.log('Error trying to play video: ', e.message));
+
+        // Cleanup function to remove the event listener
+        // return () => {
+        //   navVideoElement.removeEventListener('canplaythrough', navHandleCanPlayThrough);
+        // };
+      }
+  }, []); // Empty dependency array means this effect runs once after the initial render
+
+
   return (
     <div className="">
-      <nav className="text-right sticky top-0 z-50 bg-white py-4 mx-auto md:max-w-xl md:px-0 px-8">
+      <nav className="flex justify-end items-center text-right sticky top-0 z-50 bg-white py-4 mx-auto md:max-w-xl md:px-0 px-8" id="nav">
+        <div className="grow text-left">
+          <video
+            className={`... ${isHeroBehindNav ? '' : 'hidden'}`} // Hide video when hero is not behind navbar
+            id="vaporwareDevicesVideoNav"
+            width="40"
+            height="40"
+            poster="/images/vaporware-devices-preview.png"
+            preload="none"
+            loop
+            muted
+          >
+            <source src="/images/vaporware-devices-preview-194.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div className="text-right">
           <button>
             Get Updates
           </button>
-        </nav>
+        </div>
+      </nav>
+
       <main className="container mx-auto md:max-w-xl px-8 md:px-0">
 
         <header className="mx-auto border-b border-black pb-8 mb-8">
-          <Image
-            src="/images/vaporware-devices-preview.png"
-            alt="Vaporware devices"
-            width={194}
-            height={194}
+          <video
             className="mx-auto"
-          />
+            id="vaporwareDevicesVideo"
+            width="194"
+            height="194"
+            poster="/images/vaporware-devices-preview.png"
+            preload="none"
+            loop
+            muted
+          >
+            <source src="/images/vaporware-devices-preview-194.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
           <h1 className="hero mb-4">
             This website is<br/>
             <span>vaporware</span>,
@@ -36,11 +137,11 @@ export default function Home() {
 
         <section>
           <p>
-            Vaporware is a new kind of internet computer, called a ship. Ships are built on a novel virtual machine, called a <a href="https://media.urbit.org/whitepaper.pdf" target="_blank">solid-state interpreter</a>. 
+            Vaporware is a new kind of internet computer, called a <em>ship</em>. Ships are built on a novel virtual machine, called a <a href="https://media.urbit.org/whitepaper.pdf" target="_blank">solid-state interpreter</a>. 
           </p>
 
           <p>
-Ships combine the functionality of wallets, large file storage, encrypted p2p networking, and full stack web applications into a single framework. They are designed to run in the cloud, but are owned cryptographically by people. Ships are digital appliances.
+Ships combine the functionality of wallets, large file storage, encrypted p2p networking, and full stack web applications into a single framework. They are designed to run in the cloud, but are owned cryptographically by people. Ships are internet appliances.
           </p>
         </section>
 
@@ -128,5 +229,6 @@ Rather than relying on a central company (like Apple or Steam) to host and monet
         </ul>
       </footer>
     </div>
+
   );
 }

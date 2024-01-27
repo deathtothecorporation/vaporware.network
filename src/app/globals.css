@@ -40,6 +40,13 @@ body {
   font-family: 'BerkeleyMono', monospace;
 }
 
+.key-term {
+  @apply bg-black;
+  @apply text-white;
+  @apply italic;
+  @apply px-0.5;
+}
+
 .hero {
   color: #000;
   text-align: center;
@@ -118,6 +125,10 @@ footer a {
   @apply no-underline;
   @apply text-black;
   @apply font-semibold;
+}
+
+footer p {
+  @apply text-[8px];
 }
 
 .horizontal-bars {

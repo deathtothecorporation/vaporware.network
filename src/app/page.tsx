@@ -103,9 +103,9 @@ export default function Home() {
           </video>
         </div>
         <div className="text-right">
-          <button>
+          <a className="no-underline" href="#">
             Get Updates
-          </button>
+          </a>
         </div>
       </nav>
 
@@ -147,11 +147,11 @@ export default function Home() {
 
         <section>
           <p>
-            Vaporware is a new kind of internet computer, called a <em>ship</em>. Ships are built on a novel virtual machine, called a <a href="https://media.urbit.org/whitepaper.pdf" target="_blank">solid-state interpreter</a>. 
+            Vaporware is a new kind of internet computer, called a <span className="key-term">ship</span>. Ships are built on a novel virtual machine, called a <a href="https://media.urbit.org/whitepaper.pdf" target="_blank">solid-state interpreter</a>. 
           </p>
 
           <p>
-            Ships combine the functionality of wallets, large file storage, encrypted p2p networking, and full stack web applications into a single framework. They are designed to run in the cloud, but are owned cryptographically by people. Ships are <em>internet appliances</em>.
+            Ships combine the functionality of wallets, large file storage, encrypted p2p networking, and full stack web applications into a single framework. They are designed to run in the cloud, but are owned cryptographically by people. Ships are <span className="key-term">internet appliances</span>.
           </p>
         </section>
 
@@ -205,7 +205,7 @@ export default function Home() {
           </header>
 
           <p>
-            Every ship has a unique identity. NFTs can be registered with the protocol and used as a network handle. Ships encrypt and sign all of their messages by default. The owner of a ship can register the ship’s content onchain and share it with others. Identities are used to control access to registered content.
+            Every ship has a unique <span className="key-term">identity</span>. NFTs can be registered with the protocol and used as a network handle. Ships encrypt and sign all of their messages by default. The owner of a ship can register the ship’s content onchain and share it with others. Identities are used to control access to registered content.
           </p>
 
           <p>
@@ -216,28 +216,40 @@ export default function Home() {
         <section>
           <header>
             <div className="horizontal-bars shrink mr-4"></div>
-            <h1 className="grow whitespace-nowrap">The app store</h1>
+            <h1 className="grow whitespace-nowrap">The agora</h1>
             <div className="horizontal-bars shrink ml-4"></div>
           </header>
 
           <p>
-            The app store is the <em>economic bootloader</em> for the Vaporware network. It is the default program, owned by every user, providing access to purchasable content and software.
+            The agora is the economic bootloader for the Vaporware network. It is the default protocol, owned by every user, providing unfiltered access to purchasable content and software.
           </p>
 
           <p>
-Rather than relying on a central company (like Apple or Steam) to host and monetize apps, users are able to self-host their own access point to a purely p2p, onchain, content distribution market. NFTs provide uncensorable payment rails and the app store provides uncensorable distribution.
+            Vaporware has no &ldquo;app store&rdquo; qua &ldquo;app store&rdquo; to host and monetize apps. Instead, users are able to self-host their own access point to a purely p2p, onchain, content distribution system. Tokens provide censorship resistant payment rails and the agora provides censorship resistant distribution.
           </p>
+        </section>
+
+        <section className="text-center">
+          <p className="text-center">
+            For whitelist access,<br />
+            mint a free internet appliance.
+          </p>
+
+          <button className="text-[20px]">
+            Mint
+          </button>
+
         </section>
 
 
       </main>
-      <footer className="text-right sticky bottom-0 z-50 bg-white py-2 text-[13px] mx-auto md:max-w-xl md:px-0 px-8"
-      >
-        <ul>
+      <footer className="sticky bottom-0 z-50 bg-white py-2 text-[13px] mx-auto md:max-w-xl md:px-0 px-8">
+        <ul className="mb-2">
           <li><a href="#" target="_blank">Twitter</a></li>
           <li><a href="#" target="_blank">Farcaster</a></li>
           <li><a href="#" target="_blank">GitHub</a></li>
         </ul>
+        <p>Vaporware Network, Corporation - 2024 - All rights reserved.</p>
       </footer>
     </div>
 

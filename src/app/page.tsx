@@ -12,7 +12,7 @@ export default function Home() {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const inputRef = useRef(null); // Reference to the input element
+  const inputRef = useRef(null);
 
   const [isIOS, setIsIOS] = useState(null); // null initially indicates it's not yet determined
   const [videoSource, setVideoSource] = useState({
@@ -90,21 +90,18 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroSection = document.getElementById('vaporwareDevicesVideo'); // Add an ID to your hero section
-      const navBar = document.getElementById('nav'); // Add an ID to your navbar
+      const heroSection = document.getElementById('vaporwareDevicesVideo');
+      const navBar = document.getElementById('nav');
       if (heroSection && navBar) {
         const heroBottom = heroSection.getBoundingClientRect().bottom;
         const navBottom = navBar.getBoundingClientRect().bottom;
 
-        // Set state based on scroll position
         setIsHeroBehindNav(heroBottom < navBottom);
       }
     };
 
-    // Set up event listener
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up event listener
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -113,6 +110,7 @@ export default function Home() {
   useEffect(() => {
     const userAgent = typeof navigator !== 'undefined' ? navigator.userAgent.toLowerCase() : '';
     const isIOSDevice = /iphone|ipad|ipod/.test(userAgent);
+    // @ts-ignore
     setIsIOS(isIOSDevice);
 
     const source = isIOSDevice
@@ -132,6 +130,7 @@ export default function Home() {
     // Ridiculous hack:
     // Render nothing until isIOS is determined
     return <div></div>;
+    // We have a nice <noscript>, so i feel okay about it.
   }
 
   return (

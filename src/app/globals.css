@@ -51,6 +51,10 @@ section header h1 {
   @apply px-0.5;
 }
 
+.fade-transition {
+  transition: opacity 0.1s ease;
+}
+
 .hero {
   color: #000;
   text-align: center;
@@ -80,6 +84,11 @@ button {
   @apply text-white;
   @apply py-2;
   @apply px-4;
+}
+
+button:disabled {
+  @apply cursor-not-allowed;
+  @apply opacity-60;
 }
 
 header aside {

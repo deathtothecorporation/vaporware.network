@@ -227,7 +227,7 @@ export default function Home() {
         <p>
           MASTER <span className="font-semibold">e70e1e7c297d0545177006247be13488b631a2dc</span>
         </p>
-        { false && (
+        { true && (
           <p>
             Using mp4: <span className="">{ videoSource.mp4 }</span>
             <br />

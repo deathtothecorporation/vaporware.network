@@ -123,7 +123,7 @@ export default function Home() {
             muted
           >
             <source src="/images/vaporware-devices-30s.webm" type="video/webm" />
-            <source src="/images/vaporware-devices-30s.mp4" type="video/mp4" />
+            <source src="/images/vaporware-devices-30s.m4v" type="video/m4v" />
             Your browser does not support the video tag.
           </video>
 

@@ -355,9 +355,9 @@ export default function Home() {
   </main>
   <footer className="sticky bottom-0 z-50 bg-white pt-2 pb-[25px] text-[14px] mx-auto md:max-w-xl md:px-0 px-8">
     <ul className="mb-[30px]">
-      <li><a href="#" target="_blank">Twitter</a></li>
-      <li><a href="#" target="_blank">Farcaster</a></li>
-      <li><a href="#" target="_blank">GitHub</a></li>
+      <li><a href="https://twitter.com/__vaporware__" target="_blank">Twitter</a></li>
+      <li><a href="https://warpcast.com/vaporware" target="_blank">Farcaster</a></li>
+      <li><a href="https://github.com/deathtothecorporation/" target="_blank">GitHub</a></li>
     </ul>
   </footer>
 </div>

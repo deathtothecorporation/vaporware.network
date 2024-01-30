@@ -233,7 +233,6 @@ export default function Home() {
         playsInline
         loop
         muted
-        controls
       >
         <source src="/images/vaporware-devices-30s.webm" type="video/webm" />
         <source src="/images/vaporware-devices-30s.m4v" type="video/m4v" />

@@ -19,7 +19,6 @@ export default function Home() {
     return /iphone|ipad|ipod/.test(userAgent);
   };
 
-  // TODO: update video urls!
   const initialVideoSource = isIOS()
     ? { mp4: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.mp4', webm: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.webm' }
     : { mp4: '/images/vaporware-appliances-30s-200x200.mp4', webm: '/images/vaporware-appliances-30s-200x200.webm' };
@@ -28,18 +27,12 @@ export default function Home() {
 
     useEffect(() => {
         // Function to check if the current device is iOS
-
         // If the device is iOS, set the video source to the iOS compatible one
         if (isIOS()) {
-          // TODO: new video, better URL
-            setVideoSource({
-                mp4: 'ios mp4',
-              webm: 'ios webm'
-            });
-          // setVideoSource({
-          //       mp4: 'https://nyc3.digitaloceanspaces.com/sogrum-savluc/2024.1.30..02.33.19-vaporware-devices-600.mp4',
-          //     webm: 'https://nyc3.digitaloceanspaces.com/sogrum-savluc/2024.1.30..02.48.50-vaporware-devices-600.webm'
-          //   });
+          setVideoSource({
+            mp4: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.mp4',
+            webm: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.webm'
+          });
         }
     }, []);
 
@@ -268,8 +261,6 @@ export default function Home() {
       </video>
 
       <h1 className="hero mb-4">
-        {videoSource.mp4}
-        {videoSource.webm}
         This website is<br/>
         <span className="font-bold">vaporware</span>,
       </h1>

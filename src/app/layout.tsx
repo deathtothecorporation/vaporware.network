@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   category: 'technology',
 
   twitter: {
-    "card": "summary",
+    "card": "summary_large_image",
     "site": "@__vaporware__",
     "creator": "@__vaporware__",
     "title": "Vaporware",

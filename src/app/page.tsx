@@ -14,22 +14,11 @@ export default function Home() {
 
   const inputRef = useRef(null); // Reference to the input element
 
-  const isIOS = () => {
-    const userAgent = typeof navigator !== 'undefined' ? navigator.userAgent.toLowerCase() : '';
-    return /iphone|ipad|ipod/.test(userAgent);
-  };
-
-  const initialVideoSource = isIOS()
-    ? {
-        mp4: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.mp4',
-        webm: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.webm'
-      }
-    : {
-        mp4: '/images/vaporware-appliances-30s-200x200.mp4',
-        webm: '/images/vaporware-appliances-30s-200x200.webm'
-      };
-
-  const [videoSource, setVideoSource] = useState(initialVideoSource);
+  const [isIOS, setIsIOS] = useState(null); // null initially indicates it's not yet determined
+  const [videoSource, setVideoSource] = useState({
+    mp4: '',
+    webm: ''
+  });
 
   const resetFlags = () => {
     setThanks(false);
@@ -122,58 +111,28 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    // const handleCanPlayThrough = () => {
-    //   if (videoElement && videoElement.paused) { // Check if the video is not already playing
-    //     console.log('playing... ', videoElement);
-    //     videoElement.muted = true;
-    //     videoElement.play();
-    //   } else {
-    //     console.log('Video is already playing');
-    //   }
-    // };
+    const userAgent = typeof navigator !== 'undefined' ? navigator.userAgent.toLowerCase() : '';
+    const isIOSDevice = /iphone|ipad|ipod/.test(userAgent);
+    setIsIOS(isIOSDevice);
 
-    // const navHandleCanPlayThrough = () => {
-    //   if (navVideoElement && navVideoElement.paused) { // Check if the video is not already playing
-    //     console.log('playing nav... ', navVideoElement);
-    //     navVideoElement.muted = true;
-    //     navVideoElement.play();
-    //   } else {
-    //     console.log('nav Video is already playing');
-    //   }
-    // };
+    const source = isIOSDevice
+      ? {
+          mp4: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.mp4',
+          webm: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.webm'
+        }
+      : {
+          mp4: '/images/vaporware-appliances-30s-200x200.mp4',
+          webm: '/images/vaporware-appliances-30s-200x200.webm'
+        };
 
-    // const videoElement = document.getElementById('vaporwareDevicesVideo') as HTMLVideoElement;
-    // const navVideoElement = document.getElementById('vaporwareDevicesVideoNav') as HTMLVideoElement;
-    // console.log('checking for ', videoElement)
+    setVideoSource(source);
+  }, []);
 
-    // if (videoElement) {
-    //   console.log('have it')
-    //   videoElement.addEventListener('canplaythrough', handleCanPlayThrough);
-
-    //   videoElement.muted = true;
-    //   videoElement.play().catch(e => console.log('Error trying to play video: ', e.message));
-
-    //   // Cleanup function to remove the event listener
-    //   // return () => {
-    //   //   videoElement.removeEventListener('canplaythrough', handleCanPlayThrough);
-    //   // };
-    // }
-
-    // console.log('checking for nav', navVideoElement)
-    // if (navVideoElement) {
-    //   console.log('have it')
-    //   navVideoElement.addEventListener('canplaythrough', navHandleCanPlayThrough);
-
-    //   navVideoElement.muted = true;
-    //   navVideoElement.play().catch(e => console.log('Error trying to play video: ', e.message));
-
-    //   // Cleanup function to remove the event listener
-    //   // return () => {
-    //   //   navVideoElement.removeEventListener('canplaythrough', navHandleCanPlayThrough);
-    //   // };
-    // }
-  }, []); // Empty dependency array means this effect runs once after the initial render
-
+  if (isIOS === null) {
+    // Ridiculous hack:
+    // Render nothing until isIOS is determined
+    return <div></div>;
+  }
 
   return (
     <div className="">

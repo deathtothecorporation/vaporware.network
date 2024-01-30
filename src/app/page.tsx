@@ -117,15 +117,15 @@ export default function Home() {
             id="vaporwareDevicesVideo"
             width="194"
             height="194"
-            poster="/images/vaporware-devices-preview.png"
+            poster="/images/vaporware-devices-30s-preview.jpeg"
             preload="none"
             autoPlay
             playsInline
             loop
             muted
           >
-            <source src="/images/vaporware-devices-600.webm" type="video/webm" />
-            <source src="/images/vaporware-devices-600.mp4" type="video/mp4" />
+            <source src="/images/vaporware-devices-30s.webm" type="video/webm" />
+            <source src="/images/vaporware-devices-30s.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 

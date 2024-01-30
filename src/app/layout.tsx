@@ -3,6 +3,7 @@ import React from 'react';
 import "./globals.css";
 
 const description = "Vaporware is a progam that runs on a new kind of internet computer, called a ship. Ships are built on a novel virtual machine, called a solid-state interpreter."
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://vaporware.network'),
 

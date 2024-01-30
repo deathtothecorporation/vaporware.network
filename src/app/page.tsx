@@ -21,7 +21,7 @@ export default function Home() {
 
   // TODO: update video urls!
   const initialVideoSource = isIOS()
-    ? { mp4: 'ios-video.mp4', webm: 'ios-webm.webm' }
+    ? { mp4: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.mp4', webm: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.webm' }
     : { mp4: '/images/vaporware-appliances-30s-200x200.mp4', webm: '/images/vaporware-appliances-30s-200x200.webm' };
 
   const [videoSource, setVideoSource] = useState(initialVideoSource);

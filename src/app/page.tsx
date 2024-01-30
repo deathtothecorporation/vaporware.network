@@ -20,21 +20,16 @@ export default function Home() {
   };
 
   const initialVideoSource = isIOS()
-    ? { mp4: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.mp4', webm: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.webm' }
-    : { mp4: '/images/vaporware-appliances-30s-200x200.mp4', webm: '/images/vaporware-appliances-30s-200x200.webm' };
+    ? {
+        mp4: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.mp4',
+        webm: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.webm'
+      }
+    : {
+        mp4: '/images/vaporware-appliances-30s-200x200.mp4',
+        webm: '/images/vaporware-appliances-30s-200x200.webm'
+      };
 
   const [videoSource, setVideoSource] = useState(initialVideoSource);
-
-    useEffect(() => {
-        // Function to check if the current device is iOS
-        // If the device is iOS, set the video source to the iOS compatible one
-        if (isIOS()) {
-          setVideoSource({
-            mp4: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.mp4',
-            webm: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.webm'
-          });
-        }
-    }, []);
 
   const resetFlags = () => {
     setThanks(false);
@@ -257,6 +252,7 @@ export default function Home() {
         muted
       >
         <source src={videoSource.mp4} type="video/mp4" />
+        <source src={videoSource.webm} type="video/webm" />
         Your browser does not support the video tag.
       </video>
 
@@ -272,6 +268,11 @@ export default function Home() {
 
         <p>
           MASTER <span className="font-semibold">e70e1e7c297d0545177006247be13488b631a2dc</span>
+        </p>
+        <p>
+          Using mp4: <span className="">{ videoSource.mp4 }</span>
+          <br />
+          Using webm: <span className="">{ videoSource.webm }</span>
         </p>
       </aside>
     </header>

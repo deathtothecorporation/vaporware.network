@@ -90,8 +90,7 @@ export default function Home() {
             id="vaporwareDevicesVideoNav"
             width="30"
             height="30"
-            poster="/images/vaporware-devices-preview.png"
-            preload="none"
+            poster="/images/vaporware-devices-30s-preview.jpeg"
             autoPlay
             playsInline
             loop
@@ -118,7 +117,6 @@ export default function Home() {
             width="194"
             height="194"
             poster="/images/vaporware-devices-30s-preview.jpeg"
-            preload="none"
             autoPlay
             playsInline
             loop

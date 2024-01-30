@@ -28,56 +28,56 @@ export default function Home() {
     }, []);
 
     useEffect(() => {
-      const handleCanPlayThrough = () => {
-        if (videoElement && videoElement.paused) { // Check if the video is not already playing
-          console.log('playing... ', videoElement);
-          videoElement.muted = true;
-          videoElement.play();
-        } else {
-          console.log('Video is already playing');
-        }
-      };
+      // const handleCanPlayThrough = () => {
+      //   if (videoElement && videoElement.paused) { // Check if the video is not already playing
+      //     console.log('playing... ', videoElement);
+      //     videoElement.muted = true;
+      //     videoElement.play();
+      //   } else {
+      //     console.log('Video is already playing');
+      //   }
+      // };
 
-      const navHandleCanPlayThrough = () => {
-        if (navVideoElement && navVideoElement.paused) { // Check if the video is not already playing
-          console.log('playing nav... ', navVideoElement);
-          navVideoElement.muted = true;
-          navVideoElement.play();
-        } else {
-          console.log('nav Video is already playing');
-        }
-      };
+      // const navHandleCanPlayThrough = () => {
+      //   if (navVideoElement && navVideoElement.paused) { // Check if the video is not already playing
+      //     console.log('playing nav... ', navVideoElement);
+      //     navVideoElement.muted = true;
+      //     navVideoElement.play();
+      //   } else {
+      //     console.log('nav Video is already playing');
+      //   }
+      // };
 
-      const videoElement = document.getElementById('vaporwareDevicesVideo') as HTMLVideoElement;
-      const navVideoElement = document.getElementById('vaporwareDevicesVideoNav') as HTMLVideoElement;
-      console.log('checking for ', videoElement)
+      // const videoElement = document.getElementById('vaporwareDevicesVideo') as HTMLVideoElement;
+      // const navVideoElement = document.getElementById('vaporwareDevicesVideoNav') as HTMLVideoElement;
+      // console.log('checking for ', videoElement)
 
-      if (videoElement) {
-        console.log('have it')
-        videoElement.addEventListener('canplaythrough', handleCanPlayThrough);
+      // if (videoElement) {
+      //   console.log('have it')
+      //   videoElement.addEventListener('canplaythrough', handleCanPlayThrough);
 
-        videoElement.muted = true;
-        videoElement.play().catch(e => console.log('Error trying to play video: ', e.message));
+      //   videoElement.muted = true;
+      //   videoElement.play().catch(e => console.log('Error trying to play video: ', e.message));
 
-        // Cleanup function to remove the event listener
-        // return () => {
-        //   videoElement.removeEventListener('canplaythrough', handleCanPlayThrough);
-        // };
-      }
+      //   // Cleanup function to remove the event listener
+      //   // return () => {
+      //   //   videoElement.removeEventListener('canplaythrough', handleCanPlayThrough);
+      //   // };
+      // }
 
-      console.log('checking for nav', navVideoElement)
-      if (navVideoElement) {
-        console.log('have it')
-        navVideoElement.addEventListener('canplaythrough', navHandleCanPlayThrough);
+      // console.log('checking for nav', navVideoElement)
+      // if (navVideoElement) {
+      //   console.log('have it')
+      //   navVideoElement.addEventListener('canplaythrough', navHandleCanPlayThrough);
 
-        navVideoElement.muted = true;
-        navVideoElement.play().catch(e => console.log('Error trying to play video: ', e.message));
+      //   navVideoElement.muted = true;
+      //   navVideoElement.play().catch(e => console.log('Error trying to play video: ', e.message));
 
-        // Cleanup function to remove the event listener
-        // return () => {
-        //   navVideoElement.removeEventListener('canplaythrough', navHandleCanPlayThrough);
-        // };
-      }
+      //   // Cleanup function to remove the event listener
+      //   // return () => {
+      //   //   navVideoElement.removeEventListener('canplaythrough', navHandleCanPlayThrough);
+      //   // };
+      // }
   }, []); // Empty dependency array means this effect runs once after the initial render
 
 

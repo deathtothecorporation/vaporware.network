@@ -86,10 +86,10 @@ export default function Home() {
       <nav className="flex justify-end items-center text-right sticky top-0 z-50 bg-white py-4 mx-auto md:max-w-xl md:px-0 px-8" id="nav">
         <div className="grow text-left">
           <video
-            className={`... ${isHeroBehindNav ? '' : 'hidden'}`} // Hide video when hero is not behind navbar
+            className={`${isHeroBehindNav ? '' : 'hidden'}`} // Hide video when hero is not behind navbar
             id="vaporwareDevicesVideoNav"
-            width="40"
-            height="40"
+            width="30"
+            height="30"
             poster="/images/vaporware-devices-preview.png"
             preload="none"
             autoPlay
@@ -97,8 +97,8 @@ export default function Home() {
             loop
             muted
           >
-            <source src="/images/vaporware-devices-preview-194.webm" type="video/webm" />
-            <source src="/images/vaporware-devices-preview-194.mp4" type="video/mp4" />
+            <source src="https://nyc3.digitaloceanspaces.com/sogrum-savluc/2024.1.30..02.48.50-vaporware-devices-600.webm" type="video/webm" />
+            <source src="https://nyc3.digitaloceanspaces.com/sogrum-savluc/2024.1.30..02.33.19-vaporware-devices-600.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -124,8 +124,8 @@ export default function Home() {
             loop
             muted
           >
-            <source src="/images/vaporware-devices-preview-194.webm" type="video/webm" />
-            <source src="/images/vaporware-devices-preview-194.mp4" type="video/mp4" />
+            <source src="/images/vaporware-devices-600.webm" type="video/webm" />
+            <source src="/images/vaporware-devices-600.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
@@ -231,7 +231,7 @@ export default function Home() {
         <section className="text-center">
           <p className="text-center">
             For whitelist access,<br />
-            mint a free internet appliance.
+            mint a free Vaporware appliance.
           </p>
 
           <button disabled className="cursor-not-allowed opacity-60 text-[20px]">

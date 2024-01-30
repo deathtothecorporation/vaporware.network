@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function Home() {
     const [isHeroBehindNav, setIsHeroBehindNav] = useState(false);
@@ -12,7 +12,7 @@ export default function Home() {
         if (heroSection && navBar) {
           const heroBottom = heroSection.getBoundingClientRect().bottom;
           const navBottom = navBar.getBoundingClientRect().bottom;
-          
+
           // Set state based on scroll position
           setIsHeroBehindNav(heroBottom < navBottom);
         }
@@ -147,8 +147,7 @@ export default function Home() {
 
         <section>
           <p>
-            Vaporware is a new kind of internet computer, called a <span className="key-term">ship</span>. Ships are built on a novel virtual machine, called a <a href="https://media.urbit.org/whitepaper.pdf" target="_blank">solid-state interpreter</a>. 
-          </p>
+            Vaporware runs on a new kind of internet computer, called a <span className="key-term">ship</span>. Ships are built on a novel virtual machine, called a <a href="https://media.urbit.org/whitepaper.pdf" target="_blank">solid-state interpreter</a>. </p>
 
           <p>
             Ships combine the functionality of wallets, large file storage, encrypted p2p networking, and full stack web applications into a single framework. They are designed to run in the cloud, but are owned cryptographically by people. Ships are <span className="key-term">internet appliances</span>.
@@ -157,9 +156,9 @@ export default function Home() {
 
         <section>
           <header className="flex flex-row space-between items-center">
-            <div className="horizontal-bars shrink mr-4"></div>
+            <div className="horizontal-bars shrink mr-[6px]"></div>
             <h1 className="grow whitespace-nowrap">The system</h1>
-            <div className="horizontal-bars shrink ml-4"></div>
+            <div className="horizontal-bars shrink ml-[6px]"></div>
           </header>
 
           <p className="mb-2">
@@ -183,9 +182,9 @@ export default function Home() {
 
         <section>
           <header>
-            <div className="horizontal-bars shrink mr-4"></div>
+            <div className="horizontal-bars shrink mr-[6px]"></div>
             <h1 className="grow whitespace-nowrap">The device</h1>
-            <div className="horizontal-bars shrink ml-4"></div>
+            <div className="horizontal-bars shrink ml-[6px]"></div>
           </header>
 
           <p>
@@ -199,9 +198,9 @@ export default function Home() {
 
         <section>
           <header>
-            <div className="horizontal-bars shrink mr-4"></div>
+            <div className="horizontal-bars shrink mr-[6px]"></div>
             <h1 className="grow whitespace-nowrap">The registry</h1>
-            <div className="horizontal-bars shrink ml-4"></div>
+            <div className="horizontal-bars shrink ml-[6px]"></div>
           </header>
 
           <p>
@@ -209,15 +208,15 @@ export default function Home() {
           </p>
 
           <p>
-            Vaporware is an alternative for <a href="https://arxiv.org/pdf/2205.14927.pdf" target="_blank">decentralized file storage</a>, but can also be used to distribute <em>and run</em> full stack software applications. Registration binds content to an NFT, so users can trustlessly monetize their data and apps.
+            Vaporware is a <a href="https://arxiv.org/pdf/2205.14927.pdf" target="_blank">decentralized file storage</a>, but can also be used to distribute and run full stack software applications. Registration binds content to an NFT, so users can trustlessly monetize their data and apps.
           </p>
         </section>
 
         <section>
           <header>
-            <div className="horizontal-bars shrink mr-4"></div>
+            <div className="horizontal-bars shrink mr-[6px]"></div>
             <h1 className="grow whitespace-nowrap">The agora</h1>
-            <div className="horizontal-bars shrink ml-4"></div>
+            <div className="horizontal-bars shrink ml-[6px]"></div>
           </header>
 
           <p>
@@ -235,16 +234,16 @@ export default function Home() {
             mint a free internet appliance.
           </p>
 
-          <button className="text-[20px]">
-            Mint
+          <button disabled className="cursor-not-allowed opacity-60 text-[20px]">
+            Mint coming soon
           </button>
 
         </section>
 
 
       </main>
-      <footer className="sticky bottom-0 z-50 bg-white py-2 text-[13px] mx-auto md:max-w-xl md:px-0 px-8">
-        <ul className="mb-2">
+      <footer className="sticky bottom-0 z-50 bg-white pt-2 pb-[25px] text-[14px] mx-auto md:max-w-xl md:px-0 px-8">
+        <ul className="mb-[30px]">
           <li><a href="#" target="_blank">Twitter</a></li>
           <li><a href="#" target="_blank">Farcaster</a></li>
           <li><a href="#" target="_blank">GitHub</a></li>

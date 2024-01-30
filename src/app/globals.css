@@ -40,6 +40,10 @@ body {
   font-family: 'BerkeleyMono', monospace;
 }
 
+section header h1 {
+  font-size: 18px;
+}
+
 .key-term {
   @apply bg-black;
   @apply text-white;
@@ -67,7 +71,7 @@ a:hover {
 }
 
 a:visited {
-  color: purple;
+  /* color: purple; */
 }
 
 button {

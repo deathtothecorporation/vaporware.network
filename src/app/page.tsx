@@ -14,7 +14,7 @@ export default function Home() {
 
   const inputRef = useRef(null);
 
-  const [isIOS, setIsIOS] = useState(null); // null initially indicates it's not yet determined
+  const [isMobile, setIsMobile] = useState(null); // null initially indicates it's not yet determined
   const [videoSource, setVideoSource] = useState({
     mp4: '',
     webm: ''
@@ -109,11 +109,11 @@ export default function Home() {
 
   useEffect(() => {
     const userAgent = typeof navigator !== 'undefined' ? navigator.userAgent.toLowerCase() : '';
-    const isIOSDevice = /iphone|ipad|ipod/.test(userAgent);
+    const isMobileDevice = /android|iPad|iPhone|iPod/i.test(userAgent);
     // @ts-ignore
-    setIsIOS(isIOSDevice);
+    setIsMobile(isMobileDevice);
 
-    const source = isIOSDevice
+    const source = isMobileDevice
       ? {
           mp4: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.mp4',
           webm: 'https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/vaporware-appliances-30s-200x200.webm'
@@ -126,9 +126,9 @@ export default function Home() {
     setVideoSource(source);
   }, []);
 
-  if (isIOS === null) {
+  if (isMobile === null) {
     // Ridiculous hack:
-    // Render nothing until isIOS is determined
+    // Render nothing until user agent is determined
     return <div></div>;
     // We have a nice <noscript>, so i feel okay about it.
   }
@@ -221,17 +221,19 @@ export default function Home() {
 
       <aside className="text-center">
         <p className="mb-2">
-          a web application running on a Solid-State Interpreter Virtual Machine. Last updated: 1/26/24
+          a web application running on a Solid-State Interpreter Virtual Machine. Last updated: 1/3024
         </p>
 
         <p>
           MASTER <span className="font-semibold">e70e1e7c297d0545177006247be13488b631a2dc</span>
         </p>
-        <p>
-          Using mp4: <span className="">{ videoSource.mp4 }</span>
-          <br />
-          Using webm: <span className="">{ videoSource.webm }</span>
-        </p>
+        { false && (
+          <p>
+            Using mp4: <span className="">{ videoSource.mp4 }</span>
+            <br />
+            Using webm: <span className="">{ videoSource.webm }</span>
+          </p>
+        )}
       </aside>
     </header>
 

@@ -14,6 +14,35 @@ export default function Home() {
 
   const inputRef = useRef(null); // Reference to the input element
 
+  const isIOS = () => {
+    const userAgent = typeof navigator !== 'undefined' ? navigator.userAgent.toLowerCase() : '';
+    return /iphone|ipad|ipod/.test(userAgent);
+  };
+
+  // TODO: update video urls!
+  const initialVideoSource = isIOS()
+    ? { mp4: 'ios-video.mp4', webm: 'ios-webm.webm' }
+    : { mp4: '/images/vaporware-appliances-30s-200x200.mp4', webm: '/images/vaporware-appliances-30s-200x200.webm' };
+
+  const [videoSource, setVideoSource] = useState(initialVideoSource);
+
+    useEffect(() => {
+        // Function to check if the current device is iOS
+
+        // If the device is iOS, set the video source to the iOS compatible one
+        if (isIOS()) {
+          // TODO: new video, better URL
+            setVideoSource({
+                mp4: 'ios mp4',
+              webm: 'ios webm'
+            });
+          // setVideoSource({
+          //       mp4: 'https://nyc3.digitaloceanspaces.com/sogrum-savluc/2024.1.30..02.33.19-vaporware-devices-600.mp4',
+          //     webm: 'https://nyc3.digitaloceanspaces.com/sogrum-savluc/2024.1.30..02.48.50-vaporware-devices-600.webm'
+          //   });
+        }
+    }, []);
+
   const resetFlags = () => {
     setThanks(false);
     setError(false);
@@ -168,14 +197,14 @@ export default function Home() {
               id="vaporwareDevicesVideoNav"
               width="30"
               height="30"
-              poster="/images/vaporware-devices-30s-preview.jpeg"
+              poster="/images/vaporware-appliances-30s-200x200-preview.jpg"
               autoPlay
               playsInline
               loop
               muted
             >
-              <source src="https://nyc3.digitaloceanspaces.com/sogrum-savluc/2024.1.30..02.48.50-vaporware-devices-600.webm" type="video/webm" />
-              <source src="https://nyc3.digitaloceanspaces.com/sogrum-savluc/2024.1.30..02.33.19-vaporware-devices-600.mp4" type="video/mp4" />
+              <source src={videoSource.mp4} type="video/mp4" />
+              <source src={videoSource.webm} type="video/webm" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -228,18 +257,19 @@ export default function Home() {
         id="vaporwareDevicesVideo"
         width="194"
         height="194"
-        poster="/images/vaporware-devices-30s-preview.jpeg"
+        poster="/images/vaporware-appliances-30s-200x200-preview.jpg"
         autoPlay
         playsInline
         loop
         muted
       >
-        <source src="/images/vaporware-devices-30s.webm" type="video/webm" />
-        <source src="/images/vaporware-devices-30s.m4v" type="video/m4v" />
+        <source src={videoSource.mp4} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       <h1 className="hero mb-4">
+        {videoSource.mp4}
+        {videoSource.webm}
         This website is<br/>
         <span className="font-bold">vaporware</span>,
       </h1>
@@ -318,7 +348,7 @@ export default function Home() {
       </p>
 
       <p>
-        Vaporware is a <a href="https://arxiv.org/pdf/2205.14927.pdf" target="_blank">decentralized file storage</a>, but can also be used to distribute and run full stack software applications. Registration binds content to an NFT, so users can trustlessly monetize their data and apps.
+        Vaporware is a <a href="https://arxiv.org/pdf/2205.14927.pdf" target="_blank">decentralized file storage</a> network, but can also be used to distribute and run full stack software applications. Registration binds content to an NFT, so users can trustlessly monetize their data and apps.
       </p>
     </section>
 
@@ -348,12 +378,16 @@ export default function Home() {
         Mint coming soon
       </button>
 
+      <p className="text-center mt-12 mb-8">
+        Reach us at: <br />
+        founders@vaporware.network
+      </p>
     </section>
 
 
   </main>
-  <footer className="sticky bottom-0 z-50 bg-white pt-2 pb-[25px] text-[14px] mx-auto md:max-w-xl md:px-0 px-8">
-    <ul className="mb-[30px]">
+  <footer className="z-50 bg-white pt-2 text-[14px] mx-auto md:max-w-xl md:px-0 px-8">
+    <ul className="">
       <li><a href="https://twitter.com/__vaporware__" target="_blank">Twitter</a></li>
       <li><a href="https://warpcast.com/vaporware" target="_blank">Farcaster</a></li>
       <li><a href="https://github.com/deathtothecorporation/" target="_blank">GitHub</a></li>

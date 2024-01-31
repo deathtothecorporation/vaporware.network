@@ -224,7 +224,7 @@ export default function Home() {
 
       <aside className="text-center">
         <p className="mb-2">
-          a web application running on a Solid-State Interpreter Virtual Machine. Last updated: 1/3024
+          a web application running on a Solid-State Interpreter Virtual Machine. Last updated: 1/30/24
         </p>
 
         <p>

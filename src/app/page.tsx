@@ -204,8 +204,11 @@ export default function Home() {
         width="194"
         height="194"
         poster="/images/vaporware-appliances-30s-200x200-preview.jpg"
+        preload="auto"
         autoPlay
         playsInline
+        webkit-playsInline
+        x5-playsInline
         loop
         muted
       >

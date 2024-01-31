@@ -1,1 +1,0 @@
-programmable identity-linked licenses for monetization of open-source software on distributed networks.

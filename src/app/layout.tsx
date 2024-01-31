@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import React from 'react';
 import "./globals.css";
 
-const description = "Vaporware is a progam that runs on a new kind of internet computer, called a ship. Ships are built on a novel virtual machine, called a solid-state interpreter."
+const description = "What if every token had a cloud computer?"
 
 const metadataBase = new URL(process.env.BASE_URL as string)
 
 export const metadata: Metadata = {
   metadataBase,
-  title: "Vaporware.network",
+  title: "Vaporware",
   description,
   // "image": "https://vaporware-network-git-relaunch-2024-vaporware.vercel.app/images/vaporware-devices-preview.png",
   category: 'technology',
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     "creator": "@__vaporware__",
     "title": "Vaporware",
     description,
+    images: '/twitter-image.jpeg',
     // images: ["https://vaporware.network/images/vaporware-devices-30s-preview.jpeg"],
     // "card": "player",
     // "players": {
@@ -30,10 +31,11 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Vaporware.network",
+    title: "Vaporware",
     description,
     url: 'https://vaporware.network',
     siteName: 'Vaporware.network',
+    images: '/opengraph-image.jpeg',
     // images: ["https://vaporware.network/images/vaporware-devices-30s-preview.jpeg"],
     // images: [
     //   {

@@ -88,7 +88,7 @@ export default function RootLayout({
               </h1>
 
             <p className="mb-2">
-        Vaporware is a progam that runs on a new kind of internet computer, called a <span className="key-term">ship</span>. Ships are built on a novel virtual machine, called a <a href="https://media.urbit.org/whitepaper.pdf" target="_blank">solid-state interpreter</a>.
+        Vaporware is a program that runs on a new kind of internet computer, called a <span className="key-term">ship</span>. Ships are built on a novel virtual machine, called a <a href="https://media.urbit.org/whitepaper.pdf" target="_blank">solid-state interpreter</a>.
             </p>
 
             <p className="mb-2">

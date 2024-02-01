@@ -146,6 +146,8 @@ export default function Home() {
               poster="/images/vaporware-appliances-30s-200x200-preview.jpg"
               autoPlay
               playsInline
+              webkit-playsinline="true"
+              x5-playsinline="true"
               loop
               muted
             >
@@ -207,8 +209,8 @@ export default function Home() {
         preload="auto"
         autoPlay
         playsInline
-        webkit-playsInline
-        x5-playsInline
+        webkit-playsinline="true"
+        x5-playsinline="true"
         loop
         muted
       >

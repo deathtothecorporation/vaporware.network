@@ -331,9 +331,11 @@ export default function Home() {
         mint a free Vaporware appliance.
       </p>
 
-      <button disabled className="text-[20px]">
-        Mint coming soon
-      </button>
+      <a href="https://zora.co/collect/base:0x5ea0b45d94eba075b95c1296a8e5b8397ee6b8f9/1" target="_blank">
+        <button className="text-[20px]">
+          Mint
+        </button>
+      </a>
 
       <p className="text-center mt-12 mb-8">
         Reach us at: <br />

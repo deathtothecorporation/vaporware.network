@@ -160,17 +160,17 @@ Vaporware has no “app store” qua “app store” to host and monetize apps. 
 
             <p className="mb-2">
 For whitelist access,
-mint a free Vaporware appliance:
-<a href="#">(Mint coming soon)</a>
-            </p>
+  collect a Vaporware appliance:<br/>
+<a href="https://zora.co/collect/base:0x5ea0b45d94eba075b95c1296a8e5b8397ee6b8f9/1">Collect</a>
+</p>
 
             <p className="mb-2">
 Reach us at: founders@vaporware.network
 </p>
 <ul>
       <li><a href="https://twitter.com/__vaporware__" target="_blank">Twitter</a></li>
-      <li><a href="https://warpcast.com/vaporware" target="_blank">Farcaster</a></li>
-      <li><a href="https://github.com/deathtothecorporation/" target="_blank">GitHub</a></li>
+      <li><a href="https://vaporware.gitbook.io/vaporware" target="_blank">Documentation</a></li>
+      <li><a href="https://github.com/deathtothecorporation/pallas" target="_blank">GitHub</a></li>
 </ul>
 </div>
 

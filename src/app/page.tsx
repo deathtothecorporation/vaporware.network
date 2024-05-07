@@ -328,12 +328,12 @@ export default function Home() {
     <section className="text-center">
       <p className="text-center">
         For whitelist access,<br />
-        mint a free Vaporware appliance.
+        collect a Vaporware appliance.
       </p>
 
       <a href="https://zora.co/collect/base:0x5ea0b45d94eba075b95c1296a8e5b8397ee6b8f9/1" target="_blank">
         <button className="text-[20px]">
-          Mint
+          Collect
         </button>
       </a>
 
@@ -348,8 +348,8 @@ export default function Home() {
   <footer className="z-50 bg-white pt-2 text-[14px] mx-auto md:max-w-xl md:px-0 px-8">
     <ul className="">
       <li><a href="https://twitter.com/__vaporware__" target="_blank">Twitter</a></li>
-      <li><a href="https://warpcast.com/vaporware" target="_blank">Farcaster</a></li>
-      <li><a href="https://github.com/deathtothecorporation/" target="_blank">GitHub</a></li>
+      <li><a href="https://vaporware.gitbook.io/vaporware" target="_blank">Documentation</a></li>
+      <li><a href="https://github.com/deathtothecorporation/pallas" target="_blank">GitHub</a></li>
     </ul>
   </footer>
 </div>

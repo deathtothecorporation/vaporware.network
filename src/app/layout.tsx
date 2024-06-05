@@ -170,6 +170,7 @@ Reach us at: founders@vaporware.network
 <ul>
       <li><a href="https://twitter.com/__vaporware__" target="_blank">Twitter</a></li>
       <li><a href="https://vaporware.gitbook.io/vaporware" target="_blank">Documentation</a></li>
+      <li><a href="https://blog.vaporware.network" target="_blank">Blog/Podcast</a></li>
       <li><a href="https://github.com/deathtothecorporation/pallas" target="_blank">GitHub</a></li>
 </ul>
 </div>

@@ -4,7 +4,7 @@ import Script from "next/script";
 import React from "react";
 import "./globals.css";
 
-const description = "What if every token had a cloud computer?";
+const description = "Digital membranes and Nock heresy";
 
 const metadataBase = new URL(process.env.BASE_URL as string);
 
@@ -191,9 +191,9 @@ export default function RootLayout({
             <p className="mb-2">
               Vaporware has no “app store” qua “app store” to host and monetize
               apps. Instead, users are able to self-host their own access point
-              to a purely p2p content distribution system.
-              Peer-to-peer payments provide censorship resistant payment rails
-              and the agora provides censorship resistant distribution.
+              to a purely p2p content distribution system. Peer-to-peer payments
+              provide censorship resistant payment rails and the agora provides
+              censorship resistant distribution.
             </p>
 
             <hr className="my-4" />

@@ -198,13 +198,6 @@ export default function RootLayout({
 
             <hr className="my-4" />
 
-            <p className="mb-2">
-              For whitelist access, collect a Vaporware appliance:
-              <br />
-              <a href="https://zora.co/collect/base:0x5ea0b45d94eba075b95c1296a8e5b8397ee6b8f9/1">
-                Collect
-              </a>
-            </p>
 
             <p className="mb-2">Reach us at: founders@vaporware.network</p>
             <ul>

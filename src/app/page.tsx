@@ -369,8 +369,8 @@ export default function Home() {
             Every ship has a unique <span className="key-term">identity</span>{" "}
             in the form of a cryptographic key. Ships encrypt and sign all of
             their messages by default. The owner of a ship can register the
-            ship’s content and share it with others. Identities are used
-            to control access to registered content.
+            ship’s content and share it with others. Identities are used to
+            control access to registered content.
           </p>
 
           <p>
@@ -379,8 +379,8 @@ export default function Home() {
               decentralized file storage
             </a>{" "}
             network, but can also be used to distribute and run full stack
-            software applications. Registration binds content to ship identity, so
-            users can trustlessly monetize their data and apps.
+            software applications. Registration binds content to ship identity,
+            so users can trustlessly monetize their data and apps.
           </p>
         </section>
 
@@ -400,26 +400,13 @@ export default function Home() {
           <p>
             Vaporware has no &ldquo;app store&rdquo; qua &ldquo;app store&rdquo;
             to host and monetize apps. Instead, users are able to self-host
-            their own access point to a purely p2p content
-            distribution system. Peer-to-peer payments provide censorship resistant payment
-            rails and the agora provides censorship resistant distribution.
+            their own access point to a purely p2p content distribution system.
+            Peer-to-peer payments provide censorship resistant payment rails and
+            the agora provides censorship resistant distribution.
           </p>
         </section>
 
         <section className="text-center">
-          <p className="text-center">
-            For whitelist access,
-            <br />
-            collect a Vaporware appliance.
-          </p>
-
-          <a
-            href="https://zora.co/collect/base:0x5ea0b45d94eba075b95c1296a8e5b8397ee6b8f9/1"
-            target="_blank"
-          >
-            <button className="text-[20px]">Collect</button>
-          </a>
-
           <p className="text-center mt-12 mb-8">
             Reach us at: <br />
             founders@vaporware.network

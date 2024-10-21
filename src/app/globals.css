@@ -100,6 +100,36 @@ section {
   @apply mb-8;
 }
 
+.content-zone {
+  @apply container;
+  @apply mx-auto;
+  @apply md:max-w-xl;
+  @apply px-8;
+  @apply md:px-0;
+}
+
+h1, h2, h3, h4, h5 {
+  @apply mb-4;
+  @apply font-semibold;
+}
+
+h1 {
+  @apply text-xl;
+}
+
+h2 {
+  @apply text-lg;
+}
+
+h3 {
+}
+
+blockquote {
+  @apply italic;
+  @apply text-lg;
+  @apply opacity-50;
+}
+
 section header {
   @apply mb-4;
   @apply font-semibold;
@@ -107,6 +137,7 @@ section header {
   @apply flex-row;
   @apply items-center;
 }
+
 
 section p {
   @apply mb-4;

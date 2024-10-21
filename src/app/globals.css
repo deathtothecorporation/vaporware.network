@@ -64,6 +64,16 @@ section header h1 {
   line-height: normal;
 }
 
+nav ul {
+  @apply list-none !important;
+  @apply flex;
+  @apply flex-row;
+}
+
+nav ul > li {
+  @apply list-none !important;
+}
+
 a {
   color: #00E;
   @apply underline;
@@ -108,17 +118,23 @@ section {
   @apply md:px-0;
 }
 
-h1, h2, h3, h4, h5 {
+p {
   @apply mb-4;
+}
+
+h1, h2, h3, h4, h5 {
+  @apply my-8;
   @apply font-semibold;
 }
 
 h1 {
-  @apply text-xl;
+  @apply text-2xl;
+  @apply mb-8;
 }
 
 h2 {
   @apply text-lg;
+  @apply underline;
 }
 
 h3 {
@@ -146,12 +162,18 @@ section p {
 
 ul {
   @apply mb-4;
+  @apply list-disc;
 }
 
 li {
-  @apply list-disc;
   @apply ml-8;
   @apply text-left;
+  @apply list-disc;
+}
+
+footer {
+  @apply text-xs;
+  @apply text-black;
 }
 
 footer ul {
@@ -165,15 +187,16 @@ footer ul li {
   @apply ml-0;
 }
 
+footer li {
+  @apply my-0;
+}
+
 footer a {
   @apply no-underline;
   @apply text-black;
-  @apply font-semibold;
+  /*@apply font-semibold;*/
 }
 
-footer p {
-  @apply text-[8px];
-}
 
 .horizontal-bars {
   background-image: repeating-linear-gradient(

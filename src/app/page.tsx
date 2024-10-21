@@ -18,68 +18,45 @@ export default function Home() {
 
   return (
     <div className="">
-      <main className="container mx-auto md:max-w-xl px-8 md:px-0">
-        <header className="mx-auto border-b border-black pb-8 mb-8">
-          <h1 className="hero mb-4">opfn</h1>
-        </header>
+      <main className="content-zone">
+        <section>
+          <header className="hero">
+            The Ubiquitous Computer You Mod
+          </header>
+        </section>
 
         <section>
-          <header>
-            <div className="horizontal-bars shrink mr-[6px]"></div>
-            <h1 className="grow whitespace-nowrap">This is a relaunch</h1>
-            <div className="horizontal-bars shrink ml-[6px]"></div>
-          </header>
+          <p>
+          Your ship is a ubiquitous personal cloud computer. 
+        </p>
 
           <p>
-            Application silos are destroying the Internet. Apps create high
-            transaction costs for developers and high switching costs for users.
-            Within organizations, experimental code changes are subject to
-            coordination costs which grow non-linearly with codebase size.
-            Externally, third party developers can’t even access the code,
-            making transactions effectively impossible. This development
-            structure inevitably favors large corporations that embrace
-            extractive business models. But even with nation-sized treasuries,
-            innovation slows to a crawl as organizations grow and diseconomies
-            of scale set in.
-          </p>
+          A ship is made of many individual machines. Each physical computer you use contains one machine. All your machines together make up your ship. That means your ship is decentralized.
+        </p>
 
           <p>
-            Applications also discourage users from adopting new software.
-            Switching is made more costly when user data is unavailable for
-            exporting, or is exported in a malformed or partial representation.
-            Since code is owned and controlled by the corporation, users that
-            move to a new app have to learn new functionality; they can’t take
-            the interface with them. Worse yet, applications capture the value
-            created when users find and interact with one another. Silicon
-            Valley calls these network effects, the rest of us just call it
-            being social. But the desire to be connected is so compelling,
-            people are willing to ignore even the most egregious manipulations.
-          </p>
+          Each machine can run many processes, called cogs. Cogs are responsible for running all of your programs and storing all of your data. They do this automatically so you never have to think about saving or backup.
+        </p>
 
           <p>
-            What is needed instead of applications is a ubiquitous personal
-            computer where all software is open and owned by the user. The
-            computer must be distributed because software needs to exist
-            everywhere its operator goes. Servers must be supported so that
-            individuals can access cheap storage, scalable compute, and external
-            services like generative models. A standardized and universally
-            portable computer protects users from vendor lock-in because it can
-            always be moved to a different device or host.
-          </p>
+          Each cog can create many drivers. Drivers are a special program that only a cog can create. They allow your machines, and your ship, to interact with the outside world. Drivers let your ship connect to things like the web, a file system, or a GPU.
+        </p>
 
           <p>
-            Developers benefit too. If a user already has a computer in the
-            cloud, the developer can write software without worrying about
-            infrastructure. New developers can rely on user-owned social graphs,
-            and focus on writing great programs, instead of bootstrapping new
-            networks. And since users operate the software, developers don’t
-            incur the same moderation costs that plague content publishers
-            today—publishing software becomes like publishing a book. Finally,
-            the coordination costs for code changes are minimized as much as
-            possible. When all code is open, you can “inspect source” a full
-            stack program and reuse any bit you want.
-          </p>
+          Mods are upgrades to your ship. You can install a mod from a marketplace, the internet, or from your friend down the street. Since you own your ship, no one can keep the insides of a mod secret from you. If you want to change the mod, the only limit is your skill.
+        </p>
+
+          <p>
+          As your digital life gets bigger, you’ll want to add more machines to your ship. To start a new machine, you give it a manifest file. The manifest tells the machine what contents of your ship it is responsible for. 
+        </p>
         </section>
+
+        <section>
+          <div className="text-center">
+            <button>GET YOUR SHIP</button>
+          </div>
+        </section>
+
       </main>
     </div>
   );

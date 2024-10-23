@@ -31,11 +31,15 @@ export default function Home() {
             <h1 className="text-6xl">
               <OpfnSvg className="mx-auto" />
             </h1>
-            <h2 className="no-underline">
-              An Operating Function is a decentralized personal computer. It
-              exists on many devices simultaneously, including the cloud, and
-              can run forever.
-            </h2>
+            <div className="max-w-lg">
+              <h2 className="no-underline">
+                An Operating Function is a decentralized personal computer.
+              </h2>
+              <h2 className="no-underline">
+                It exists on many devices simultaneously, including the cloud,
+                and can run forever.
+              </h2>
+            </div>
           </div>
         </section>
 
@@ -98,8 +102,15 @@ export default function Home() {
         </section>
 
         <section>
+          <WebGLTest
+            speed={0.8}
+            color={[0.5, 0.3, 1.0]}
+            size={0.3}
+            targetSelectors={["#test"]}
+            debug={true} // Enable this temporarily to see what's happening
+          />
           <div className="text-center">
-            <button>GET YOUR SHIP</button>
+            <button id="test">GET YOUR SHIP</button>
           </div>
         </section>
       </main>

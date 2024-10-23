@@ -48,7 +48,7 @@ const HamburgerMenu: React.FC<HamburgerProps> = ({ children }) => {
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
-        className="fixed top-4 left-4 z-50 p-2 focus:outline-none"
+        className="fixed top-4 right-4 z-50 p-2 focus:outline-none"
         aria-label="Toggle menu"
       >
         <div className="flex flex-col justify-between w-6 h-5">

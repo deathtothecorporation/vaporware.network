@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import Logo from "@/components/Logo";
 
+import Link from "next/link";
 import React from "react";
 
 import Nav from "@/components/Nav";
@@ -104,10 +106,23 @@ export default function RootLayout({
           </div>
         </noscript>
 
-        <Nav></Nav>
+        <header className="z-30 container mx-auto sticky top-0 flex w-full justify-between">
+          <div className="w-full p-2">
+            <Link
+              href="/"
+              className="block text-lg hover:text-gray-600 text-center"
+            >
+              <Logo size={35} color="black" />
+            </Link>
+          </div>
+          <div>
+            <Nav></Nav>
+          </div>
+        </header>
         {children}
         <Footer></Footer>
       </body>
+
       <Script id="matomo-analytics">
         {`
           var _paq = window._paq = window._paq || [];

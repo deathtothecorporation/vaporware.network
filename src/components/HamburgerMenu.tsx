@@ -56,7 +56,7 @@ const HamburgerMenu = ({ children }: HamburgerMenuProps) => {
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
-        className={`fixed top-4 right-4 z-[60] p-2 focus:outline-none ${isOpen ? "bg-black" : "bg-transparent"}`}
+        className={`z-[60] p-2 focus:outline-none ${isOpen ? "bg-black" : "bg-transparent"}`}
         aria-label="Toggle menu"
       >
         <div className="flex flex-col justify-between w-6 h-5">

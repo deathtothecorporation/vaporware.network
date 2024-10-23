@@ -127,7 +127,9 @@ export default function Home() {
 
         <section>
           <div className="text-center">
-            <button id="test">Contribute</button>
+            <Link href="/contribute">
+              <button>Contribute</button>
+            </Link>
           </div>
         </section>
 

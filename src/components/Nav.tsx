@@ -13,11 +13,19 @@ export default function Nav() {
         >
           <Logo size={50} color="black" className="mx-auto" />
         </Link>
+
         <Link
           href="/learn-more"
           className="block text-lg hover:text-gray-600 text-center"
         >
           Learn More
+        </Link>
+
+        <Link
+          href="/contribute"
+          className="block text-lg hover:text-gray-600 text-center"
+        >
+          Contribute
         </Link>
 
         <Link

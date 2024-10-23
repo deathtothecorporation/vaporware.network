@@ -56,22 +56,22 @@ const HamburgerMenu = ({ children }: HamburgerMenuProps) => {
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
-        className="fixed top-4 right-4 z-50 p-2 focus:outline-none"
+        className={`fixed top-4 right-4 z-[60] p-2 focus:outline-none ${isOpen ? "bg-black" : "bg-transparent"}`}
         aria-label="Toggle menu"
       >
         <div className="flex flex-col justify-between w-6 h-5">
           <span
-            className={`block w-full h-0.5 bg-white transition-transform duration-300 ${
+            className={`block w-full h-0.5 bg-gray-200 transition-transform duration-300 ${
               isOpen ? "rotate-45 translate-y-2" : ""
             }`}
           />
           <span
-            className={`block w-full h-0.5 bg-white transition-opacity duration-300 ${
+            className={`block w-full h-0.5 bg-gray-200 transition-opacity duration-300 ${
               isOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`block w-full h-0.5 bg-white transition-transform duration-300 ${
+            className={`block w-full h-0.5 bg-gray-200 transition-transform duration-300 ${
               isOpen ? "-rotate-45 -translate-y-2" : ""
             }`}
           />
@@ -81,20 +81,20 @@ const HamburgerMenu = ({ children }: HamburgerMenuProps) => {
       {/* Menu Overlay */}
       <div
         className={`fixed inset-0 bg-black bg-opacity-0 transition-opacity duration-300 ${
-          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          isOpen
+            ? "opacity-50 visible"
+            : "opacity-0 invisible pointer-events-none"
         }`}
         onClick={toggleMenu}
       />
 
       {/* Menu Panel */}
       <div
-        className={`fixed top-0 left-0 w-full bg-white transform transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-y-0" : "-translate-y-full"
+        className={`fixed z-[50] top-0 right-0 h-full w-full md:w-1/3 bg-white transform transition-transform duration-300 ease-in-out ${
+          isOpen ? "shadow-lg translate-x-0" : "shadow-none translate-x-full"
         }`}
       >
-        <div className="p-6">
-          {addCloseHandler(children)}
-        </div>
+        <div className="p-6">{addCloseHandler(children)}</div>
       </div>
     </div>
   );

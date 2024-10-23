@@ -117,13 +117,11 @@ section {
 }
 
 .content-zone {
-  /*
   @apply container;
   @apply mx-auto;
   @apply md:max-w-xl;
   @apply px-8;
   @apply md:px-0;
-  */
 }
 
 p {

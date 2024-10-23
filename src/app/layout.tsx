@@ -107,7 +107,6 @@ export default function RootLayout({
         <Nav></Nav>
         {children}
         <Footer></Footer>
-
       </body>
       <Script id="matomo-analytics">
         {`

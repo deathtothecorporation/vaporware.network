@@ -107,17 +107,7 @@ export default function RootLayout({
         </noscript>
 
         <header className="z-30 container mx-auto sticky top-0 flex w-full justify-between">
-          <div className="w-full p-2">
-            <Link
-              href="/"
-              className="block text-lg hover:text-gray-600 text-center"
-            >
-              <Logo size={35} color="black" />
-            </Link>
-          </div>
-          <div>
-            <Nav></Nav>
-          </div>
+          <Nav></Nav>
         </header>
         {children}
         <Footer></Footer>

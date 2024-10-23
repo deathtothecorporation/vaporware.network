@@ -1,18 +1,13 @@
 "use client";
 
-import React, {
-  useState,
-  Children,
-  cloneElement,
-  ReactNode,
-  ReactElement,
-} from "react";
+import React, { useState, Children, ReactNode, ReactElement } from "react";
 
 interface HamburgerMenuProps {
   children: ReactNode;
+  color?: string;
 }
 
-const HamburgerMenu = ({ children }: HamburgerMenuProps) => {
+const HamburgerMenu = ({ children, color = "white" }: HamburgerMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -54,27 +49,30 @@ const HamburgerMenu = ({ children }: HamburgerMenuProps) => {
     });
   };
 
+  const bgColor = color === "black" ? "bg-black" : "bg-white";
+  const buttonColor = color === "black" ? "bg-white" : "bg-black";
+
   return (
     <div className="relative">
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
-        className={`relative z-[60] top-0 right-4 p-2 focus:outline-none ${isOpen ? "bg-black" : "bg-transparent"}`}
+        className={`relative z-[60] top-0 right-4 p-2 focus:outline-none ${isOpen ? "bg-white" : "bg-transparent"}`}
         aria-label="Toggle menu"
       >
         <div className="flex flex-col justify-between w-6 h-5">
           <span
-            className={`block w-full h-0.5 bg-gray-200 transition-transform duration-300 ${
+            className={`block w-full h-0.5 ${bgColor} transition-transform duration-300 ${
               isOpen ? "rotate-45 translate-y-2" : ""
             }`}
           />
           <span
-            className={`block w-full h-0.5 bg-gray-200 transition-opacity duration-300 ${
+            className={`block w-full h-0.5 ${bgColor} transition-opacity duration-300 ${
               isOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`block w-full h-0.5 bg-gray-200 transition-transform duration-300 ${
+            className={`block w-full h-0.5 ${bgColor} transition-transform duration-300 ${
               isOpen ? "-rotate-45 -translate-y-2" : ""
             }`}
           />
@@ -83,7 +81,7 @@ const HamburgerMenu = ({ children }: HamburgerMenuProps) => {
 
       {/* Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-black bg-opacity-0 transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-opacity-0 transition-opacity duration-300 ${
           isOpen
             ? "opacity-50 visible"
             : "opacity-0 invisible pointer-events-none"

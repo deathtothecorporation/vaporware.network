@@ -40,6 +40,11 @@
 
 body {
   font-family: "BerkeleyMono", monospace;
+  @apply bg-white;
+}
+
+section {
+  @apply bg-white;
 }
 
 section header h1 {

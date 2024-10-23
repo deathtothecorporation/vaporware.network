@@ -84,10 +84,10 @@ export default function Home() {
         </section>
 
         <section className="content-zone">
-          <header class="flex flex-row space-between items-center">
-            <div class="horizontal-bars shrink mr-[6px]"></div>
-            <h1 class="grow whitespace-nowrap">All Software is Open</h1>
-            <div class="horizontal-bars shrink ml-[6px]"></div>
+          <header className="flex flex-row space-between items-center">
+            <div className="horizontal-bars shrink mr-[6px]"></div>
+            <h1 className="grow whitespace-nowrap">All Software is Open</h1>
+            <div className="horizontal-bars shrink ml-[6px]"></div>
           </header>
 
           <p>
@@ -106,34 +106,62 @@ export default function Home() {
         </section>
 
         <div className="my-[400px]"></div>
-        <section>
+
+        <section className="content-zone">
           <p>
             Each OF can run many processes, called cogs. Cogs are responsible
             for running all of your programs and storing all of your data. They
             do this automatically so you never have to think about saving or
-            backup.
+            backup....
           </p>
 
-          <p>
-            Each cog can create many drivers. Drivers are a special program that
-            only a cog can create. They allow your OF to interact with the
-            outside world. Drivers let your OF connect to things like the web, a
-            file system, or a GPU.
-          </p>
-
-          <p>
-            Mods are upgrades to your OF. You can install a mod from a
-            marketplace, the internet, or from your friend down the street.
-            Since you own your OF, no one can keep the insides of a mod secret
-            from you. If you want to change the mod, the only limit is your
-            skill.
-          </p>
+          <div className="text-center">
+            <p>...</p>
+            <p>...</p>
+            <p>...</p>
+            <p>...</p>
+            <p>...</p>
+            <p>...</p>
+          </div>
         </section>
 
         <section>
           <div className="text-center">
-            <button id="test">GET YOUR SHIP</button>
+            <button id="test">Contribute</button>
           </div>
+        </section>
+
+        <section className="content-zone">
+          <div className="horizontal-bars my-4"></div>
+        </section>
+
+        <section className="content-zone" id="callouts">
+          <article className="left">
+            <header>PLAN</header>
+            <main>
+              Some more words on PLAN lorem ipsum Some more words on PLAN lorem
+              ipsum Some more words on PLAN lorem ipsum Some more words on PLAN
+              lorem ipsum Some more words on PLAN lorem ipsum
+            </main>
+          </article>
+
+          <article className="right flex flex-row-reverse">
+            <header>Ships</header>
+            <main>
+              Some more words on PLAN lorem ipsum Some more words on PLAN lorem
+              ipsum Some more words on PLAN lorem ipsum Some more words on PLAN
+              lorem ipsum Some more words on PLAN lorem ipsum
+            </main>
+          </article>
+
+          <article className="left">
+            <header>Runtime</header>
+            <main>
+              Some more words on PLAN lorem ipsum Some more words on PLAN lorem
+              ipsum Some more words on PLAN lorem ipsum Some more words on PLAN
+              lorem ipsum Some more words on PLAN lorem ipsum
+            </main>
+          </article>
         </section>
       </main>
     </div>

@@ -180,6 +180,44 @@ li {
   @apply list-disc;
 }
 
+section#callouts {
+  @apply flex;
+  @apply flex-col;
+  @apply space-y-4;
+}
+
+section#callouts > article {
+  @apply flex;
+  @apply flex-col;
+  @apply md:flex-row;
+}
+
+section#callouts > article > header {
+  @apply mb-4;
+  @apply md:mb-0;
+  @apply md:flex-[1];
+}
+
+section#callouts > article > main {
+  @apply md:flex-[3];
+}
+
+article.left {
+  @apply flex-row;
+}
+
+section#callouts > article.right {
+  @apply md:flex-row-reverse;
+}
+
+section#callouts > article.right > header {
+  @apply md:text-right;
+  @apply md:justify-end;
+}
+section#callouts > article.right > main {
+  @apply md:text-left;
+}
+
 footer {
   @apply text-xs;
   @apply text-black;

@@ -74,6 +74,14 @@ export default function Home() {
             skill.
           </p>
 
+          <div className="text-right flex flew-row justify-end">
+            <div className="text-right">
+              <p className="text-xl" id="thing">
+                Thing!!
+              </p>
+            </div>
+          </div>
+
           <div className="text-center relative">
             <ScrollSequence
               frameDir="forest_frames"
@@ -103,10 +111,10 @@ export default function Home() {
 
         <section>
           <WebGLTest
-            speed={0.8}
+            speed={0.5}
             color={[0.5, 0.3, 1.0]}
-            size={0.3}
-            targetSelectors={["#test"]}
+            size={0.1}
+            targetSelectors={["#test", "#thing"]}
             debug={true} // Enable this temporarily to see what's happening
           />
           <div className="text-center">

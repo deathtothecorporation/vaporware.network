@@ -29,24 +29,25 @@ const WebGLAnimation: React.FC<WebGLAnimationProps> = ({
   const programRef = useRef<WebGLProgram | null>(null);
   const [targets, setTargets] = useState<AnimationTarget[]>([]);
 
-  // Current position state for smooth animation
   const currentPosition = useRef({ x: 0, y: 0 });
   const targetPosition = useRef({ x: 0, y: 0 });
-  const currentSize = useRef(size);
+  const currentSize = useRef({ width: size, height: size });
+  const targetSize = useRef({ width: size, height: size });
   const lastVisibleTarget = useRef<Element | null>(null);
+  const defaultCenter = { x: -0.6, y: 0.6 };
 
-  // Simplified vertex shader with direct position mapping
+  // Updated vertex shader to handle separate width and height
   const vertexShaderSource = `
     attribute vec4 aVertexPosition;
     uniform float uTime;
-    uniform float uSize;
+    uniform vec2 uSize;
     uniform vec2 uOffset;
 
     void main() {
-      float x = aVertexPosition.x * uSize + uOffset.x;
-      float y = aVertexPosition.y * uSize + uOffset.y;
-      x += sin(uTime * 2.0) * 0.05;
-      y += cos(uTime * 2.0) * 0.05;
+      float x = aVertexPosition.x * uSize.x + uOffset.x;
+      float y = aVertexPosition.y * uSize.y + uOffset.y;
+      x += sin(uTime * 2.0) * 0.02;
+      y += cos(uTime * 2.0) * 0.02;
       gl_Position = vec4(x, y, 0.0, 1.0);
     }
   `;
@@ -62,26 +63,34 @@ const WebGLAnimation: React.FC<WebGLAnimationProps> = ({
 
   const updateSquarePosition = (element: Element) => {
     const rect = element.getBoundingClientRect();
+
+    // Center position
     const x = ((rect.left + rect.width / 2) / window.innerWidth) * 2 - 1;
     const y = (-(rect.top + rect.height / 2) / window.innerHeight) * 2 + 1;
 
+    // Size in WebGL coordinates with padding factor (e.g., 1.2 = 20% larger)
+    const paddingFactor = 1.2;
+    const width = (rect.width / window.innerWidth) * paddingFactor;
+    const height = (rect.height / window.innerHeight) * paddingFactor;
+
     if (debug) {
-      console.log("Updating target position for element:", element);
       console.log("Element rect:", rect);
       console.log("New target position:", { x, y });
+      console.log("New target size:", { width, height });
     }
 
     targetPosition.current = { x, y };
-
-    const elementSize =
-      Math.min(rect.width, rect.height) /
-      Math.min(window.innerWidth, window.innerHeight);
-    currentSize.current = Math.max(size, elementSize * 0.3);
+    targetSize.current = { width, height };
   };
 
   useEffect(() => {
     if (debug) {
       console.log("Target selectors:", targetSelectors);
+    }
+
+    // Set initial position to upper left
+    if (targetSelectors.length === 0) {
+      targetPosition.current = defaultCenter;
     }
 
     const updateTargetPositions = () => {
@@ -105,7 +114,6 @@ const WebGLAnimation: React.FC<WebGLAnimationProps> = ({
       setTargets(newTargets);
     };
 
-    // Set up intersection observer
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -134,7 +142,6 @@ const WebGLAnimation: React.FC<WebGLAnimationProps> = ({
       }
     );
 
-    // Observe all targets
     targetSelectors.forEach((selector) => {
       const element = document.querySelector(selector);
       if (element) {
@@ -157,8 +164,17 @@ const WebGLAnimation: React.FC<WebGLAnimationProps> = ({
       if (!lastVisibleTarget.current) {
         const time = Date.now() * 0.001;
         targetPosition.current = {
-          x: Math.sin(time) * 0.8,
-          y: Math.cos(time) * 0.8,
+          x: defaultCenter.x + Math.sin(time * 0.5) * 0.1,
+          y: defaultCenter.y + Math.cos(time * 0.5) * 0.1,
+        };
+        // Set square size accounting for aspect ratio
+        const defaultSize = size;
+        const aspectRatio = glRef.current
+          ? glRef.current.canvas.width / glRef.current.canvas.height
+          : 1;
+        targetSize.current = {
+          width: defaultSize,
+          height: defaultSize * aspectRatio,
         };
       } else {
         updateSquarePosition(lastVisibleTarget.current);
@@ -204,14 +220,14 @@ const WebGLAnimation: React.FC<WebGLAnimationProps> = ({
 
   const initBuffers = (gl: WebGLRenderingContext) => {
     const positions = [
-      -0.5,
-      0.5, // top left
-      0.5,
-      0.5, // top right
-      -0.5,
-      -0.5, // bottom left
-      0.5,
-      -0.5, // bottom right
+      -1.0,
+      1.0, // top left
+      1.0,
+      1.0, // top right
+      -1.0,
+      -1.0, // bottom left
+      1.0,
+      -1.0, // bottom right
     ];
 
     const positionBuffer = gl.createBuffer();
@@ -226,10 +242,12 @@ const WebGLAnimation: React.FC<WebGLAnimationProps> = ({
     positionBuffer: WebGLBuffer,
     time: number
   ) => {
+    const aspectRatio = gl.canvas.width / gl.canvas.height;
+
     gl.clearColor(0.0, 0.0, 0.0, 0.0);
     gl.clear(gl.COLOR_BUFFER_BIT);
 
-    // Faster lerp for more responsive movement
+    // Smooth transitions for position and size
     const lerp = (start: number, end: number, t: number) =>
       start + (end - start) * t;
     currentPosition.current.x = lerp(
@@ -242,9 +260,42 @@ const WebGLAnimation: React.FC<WebGLAnimationProps> = ({
       targetPosition.current.y,
       0.08
     );
+    currentSize.current.width = lerp(
+      currentSize.current.width,
+      targetSize.current.width,
+      0.08
+    );
+    currentSize.current.height = lerp(
+      currentSize.current.height,
+      targetSize.current.height,
+      0.08
+    );
+
+    if (lastVisibleTarget.current) {
+      currentSize.current.width = lerp(
+        currentSize.current.width,
+        targetSize.current.width,
+        0.08
+      );
+      currentSize.current.height = lerp(
+        currentSize.current.height,
+        targetSize.current.height,
+        0.08
+      );
+    } else {
+      // For default square shape, adjust for aspect ratio
+      const squareSize = lerp(
+        currentSize.current.width,
+        targetSize.current.width,
+        0.08
+      );
+      currentSize.current.width = squareSize;
+      currentSize.current.height = squareSize * aspectRatio;
+    }
 
     if (debug) {
       console.log("Current position:", currentPosition.current);
+      console.log("Current size:", currentSize.current);
     }
 
     const positionLocation = gl.getAttribLocation(program, "aVertexPosition");
@@ -259,7 +310,11 @@ const WebGLAnimation: React.FC<WebGLAnimationProps> = ({
 
     gl.uniform1f(timeLocation, time * speed);
     gl.uniform3fv(colorLocation, color);
-    gl.uniform1f(sizeLocation, currentSize.current);
+    gl.uniform2f(
+      sizeLocation,
+      currentSize.current.width,
+      currentSize.current.height
+    );
     gl.uniform2f(
       offsetLocation,
       currentPosition.current.x,

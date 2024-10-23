@@ -69,49 +69,41 @@ export default function Home() {
         </section>
 
         <section className="content-zone">
-          <p>Your ship is a ubiquitous personal cloud computer.</p>
-
           <p>
-            A ship is made of many individual machines. Each physical computer
-            you use contains one machine. All your machines together make up
-            your ship. That means your ship is decentralized.
+            An Operating Function specifies a new kind of personal computer. The
+            computer is decentralized because it exists on many devices
+            simultaneously, including the cloud, and can run forever.
           </p>
 
           <p>
-            Each machine can run many processes, called cogs. Cogs are
-            responsible for running all of your programs and storing all of your
-            data. They do this automatically so you never have to think about
-            saving or backup.
+            OFs save data automatically and can be moved even while running. All
+            programs are open and modifiable. Users retain control over their
+            software, their data, and their networks. Developers bear no
+            infrastructure cost.
+          </p>
+
+          <div className="my-[400px]"></div>
+
+          <p>
+            Each OF can run many processes, called cogs. Cogs are responsible
+            for running all of your programs and storing all of your data. They
+            do this automatically so you never have to think about saving or
+            backup.
           </p>
 
           <p>
             Each cog can create many drivers. Drivers are a special program that
-            only a cog can create. They allow your machines, and your ship, to
-            interact with the outside world. Drivers let your ship connect to
-            things like the web, a file system, or a GPU.
+            only a cog can create. They allow your OF to interact with the
+            outside world. Drivers let your OF connect to things like the web, a
+            file system, or a GPU.
           </p>
 
           <p>
-            Mods are upgrades to your ship. You can install a mod from a
+            Mods are upgrades to your OF. You can install a mod from a
             marketplace, the internet, or from your friend down the street.
-            Since you own your ship, no one can keep the insides of a mod secret
+            Since you own your OF, no one can keep the insides of a mod secret
             from you. If you want to change the mod, the only limit is your
             skill.
-          </p>
-
-          <div className="text-right flex flew-row justify-end">
-            <div className="text-right">
-              <p className="text-xl" id="thing">
-                Thing!!
-              </p>
-            </div>
-          </div>
-
-          <p>
-            As your digital life gets bigger, you’ll want to add more machines
-            to your ship. To start a new machine, you give it a manifest file.
-            The manifest tells the machine what contents of your ship it is
-            responsible for.
           </p>
         </section>
 

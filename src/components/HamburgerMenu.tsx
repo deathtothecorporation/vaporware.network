@@ -20,34 +20,37 @@ const HamburgerMenu = ({ children }: HamburgerMenuProps) => {
   };
 
   // Recursively add click handler to all Link elements
-  const addCloseHandler = (children: ReactNode): ReactNode => {
+  const addCloseHandler = (children: ReactNode): ReactNode[] => {
+    // Note the return type is now ReactNode[]
     return Children.map(children, (child) => {
       if (!child || typeof child === "string") return child;
-
-      // Need to type check if it's a valid element
       if (!React.isValidElement(child)) return child;
 
-      // If it has an href prop, it's likely a Link
-      if ("href" in child.props) {
-        return cloneElement(child as ReactElement, {
+      const childElement = child as ReactElement;
+
+      // Handle nav and other container elements
+      const newChildren = childElement.props?.children
+        ? addCloseHandler(childElement.props.children)
+        : childElement.props.children;
+
+      // If it has an href prop, add the click handler
+      if ("href" in childElement.props) {
+        return React.cloneElement(childElement, {
+          ...childElement.props,
           onClick: (e: React.MouseEvent) => {
-            // Call the original onClick if it exists
-            if (child.props.onClick) {
-              child.props.onClick(e);
+            if (childElement.props.onClick) {
+              childElement.props.onClick(e);
             }
             toggleMenu();
           },
         });
       }
 
-      // If it has children, recursively process them
-      if (child.props?.children) {
-        return cloneElement(child as ReactElement, {
-          children: addCloseHandler(child.props.children),
-        });
-      }
-
-      return child;
+      // For non-link elements, just clone with new children if they exist
+      return React.cloneElement(childElement, {
+        ...childElement.props,
+        children: newChildren,
+      });
     });
   };
 
@@ -56,7 +59,7 @@ const HamburgerMenu = ({ children }: HamburgerMenuProps) => {
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
-        className={`z-[60] p-2 focus:outline-none ${isOpen ? "bg-black" : "bg-transparent"}`}
+        className={`relative z-[60] top-0 right-4 p-2 focus:outline-none ${isOpen ? "bg-black" : "bg-transparent"}`}
         aria-label="Toggle menu"
       >
         <div className="flex flex-col justify-between w-6 h-5">

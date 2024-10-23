@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import Hamburger from "@/components/HamburgerMenu";
+import ExternalLink from "@/components/ExternalLink";
 
 export default function Nav() {
   return (
@@ -27,6 +28,14 @@ export default function Nav() {
         >
           Contribute
         </Link>
+
+        <ExternalLink
+          href="https://github.com/operating-function/pallas"
+          divClass="text-lg hover:text-gray-600 justify-center flex"
+          linkClass="justify-center text-center"
+        >
+          Code
+        </ExternalLink>
 
         <Link
           href="/about"

@@ -105,6 +105,48 @@ export default function Home() {
           </p>
         </section>
 
+        <section className="content-zone">
+          <header className="flex flex-row space-between items-center">
+            <div className="horizontal-bars shrink mr-[6px]"></div>
+            <h1 className="grow whitespace-nowrap">No Server Costs</h1>
+            <div className="horizontal-bars shrink ml-[6px]"></div>
+          </header>
+
+          <p>
+            Users connect to each other peer-to-peer. OpFn’s run on edge devices
+            and cloud servers, moving programs between domains depending on
+            need.
+          </p>
+
+          <p>
+            Developers write full stack programs that are like serverless
+            functions, or smart contracts. Publishing software is equivalent to
+            sharding: the user runs an entirely independent copy.
+          </p>
+        </section>
+
+        <section className="content-zone">
+          <header className="flex flex-row space-between items-center">
+            <div className="horizontal-bars shrink mr-[6px]"></div>
+            <h1 className="grow whitespace-nowrap">Programs Run Forever</h1>
+            <div className="horizontal-bars shrink ml-[6px]"></div>
+          </header>
+
+          <p>
+            A personal computer should never become obsolete. PLAN has 5 opcodes
+            that are frozen in time, guaranteeing old code will work on new
+            implementations, and new code will work on old (but maybe more
+            slowly).
+          </p>
+
+          <p>
+            To make it fast, targets for hardware acceleration are encoded
+            within the system. New targets can be added as standards. Stateful
+            effects are handled by a small number of IO channels that are
+            specified by the system, but implemented in the runtime.
+          </p>
+        </section>
+
         <div className="my-[400px]"></div>
 
         <section className="content-zone">
@@ -164,6 +206,22 @@ export default function Home() {
               lorem ipsum Some more words on PLAN lorem ipsum
             </main>
           </article>
+        </section>
+
+        <section>
+          <div className="flex flex-row gap-x-4 justify-center">
+            <div className="">
+              <a href="https://opfn.gitbook.io/pallas" target="_blank">
+                <button>Read the Docs</button>
+              </a>
+            </div>
+
+            <div className="">
+              <Link href="/about">
+                <button>Join the Community</button>
+              </Link>
+            </div>
+          </div>
         </section>
       </main>
     </div>

@@ -158,3 +158,11 @@ human coordination requires free exchange of information
 - content addressable data
 - NAT holepunching
 
+
+<div class="text-center w-full mt-8" style="margin-top: 2em;">
+  <a href="https://opfn.gitbook.io/pallas" target="_blank">
+  <button class="mt-8">
+    Read the docs
+  </button>
+  </a>
+</div>

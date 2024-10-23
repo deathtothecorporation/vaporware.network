@@ -1,28 +1,37 @@
 import React from "react";
 import Link from "next/link";
+import Hambugger from "@/components/HambuggerMenu";
 
 export default function Nav() {
   return (
-    <nav
-      className="flex flex-col sticky top-0 z-50 bg-white pt-4 pb-2 mx-auto md:max-w-xl md:px-0 px-8"
-      id="nav"
-    >
-      <div className="flex justify-center text-center items-center">
-        <ul>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/learn-more">Learn More</Link>
-          </li>
-          <li>
-            <Link href="/careers">Careers</Link>
-          </li>
-          <li>
-            <Link href="/about">About</Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <Hambugger>
+      <nav className="space-y-4 mt-8">
+        <Link
+          href="/"
+          className="block text-lg hover:text-gray-600 text-center"
+        >
+          Home
+        </Link>
+        <Link
+          href="/learn-more"
+          className="block text-lg hover:text-gray-600 text-center"
+        >
+          Learn More
+        </Link>
+
+        <Link
+          href="/about"
+          className="block text-lg hover:text-gray-600 text-center"
+        >
+          About
+        </Link>
+        <Link
+          href="/careers"
+          className="block text-lg hover:text-gray-600 text-center"
+        >
+          Careers
+        </Link>
+      </nav>
+    </Hambugger>
   );
 }

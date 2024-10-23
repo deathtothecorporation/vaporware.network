@@ -81,9 +81,32 @@ export default function Home() {
             software, their data, and their networks. Developers bear no
             infrastructure cost.
           </p>
+        </section>
 
-          <div className="my-[400px]"></div>
+        <section className="content-zone">
+          <header class="flex flex-row space-between items-center">
+            <div class="horizontal-bars shrink mr-[6px]"></div>
+            <h1 class="grow whitespace-nowrap">All Software is Open</h1>
+            <div class="horizontal-bars shrink ml-[6px]"></div>
+          </header>
 
+          <p>
+            The system is inspectable down to the bottom. Our compiler binary is
+            called PLAN and is pure, lazy, and human readable. The entire system
+            bootstraps itself from PLAN using reflection and dynamic code
+            generation.
+          </p>
+
+          <p>
+            End-user programs are created without siloing functionality in
+            applications. When software is installed, source is automatically
+            available for inspection. Modifications can be hot reloaded with no
+            downtime.
+          </p>
+        </section>
+
+        <div className="my-[400px]"></div>
+        <section>
           <p>
             Each OF can run many processes, called cogs. Cogs are responsible
             for running all of your programs and storing all of your data. They

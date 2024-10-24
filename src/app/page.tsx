@@ -74,17 +74,16 @@ export default function Home() {
 
         <section className="content-zone">
           <p>
-            An Operating Function specifies a new kind of personal
-            computer. The computer is decentralized because it exists on
-            many devices simultaneously, including the cloud, and can
-            run forever.
+            An operating function is a new personal computer. The
+            computer is decentralized because it exists on many devices
+            simultaneously, including the cloud, and can run forever. 
           </p>
 
           <p>
-            OFs save data automatically and can be moved even while
-            running. All programs are open and modifiable. Users retain
-            control over their software, their data, and their networks.
-            Developers bear no infrastructure cost.
+            Operating functions can be moved while running and save
+            state automatically. All programs are open and modifiable.
+            Users retain control over their software, their data, and
+            their networks. Developers bear no infrastructure cost.
           </p>
         </section>
 
@@ -101,7 +100,7 @@ export default function Home() {
             The system is inspectable down to the bottom. Our compiler
             binary is called PLAN and is pure, lazy, and human readable.
             The entire system bootstraps itself from PLAN using
-            reflection and dynamic code generation.
+            reflection and dynamic code generation. 
           </p>
 
           <p>
@@ -120,16 +119,17 @@ export default function Home() {
           </header>
 
           <p>
-            Users connect to each other peer-to-peer. OpFn’s run on edge
-            devices and cloud servers, moving programs between domains
-            depending on need.
+            Users connect to each other peer-to-peer. Operating
+            functions run on edge devices and cloud servers, moving
+            programs between domains depending on their user’s need. 
           </p>
 
           <p>
             Developers write full stack programs that are like
             serverless functions, or smart contracts. Publishing
             software is equivalent to sharding: the user runs an
-            entirely independent copy.
+            entirely independent copy. External services can still be
+            integrated through API.
           </p>
         </section>
 
@@ -205,15 +205,18 @@ export default function Home() {
 
         <section className="content-zone" id="callouts">
           <article className="left">
-            <header>PLAN</header>
+            <header>
+              <h3>PLAN</h3>
+            </header>
             <main>
               <p>
-                Some more words on PLAN lorem ipsum Some more words on
-                PLAN lorem ipsum Some more words on PLAN lorem ipsum
-                Some more words on PLAN lorem ipsum Some more words on
-                PLAN lorem ipsum
+                PLAN is the core innovation that makes a ubiquitous
+                personal computer possible. The spec is tiny and the
+                system it defines is reflective: it can examine,
+                introspect, and modify itself.
               </p>
-              <pre className="code">
+              <p>Here is the data model of PLAN:</p>
+              <pre className="code mx-2">
                 <code>
                   {`
 PLAN ::= <PLAN>           # Pin
@@ -224,31 +227,126 @@ PLAN ::= <PLAN>           # Pin
                 </code>
               </pre>
               <p>
-                Some more words on PLAN lorem ipsum Some more words on
-                PLAN lorem ipsum Some more words on PLAN lorem ipsum
-                Some more words on PLAN lorem ipsum Some more words on
-                PLAN lorem ipsum
+                PLAN is barely hand-writable, but it is human-readable.
+                This is the source for the foldl function:
+              </p>
+              <pre className="code mx-2 text-[10px]">
+                <code>
+                  {`
+* (_If a b c)=(2 c ((d e & d) b) a)
+* (_Not a)=(_If a 0 1)
+* (_IsApp a)=(1:(b&0):(b c d & 0):(b c & 1):(b&0) a)
+* (_Null a)=(_Not _IsApp-a)
+* (_Cdr a)=(1:(b&b):(b c d & d):(b c & c):(b&0) a)
+* (_Car a)=(1:(b&4):(b c d & 0-b-c):(b c & b):(b&0) a)
+* (_Get a b)=(_If _Null-a 0 (2 _Cdr-a (_Get _Car-a) b))
+* (_Idx a b)=(_Get b a)
+* (_Seq a b)=(2 b ((c d & c) b) a)
+* (id a)=a
+* (_Dec a)=(2:0:id a)
+*   = (_Len a)
+    ^ a
+    : (go b c ? _Seq b (_If _Null-c b (go 3-b _Car-c)))
+    : 0
+*   = (foldl a b c)
+    ^ a c b 0 _Len-c
+    ? (go d e f g h)
+    @ i (d f _Idx-g-e)
+    | _If h (_Seq i (go d e i 3-g _Dec-h)) f
+                `}
+                </code>
+              </pre>
+              <p>
+                foldl includes the source for its dependencies (_If
+                _Not, etc). Once you learn the 5 opcodes, you can
+                understand the entire foldl source down to the metal.
               </p>
             </main>
           </article>
 
           <article className="right">
-            <header>Machines</header>
+            <header>
+              <h3>Ships</h3>
+            </header>
             <main>
-              A ship is made of many individual machines. Each physical
-              computer you use contains one machine. All your machines
-              together make up your ship. That means your ship is
-              decentralized.
+              <p>
+                A ship is made of many individual machines. Each
+                physical computer you use contains one machine. All your
+                machines together make up your ship. That means your
+                ship is decentralized.
+              </p>
             </main>
           </article>
 
           <article className="left">
-            <header>Runtime</header>
+            <header>
+              <h3>Machines</h3>
+            </header>
             <main>
-              Some more words on PLAN lorem ipsum Some more words on
-              PLAN lorem ipsum Some more words on PLAN lorem ipsum Some
-              more words on PLAN lorem ipsum Some more words on PLAN
-              lorem ipsum
+              <p>
+                A machine runs an operating function. The operating
+                function is a new kind of programming environment that
+                combines language features, a minimal kernel,
+                networking, and a database. It bootstraps from PLAN.
+              </p>
+            </main>
+          </article>
+
+          <article className="right">
+            <header>
+              <h3>Cogs</h3>
+            </header>
+            <main>
+              <p>
+                Each machine can manage many processes, called cogs.
+                Cogs are responsible for running all of your programs
+                and storing all of your data. They do this automatically
+                so you never have to think about saving or backup.
+              </p>
+            </main>
+          </article>
+
+          <article className="left">
+            <header>
+              <h3>Drivers</h3>
+            </header>
+            <main>
+              <p>
+                Each cog can create many drivers. Drivers are a special
+                program that only a cog can create. They allow your
+                machines, and your ship, to interact with the world
+                around them. Drivers let your ship connect to things
+                like the web, a file system, or a GPU.
+              </p>
+            </main>
+          </article>
+
+          <article className="right">
+            <header>
+              <h3>Mods</h3>
+            </header>
+            <main>
+              <p>
+                Mods are upgrades to your ship. You can install a mod
+                from a marketplace, the internet, or from your friend
+                down the street. Since you own your ship, no one can
+                keep the insides of a mod secret from you. If you want
+                to change the mod, the only limit is your skill.
+              </p>
+            </main>
+          </article>
+
+          <article className="left">
+            <header>
+              <h3>Manifests</h3>
+            </header>
+            <main>
+              <p>
+                As your digital life gets bigger, you’ll want to add
+                more machines to your ship. To start a new machine, you
+                give it a manifest. The manifest tells the machine what
+                contents of your ship it is responsible for. 
+              </p>
             </main>
           </article>
         </section>

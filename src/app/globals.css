@@ -195,6 +195,7 @@ pre.code {
 section#callouts {
   @apply flex;
   @apply flex-col;
+  @apply md:space-y-10;
   @apply space-y-8;
 }
 
@@ -232,21 +233,44 @@ section#callouts > article.left {
 }
 
 section#callouts > article.right > header {
+  @apply text-right;
+  @apply md:items-start;
   @apply md:text-right;
   @apply md:justify-end;
   @apply md:border-l-2;
-  @apply ml-2;
+  @apply md:ml-2;
+}
+
+section#callouts > article > header > h3 {
+  @apply w-full;
+  @apply my-0;
+}
+
+section#callouts > article.right > header > h3 {
+  @apply w-full;
+  @apply text-right;
+}
+
+section#callouts > article.left > header > h3 {
+  @apply w-full;
+  @apply text-left;
 }
 
 section#callouts > article.left > header {
   @apply md:text-right;
   @apply md:justify-start;
   @apply md:border-r-2;
-  @apply mr-2;
+  @apply md:mr-2;
 }
 
 section#callouts > article.right > main {
   @apply md:text-left;
+  @apply md:pr-2;
+}
+
+section#callouts > article.left > main {
+  @apply md:text-left;
+  @apply md:pl-2;
 }
 
 footer {

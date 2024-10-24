@@ -64,26 +64,31 @@ export default function Home() {
             <h1 className="text-6xl">
               <Lockup className="mx-auto" size={300} color="white" />
             </h1>
-            <h2 className="no-underline">
+            <h2 className="no-underline font-bold berkeley">
               The Operating Function Company
             </h2>
           </div>
         </section>
 
-        <div className="content-zone border-b border-black mb-8"></div>
+        <div className="max-w-sm content-zone border-b border-black mb-8"></div>
 
         <section className="content-zone">
-          <p>
-            An operating function is a new personal computer. The
-            computer is decentralized because it exists on many devices
-            simultaneously, including the cloud, and can run forever. 
+          <p className="">
+            <span className="italic">
+              An operating function is a new software-defined personal
+              computer. The computer is decentralized because it exists
+              on many devices simultaneously, including the cloud, and
+              can run forever.
+            </span>
           </p>
 
           <p>
-            Operating functions can be moved while running and save
-            state automatically. All programs are open and modifiable.
-            Users retain control over their software, their data, and
-            their networks. Developers bear no infrastructure cost.
+            <span className="italic">
+              Operating functions can be moved while running and save
+              state automatically. All programs are open and modifiable.
+              Users retain control over their software, their data, and
+              their networks. Developers bear no infrastructure cost.
+            </span>
           </p>
         </section>
 
@@ -98,9 +103,9 @@ export default function Home() {
 
           <p>
             The system is inspectable down to the bottom. Our compiler
-            binary is called PLAN and is pure, lazy, and human readable.
-            The entire system bootstraps itself from PLAN using
-            reflection and dynamic code generation. 
+            binary is called <a href="#plan">PLAN</a> and is pure, lazy,
+            and human readable. The entire system bootstraps itself from
+            PLAN using reflection and dynamic code generation. 
           </p>
 
           <p>
@@ -109,28 +114,8 @@ export default function Home() {
             automatically available for inspection. Modifications can be
             hot reloaded with no downtime.
           </p>
-        </section>
 
-        <section className="content-zone">
-          <header className="flex flex-row space-between items-center">
-            <div className="horizontal-bars shrink mr-[6px]"></div>
-            <h1 className="grow whitespace-nowrap">No Server Costs</h1>
-            <div className="horizontal-bars shrink ml-[6px]"></div>
-          </header>
-
-          <p>
-            Users connect to each other peer-to-peer. Operating
-            functions run on edge devices and cloud servers, moving
-            programs between domains depending on their user’s need. 
-          </p>
-
-          <p>
-            Developers write full stack programs that are like
-            serverless functions, or smart contracts. Publishing
-            software is equivalent to sharding: the user runs an
-            entirely independent copy. External services can still be
-            integrated through API.
-          </p>
+          <p>TK: paragraph about trustlessness</p>
         </section>
 
         <section className="content-zone">
@@ -156,64 +141,52 @@ export default function Home() {
             IO channels that are specified by the system, but
             implemented in the runtime.
           </p>
-        </section>
-
-        <section className="content-zone">
-          <header className="flex flex-row space-between items-center">
-            <div className="horizontal-bars shrink mr-[6px]"></div>
-            <h1 className="grow whitespace-nowrap">
-              Uncensorable Sharing
-            </h1>
-            <div className="horizontal-bars shrink ml-[6px]"></div>
-          </header>
 
           <p>
-            All data and code is content-addressed and stored in a
-            Merkle DAG. Efficient memory paging means there is no real
-            distinction between in-memory and on-disk.
-          </p>
-
-          <p>
-            The DAG structure and peer network complement protocols like
-            BitTorrent and the runtime can handle large amounts of data.
-            This makes it possible to build scalable content networks.
+            Operating functions run on edge devices and cloud servers,
+            moving programs between domains depending on their user’s
+            need. 
           </p>
         </section>
 
-        <section>
-          <div className="text-center">
-            <Link href="https://github.com/operating-function/pallas/issues?q=is%3Aissue+is%3Aopen+label%3Acontributor_challenge">
-              <button>Contribute</button>
-            </Link>
-          </div>
-        </section>
+        <div className="max-w-sm content-zone border-b border-black mb-8"></div>
 
         <section className="content-zone">
-          <div className="horizontal-bars my-4"></div>
-        </section>
-
-        <section className="relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center h-[70vh]">
-          <img
-            src="/images/field.png"
-            alt="Field"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="relative z-10 max-w-lg">
-            <h1 className="text-6xl">System Terms</h1>
-          </div>
+          <article>
+            <header>
+              <h1 className="my-2">Pallas (OF 1.0)</h1>
+            </header>
+            <div>
+              <p>
+                The fullstack system being developed by
+                <Lockup
+                  className="relative top-1 mx-2 inline-block"
+                  size={50}
+                  color="black"
+                />
+                is called Pallas. it's the first operating function, but
+                we expect subsequent OFs to emerge from other
+                communities.
+              </p>
+              <p>
+                PLAN is the core innovation that makes a ubiquitous
+                personal computer possible. Let's take a quick look at
+                it now.
+              </p>
+            </div>
+          </article>
         </section>
 
         <section className="content-zone" id="callouts">
           <article className="left">
             <header>
-              <h3>PLAN</h3>
+              <h3 id="PLAN">PLAN</h3>
             </header>
             <main>
               <p>
-                PLAN is the core innovation that makes a ubiquitous
-                personal computer possible. The spec is tiny and the
-                system it defines is reflective: it can examine,
-                introspect, and modify itself.
+                The PLAN spec is tiny and the system it defines is
+                reflective: it can examine, introspect, and modify
+                itself.
               </p>
               <p>Here is the data model of PLAN:</p>
               <pre className="code mx-2">
@@ -263,107 +236,16 @@ PLAN ::= <PLAN>           # Pin
               </p>
             </main>
           </article>
-
-          <article className="right">
-            <header>
-              <h3>Ships</h3>
-            </header>
-            <main>
-              <p>
-                A ship is made of many individual machines. Each
-                physical computer you use contains one machine. All your
-                machines together make up your ship. That means your
-                ship is decentralized.
-              </p>
-            </main>
-          </article>
-
-          <article className="left">
-            <header>
-              <h3>Machines</h3>
-            </header>
-            <main>
-              <p>
-                A machine runs an operating function. The operating
-                function is a new kind of programming environment that
-                combines language features, a minimal kernel,
-                networking, and a database. It bootstraps from PLAN.
-              </p>
-            </main>
-          </article>
-
-          <article className="right">
-            <header>
-              <h3>Cogs</h3>
-            </header>
-            <main>
-              <p>
-                Each machine can manage many processes, called cogs.
-                Cogs are responsible for running all of your programs
-                and storing all of your data. They do this automatically
-                so you never have to think about saving or backup.
-              </p>
-            </main>
-          </article>
-
-          <article className="left">
-            <header>
-              <h3>Drivers</h3>
-            </header>
-            <main>
-              <p>
-                Each cog can create many drivers. Drivers are a special
-                program that only a cog can create. They allow your
-                machines, and your ship, to interact with the world
-                around them. Drivers let your ship connect to things
-                like the web, a file system, or a GPU.
-              </p>
-            </main>
-          </article>
-
-          <article className="right">
-            <header>
-              <h3>Mods</h3>
-            </header>
-            <main>
-              <p>
-                Mods are upgrades to your ship. You can install a mod
-                from a marketplace, the internet, or from your friend
-                down the street. Since you own your ship, no one can
-                keep the insides of a mod secret from you. If you want
-                to change the mod, the only limit is your skill.
-              </p>
-            </main>
-          </article>
-
-          <article className="left">
-            <header>
-              <h3>Manifests</h3>
-            </header>
-            <main>
-              <p>
-                As your digital life gets bigger, you’ll want to add
-                more machines to your ship. To start a new machine, you
-                give it a manifest. The manifest tells the machine what
-                contents of your ship it is responsible for. 
-              </p>
-            </main>
-          </article>
         </section>
 
-        <section>
-          <div className="flex flex-row gap-x-4 justify-center">
-            <div className="">
-              <a href="https://opfn.gitbook.io/pallas" target="_blank">
-                <button>Read the Docs</button>
-              </a>
-            </div>
-
-            <div className="">
-              <Link href="/about">
-                <button>Join the Community</button>
-              </Link>
-            </div>
+        <section className="content-zone">
+          <div className="text-center flex justify-center w-full gap-x-4">
+            <Link href="https://opfn.gitbook.io/pallas" target="_blank">
+              <button>See the Docs</button>
+            </Link>
+            <Link href="/use-cases">
+              <button>Use Cases</button>
+            </Link>
           </div>
         </section>
       </main>

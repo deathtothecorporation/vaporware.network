@@ -6,12 +6,16 @@ interface LogoProps {
   color?: string;
 }
 
-const Logo = ({ className = "", size = 24, color = "white" }: LogoProps) => {
+const Logo = ({
+  className = "",
+  size = 24,
+  color = "white",
+}: LogoProps) => {
   const aspectRatio = 114 / 351;
   const height = size * aspectRatio;
 
   return (
-    <div className={className} style={{ width: size, height }}>
+    <span className={className} style={{ width: size, height }}>
       <svg
         style={{ width: "100%", height: "100%" }}
         viewBox="0 0 351 114"
@@ -43,7 +47,7 @@ const Logo = ({ className = "", size = 24, color = "white" }: LogoProps) => {
           fill={color}
         />
       </svg>
-    </div>
+    </span>
   );
 };
 

@@ -19,7 +19,6 @@
   font-style: italic;
 }
 
-/* Define @font-face for Berkeley Mono Regular (variable) */
 @font-face {
   font-family: "BerkeleyMono";
   src:
@@ -38,9 +37,46 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "LatinModern";
+  src: url("/fonts/lmmonoproplt10-regular.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LatinModern";
+  src: url("/fonts/lmmonoproplt10-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LatinModern";
+  src: url("/fonts/lmmonoproplt10-oblique.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "LatinModern";
+  src: url("/fonts/lmmonoproplt10-boldoblique.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "LatinModernRomanCaps";
+  src: url("/fonts/lmromancaps10-regular.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
 body {
-  font-family: "BerkeleyMono", monospace;
+  /*font-family: "BerkeleyMono", monospace;*/
+  font-family: "LatinModern", monospace;
   @apply bg-white;
+}
+
+.berkeley {
+  font-family: "BerkeleyMono", monospace;
 }
 
 section {
@@ -100,7 +136,7 @@ a:visited {
 }
 
 button {
-  font-size: 13px;
+  font-family: "BerkeleyMono";
   @apply bg-black;
   @apply text-white;
   @apply py-2;
@@ -113,11 +149,9 @@ button:disabled {
 }
 
 header aside {
-  font-size: 10px;
 }
 
 section {
-  font-size: 14px;
   @apply mb-8;
 }
 
@@ -139,7 +173,8 @@ h3,
 h4,
 h5 {
   @apply my-8;
-  @apply font-semibold;
+  /*@apply font-semibold;*/
+  font-family: "LatinModernRomanCaps";
 }
 
 h1 {
@@ -163,10 +198,14 @@ blockquote {
 
 section header {
   @apply mb-4;
-  @apply font-semibold;
+  /*@apply font-semibold;*/
   @apply flex;
   @apply flex-row;
   @apply items-center;
+}
+
+section header h1 {
+  @apply text-xl;
 }
 
 section p {

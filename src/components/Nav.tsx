@@ -82,10 +82,10 @@ export default function Nav() {
             <Logo size={50} color={elementColor} className="mx-auto" />
           </Link>
           <Link
-            href="/learn-more"
+            href="/use-cases"
             className="block text-lg hover:text-gray-600 text-center"
           >
-            Learn More
+            Use Cases
           </Link>
           <ExternalLink
             href="https://github.com/operating-function/pallas/issues?q=is%3Aissue+is%3Aopen+label%3Acontributor_challenge"

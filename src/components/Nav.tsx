@@ -87,12 +87,13 @@ export default function Nav() {
           >
             Learn More
           </Link>
-          <Link
+          <ExternalLink
             href="https://github.com/operating-function/pallas/issues?q=is%3Aissue+is%3Aopen+label%3Acontributor_challenge"
-            className="block text-lg hover:text-gray-600 text-center"
+            divClass="text-lg hover:text-gray-600 justify-center flex"
+            linkClass="justify-center text-center"
           >
             Contribute
-          </Link>
+          </ExternalLink>
           <ExternalLink
             href="https://github.com/operating-function/pallas"
             divClass="text-lg hover:text-gray-600 justify-center flex"

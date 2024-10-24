@@ -185,26 +185,39 @@ li {
   @apply list-disc;
 }
 
+pre.code {
+  @apply border;
+  @apply rounded-md;
+  @apply p-2;
+  @apply my-2;
+}
+
 section#callouts {
   @apply flex;
   @apply flex-col;
-  @apply space-y-4;
+  @apply space-y-8;
 }
 
-section#callouts > article {
+section#callouts article {
   @apply flex;
   @apply flex-col;
   @apply md:flex-row;
+  @apply border-b-2;
+  @apply md:border-b-0;
+  @apply pb-2;
+  @apply md:pb-0;
 }
 
 section#callouts > article > header {
+  @apply text-lg;
   @apply mb-4;
   @apply md:mb-0;
   @apply md:flex-[1];
+  @apply md:items-start;
 }
 
 section#callouts > article > main {
-  @apply md:flex-[3];
+  @apply md:flex-[4];
 }
 
 article.left {
@@ -215,10 +228,23 @@ section#callouts > article.right {
   @apply md:flex-row-reverse;
 }
 
+section#callouts > article.left {
+}
+
 section#callouts > article.right > header {
   @apply md:text-right;
   @apply md:justify-end;
+  @apply md:border-l-2;
+  @apply ml-2;
 }
+
+section#callouts > article.left > header {
+  @apply md:text-right;
+  @apply md:justify-start;
+  @apply md:border-r-2;
+  @apply mr-2;
+}
+
 section#callouts > article.right > main {
   @apply md:text-left;
 }

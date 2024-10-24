@@ -22,10 +22,13 @@ export default function Nav() {
       const elements = document.elementsFromPoint(centerX, centerY);
 
       // Find the first non-nav element (the background)
-      const backgroundElement = elements.find((el) => !el.closest("header"));
+      const backgroundElement = elements.find(
+        (el) => !el.closest("header")
+      );
 
       if (backgroundElement) {
-        const computedStyle = window.getComputedStyle(backgroundElement);
+        const computedStyle =
+          window.getComputedStyle(backgroundElement);
 
         // Try different properties to find actual background color
         // const fill = computedStyle.fill; // For SVGs
@@ -85,7 +88,7 @@ export default function Nav() {
             Learn More
           </Link>
           <Link
-            href="/contribute"
+            href="https://github.com/operating-function/pallas/issues?q=is%3Aissue+is%3Aopen+label%3Acontributor_challenge"
             className="block text-lg hover:text-gray-600 text-center"
           >
             Contribute

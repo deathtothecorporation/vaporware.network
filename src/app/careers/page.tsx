@@ -8,13 +8,17 @@ export default async function Careers() {
     <div>
       <main className="content-zone">
         <div>
-          <h1>jubs</h1>
-          <p className="text-red-500">TODO: some explanation, including how to get in touch</p>
+          <h1>Work with us</h1>
+          <p className="text-red-500">
+            TODO: some explanation, including how to get in touch
+          </p>
           <section>
             {jobs.map((job) => (
               <article>
                 <h2 className="no-underline">{job.title}</h2>
-                <div dangerouslySetInnerHTML={{ __html: job.description }} />
+                <div
+                  dangerouslySetInnerHTML={{ __html: job.description }}
+                />
                 {job.skills && job.skills.length > 0 && (
                   <>
                     <span>Required skills</span>

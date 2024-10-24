@@ -64,44 +64,51 @@ export default function Home() {
             <h1 className="text-6xl">
               <Lockup className="mx-auto" size={300} color="white" />
             </h1>
-            <h2 className="no-underline">The Operating Function Company</h2>
+            <h2 className="no-underline">
+              The Operating Function Company
+            </h2>
           </div>
         </section>
 
+        <div className="content-zone border-b border-black mb-8"></div>
+
         <section className="content-zone">
           <p>
-            An Operating Function specifies a new kind of personal computer. The
-            computer is decentralized because it exists on many devices
-            simultaneously, including the cloud, and can run forever.
+            An Operating Function specifies a new kind of personal
+            computer. The computer is decentralized because it exists on
+            many devices simultaneously, including the cloud, and can
+            run forever.
           </p>
 
           <p>
-            OFs save data automatically and can be moved even while running. All
-            programs are open and modifiable. Users retain control over their
-            software, their data, and their networks. Developers bear no
-            infrastructure cost.
+            OFs save data automatically and can be moved even while
+            running. All programs are open and modifiable. Users retain
+            control over their software, their data, and their networks.
+            Developers bear no infrastructure cost.
           </p>
         </section>
 
         <section className="content-zone">
           <header className="flex flex-row space-between items-center">
             <div className="horizontal-bars shrink mr-[6px]"></div>
-            <h1 className="grow whitespace-nowrap">All Software is Open</h1>
+            <h1 className="grow whitespace-nowrap">
+              All Software is Open
+            </h1>
             <div className="horizontal-bars shrink ml-[6px]"></div>
           </header>
 
           <p>
-            The system is inspectable down to the bottom. Our compiler binary is
-            called PLAN and is pure, lazy, and human readable. The entire system
-            bootstraps itself from PLAN using reflection and dynamic code
-            generation.
+            The system is inspectable down to the bottom. Our compiler
+            binary is called PLAN and is pure, lazy, and human readable.
+            The entire system bootstraps itself from PLAN using
+            reflection and dynamic code generation.
           </p>
 
           <p>
-            End-user programs are created without siloing functionality in
-            applications. When software is installed, source is automatically
-            available for inspection. Modifications can be hot reloaded with no
-            downtime.
+            End-user programs are created without siloing functionality
+            in applications. When software is installed, source is
+            automatically available for inspection. Modifications can be
+            hot reloaded with no downtime.
           </p>
         </section>
 
@@ -113,63 +120,69 @@ export default function Home() {
           </header>
 
           <p>
-            Users connect to each other peer-to-peer. OpFn’s run on edge devices
-            and cloud servers, moving programs between domains depending on
-            need.
+            Users connect to each other peer-to-peer. OpFn’s run on edge
+            devices and cloud servers, moving programs between domains
+            depending on need.
           </p>
 
           <p>
-            Developers write full stack programs that are like serverless
-            functions, or smart contracts. Publishing software is equivalent to
-            sharding: the user runs an entirely independent copy.
+            Developers write full stack programs that are like
+            serverless functions, or smart contracts. Publishing
+            software is equivalent to sharding: the user runs an
+            entirely independent copy.
           </p>
         </section>
 
         <section className="content-zone">
           <header className="flex flex-row space-between items-center">
             <div className="horizontal-bars shrink mr-[6px]"></div>
-            <h1 className="grow whitespace-nowrap">Programs Run Forever</h1>
+            <h1 className="grow whitespace-nowrap">
+              Programs Run Forever
+            </h1>
             <div className="horizontal-bars shrink ml-[6px]"></div>
           </header>
 
           <p>
-            A personal computer should never become obsolete. PLAN has 5 opcodes
-            that are frozen in time, guaranteeing old code will work on new
-            implementations, and new code will work on old (but maybe more
-            slowly).
+            A personal computer should never become obsolete. PLAN has 5
+            opcodes that are frozen in time, guaranteeing old code will
+            work on new implementations, and new code will work on old
+            (but maybe more slowly).
           </p>
 
           <p>
-            To make it fast, targets for hardware acceleration are encoded
-            within the system. New targets can be added as standards. Stateful
-            effects are handled by a small number of IO channels that are
-            specified by the system, but implemented in the runtime.
+            To make it fast, targets for hardware acceleration are
+            encoded within the system. New targets can be added as
+            standards. Stateful effects are handled by a small number of
+            IO channels that are specified by the system, but
+            implemented in the runtime.
           </p>
         </section>
 
-        <div className="my-[400px]"></div>
-
         <section className="content-zone">
+          <header className="flex flex-row space-between items-center">
+            <div className="horizontal-bars shrink mr-[6px]"></div>
+            <h1 className="grow whitespace-nowrap">
+              Uncensorable Sharing
+            </h1>
+            <div className="horizontal-bars shrink ml-[6px]"></div>
+          </header>
+
           <p>
-            Each OF can run many processes, called cogs. Cogs are responsible
-            for running all of your programs and storing all of your data. They
-            do this automatically so you never have to think about saving or
-            backup....
+            All data and code is content-addressed and stored in a
+            Merkle DAG. Efficient memory paging means there is no real
+            distinction between in-memory and on-disk.
           </p>
 
-          <div className="text-center">
-            <p>...</p>
-            <p>...</p>
-            <p>...</p>
-            <p>...</p>
-            <p>...</p>
-            <p>...</p>
-          </div>
+          <p>
+            The DAG structure and peer network complement protocols like
+            BitTorrent and the runtime can handle large amounts of data.
+            This makes it possible to build scalable content networks.
+          </p>
         </section>
 
         <section>
           <div className="text-center">
-            <Link href="/contribute">
+            <Link href="https://github.com/operating-function/pallas/issues?q=is%3Aissue+is%3Aopen+label%3Acontributor_challenge">
               <button>Contribute</button>
             </Link>
           </div>
@@ -179,31 +192,63 @@ export default function Home() {
           <div className="horizontal-bars my-4"></div>
         </section>
 
+        <section className="relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center h-[70vh]">
+          <img
+            src="/images/field.png"
+            alt="Field"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="relative z-10 max-w-lg">
+            <h1 className="text-6xl">System Terms</h1>
+          </div>
+        </section>
+
         <section className="content-zone" id="callouts">
           <article className="left">
             <header>PLAN</header>
             <main>
-              Some more words on PLAN lorem ipsum Some more words on PLAN lorem
-              ipsum Some more words on PLAN lorem ipsum Some more words on PLAN
-              lorem ipsum Some more words on PLAN lorem ipsum
+              <p>
+                Some more words on PLAN lorem ipsum Some more words on
+                PLAN lorem ipsum Some more words on PLAN lorem ipsum
+                Some more words on PLAN lorem ipsum Some more words on
+                PLAN lorem ipsum
+              </p>
+              <pre className="code">
+                <code>
+                  {`
+PLAN ::= <PLAN>           # Pin
+       | {Nat Nat PLAN}   # Law
+       | (PLAN PLAN)      # App
+       | Nat              # Nat
+                 `}
+                </code>
+              </pre>
+              <p>
+                Some more words on PLAN lorem ipsum Some more words on
+                PLAN lorem ipsum Some more words on PLAN lorem ipsum
+                Some more words on PLAN lorem ipsum Some more words on
+                PLAN lorem ipsum
+              </p>
             </main>
           </article>
 
-          <article className="right flex flex-row-reverse">
-            <header>Ships</header>
+          <article className="right">
+            <header>Machines</header>
             <main>
-              Some more words on PLAN lorem ipsum Some more words on PLAN lorem
-              ipsum Some more words on PLAN lorem ipsum Some more words on PLAN
-              lorem ipsum Some more words on PLAN lorem ipsum
+              A ship is made of many individual machines. Each physical
+              computer you use contains one machine. All your machines
+              together make up your ship. That means your ship is
+              decentralized.
             </main>
           </article>
 
           <article className="left">
             <header>Runtime</header>
             <main>
-              Some more words on PLAN lorem ipsum Some more words on PLAN lorem
-              ipsum Some more words on PLAN lorem ipsum Some more words on PLAN
-              lorem ipsum Some more words on PLAN lorem ipsum
+              Some more words on PLAN lorem ipsum Some more words on
+              PLAN lorem ipsum Some more words on PLAN lorem ipsum Some
+              more words on PLAN lorem ipsum Some more words on PLAN
+              lorem ipsum
             </main>
           </article>
         </section>

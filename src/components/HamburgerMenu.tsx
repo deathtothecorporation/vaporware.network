@@ -1,13 +1,21 @@
 "use client";
 
-import React, { useState, Children, ReactNode, ReactElement } from "react";
+import React, {
+  useState,
+  Children,
+  ReactNode,
+  ReactElement,
+} from "react";
 
 interface HamburgerMenuProps {
   children: ReactNode;
   color?: string;
 }
 
-const HamburgerMenu = ({ children, color = "white" }: HamburgerMenuProps) => {
+const HamburgerMenu = ({
+  children,
+  color = "white",
+}: HamburgerMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -15,8 +23,7 @@ const HamburgerMenu = ({ children, color = "white" }: HamburgerMenuProps) => {
   };
 
   // Recursively add click handler to all Link elements
-  const addCloseHandler = (children: ReactNode): ReactNode[] => {
-    // Note the return type is now ReactNode[]
+  const addCloseHandler = (children: any): ReactNode[] => {
     return Children.map(children, (child) => {
       if (!child || typeof child === "string") return child;
       if (!React.isValidElement(child)) return child;
@@ -50,7 +57,6 @@ const HamburgerMenu = ({ children, color = "white" }: HamburgerMenuProps) => {
   };
 
   const bgColor = color === "black" ? "bg-black" : "bg-white";
-  const buttonColor = color === "black" ? "bg-white" : "bg-black";
 
   return (
     <div className="relative">
@@ -92,7 +98,9 @@ const HamburgerMenu = ({ children, color = "white" }: HamburgerMenuProps) => {
       {/* Menu Panel */}
       <div
         className={`fixed z-[50] top-0 right-0 h-full w-full md:w-1/3 bg-white transform transition-transform duration-300 ease-in-out ${
-          isOpen ? "shadow-lg translate-x-0" : "shadow-none translate-x-full"
+          isOpen
+            ? "shadow-lg translate-x-0"
+            : "shadow-none translate-x-full"
         }`}
       >
         <div className="p-6">{addCloseHandler(children)}</div>

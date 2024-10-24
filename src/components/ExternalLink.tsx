@@ -3,8 +3,8 @@ import { ExternalLink as ExternalLinkIcon } from "lucide-react"; // Rename impor
 interface ExternalLinkProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   children: React.ReactNode;
-  linkClass: string;
-  divClass: string;
+  linkClass?: string;
+  divClass?: string;
 }
 
 const ExternalLinkWithIcon = ({
@@ -14,7 +14,7 @@ const ExternalLinkWithIcon = ({
   ...props
 }: ExternalLinkProps) => {
   return (
-    <div className={`flex items-center gap-1 ${divClass}`}>
+    <div className={`items-center gap-1 ${divClass}`}>
       <a {...props} className={`${linkClass}`} target="_blank">
         {children}
       </a>

@@ -14,7 +14,9 @@ export default function Footer() {
               <Link href="/learn-more">Learn More</Link>
             </li>
             <li>
-              <Link href="/contribute">Contribute</Link>
+              <Link href="https://github.com/operating-function/pallas/issues?q=is%3Aissue+is%3Aopen+label%3Acontributor_challenge">
+                Contribute
+              </Link>
             </li>
             <li>
               <Link href="/careers">Careers</Link>
@@ -26,7 +28,7 @@ export default function Footer() {
         </div>
         <div>
           <a
-            href="https://github.com/deathtothecorporation/pallas"
+            href="https://github.com/operating-function/pallas"
             target="_blank"
           >
             GitHub

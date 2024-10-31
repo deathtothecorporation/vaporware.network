@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 :root {
+  --scale: 1.5;
 }
+
+/*[class*="text-"] {*/
+/*font-size: calc(var(--font-size, 1rem) * var(--scale)) !important;*/
+/*}*/
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -75,6 +80,11 @@ body {
   @apply bg-white;
 }
 
+p {
+  @apply text-xl;
+  @apply md:text-base;
+}
+
 .berkeley {
   font-family: "BerkeleyMono", monospace;
 }
@@ -122,7 +132,12 @@ nav#site-nav a {
 }
 
 footer#site-footer {
+  @apply text-lg;
+  @apply md:text-base;
   @apply font-bold;
+  @apply py-4;
+  @apply h-[250px];
+  @apply md:h-full;
 }
 
 footer#site-footer a {
@@ -161,6 +176,8 @@ button {
   font-family: "BerkeleyMono";
   @apply bg-black;
   @apply text-white;
+  @apply text-lg;
+  @apply md:text-base;
   @apply py-2;
   @apply px-4;
 }
@@ -200,16 +217,24 @@ h5 {
 }
 
 h1 {
-  @apply text-2xl;
+  @apply text-4xl;
+  @apply md:text-2xl;
   @apply mb-8;
 }
 
 h2 {
-  @apply text-lg;
+  @apply text-2xl;
+  @apply md:text-lg;
   @apply underline;
 }
 
 h3 {
+}
+
+h5 {
+  @apply text-2xl;
+  @apply md:text-lg;
+  @apply mb-0;
 }
 
 blockquote {
@@ -255,6 +280,8 @@ pre.code {
   /*@apply rounded-md;*/
   /*@apply p-2;*/
   /*@apply my-2;*/
+  @apply text-[10px];
+  @apply md:text-[14px];
 }
 
 section#callouts {
@@ -351,6 +378,7 @@ section#core-technology h2 {
 }
 
 #core-technology .jungle-bg-image {
+  @apply w-full;
   /*position: absolute;*/
   /*top: 0;*/
   /*left: 0;*/

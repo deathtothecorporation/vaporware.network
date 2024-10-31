@@ -63,13 +63,13 @@ const HamburgerMenu = ({
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
-        className={`relative z-[60] top-0 right-4 p-2 focus:outline-none ${isOpen ? "bg-white" : "bg-transparent"}`}
+        className={`relative z-[60] top-0 pt-2 px-0 focus:outline-none ${isOpen ? "bg-black" : "bg-transparent"}`}
         aria-label="Toggle menu"
       >
         <div className="flex flex-col justify-between w-6 h-5">
           <span
             className={`block w-full h-0.5 ${bgColor} transition-transform duration-300 ${
-              isOpen ? "rotate-45 translate-y-2" : ""
+              isOpen ? "rotate-45 translate-y-2 bg-white" : ""
             }`}
           />
           <span
@@ -79,7 +79,7 @@ const HamburgerMenu = ({
           />
           <span
             className={`block w-full h-0.5 ${bgColor} transition-transform duration-300 ${
-              isOpen ? "-rotate-45 -translate-y-2" : ""
+              isOpen ? "-rotate-45 -translate-y-2 bg-white" : ""
             }`}
           />
         </div>

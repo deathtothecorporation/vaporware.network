@@ -14,6 +14,13 @@ const description = "Digital membranes and Nock heresy";
 
 const metadataBase = new URL(process.env.BASE_URL as string);
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1.0,
+  //maximumScale: 1.0,
+  //userScalable: "no",
+};
+
 export const metadata: Metadata = {
   metadataBase,
   title: "Vaporware",

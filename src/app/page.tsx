@@ -60,7 +60,7 @@ export default function Home() {
             alt="Forest Background"
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="relative z-10 max-w-lg">
+          <div className="relative z-10 max-w-lg mx-auto px-4">
             <h1 className="text-6xl">
               <Lockup className="mx-auto" size={300} color="white" />
             </h1>
@@ -157,11 +157,11 @@ export default function Home() {
         </div>
 
         <section id="core-technology">
-          <header className="relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center h-[70vh]">
+          <header className="relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center h-[25vh]">
             <img
               src="/images/field.png"
               alt="Forest Background"
-              className="px-4 absolute inset-0 w-full h-full object-cover"
+              className="px-3 absolute inset-0 w-full h-full object-cover"
             />
             <div className="relative z-10 max-w-lg">
               <h1 className="text-3xl font-bold berkeley">Core Technology</h1>
@@ -184,7 +184,7 @@ export default function Home() {
 
               <main>
                 <div className="p-4 bg-white opacity-90">
-                  <pre className="code text-[9px]">
+                  <pre className="code">
                     <code
                       style={{ whiteSpace: "pre-wrap", wordWrap: "break-word" }}
                     >
@@ -265,7 +265,7 @@ EXEC(e, x)       = x
                 </div>
 
                 <div className="">
-                  <pre className="code text-[9px]">
+                  <pre className="code">
                     <code
                       style={{ whiteSpace: "pre-wrap", wordWrap: "break-word" }}
                     >

@@ -19,7 +19,7 @@ export default function Footer() {
             <Logo size={25} color="white" />
           </a>
         </div>
-        <ul className="list-none text-center flex flex-col space-y-2 mb-0 text-white text-sm">
+        <ul className="list-none text-center flex flex-col space-y-2 mb-0 text-white">
           <li>
             <a href="/system-overview" className="">
               System and Uses

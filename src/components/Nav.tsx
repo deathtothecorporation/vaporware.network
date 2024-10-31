@@ -31,19 +31,19 @@ export default function Nav() {
           window.getComputedStyle(backgroundElement);
 
         // Try different properties to find actual background color
-        // const fill = computedStyle.fill; // For SVGs
-        // const backgroundColor = computedStyle.backgroundColor;
-        // const background = computedStyle.background;
-        // const color = computedStyle.color;
+        const fill = computedStyle.fill; // For SVGs
+        const backgroundColor = computedStyle.backgroundColor;
+        const background = computedStyle.background;
+        const color = computedStyle.color;
         const tagName = backgroundElement.tagName;
 
-        //console.log({
-        //element: backgroundElement.tagName,
-        //fill,
-        //backgroundColor,
-        //background,
-        //color,
-        //});
+        console.log({
+          element: backgroundElement.tagName,
+          fill,
+          backgroundColor,
+          background,
+          color,
+        });
         setIsOnWhite(tagName !== "IMG");
       }
     };
@@ -63,7 +63,7 @@ export default function Nav() {
   const elementColor = isOnWhite ? "black" : "white";
 
   return (
-    <div className="flex justify-between items-center w-full p-2">
+    <div className="flex justify-between items-center w-full p-4">
       <div className="">
         <Link
           id="headLogo"

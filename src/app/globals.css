@@ -106,19 +106,41 @@ section header h1 {
   line-height: normal;
 }
 
-nav ul {
+nav#site-nav ul {
   @apply list-none !important;
   @apply flex;
   @apply flex-row;
 }
 
-nav ul > li {
+nav#site-nav ul > li {
   @apply list-none !important;
 }
 
-nav a {
+nav#site-nav a {
   @apply text-black;
   @apply no-underline;
+}
+
+footer#site-footer {
+  @apply font-bold;
+}
+
+footer#site-footer a {
+  @apply text-white;
+  @apply no-underline;
+  font-family: "BerkeleyMono";
+}
+
+footer#site-footer ul {
+  @apply list-none !important;
+  @apply mx-0 !important;
+  @apply px-0 !important;
+}
+footer#site-footer li {
+  @apply list-none !important;
+  @apply mx-0 !important;
+  @apply px-0 !important;
+  @apply text-center;
 }
 
 a {
@@ -208,6 +230,10 @@ section header h1 {
   @apply text-xl;
 }
 
+.main-points section header {
+  @apply text-lg;
+}
+
 section p {
   @apply mb-4;
   @apply text-justify;
@@ -225,10 +251,10 @@ li {
 }
 
 pre.code {
-  @apply border;
-  @apply rounded-md;
-  @apply p-2;
-  @apply my-2;
+  /*@apply border;*/
+  /*@apply rounded-md;*/
+  /*@apply p-2;*/
+  /*@apply my-2;*/
 }
 
 section#callouts {
@@ -260,8 +286,102 @@ section#callouts > article > main {
   @apply md:flex-[4];
 }
 
+section.main-points > article.left > header {
+  @apply justify-start;
+}
+section.main-points > article.right > header {
+  @apply justify-end;
+}
+
 article.left {
   @apply flex-row;
+}
+
+section#core-technology header {
+  @apply inline-flex;
+  @apply content-center;
+  @apply justify-center;
+  @apply items-center;
+  @apply w-full;
+  @apply my-2;
+}
+
+section#core-technology h2 {
+  font-family: "LatinModernRomanCaps";
+  @apply no-underline;
+  @apply text-center;
+  @apply px-6;
+  @apply bg-white;
+}
+
+#core-technology article {
+  background-image: url("/images/dither-jungle.png");
+  background-size: cover;
+  @apply w-full;
+  @apply h-full;
+}
+
+#core-technology main {
+}
+
+#core-technology article {
+  position: relative;
+  width: 100%;
+  background: white;
+  /*min-height: 400px; [> Adjust as needed <]*/
+  overflow: hidden;
+}
+
+#core-technology .core-content {
+  @apply relative;
+  z-index: 1;
+  @apply px-6;
+}
+
+#core-technology .jungle-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 100%;
+  /*left: -40%; [> Increase the overflow <]*/
+  /*width: 100%; [> Make container even wider <]*/
+  /*height: 100%;*/
+  /*overflow: hidden;*/
+}
+
+#core-technology .jungle-bg-image {
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*object-fit: fit;*/
+  /*object-position: center center;*/
+
+  /* Convert to black and white */
+  /*filter: grayscale(100%);*/
+  /*[> Optional: add some noise <]*/
+  /*opacity: 0.4;*/
+}
+
+#core-technology .jungle-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 2%,
+    /* Quick fade to transparent */ transparent 4%,
+    /* Stay transparent for most of the top */ transparent 50%,
+    /* Continue transparency to middle */ rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  pointer-events: none;
 }
 
 section#callouts > article.right {
@@ -310,32 +430,6 @@ section#callouts > article.right > main {
 section#callouts > article.left > main {
   @apply md:text-left;
   @apply md:pl-2;
-}
-
-footer {
-  @apply text-xs;
-  @apply text-black;
-}
-
-footer ul {
-  @apply flex;
-  @apply flex-row;
-  @apply justify-between;
-}
-
-footer ul li {
-  @apply inline-block;
-  @apply ml-0;
-}
-
-footer li {
-  @apply my-0;
-}
-
-footer a {
-  @apply no-underline;
-  @apply text-black;
-  /*@apply font-semibold;*/
 }
 
 .horizontal-bars {

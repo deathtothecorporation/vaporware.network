@@ -52,7 +52,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="">
+    <div className="mb-10">
       <main className="">
         <section className="relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center h-[70vh]">
           <img
@@ -70,183 +70,239 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="max-w-sm content-zone border-b border-black mb-8"></div>
+        <div className="content-zone border-b border-black mb-8"></div>
 
         <section className="content-zone">
           <p className="">
-            <span className="italic">
-              An operating function is a new software-defined personal
-              computer. The computer is decentralized because it exists
-              on many devices simultaneously, including the cloud, and
-              can run forever.
-            </span>
+            An operating function is a new kind of personal computer where all
+            programs are open, malleable and owned by the user.
           </p>
 
           <p>
-            <span className="italic">
-              Operating functions can be moved while running and save
-              state automatically. All programs are open and modifiable.
-              Users retain control over their software, their data, and
-              their networks. Developers bear no infrastructure cost.
-            </span>
+            It isn’t a device&mdash;it’s a computer defined as software. And it
+            runs everywhere simultaneously.
           </p>
         </section>
 
-        <section className="content-zone">
-          <header className="flex flex-row space-between items-center">
-            <div className="horizontal-bars shrink mr-[6px]"></div>
-            <h1 className="grow whitespace-nowrap">
-              All Software is Open
-            </h1>
-            <div className="horizontal-bars shrink ml-[6px]"></div>
-          </header>
+        <div className="content-zone my-10 flex flex-row space-between items-center">
+          <div className="horizontal-bars shrink"></div>
+        </div>
 
-          <p>
-            The system is inspectable down to the bottom. Our compiler
-            binary is called <a href="#plan">PLAN</a> and is pure, lazy,
-            and human readable. The entire system bootstraps itself from
-            PLAN using reflection and dynamic code generation. 
-          </p>
-
-          <p>
-            End-user programs are created without siloing functionality
-            in applications. When software is installed, source is
-            automatically available for inspection. Modifications can be
-            hot reloaded with no downtime.
-          </p>
-
-          <p>TK: paragraph about trustlessness</p>
-        </section>
-
-        <section className="content-zone">
-          <header className="flex flex-row space-between items-center">
-            <div className="horizontal-bars shrink mr-[6px]"></div>
-            <h1 className="grow whitespace-nowrap">
-              Programs Run Forever
-            </h1>
-            <div className="horizontal-bars shrink ml-[6px]"></div>
-          </header>
-
-          <p>
-            A personal computer should never become obsolete. PLAN has 5
-            opcodes that are frozen in time, guaranteeing old code will
-            work on new implementations, and new code will work on old
-            (but maybe more slowly).
-          </p>
-
-          <p>
-            To make it fast, targets for hardware acceleration are
-            encoded within the system. New targets can be added as
-            standards. Stateful effects are handled by a small number of
-            IO channels that are specified by the system, but
-            implemented in the runtime.
-          </p>
-
-          <p>
-            Operating functions run on edge devices and cloud servers,
-            moving programs between domains depending on their user’s
-            need. 
-          </p>
-        </section>
-
-        <div className="max-w-sm content-zone border-b border-black mb-8"></div>
-
-        <section className="content-zone">
-          <article>
+        <section className="main-points my-12">
+          <article className="content-zone left">
             <header>
-              <h1 className="my-2">Pallas (OF 1.0)</h1>
+              <h5>App-Less Software</h5>
             </header>
-            <div>
-              <p>
-                The fullstack system being developed by
-                <Lockup
-                  className="relative top-1 mx-2 inline-block"
-                  size={50}
-                  color="black"
-                />
-                is called Pallas. it's the first operating function, but
-                we expect subsequent OFs to emerge from other
-                communities.
-              </p>
-              <p>
-                PLAN is the core innovation that makes a ubiquitous
-                personal computer possible. Let's take a quick look at
-                it now.
-              </p>
+            <p>
+              Because software in an operating function isn’t siloed in apps,
+              you have full access to the codebase, backend included. “Inspect
+              source” everything, and change anything you want.
+            </p>
+          </article>
+
+          <article className="content-zone right">
+            <header>
+              <h5>No Server Costs</h5>
+            </header>
+
+            <p>
+              Write full stack programs as you would serverless functions, or
+              smart contracts. Operating functions are owned by users and scale
+              automatically based on their owners' demand and preferences.
+            </p>
+          </article>
+
+          <article className="content-zone left">
+            <header>
+              <h5>Programs Run Forever</h5>
+            </header>
+
+            <p>
+              Operating functions provides strong backward and forward
+              compatibility guarantees and make it possible to move running
+              computations between machines, with no impact to the program.
+            </p>
+          </article>
+
+          <article className="content-zone right">
+            <header>
+              <h5>Uncensorable Publishing</h5>
+            </header>
+
+            <p>
+              All data and code is hashed and stored in a content-addressable
+              Merkle DAG. Content can be published using a protocol that
+              combines aspects of IPFS and BitTorrent.
+            </p>
+          </article>
+        </section>
+
+        <section className="content-zone my-12">
+          <div className="text-center flex justify-center w-full gap-x-4">
+            <div className="flex-1 px-4">
+              <Link href="https://opfn.gitbook.io/pallas" target="_blank">
+                <button className="w-full">Docs</button>
+              </Link>
+            </div>
+            <div className="flex-1 px-4">
+              <Link href="/system-overview#use-cases">
+                <button className="w-full">Use Cases</button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <div className="content-zone my-10 flex flex-row space-between items-center">
+          <div className="horizontal-bars shrink"></div>
+        </div>
+
+        <section id="core-technology">
+          <header className="relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center h-[70vh]">
+            <img
+              src="/images/field.png"
+              alt="Forest Background"
+              className="px-4 absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="relative z-10 max-w-lg">
+              <h1 className="text-3xl font-bold berkeley">Core Technology</h1>
+            </div>
+          </header>
+
+          <article>
+            <div className="jungle-bg">
+              <img
+                src="/images/dithered-square.png"
+                alt="jungle background image"
+                className="jungle-bg-image"
+              />
+              <div className="jungle-overlay"></div>
+            </div>
+            <div className="core-content">
+              <header>
+                <h2>PLAN is a Bytecode</h2>
+              </header>
+
+              <main>
+                <div className="p-4 bg-white opacity-90">
+                  <pre className="code text-[9px]">
+                    <code
+                      style={{ whiteSpace: "pre-wrap", wordWrap: "break-word" }}
+                    >
+                      {`
+
+Each value is a pin x:<i>, a law x:{n a b}, an app x:(f g), or a nat x:@.
+
+Treat this as a combinator system, and use normal-order evaluation to normalize.
+Unmatched patterns diverge.
+
+(0 n a b) | NAT(a)>0 = {NAT(n) NAT(a) force(b)}  
+(1 p _ _ _ <x>)      = (p x)  
+(1 _ l _ _ {n a b})  = (l n a b)  
+(1 _ _ a _ (f x))    = (a f x)  
+(1 _ _ _ n x:@)      = (n x)  
+(2 z p x)            = n=NAT(x); if n=0 then z else p (n-1)  
+(3 x)                = NAT(x)+1  
+(4 x)                = <force(x)>  
+(f:{n a b} x0..xn)   = EXEC([f x0..xn], b)  
+(f:<{n a b}> x0..xn) = EXEC([f x0..xn], b)  
+(<i> ..)             = (i ..)
+
+NAT(x:@) = x  
+NAT(_)   = 0
+
+EXEC(e, n:@)     = e[n] or n if n>=len(e)
+EXEC(e, (0 x y)) = (EXEC(x) EXEC(y))  
+EXEC(e, (1 v b)) = EXEC(f,b) where f = e ++ [EXEC(f,v)]  
+EXEC(e, (2 x))   = x  
+EXEC(e, x)       = x
+                                    `}
+                    </code>
+                  </pre>
+                </div>
+
+                <p className="mt-8">
+                  PLAN is the core innovation that makes a ubiquitous personal
+                  computer possible. It enables universal portability across
+                  devices, guarantees backward compatibility, and makes forward
+                  compatibility between runtimes tractable.
+                </p>
+
+                <p>PLAN is functional, lazy, and reflective.</p>
+              </main>
+
+              <div className="flex mt-8 mb-10 justify-center">
+                <Link href="/system-overview">
+                  <button>System Overview</button>
+                </Link>
+              </div>
             </div>
           </article>
-        </section>
 
-        <section className="content-zone" id="callouts">
-          <article className="left">
-            <header>
-              <h3 id="PLAN">PLAN</h3>
-            </header>
-            <main>
-              <p>
-                The PLAN spec is tiny and the system it defines is
-                reflective: it can examine, introspect, and modify
-                itself.
-              </p>
-              <p>Here is the data model of PLAN:</p>
-              <pre className="code mx-2">
-                <code>
-                  {`
-PLAN ::= <PLAN>           # Pin
-       | {Nat Nat PLAN}   # Law
-       | (PLAN PLAN)      # App
-       | Nat              # Nat
-                 `}
-                </code>
-              </pre>
-              <p>
-                PLAN is barely hand-writable, but it is human-readable.
-                This is the source for the foldl function:
-              </p>
-              <pre className="code mx-2 text-[10px]">
-                <code>
-                  {`
-* (_If a b c)=(2 c ((d e & d) b) a)
-* (_Not a)=(_If a 0 1)
-* (_IsApp a)=(1:(b&0):(b c d & 0):(b c & 1):(b&0) a)
-* (_Null a)=(_Not _IsApp-a)
-* (_Cdr a)=(1:(b&b):(b c d & d):(b c & c):(b&0) a)
-* (_Car a)=(1:(b&4):(b c d & 0-b-c):(b c & b):(b&0) a)
-* (_Get a b)=(_If _Null-a 0 (2 _Cdr-a (_Get _Car-a) b))
-* (_Idx a b)=(_Get b a)
-* (_Seq a b)=(2 b ((c d & c) b) a)
-* (id a)=a
-* (_Dec a)=(2:0:id a)
-*   = (_Len a)
-    ^ a
-    : (go b c ? _Seq b (_If _Null-c b (go 3-b _Car-c)))
-    : 0
-*   = (foldl a b c)
-    ^ a c b 0 _Len-c
-    ? (go d e f g h)
-    @ i (d f _Idx-g-e)
-    | _If h (_Seq i (go d e i 3-g _Dec-h)) f
-                `}
-                </code>
-              </pre>
-              <p>
-                foldl includes the source for its dependencies (_If
-                _Not, etc). Once you learn the 5 opcodes, you can
-                understand the entire foldl source down to the metal.
-              </p>
-            </main>
+          <article>
+            <div className="jungle-bg">
+              <img
+                src="/images/dithered-square.png"
+                alt="jungle background image"
+                className="jungle-bg-image"
+              />
+              <div className="jungle-overlay"></div>
+            </div>
+
+            <div className="core-content">
+              <header>
+                <h2>Cogs Run Forever</h2>
+              </header>
+
+              <main className="p-2 bg-white  opacity-90">
+                <div>
+                  <p>
+                    Cogs are programs that run forever. Even if you reboot, cogs
+                    will continue exactly where they left off because they
+                    persist state automatically. A personal computer should
+                    never become obsolete. And it should{" "}
+                    <span className="font-bold">never</span> lose your data.
+                  </p>
+                </div>
+
+                <div className="">
+                  <pre className="code text-[9px]">
+                    <code
+                      style={{ whiteSpace: "pre-wrap", wordWrap: "break-word" }}
+                    >
+                      {`
+type Worker   = Driver | Job
+type WorkerId = Nat
+type MsgId    = Nat
+type Input    = (WorkerId, PLAN)
+type Output   = (WorkerId, MsgId, PLAN)
+
+type CogClosure =
+  { run     :: CogClosure 
+            -> Array Input 
+            -> (CogClosure, Array Output)
+  , state   :: state
+  , query   :: WorkerID -> state -> PLAN -> PLAN
+  , workers :: Array Worker
+  }
+
+                                    `}
+                    </code>
+                  </pre>
+                </div>
+
+                <p>
+                  Notice that the cog is free to change itself. It can even
+                  replace itself with a completely new value.
+                </p>
+              </main>
+
+              <div className="flex mt-4 justify-center">
+                <Link href="#">
+                  <button>Waitlist</button>
+                </Link>
+              </div>
+            </div>
           </article>
-        </section>
-
-        <section className="content-zone">
-          <div className="text-center flex justify-center w-full gap-x-4">
-            <Link href="https://opfn.gitbook.io/pallas" target="_blank">
-              <button>See the Docs</button>
-            </Link>
-            <Link href="/use-cases">
-              <button>Use Cases</button>
-            </Link>
-          </div>
         </section>
       </main>
     </div>

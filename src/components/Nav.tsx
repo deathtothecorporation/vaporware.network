@@ -74,7 +74,7 @@ export default function Nav() {
         </Link>
       </div>
       <Hamburger color={elementColor}>
-        <nav className="space-y-4 mt-10">
+        <nav id="site-nav" className="space-y-4 mt-10">
           <Link
             href="/"
             className="block text-lg hover:text-gray-600 text-center"
@@ -82,10 +82,10 @@ export default function Nav() {
             <Logo size={50} color={elementColor} className="mx-auto" />
           </Link>
           <Link
-            href="/use-cases"
+            href="/system-overview"
             className="block text-lg hover:text-gray-600 text-center"
           >
-            Use Cases
+            System and Uses
           </Link>
           <ExternalLink
             href="https://github.com/operating-function/pallas/issues?q=is%3Aissue+is%3Aopen+label%3Acontributor_challenge"

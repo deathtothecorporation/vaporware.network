@@ -63,7 +63,7 @@ export default function Nav() {
   const elementColor = isOnWhite ? "black" : "white";
 
   return (
-    <div className="flex justify-between items-center w-full p-4">
+    <div className="flex absolute top-0 justify-between items-center w-full p-4">
       <div className="">
         <Link
           id="headLogo"

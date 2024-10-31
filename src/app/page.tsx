@@ -54,23 +54,28 @@ export default function Home() {
   return (
     <div className="mb-10">
       <main className="">
-        <section className="relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center h-[70vh]">
+        <section className="relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mb-0 h-[439px]">
           <img
             src="/images/wide-forest.jpeg"
             alt="Forest Background"
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="relative z-10 max-w-lg mx-auto px-4">
+          <div className="relative z-10 max-w-lg mx-auto px-[52px]">
             <h1 className="text-6xl">
               <Lockup className="mx-auto" size={300} color="white" />
             </h1>
-            <h2 className="no-underline font-bold berkeley">
+            <h2 className="no-underline font-bold berkeley text-[16px]">
               The Operating Function Company
             </h2>
+            <div className="flex mt-16 mb-0 justify-center">
+              <Link href="#">
+                <button>Waitlist</button>
+              </Link>
+            </div>
           </div>
         </section>
 
-        <div className="content-zone border-b border-black mb-8"></div>
+        <div className="border-b border-black w-[318px] mx-auto my-8"></div>
 
         <section className="content-zone">
           <p className="">
@@ -164,7 +169,9 @@ export default function Home() {
               className="px-3 absolute inset-0 w-full h-full object-cover"
             />
             <div className="relative z-10 max-w-lg">
-              <h1 className="text-3xl font-bold berkeley">Core Technology</h1>
+              <h1 className="text-[20px] font-bold berkeley">
+                Core Technology
+              </h1>
             </div>
           </header>
 
@@ -179,7 +186,7 @@ export default function Home() {
             </div>
             <div className="core-content">
               <header>
-                <h2>PLAN is a Bytecode</h2>
+                <h2 className="mt-0">PLAN is a Bytecode</h2>
               </header>
 
               <main>
@@ -230,7 +237,7 @@ EXEC(e, x)       = x
                 <p>PLAN is functional, lazy, and reflective.</p>
               </main>
 
-              <div className="flex mt-8 mb-10 justify-center">
+              <div className="flex mt-12 mb-10 justify-center">
                 <Link href="/system-overview">
                   <button>System Overview</button>
                 </Link>
@@ -250,7 +257,7 @@ EXEC(e, x)       = x
 
             <div className="core-content">
               <header>
-                <h2>Cogs Run Forever</h2>
+                <h2 className="mt-0">Cogs Run Forever</h2>
               </header>
 
               <main className="p-2 bg-white  opacity-90">

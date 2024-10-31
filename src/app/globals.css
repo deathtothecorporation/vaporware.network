@@ -313,11 +313,24 @@ section#callouts > article > main {
   @apply md:flex-[4];
 }
 
+section.main-points {
+  @apply flex;
+  @apply flex-col;
+  @apply md:grid;
+  @apply md:grid-cols-2;
+  @apply md:gap-8;
+  @apply md:items-start;
+  @apply md:mx-auto;
+  @apply md:max-w-2xl;
+}
+
 section.main-points > article.left > header {
   @apply justify-start;
+  @apply md:justify-start;
 }
 section.main-points > article.right > header {
   @apply justify-end;
+  @apply md:justify-start;
 }
 
 article.left {

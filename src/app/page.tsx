@@ -138,7 +138,7 @@ export default function Home() {
         </section>
 
         <section className="content-zone my-12">
-          <div className="text-center flex justify-center w-full gap-x-4">
+          <div className="text-center flex md:flex-col md:mx-auto md:w-1/2 md:space-y-4 justify-center w-full gap-x-4">
             <div className="flex-1 px-4">
               <Link href="https://opfn.gitbook.io/pallas" target="_blank">
                 <button className="w-full">Docs</button>
@@ -157,7 +157,7 @@ export default function Home() {
         </div>
 
         <section id="core-technology">
-          <header className="relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center h-[25vh]">
+          <header className="relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center h-[30vh]">
             <img
               src="/images/field.png"
               alt="Forest Background"

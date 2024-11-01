@@ -8,67 +8,44 @@ import ExternalLink from "@/components/ExternalLink";
 
 export default function Nav() {
   const [isOnWhite, setIsOnWhite] = useState(false);
+  const [isScrolledDown, setIsScrolledDown] = useState(false);
+
+  const [elementColor, setElementColor] = useState("white");
 
   useEffect(() => {
-    const checkBackground = () => {
-      const navElement = document.querySelector("#headLogo");
-      if (!navElement) return;
-
-      const rect = navElement.getBoundingClientRect();
-      const centerX = rect.left + rect.width / 2;
-      const centerY = rect.top + rect.height / 2;
-
-      // Get all elements at this point
-      const elements = document.elementsFromPoint(centerX, centerY);
-
-      // Find the first non-nav element (the background)
-      const backgroundElement = elements.find(
-        (el) => !el.closest("header")
-      );
-
-      if (backgroundElement) {
-        const computedStyle =
-          window.getComputedStyle(backgroundElement);
-
-        // Try different properties to find actual background color
-        const fill = computedStyle.fill; // For SVGs
-        const backgroundColor = computedStyle.backgroundColor;
-        const background = computedStyle.background;
-        const color = computedStyle.color;
-        const tagName = backgroundElement.tagName;
-
-        console.log({
-          element: backgroundElement.tagName,
-          fill,
-          backgroundColor,
-          background,
-          color,
-        });
-        setIsOnWhite(tagName !== "IMG");
-      }
+    const handleScroll = () => {
+      const navbarHeight =
+        document.getElementById("topNav")?.offsetHeight || 0;
+      const heroHeight =
+        document.querySelector(".top-hero").offsetHeight;
+      const scrolledPast = window.scrollY > heroHeight - navbarHeight;
+      setIsScrolledDown(scrolledPast);
+      scrolledPast
+        ? setElementColor("black")
+        : setElementColor("white");
     };
-
-    // Initial check
-    checkBackground();
-
-    // Check on scroll
-    window.addEventListener("scroll", checkBackground);
-
-    // Cleanup
-    return () => {
-      window.removeEventListener("scroll", checkBackground);
-    };
-  }, []);
-
-  const elementColor = isOnWhite ? "black" : "white";
+    window.addEventListener("scroll", handleScroll);
+  });
 
   return (
-    <div className="flex absolute top-0 justify-between items-center w-full p-4">
+    <div
+      id="topNav"
+      className={`flex absolute top-0 justify-between items-center w-full p-4
+            transition-all duration-200 ease-in-out
+
+      ${isScrolledDown ? "bg-[#EEE] shadow-md" : "bg-transparent"}
+    `}
+    >
       <div className="">
         <Link
           id="headLogo"
           href="/"
-          className="block text-lg hover:text-gray-600 text-center"
+          className={`
+      block text-lg hover:text-gray-600 text-center
+                transition-all duration-200 ease-in-out
+    ${isScrolledDown ? "opacity-100 visible" : "opacity-0 invisible"}
+
+      `}
         >
           <Logo size={35} color={elementColor} />
         </Link>

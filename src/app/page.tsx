@@ -54,7 +54,7 @@ export default function Home() {
   return (
     <div className="mb-10">
       <main className="">
-        <section className="relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mb-0 h-[439px]">
+        <section className="top-hero relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mb-0 h-[439px]">
           <img
             src="/images/wide-forest.jpeg"
             alt="Forest Background"

@@ -215,7 +215,7 @@ Nats - natural numbers: opaque data or opcodes
             </div>
           </header>
 
-          <div class="">
+          <div>
             {USE_CASES.map((caseItem, index) => (
               <UseCase
                 number={`${(index + 1).toString().padStart(2, "0")}.`}

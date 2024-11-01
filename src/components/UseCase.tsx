@@ -1,4 +1,20 @@
-export default function CaseArticle({ number, title, children, hasBackground = false }) {
+"use client";
+
+import React, { ReactNode } from "react";
+
+interface CaseArticleProps {
+  number: string;
+  title: string;
+  children: ReactNode;
+  hasBackground?: boolean;
+}
+
+export default function CaseArticle({
+  number,
+  title,
+  children,
+  hasBackground = true,
+}: CaseArticleProps) {
   return (
     <article>
       <header className="">

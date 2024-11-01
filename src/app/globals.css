@@ -179,7 +179,8 @@ button {
   font-family: "BerkeleyMono";
   @apply bg-black;
   @apply text-white;
-  @apply text-lg;
+  @apply text-base;
+  @apply whitespace-pre;
   @apply md:text-base;
   @apply py-2;
   @apply px-4;

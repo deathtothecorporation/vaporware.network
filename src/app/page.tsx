@@ -90,11 +90,11 @@ export default function Home() {
           </p>
         </section>
 
-        <div className="content-zone my-10 flex flex-row space-between items-center">
+        <div className="content-zone mt-10 flex flex-row space-between items-center">
           <div className="horizontal-bars shrink"></div>
         </div>
 
-        <section className="main-points my-12">
+        <section className="main-points mb-12">
           <article className="content-zone left">
             <header>
               <h5>App-Less Software</h5>

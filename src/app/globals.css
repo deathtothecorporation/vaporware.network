@@ -328,11 +328,13 @@ section.main-points {
   @apply md:max-w-2xl;
 }
 
-section.main-points > article.left > header {
+section.main-points,
+section.system-components > article.left > header {
   @apply justify-start;
   @apply md:justify-start;
 }
-section.main-points > article.right > header {
+section.main-points,
+section.system-components > article.right > header {
   @apply justify-end;
   @apply md:justify-start;
 }
@@ -427,6 +429,87 @@ section#core-technology h2 {
     rgba(238, 238, 238, 1) 100%
   );
   pointer-events: none;
+}
+
+#use-cases .jungle-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#use-cases .jungle-bg-image {
+  @apply w-full;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 0.4;
+  transform: scale(1.5);
+}
+
+#use-cases .jungle-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(238, 238, 238, 1) 0%,
+    rgba(238, 238, 238, 0.6) 5%,
+    rgba(238, 238, 238, 0.6) 80%,
+    rgba(238, 238, 238, 0.8) 90%,
+    rgba(238, 238, 238, 1) 100%
+  );
+  pointer-events: none;
+}
+
+section#use-cases h2 {
+  @apply no-underline;
+  font-size: 16px;
+  @apply my-0;
+}
+
+section#use-cases article header {
+  @apply gap-x-2;
+  @apply flex;
+  @apply items-start;
+  @apply px-3;
+  @apply my-0;
+}
+
+section#use-cases article p {
+  @apply px-3;
+}
+
+section#use-cases .case-area {
+  position: relative;
+  /*min-height: 100%;*/
+}
+
+section#use-cases .case-area p {
+  position: relative; /* Add this */
+  z-index: 10; /* Add this */
+  @apply py-3;
+}
+
+section#use-cases .number {
+  font-size: 10px;
+}
+
+section#use-cases .title {
+  @apply flex;
+  @apply flex-col;
+  @apply w-full;
+}
+
+section#use-cases .title .header-line {
+  @apply border-b;
+  @apply border-black;
+  @apply pt-[8px];
+  @apply mr-[35px];
 }
 
 section#callouts > article.right {

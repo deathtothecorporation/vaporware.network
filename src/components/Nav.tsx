@@ -18,7 +18,7 @@ export default function Nav() {
         (document.getElementById("topNav") as HTMLElement)?.offsetHeight || 0;
       const heroHeight = (document.querySelector(".top-hero") as HTMLElement)
         ?.offsetHeight;
-      const scrolledPast = window.scrollY > heroHeight - navbarHeight;
+      const scrolledPast = window.scrollY > heroHeight - (navbarHeight - 20);
       setIsScrolledDown(scrolledPast);
       scrolledPast ? setElementColor("black") : setElementColor("white");
     };
@@ -28,11 +28,16 @@ export default function Nav() {
   return (
     <div
       id="topNav"
-      className={`flex absolute top-0 justify-between items-center w-full pl-4
-            transition-all duration-200 ease-in-out h-[64px] 
-
-      ${isScrolledDown ? "bg-[#EEE] shadow-md" : "bg-transparent"}
-    `}
+      className={`
+    flex absolute top-0 justify-between items-center w-full pl-4 h-[64px]
+    before:absolute before:inset-0 before:transition-all before:duration-200 before:ease-in-out
+    before:-z-10
+    ${
+      isScrolledDown
+        ? "before:translate-y-0 before:bg-[#EEE] before:shadow-md"
+        : "before:-translate-y-full before:bg-transparent"
+    }
+  `}
     >
       <div className="flex container mx-auto max-w-2xl items-center justify-between">
         <Link
@@ -45,7 +50,7 @@ export default function Nav() {
 
       `}
         >
-          <Logo size={36} color={elementColor} />
+          <Logo size={30} color="black" />
         </Link>
         <Hamburger color={elementColor}>
           <nav id="site-nav" className="space-y-4">

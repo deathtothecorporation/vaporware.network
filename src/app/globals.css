@@ -339,6 +339,15 @@ section.system-components > article.right > header {
   @apply md:justify-start;
 }
 
+.system-components header {
+  @apply my-0;
+  @apply mt-8;
+}
+.system-components h5 {
+  @apply my-0;
+  @apply mb-2;
+}
+
 article.left {
   @apply flex-row;
 }

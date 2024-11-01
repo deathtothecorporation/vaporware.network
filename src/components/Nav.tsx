@@ -1,29 +1,46 @@
 "use client";
 import React from "react";
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation"; // Add this import
 import Link from "next/link";
 import Logo from "@/components/Logo";
 import Hamburger from "@/components/HamburgerMenu";
 import ExternalLink from "@/components/ExternalLink";
 
 export default function Nav() {
-  const [isOnWhite, setIsOnWhite] = useState(false);
-  const [isScrolledDown, setIsScrolledDown] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
-  const [elementColor, setElementColor] = useState("white");
+  const [isScrolledDown, setIsScrolledDown] = useState(true); // Start visible
+  const [elementColor, setElementColor] = useState("black"); // Start with black
 
   useEffect(() => {
-    const handleScroll = () => {
-      const navbarHeight =
-        (document.getElementById("topNav") as HTMLElement)?.offsetHeight || 0;
-      const heroHeight = (document.querySelector(".top-hero") as HTMLElement)
-        ?.offsetHeight;
-      const scrolledPast = window.scrollY > heroHeight - (navbarHeight - 20);
-      setIsScrolledDown(scrolledPast);
-      scrolledPast ? setElementColor("black") : setElementColor("white");
-    };
-    window.addEventListener("scroll", handleScroll);
-  });
+    if (!isHomePage) {
+      setIsScrolledDown(true);
+      setElementColor("black");
+    } else {
+      // On homepage, check scroll position immediately
+      const handleScroll = () => {
+        const navbarHeight =
+          (document.getElementById("topNav") as HTMLElement)
+            ?.offsetHeight || 0;
+        const heroHeight = (
+          document.querySelector(".top-hero") as HTMLElement
+        )?.offsetHeight;
+        const scrolledPast =
+          window.scrollY > heroHeight - (navbarHeight - 20);
+        setIsScrolledDown(scrolledPast);
+        scrolledPast
+          ? setElementColor("black")
+          : setElementColor("white");
+      };
+
+      handleScroll(); // Check position immediately
+
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, [pathname, isHomePage]); // Respond to pathname changes
 
   return (
     <div

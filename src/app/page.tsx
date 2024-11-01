@@ -79,13 +79,14 @@ export default function Home() {
 
         <section className="content-zone">
           <p className="">
-            An operating function is a new kind of personal computer where all
-            programs are open, malleable and owned by the user.
+            An operating function is a new kind of personal computer
+            where all programs are open, malleable and owned by the
+            user.
           </p>
 
           <p>
-            It isn’t a device&mdash;it’s a computer defined as software. And it
-            runs everywhere simultaneously.
+            It isn’t a device&mdash;it’s a computer defined as software.
+            And it runs everywhere simultaneously.
           </p>
         </section>
 
@@ -99,9 +100,10 @@ export default function Home() {
               <h5>App-Less Software</h5>
             </header>
             <p>
-              Because software in an operating function isn’t siloed in apps,
-              you have full access to the codebase, backend included. “Inspect
-              source” everything, and change anything you want.
+              Because software in an operating function isn’t siloed in
+              apps, you have full access to the codebase, backend
+              included. “Inspect source” everything, and change anything
+              you want.
             </p>
           </article>
 
@@ -111,9 +113,10 @@ export default function Home() {
             </header>
 
             <p>
-              Write full stack programs as you would serverless functions, or
-              smart contracts. Operating functions are owned by users and scale
-              automatically based on their owners' demand and preferences.
+              Write full stack programs as you would serverless
+              functions, or smart contracts. Operating functions are
+              owned by users and scale automatically based on their
+              owners' demand and preferences.
             </p>
           </article>
 
@@ -124,8 +127,9 @@ export default function Home() {
 
             <p>
               Operating functions provides strong backward and forward
-              compatibility guarantees and make it possible to move running
-              computations between machines, with no impact to the program.
+              compatibility guarantees and make it possible to move
+              running computations between machines, with no impact to
+              the program.
             </p>
           </article>
 
@@ -135,9 +139,10 @@ export default function Home() {
             </header>
 
             <p>
-              All data and code is hashed and stored in a content-addressable
-              Merkle DAG. Content can be published using a protocol that
-              combines aspects of IPFS and BitTorrent.
+              All data and code is hashed and stored in a
+              content-addressable Merkle DAG. Content can be published
+              using a protocol that combines aspects of IPFS and
+              BitTorrent.
             </p>
           </article>
         </section>
@@ -145,7 +150,10 @@ export default function Home() {
         <section className="content-zone my-12">
           <div className="text-center flex md:flex-col md:mx-auto md:w-1/2 md:space-y-4 justify-center w-full gap-x-4">
             <div className="flex-1 px-4">
-              <Link href="https://opfn.gitbook.io/pallas" target="_blank">
+              <Link
+                href="https://opfn.gitbook.io/pallas"
+                target="_blank"
+              >
                 <button className="w-full">Docs</button>
               </Link>
             </div>
@@ -178,7 +186,7 @@ export default function Home() {
           <article>
             <div className="jungle-bg">
               <img
-                src="/images/dithered-square.png"
+                src="/images/dithered-jungle.png"
                 alt="jungle background image"
                 className="jungle-bg-image"
               />
@@ -190,10 +198,13 @@ export default function Home() {
               </header>
 
               <main>
-                <div className="p-4 bg-white opacity-90">
+                <div className="p-4 bg-[#EEE] opacity-90">
                   <pre className="code">
                     <code
-                      style={{ whiteSpace: "pre-wrap", wordWrap: "break-word" }}
+                      style={{
+                        whiteSpace: "pre-wrap",
+                        wordWrap: "break-word",
+                      }}
                     >
                       {`
 
@@ -228,13 +239,20 @@ EXEC(e, x)       = x
                 </div>
 
                 <p className="mt-8">
-                  PLAN is the core innovation that makes a ubiquitous personal
-                  computer possible. It enables universal portability across
-                  devices, guarantees backward compatibility, and makes forward
-                  compatibility between runtimes tractable.
+                  PLAN is the core innovation that makes a ubiquitous
+                  personal computer possible. It enables universal
+                  portability across devices, guarantees backward
+                  compatibility, and makes forward compatibility between
+                  runtimes tractable.
                 </p>
 
                 <p>PLAN is functional, lazy, and reflective.</p>
+                <div
+                  id="reflective"
+                  className="absolute bottom-[80px] right-[-55px] h-[140px] w-[140px]"
+                >
+                  <img src="/images/reflective.png" />
+                </div>
               </main>
 
               <div className="flex mt-12 mb-10 justify-center">
@@ -248,7 +266,7 @@ EXEC(e, x)       = x
           <article>
             <div className="jungle-bg">
               <img
-                src="/images/dithered-square.png"
+                src="/images/dithered-jungle.png"
                 alt="jungle background image"
                 className="jungle-bg-image"
               />
@@ -260,21 +278,25 @@ EXEC(e, x)       = x
                 <h2 className="mt-0">Cogs Run Forever</h2>
               </header>
 
-              <main className="p-2 bg-white  opacity-90">
+              <main className="p-2 bg-[#EEE]  opacity-90">
                 <div>
                   <p>
-                    Cogs are programs that run forever. Even if you reboot, cogs
-                    will continue exactly where they left off because they
-                    persist state automatically. A personal computer should
-                    never become obsolete. And it should{" "}
-                    <span className="font-bold">never</span> lose your data.
+                    Cogs are programs that run forever. Even if you
+                    reboot, cogs will continue exactly where they left
+                    off because they persist state automatically. A
+                    personal computer should never become obsolete. And
+                    it should <span className="font-bold">never</span>{" "}
+                    lose your data.
                   </p>
                 </div>
 
                 <div className="">
                   <pre className="code">
                     <code
-                      style={{ whiteSpace: "pre-wrap", wordWrap: "break-word" }}
+                      style={{
+                        whiteSpace: "pre-wrap",
+                        wordWrap: "break-word",
+                      }}
                     >
                       {`
 type Worker   = Driver | Job
@@ -298,12 +320,12 @@ type CogClosure =
                 </div>
 
                 <p>
-                  Notice that the cog is free to change itself. It can even
-                  replace itself with a completely new value.
+                  Notice that the cog is free to change itself. It can
+                  even replace itself with a completely new value.
                 </p>
               </main>
 
-              <div className="flex mt-4 justify-center">
+              <div className="flex mt-6 justify-center">
                 <Link href="#">
                   <button>Waitlist</button>
                 </Link>

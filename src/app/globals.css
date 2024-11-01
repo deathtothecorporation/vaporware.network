@@ -4,7 +4,7 @@
 
 :root {
   --scale: 1.5;
-  --bgColor: #EEEEEE;
+  --bgColor: #eeeeee;
 }
 
 /*[class*="text-"] {*/
@@ -79,7 +79,7 @@ body {
   /*font-family: "BerkeleyMono", monospace;*/
   font-family: "LatinModern", monospace;
   /*@apply bg-white;*/
-  background: var(--bgColor);
+  background: var(--bgColor) !important;
 }
 
 p {
@@ -358,20 +358,12 @@ section#core-technology h2 {
   background: var(--bgColor);
 }
 
-#core-technology article {
-  background-image: url("/images/dither-jungle.png");
-  background-size: cover;
-  @apply w-full;
-  @apply h-full;
-}
-
 #core-technology main {
 }
 
 #core-technology article {
   position: relative;
   width: 100%;
-  background: white;
   /*min-height: 400px; [> Adjust as needed <]*/
   min-height: max-content;
   overflow: hidden;
@@ -379,6 +371,7 @@ section#core-technology h2 {
 
 #core-technology .core-content {
   @apply relative;
+  @apply bg-transparent;
   /*z-index: 1;*/
   /*@apply px-6;*/
   z-index: 1;
@@ -389,7 +382,7 @@ section#core-technology h2 {
   position: absolute;
   top: 0;
   left: 0;
-  /*height: 500px;*/
+  /*height: 10000px;*/
   height: 100%;
   width: 100%;
 
@@ -406,14 +399,14 @@ section#core-technology h2 {
   /*top: 0;*/
   /*left: 0;*/
   /*width: 100%;*/
-  /*height: 100%;*/
+  height: 63%;
   object-fit: cover;
   object-position: center center;
 
   /* Convert to black and white */
-  /*filter: grayscale(100%);*/
+  filter: grayscale(100%);
   /*[> Optional: add some noise <]*/
-  /*opacity: 0.4;*/
+  opacity: 0.45;
 }
 
 #core-technology .jungle-overlay {
@@ -421,16 +414,16 @@ section#core-technology h2 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 64%;
   background: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 2%,
-    /* Quick fade to transparent */ transparent 4%,
-    /* Stay transparent for most of the top */ transparent 50%,
-    /* Continue transparency to middle */ rgba(255, 255, 255, 0.5) 60%,
-    rgba(255, 255, 255, 1) 70%,
-    rgba(255, 255, 255, 1) 100%
+    rgba(238, 238, 238, 1) 0%,
+    rgba(238, 238, 238, 0) 2%,
+    transparent 4%,
+    transparent 80%,
+    rgba(238, 238, 238, 0.5) 90%,
+    rgba(238, 238, 238, 1) 95%,
+    rgba(238, 238, 238, 1) 100%
   );
   pointer-events: none;
 }

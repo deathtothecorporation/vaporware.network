@@ -15,7 +15,7 @@ export default function Footer() {
 
       <nav className="relative z-10 px-4 py-2 flex flex-row justify-between text-center items-center">
         <div>
-          <a href="#" className="">
+          <a href="/" className="">
             <Logo size={25} color="white" />
           </a>
         </div>
@@ -42,7 +42,7 @@ export default function Footer() {
           </li>
         </ul>
         <div>
-          <a href="#" className="">
+          <a href="/" className="">
             <Logo size={25} color="white" />
           </a>
         </div>

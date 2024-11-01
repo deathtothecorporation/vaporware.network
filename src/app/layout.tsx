@@ -113,7 +113,7 @@ export default function RootLayout({
           </div>
         </noscript>
 
-        <header className="z-30 container mx-auto sticky top-0 flex w-full justify-between">
+        <header className="z-30 mx-auto sticky top-0 flex w-full justify-between">
           <Nav></Nav>
         </header>
         {children}

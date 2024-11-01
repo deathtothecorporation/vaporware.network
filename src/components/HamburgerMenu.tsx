@@ -59,30 +59,32 @@ const HamburgerMenu = ({
   const bgColor = color === "black" ? "bg-black" : "bg-white";
 
   return (
-    <div className="relative">
+    <div className="">
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}
-        className={`relative z-[60] top-0 pt-2 px-0 focus:outline-none ${isOpen ? "bg-black" : "bg-transparent"}`}
+        className="relative z-100 flex bg-transparent flex-col justify-between w-[64px] py-[20px] h-[64px]"
         aria-label="Toggle menu"
       >
-        <div className="flex flex-col justify-between w-6 h-5">
-          <span
-            className={`block w-full h-0.5 ${bgColor} transition-transform duration-300 ${
-              isOpen ? "rotate-45 translate-y-2 bg-white" : ""
-            }`}
-          />
-          <span
-            className={`block w-full h-0.5 ${bgColor} transition-opacity duration-300 ${
-              isOpen ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`block w-full h-0.5 ${bgColor} transition-transform duration-300 ${
-              isOpen ? "-rotate-45 -translate-y-2 bg-white" : ""
-            }`}
-          />
-        </div>
+        {isOpen ? (
+          <>
+            <div className={`border-black border-b-2 w-[32px]`}></div>
+            <div className={`border-black border-b-2 w-[32px]`}></div>
+            <div className={`border-black border-b-2 w-[32px]`}></div>
+          </>
+        ) : (
+          <>
+            <div
+              className={`border-${color} border-b-2 w-[32px]`}
+            ></div>
+            <div
+              className={`border-${color} border-b-2 w-[32px]`}
+            ></div>
+            <div
+              className={`border-${color} border-b-2 w-[32px]`}
+            ></div>
+          </>
+        )}
       </button>
 
       {/* Menu Overlay */}
@@ -103,7 +105,7 @@ const HamburgerMenu = ({
             : "shadow-none translate-x-full"
         }`}
       >
-        <div className="p-6">{addCloseHandler(children)}</div>
+        <div className="">{addCloseHandler(children)}</div>
       </div>
     </div>
   );

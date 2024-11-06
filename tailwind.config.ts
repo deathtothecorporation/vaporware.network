@@ -13,6 +13,21 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      spacing: {
+        "opfn-sm": "2.25em", // 36px at default font size
+        "opfn": "3em", // 48px at default font size
+        "opfn-lg": "4.5625em",  // 73px at default font size
+      },
+      width: {
+        'opfn-xs': '24rem',     // 384px
+        'opfn-narrow': '49.5rem',  // 792px
+        'opfn': '58.5rem',  // 936px
+      },
+      maxWidth: {
+        'opfn-xs': '24rem',     // 384px
+        'opfn-narrow': '49.5rem',  // 792px
+        'opfn': '58.5rem',  // 936px
+      }
     },
   },
   plugins: [],

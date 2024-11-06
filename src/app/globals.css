@@ -84,7 +84,7 @@ body {
 
 p {
   /*@apply text-xl;*/
-  font-size: 14px;
+  font-size: 16px;
   @apply md:text-base;
 }
 
@@ -98,7 +98,7 @@ section {
 }
 
 section header h1 {
-  font-size: 18px;
+  /*font-size: 18px;*/
 }
 
 .key-term {
@@ -177,13 +177,16 @@ a:visited {
 
 button {
   font-family: "BerkeleyMono";
+  font-size: 18px;
   @apply bg-black;
   @apply text-white;
-  @apply text-base;
   @apply whitespace-pre;
-  @apply md:text-base;
-  @apply py-2;
-  @apply px-4;
+  @apply py-[8px];
+  @apply px-[20px];
+}
+
+button.fixed-w {
+  @apply w-[158px];
 }
 
 button:disabled {
@@ -201,7 +204,17 @@ section {
 .content-zone {
   @apply container;
   @apply mx-auto;
-  @apply md:max-w-xl;
+  /*@apply md:max-w-xl;*/
+  @apply max-w-opfn;
+  @apply px-8;
+  @apply md:px-0;
+}
+
+.narrow-zone {
+  @apply container;
+  @apply mx-auto;
+  /*@apply md:max-w-lg;*/
+  @apply max-w-opfn-narrow;
   @apply px-8;
   @apply md:px-0;
 }
@@ -221,15 +234,16 @@ h5 {
 }
 
 h1 {
-  @apply text-4xl;
-  @apply md:text-2xl;
-  @apply mb-8;
+  font-size: 36px;
+  /*@apply md:text-2xl;*/
+  /*@apply mb-8;*/
 }
 
 h2 {
-  @apply text-2xl;
-  @apply md:text-lg;
-  @apply underline;
+  font-size: 20px;
+  @apply my-0;
+  /*@apply md:text-lg;*/
+  /*@apply underline;*/
 }
 
 h3 {
@@ -256,11 +270,11 @@ section header {
 }
 
 section header h1 {
-  @apply text-xl;
+  /*@apply text-xl;*/
 }
 
 .main-points section header {
-  @apply text-lg;
+  /*@apply text-lg;*/
 }
 
 section p {
@@ -322,10 +336,14 @@ section.main-points {
   @apply flex-col;
   @apply md:grid;
   @apply md:grid-cols-2;
-  @apply md:gap-8;
+  @apply md:gap-opfn;
   @apply md:items-start;
   @apply md:mx-auto;
-  @apply md:max-w-2xl;
+  /*@apply max-w-opfn-xs;*/
+}
+
+section.main-points article {
+  @apply max-w-opfn-xs;
 }
 
 section.main-points,
@@ -337,6 +355,15 @@ section.main-points,
 section.system-components > article.right > header {
   @apply justify-end;
   @apply md:justify-start;
+}
+
+section.main-points > article.left {
+  /*@apply col-start-1;*/
+  @apply justify-self-start;
+}
+section.main-points > article.right {
+  /*@apply col-end-3;*/
+  @apply justify-self-end;
 }
 
 .system-components header {
@@ -387,7 +414,7 @@ section#core-technology h2 {
   /*z-index: 1;*/
   /*@apply px-6;*/
   z-index: 1;
-  padding: 1.5rem;
+  /*padding: 1.5rem;*/
 }
 
 #core-technology .jungle-bg {

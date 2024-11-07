@@ -220,7 +220,7 @@ section {
 }
 
 p {
-  @apply mb-4;
+  /*@apply mb-4;*/
 }
 
 h1,
@@ -368,11 +368,6 @@ section.main-points > article.right {
 
 .system-components header {
   @apply my-0;
-  @apply mt-8;
-}
-.system-components h5 {
-  @apply my-0;
-  @apply mb-2;
 }
 
 article.left {

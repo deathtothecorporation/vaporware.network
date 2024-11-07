@@ -6,6 +6,7 @@ interface CaseArticleProps {
   number: string;
   title: string;
   children: ReactNode;
+  className: string;
   hasBackground?: boolean;
 }
 
@@ -13,10 +14,11 @@ export default function CaseArticle({
   number,
   title,
   children,
+  className,
   hasBackground = true,
 }: CaseArticleProps) {
   return (
-    <article>
+    <article className={className}>
       <header className="">
         <div className="number">{number}</div>
         <div className="title">

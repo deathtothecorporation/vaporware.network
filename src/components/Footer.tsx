@@ -21,11 +21,6 @@ export default function Footer() {
         </div>
         <ul className="list-none text-center flex flex-col space-y-2 mb-0 text-white">
           <li>
-            <a href="/system-overview" className="">
-              System and Uses
-            </a>
-          </li>
-          <li>
             <a href="https://docs.opfn.co" target="_blank" className="">
               Documentation
             </a>

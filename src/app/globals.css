@@ -299,7 +299,7 @@ pre.code {
   /*@apply p-2;*/
   /*@apply my-2;*/
   @apply text-[10px];
-  @apply md:text-[14px];
+  @apply md:text-[10px];
 }
 
 section#callouts {
@@ -404,12 +404,12 @@ section#core-technology h2 {
   position: relative;
   width: 100%;
   /*min-height: 400px; [> Adjust as needed <]*/
-  min-height: max-content;
+  /*min-height: max-content;*/
   overflow: hidden;
 }
 
 #core-technology .core-content {
-  @apply relative;
+  /*@apply relative;*/
   @apply bg-transparent;
   /*z-index: 1;*/
   /*@apply px-6;*/

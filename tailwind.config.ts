@@ -19,6 +19,7 @@ const config: Config = {
         "opfn-lg": "4.5625em",  // 73px at default font size
       },
       width: {
+        '372': '372px',
         'opfn-xs': '24rem',     // 384px
         'opfn-narrow': '49.5rem',  // 792px
         'opfn': '58.5rem',  // 936px

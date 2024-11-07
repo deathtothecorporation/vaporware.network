@@ -173,7 +173,7 @@ export default function Home() {
             </div>
           </header>
 
-          <article className="flex flex-row w-opfn mx-auto container">
+          <article className="content-zone w-opfn mx-auto container">
             <div className="jungle-bg">
               <img
                 src="/images/dithered-jungle.png"
@@ -182,29 +182,35 @@ export default function Home() {
               />
               <div className="jungle-overlay"></div>
             </div>
+          <div className="px-4 grid grid-cols-2 mx-auto">
 
-            <div className="core-content">
+            <div className="justify-self-start core-content w-372">
               <header>
                 <h2 className="mt-0 mb-[14px]">PLAN is a calculus</h2>
               </header>
 
-              <main className="w-[372px]">
-                <div className="p-4 bg-[#EEE] opacity-90">
+              <main className="">
+                <div className="p-2 bg-[#EEE] opacity-90">
+                  <div className="h-[400px]">
                   <pre className="code">
                     <code
+    className="flex flex-col gap-y-2"
                       style={{
                         whiteSpace: "pre-wrap",
                         wordWrap: "break-word",
                       }}
                     >
-                      {`
+                    <div className="">
+                      {`Each value is a pin x:<i>, a law x:{n a b}, an app x:(f g), or a nat x:@. `}
+                      </div>
 
-Each value is a pin x:<i>, a law x:{n a b}, an app x:(f g), or a nat x:@.
+                    <div className="">
+{`Treat this as a combinator system, and use normal-order evaluation to normalize.
+Unmatched patterns diverge. `}
+                      </div>
 
-Treat this as a combinator system, and use normal-order evaluation to normalize.
-Unmatched patterns diverge.
-
-(0 n a b) | NAT(a)>0 = {NAT(n) NAT(a) force(b)}  
+                    <div className="">
+    {`(0 n a b) | NAT(a)>0 = {NAT(n) NAT(a) force(b)}  
 (1 p _ _ _ <x>)      = (p x)  
 (1 _ l _ _ {n a b})  = (l n a b)  
 (1 _ _ a _ (f x))    = (a f x)  
@@ -215,49 +221,45 @@ Unmatched patterns diverge.
 (f:{n a b} x0..xn)   = EXEC([f x0..xn], b)  
 (f:<{n a b}> x0..xn) = EXEC([f x0..xn], b)  
 (<i> ..)             = (i ..)
+`}</div>
 
-NAT(x:@) = x  
+                    <div className="">
+    {`NAT(x:@) = x
 NAT(_)   = 0
+`}</div>
 
-EXEC(e, n:@)     = e[n] or n if n>=len(e)
+                    <div className="">
+  {`EXEC(e, n:@)     = e[n] or n if n>=len(e)
 EXEC(e, (0 x y)) = (EXEC(x) EXEC(y))  
 EXEC(e, (1 v b)) = EXEC(f,b) where f = e ++ [EXEC(f,v)]  
 EXEC(e, (2 x))   = x  
-EXEC(e, x)       = x
-                                    `}
+EXEC(e, x)       = x`}
+`}</div>
                     </code>
                   </pre>
                 </div>
 
-                <p className="mt-8">
+                <div>
+                <p className="">
                   PLAN is the core innovation that makes a ubiquitous personal
                   computer possible. It enables universal portability across
                   devices, guarantees backward compatibility, and makes forward
                   compatibility between runtimes tractable.
                 </p>
 
-                <p>PLAN is functional, lazy, and reflective.</p>
-                <div
-                  id="reflective"
-                  className="absolute bottom-[80px] right-[-55px] h-[140px] w-[140px]"
-                >
-                  <img src="/images/reflective.png" />
+                <p>PLAN is functional, lazy, and <em>reflective</em>.</p>
+                </div>
                 </div>
               </main>
-
-              <div className="flex mt-12 mb-10 justify-center">
-                <Link href="/system-overview">
-                  <button>System Overview</button>
-                </Link>
-              </div>
             </div>
 
-            <div className="core-content w-[372px]">
+            <div className="core-content justify-self-end w-372">
               <header>
                 <h2 className="mt-0 mb-[14px]">Cogs Run Forever</h2>
               </header>
 
-              <main className="w-[372px] bg-[#EEE] opacity-90">
+              <main className="bg-[#EEE] p-2 opacity-90">
+                <div className="h-[400px]">
                 <div>
                   <p>
                     Cogs are programs that run forever. Even if you reboot, cogs
@@ -276,8 +278,7 @@ EXEC(e, x)       = x
                         wordWrap: "break-word",
                       }}
                     >
-                      {`
-type Worker   = Driver | Job
+                      {`type Worker   = Driver | Job
 type WorkerId = Nat
 type MsgId    = Nat
 type Input    = (WorkerId, PLAN)
@@ -290,26 +291,30 @@ type CogClosure =
   , state   :: state
   , query   :: WorkerID -> state -> PLAN -> PLAN
   , workers :: Array Worker
-  }
-
-                                    `}
+  }`}
                     </code>
                   </pre>
                 </div>
+              </div>
 
+              <div className="">
                 <p>
                   Notice that the cog is free to change itself. It can even
                   replace itself with a completely new value.
                 </p>
-              </main>
-
-              <div className="flex mt-6 justify-center">
-                <Link href="#">
-                  <button>Waitlist</button>
-                </Link>
               </div>
+              <div className="w-full flex justify-around items-center mx-auto">
+                <div
+                  id="reflective"
+                  className="text-center h-[106px] w-[106px]"
+                >
+                  <img src="/images/reflective.png" />
+                </div>
+                </div>
+              </main>
             </div>
-          </article>
+          </div>
+        </article>
 
           <article className="md:hidden">
             <div className="jungle-bg">

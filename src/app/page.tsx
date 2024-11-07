@@ -234,7 +234,7 @@ EXEC(e, (0 x y)) = (EXEC(x) EXEC(y))
 EXEC(e, (1 v b)) = EXEC(f,b) where f = e ++ [EXEC(f,v)]  
 EXEC(e, (2 x))   = x  
 EXEC(e, x)       = x`}
-`}</div>
+</div>
                     </code>
                   </pre>
                 </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { ReactNode, useEffect } from "react";
 import Lockup from "@/components/Lockup";
 import Logo from "@/components/Logo";
 //<Logo size={100} color="white" className="bg-black" />
@@ -67,7 +67,11 @@ const USE_CASES = [
   },
 ];
 
-const UseCasesSection = ({ children }) => {
+interface UseCasesSectionProps {
+  children: ReactNode[];
+}
+
+const UseCasesSection = ({ children }: UseCasesSectionProps) => {
   // Group the cases into pairs (for rows)
   const rows = [];
   for (let i = 0; i < children.length; i += 2) {
@@ -735,7 +739,7 @@ Nats - natural numbers: opaque data or opcodes`}
 
             {USE_CASES.map((caseItem, index) => (
               <UseCase
-              className={`w-[357px] ${index % 2 !== 0 ? '' : ''}`}
+                className={`w-[357px] ${index % 2 !== 0 ? '' : ''}`}
                 number={`${(index + 1).toString().padStart(2, "0")}.`}
                 key={index}
                 title={caseItem.title}

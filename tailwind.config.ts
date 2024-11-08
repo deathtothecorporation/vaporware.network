@@ -7,6 +7,10 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      md: "834px",  // start of tablet.
+      lg: "1728px", // start of "desktop"
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -15,20 +19,22 @@ const config: Config = {
       },
       spacing: {
         "opfn-sm": "2.25em", // 36px at default font size
-        "opfn": "3em", // 48px at default font size
-        "opfn-lg": "4.5625em",  // 73px at default font size
+        opfn: "3em", // 48px at default font size
+        "opfn-lg": "4.5625em", // 73px at default font size
       },
       width: {
-        '372': '372px',
-        'opfn-xs': '24rem',     // 384px
-        'opfn-narrow': '49.5rem',  // 792px
-        'opfn': '58.5rem',  // 936px
+        "372": "372px",
+        "opfn-xs": "24rem", // 384px
+        "opfn-narrow": "651px", // 651px
+        "opfn-mid": "49.5rem", // 792px
+        opfn: "58.5rem", // 936px
       },
       maxWidth: {
-        'opfn-xs': '24rem',     // 384px
-        'opfn-narrow': '49.5rem',  // 792px
-        'opfn': '58.5rem',  // 936px
-      }
+        "opfn-xs": "24rem", // 384px
+        "opfn-narrow": "651px", // 651px
+        "opfn-mid": "49.5rem", // 792px
+        opfn: "58.5rem", // 936px
+      },
     },
   },
   plugins: [],

@@ -67,6 +67,9 @@ const USE_CASES = [
   },
 ];
 
+const useCaseTotal = USE_CASES.length
+console.log('use case total', useCaseTotal)
+
 interface UseCasesSectionProps {
   children: ReactNode[];
 }
@@ -74,12 +77,13 @@ interface UseCasesSectionProps {
 const UseCasesSection = ({ children }: UseCasesSectionProps) => {
   // Group the cases into pairs (for rows)
   const rows = [];
+
   for (let i = 0; i < children.length; i += 2) {
     rows.push(children.slice(i, i + 2));
   }
 
   return (
-    <div className="flex w-full px-2 md:px-0 md:content-zone mx-auto flex-col gap-y-8 justify-items-stretch">
+    <div className="flex w-full md:px-0 md:content-zone mx-auto flex-col justify-items-stretch">
       {rows.map((row, rowIndex) => (
         <div key={rowIndex} className="relative">
           {/* Background for this row */}
@@ -88,7 +92,7 @@ const UseCasesSection = ({ children }: UseCasesSectionProps) => {
               <img
                 src="/images/dithered-jungle.png"
                 alt="jungle background image"
-                className="w-full h-full object-cover opacity-10"
+                className="w-full h-full object-cover opacity-20"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-[#eeeeee] via-transparent to-[#eeeeee]"></div>
             </div>
@@ -154,20 +158,20 @@ export default function Home() {
   return (
     <div className="mb-10">
       <main className="">
-        <section className="top-hero relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mb-0 md:w-opfn w-full mx-auto md:h-[1043px]">
+        <section className="top-hero relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mb-0 md:w-opfn w-full mx-auto h-[439px] md:h-[591px] lg:h-[800px]">
           <img
             src="/images/hero-forest.png"
             alt="Forest Background"
-    className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="relative z-10 mx-auto pt-[147px] md:pt-0 md:px-[52px]">
+          <div className="relative z-10 mx-auto pt-[120px] md:pt-0 md:px-[52px]">
             <h1 className="md:w-[744px]">
-              <Lockup className="mx-auto" size={300} color="white" />
+              <Lockup className="mx-auto" size={200} color="white" />
             </h1>
-            <h2 className="no-underline font-bold berkeley text-[16px] md:text-[36px] mb-[70px] md:mb-[150px]">
+            <h2 className="no-underline font-bold berkeley text-[16px] md:text-[24px] mb-[60px] md:mb-[44px] lg:mb-[81px]">
               The Operating Function Company
             </h2>
-            <div className="flex mb-[50px] md:mb-0 justify-center">
+            <div className="flex mb-[50px] md:mb-[54px] lg:mb-[70px] justify-center">
               <Link href="#">
                 <button>Waitlist</button>
               </Link>
@@ -193,9 +197,9 @@ export default function Home() {
           <div className="horizontal-bars"></div>
         </div>
 
-        <section className="main-points content-zone mb-opfn">
+        <section className="main-points content-zone">
           <article className="left">
-            <header>
+            <header className="">
               <h2>App-Less Software</h2>
             </header>
             <p>
@@ -229,7 +233,7 @@ export default function Home() {
             </p>
           </article>
 
-          <article className="right">
+          <article className="right mb-opfn">
             <header>
               <h2>Uncensorable Publishing</h2>
             </header>
@@ -242,14 +246,14 @@ export default function Home() {
           </article>
         </section>
 
-        <section className="content-zone mt-opfn-lg mb-[64px]">
-          <div className="text-center flex mx-auto justify-center w-[286px] md:w-full gap-x-4">
-            <div className="md:pr-[43px] pr-[36px]">
+        <section className="content-zone">
+          <div className="text-center flex mx-auto justify-center :w-full">
+            <div className="">
               <Link href="https://opfn.gitbook.io/pallas" target="_blank">
-                <button className="fixed-w">Docs</button>
+                <button className="py-[8px] px-[20px]">Read the Docs</button>
               </Link>
             </div>
-            <div className="">
+            <div className="hidden">
               <Link href="#use-cases">
                 <button className="fixed-w">Use Cases</button>
               </Link>
@@ -257,19 +261,21 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="content-zone my-[64px] md:my-opfn flex flex-row space-between items-center">
+        <div className="content-zone my-opfn flex flex-row space-between items-center">
           <div className="horizontal-bars"></div>
         </div>
 
         <section id="core-technology">
-          <header className="relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mx-auto w-full h-[200px] md:w-[744px] md:h-[396px]">
+          <header className="relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mx-auto w-full h-[192px] md:w-[744px] md:h-[396px]">
             <img
               src="/images/field.png"
               alt="Forest Background"
-    className="absolute inset-0 object-cover mx-auto px-2 md:px-0"
+              className="absolute inset-0 object-cover mx-auto px-2 md:px-0"
             />
             <div className="relative z-10 max-w-lg">
-              <h1 className="font-bold berkeley md:text-[36px] text-[20px]">Core Technology</h1>
+              <h1 className="font-bold berkeley md:text-[36px] text-[16px]">
+                Core Technology
+              </h1>
             </div>
           </header>
 
@@ -282,18 +288,18 @@ export default function Home() {
               />
               <div className="jungle-overlay"></div>
             </div>
-            <div className="px-4 md:grid md:grid-cols-2 flex flex-col mx-auto">
+            <div className="md:grid md:grid-cols-2 flex flex-col mx-auto">
               <div className="justify-self-start core-content md:w-372">
                 <header>
                   <h2 className="mt-0 mb-[14px]">PLAN is a calculus</h2>
                 </header>
 
                 <main className="">
-                  <div className="p-2 bg-[#EEE] opacity-90">
-                    <div className="h-[400px]">
+                  <div className="py-2 bg-[#EEE] opacity-90">
+                    <div className="mb-[17px]">
                       <pre className="code">
                         <code
-                          className="flex flex-col gap-y-2"
+                          className="flex flex-col px-4 gap-y-4"
                           style={{
                             whiteSpace: "pre-wrap",
                             wordWrap: "break-word",
@@ -353,17 +359,38 @@ EXEC(e, x)       = x`}
                         PLAN is functional, lazy, and <em>reflective</em>.
                       </p>
                     </div>
+
+                    <div className="md:hidden w-full flex justify-around items-center mx-auto">
+                    <div
+                      id="reflective"
+                      className="text-center h-[106px] w-[106px]"
+                    >
+                      <img src="/images/reflective.png" />
+                    </div>
+                  </div>
                   </div>
                 </main>
               </div>
+              </div>
+            </article>
 
-              <div className="core-content justify-self-end md:w-372">
+          <article className="content-zone w-opfn mx-auto container">
+            <div className="jungle-bg">
+              <img
+                src="/images/dithered-jungle.png"
+                alt="jungle background image"
+                className="jungle-bg-image"
+              />
+              <div className="jungle-overlay"></div>
+            </div>
+            <div className="md:grid md:grid-cols-2 flex flex-col mx-auto">
+              <div className="justify-self-start core-content md:w-372">
                 <header>
                   <h2 className="mt-0 mb-[14px]">Cogs Run Forever</h2>
                 </header>
-
-                <main className="bg-[#EEE] p-2 opacity-90">
-                  <div className="h-[400px]">
+              </div>
+                <main className="bg-[#EEE] px-2 pt-2 opacity-90">
+                  <div className="mb-[16px]">
                     <div>
                       <p>
                         Cogs are programs that run forever. Even if you reboot,
@@ -401,13 +428,13 @@ type CogClosure =
                     </div>
                   </div>
 
-                  <div className="">
-                    <p>
+                  <div className="mb-0">
+                    <p className="mb-0">
                       Notice that the cog is free to change itself. It can even
                       replace itself with a completely new value.
                     </p>
                   </div>
-                  <div className="w-full flex justify-around items-center mx-auto">
+                  <div className="hidden w-full flex justify-around items-center mx-auto">
                     <div
                       id="reflective"
                       className="text-center h-[106px] w-[106px]"
@@ -417,24 +444,24 @@ type CogClosure =
                   </div>
                 </main>
               </div>
-            </div>
           </article>
-
         </section>
 
-        <div className="content-zone my-[64px] md:my-opfn flex flex-row space-between items-center">
+        <div className="content-zone mt-opfn mb-opfn-sm flex flex-row space-between items-center">
           <div className="horizontal-bars"></div>
         </div>
 
         <section id="system-overview">
-          <header className="relative z-10 mt-0 mb-opfn overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mx-auto w-full md:w-[744px] h-[200px] md:h-[396px]">
+          <header className="relative z-10 mt-0 mb-opfn-sm overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mx-auto w-full md:w-[744px] h-[200px] md:h-[396px]">
             <img
               src="/images/coast.png"
               alt="Forest Background"
               className="px-3 absolute inset-0 w-full h-full object-cover"
             />
             <div className="relative z-10 max-w-lg">
-              <h1 className="font-bold berkeley md:text-[36px] text-[20px]">System Overview</h1>
+              <h1 className="font-bold berkeley md:text-[36px] text-[20px]">
+                System Overview
+              </h1>
             </div>
           </header>
 
@@ -454,10 +481,12 @@ type CogClosure =
             </p>
           </section>
 
-          <div className="border-b border-black md:w-[318px] md:w-opfn-narrow mx-10 md:mx-auto md:narrow-zone my-opfn-sm"></div>
+        <div className="content-zone my-opfn-sm md:my-opfn flex flex-row space-between items-center">
+          <div className="horizontal-bars"></div>
+        </div>
 
-        <section className="system-components md:grid md:grid-cols-2 md:gap-y-[65px] flex flex-col content-zone">
-          <article className="md:w-opfn-xs left md:h-[360px] mb-[65px]">
+          <section className="system-components md:grid md:grid-cols-2 md:gap-y-[65px] flex flex-col content-zone">
+            <article className="md:w-opfn-xs left mb-opfn-sm">
               <header className="mb-2 mt-0">
                 <h2 className="mb-0">PLAN</h2>
               </header>
@@ -474,15 +503,17 @@ type CogClosure =
               <div className="w-full flex items-center justify-around">
                 <pre className="code">
                   <code
+                    className="text-[12px]"
                     style={{
                       whiteSpace: "pre-wrap",
                       wordWrap: "break-word",
                     }}
                   >
-                    {`PLAN ::= <PLAN>
-         | {Nat Nat PLAN}
-         | (PLAN PLAN)
-         | Nat
+{`PLAN ::= <PLAN>
+       | {Nat Nat PLAN}
+       | (PLAN PLAN)
+       | Nat
+
 Pins - subheaps: content addressed DAG nodes
 Laws - supercombinators: pure n-ary functions
 Apps - applications: closures or thunks
@@ -492,27 +523,24 @@ Nats - natural numbers: opaque data or opcodes`}
               </div>
             </article>
 
-          <article className="md:w-opfn-xs left md:h-[360px] mb-[65px]">
-              <header className="content-zone">
+            <article className="md:w-opfn-xs left md:h-[360px] mb-[24px]">
+              <header className="">
                 <h2 className="text-right w-full">Machines</h2>
               </header>
               <div className="flex h-full flex-col justify-between">
-                <div>
-                  <p className="content-zone">
-                    Because software in an operating function isn’t siloed in
-                    apps, you have full access to the codebase, backend
-                    included. “Inspect source” everything, and change anything
-                    you want.
+                <div className="mb-0">
+                  <p className="mb-0">
+    Operating functions run on a virtual machine. The semantics of the machine are completely encoded within the system—like a runnable spec—which makes it tractable to implement and audit multiple competing versions. Each user device runs one machine; together they form a networked computer.
                   </p>
                 </div>
-                <div className="shrink"></div>
-                <div className="relative bottom-[30px] h-[120px] self-end">
+                <div className="shrink mt-[24px]"></div>
+                <div className="relative self-center h-[120px]">
                   <img height="120" src="/images/rocket.png" />
                 </div>
               </div>
             </article>
 
-            <article className="md:w-opfn-xs h-[360px]">
+            <article className="md:w-opfn-xs h-[360px] mb-[24px]">
               <header>
                 <h2>Cogs</h2>
               </header>
@@ -528,8 +556,8 @@ Nats - natural numbers: opaque data or opcodes`}
               </div>
             </article>
 
-            <article className="md:w-opfn-xs left md:h-[360px] md:mb-[65px]">
-              <div className="mb-[64px]">
+            <article className="md:w-opfn-xs left md:h-[360px] mb-0">
+              <div className="mb-opfn-sm">
                 <header>
                   <h2 className="text-right w-full">Drivers</h2>
                 </header>
@@ -542,9 +570,9 @@ Nats - natural numbers: opaque data or opcodes`}
                 </p>
               </div>
 
-              <div className="">
+              <div className="mb-0">
                 <header>
-                  <h2 className="text-right w-full">Manifests</h2>
+                  <h2 className="md:text-right w-full">Manifests</h2>
                 </header>
                 <p>
                   Manifests are a special PLAN value that must be provided to a
@@ -555,7 +583,7 @@ Nats - natural numbers: opaque data or opcodes`}
               </div>
             </article>
 
-            <div className="col-span-2 mx-auto mt-opfn-lg mb-[50px] md:mb-0">
+            <div className="col-span-2 mx-auto mt-opfn-sm">
               <a href="https://docs.opfn.co" target="_blank">
                 <button>Read the Docs</button>
               </a>
@@ -567,14 +595,16 @@ Nats - natural numbers: opaque data or opcodes`}
           </div>
 
           <section id="use-cases">
-            <header className="relative z-10 mt-0 mb-opfn overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mx-auto h-[200px] w-full md:w-[744px] md:h-[396px]">
+            <header className="relative z-10 mt-0 mb-opfn-sm overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mx-auto h-[192px] w-full md:w-[744px] md:h-[396px]">
               <img
                 src="/images/river.png"
                 alt="Forest Background"
                 className="px-3 absolute inset-0 w-full h-full object-cover"
               />
               <div className="relative z-10 max-w-lg">
-              <h1 className="font-bold berkeley md:text-[36px] text-[20px]">Use Cases</h1>
+                <h1 className="font-bold berkeley md:text-[36px] text-[20px]">
+                  Use Cases
+                </h1>
               </div>
             </header>
 
@@ -582,21 +612,24 @@ Nats - natural numbers: opaque data or opcodes`}
               <UseCasesSection>
                 {USE_CASES.map((caseItem, index) => (
                   <UseCase
-                  className={`w-full md:w-[357px] ${index % 2 !== 0 ? "" : ""}`}
+                  className={`w-full md:w-[357px] ${index % 2 !== 0 ? "" : ""} ${ (index === (useCaseTotal - 1)) ? "mb-0" : "mb-[24px]"} ${index === (useCaseTotal - 1)} `}
                     number={`${(index + 1).toString().padStart(2, "0")}.`}
                     key={index}
                     title={caseItem.title}
                     hasBackground={false}
                   >
-                    <div className={`w-full md:w-[357px] ${index % 2 !== 0 ? "" : ""}`}>
-                      <p className="w-full">{caseItem.content}</p>
+                    <div
+                      className={`w-full px-4 md:w-[357px] ${index % 2 !== 0 ? "" : ""}`}
+                    >
+                      <p className="w-full mb-0">{caseItem.content}</p>
                     </div>
                   </UseCase>
                 ))}
               </UseCasesSection>
-              <div className="flex mt-opfn-lg mb-opfn justify-center">
+
+              <div className="flex mt-opfn mb-opfn-sm justify-center">
                 <Link href="#">
-                  <button>Waitlist</button>
+                  <button>Contact Us</button>
                 </Link>
               </div>
             </div>

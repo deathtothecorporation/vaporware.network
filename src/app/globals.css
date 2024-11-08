@@ -11,6 +11,8 @@
 /*font-size: calc(var(--font-size, 1rem) * var(--scale)) !important;*/
 /*}*/
 
+
+
 @media (prefers-color-scheme: dark) {
   :root {
   }
@@ -80,12 +82,14 @@ body {
   font-family: "LatinModern", monospace;
   /*@apply bg-white;*/
   background: var(--bgColor) !important;
+  line-height: normal;
 }
 
 p {
   /*@apply text-xl;*/
   font-size: 16px;
   @apply md:text-base;
+  @apply mb-0;
 }
 
 .berkeley {
@@ -136,11 +140,8 @@ nav#site-nav a {
 }
 
 footer#site-footer {
-  @apply text-[14px];
-  @apply md:text-base;
+  @apply text-[20px];
   @apply font-bold;
-  @apply h-[135px];
-  @apply md:h-full;
 }
 
 footer#site-footer a {
@@ -151,12 +152,13 @@ footer#site-footer a {
 
 footer#site-footer ul {
   @apply list-none !important;
-  @apply mx-0 !important;
   @apply px-0 !important;
+  @apply mx-auto;
 }
 footer#site-footer li {
   @apply list-none !important;
-  @apply mx-0 !important;
+  @apply mb-[14px] !important;
+  @apply mx-auto;
   @apply px-0 !important;
   @apply text-center;
 }
@@ -196,19 +198,12 @@ button:disabled {
   @apply opacity-60;
 }
 
-header aside {
-}
-
-section {
-  @apply mb-8;
-}
-
 .content-zone {
   @apply container;
   @apply mx-auto;
   /*@apply md:max-w-xl;*/
   @apply max-w-opfn;
-  @apply px-8;
+  @apply px-4;
   @apply md:px-0;
 }
 
@@ -217,7 +212,7 @@ section {
   @apply mx-auto;
   /*@apply md:max-w-lg;*/
   @apply md:max-w-opfn-narrow;
-  @apply px-8;
+  @apply px-4;
   @apply md:px-0;
 }
 
@@ -264,7 +259,7 @@ blockquote {
 }
 
 section header {
-  @apply mb-4;
+  /*@apply mb-4;*/
   /*@apply font-semibold;*/
   @apply flex;
   @apply flex-row;
@@ -276,6 +271,7 @@ section header h1 {
 }
 
 .main-points section header {
+  @apply mb-[8px];
   /*@apply text-lg;*/
 }
 
@@ -338,7 +334,7 @@ section.main-points {
   @apply flex-col;
   @apply md:grid;
   @apply md:grid-cols-2;
-  @apply md:gap-opfn;
+  /*@apply md:gap-opfn;*/
   @apply md:items-start;
   @apply md:mx-auto;
   /*@apply max-w-opfn-xs;*/
@@ -346,6 +342,11 @@ section.main-points {
 
 section.main-points article {
   @apply max-w-opfn-xs;
+  @apply mb-opfn-sm;
+}
+
+section.main-points article header {
+  @apply mb-[8px];
 }
 
 section.main-points,
@@ -353,7 +354,12 @@ section.system-components > article.left > header {
   @apply justify-start;
   @apply md:justify-start;
 }
-section.main-points,
+section.main-points > article.right > header > h2 {
+  @apply text-right;
+  @apply w-full;
+  @apply md:text-left;
+}
+
 section.system-components > article.right > header {
   @apply justify-end;
   @apply md:justify-start;
@@ -369,11 +375,18 @@ section.main-points > article.right {
 }
 
 .system-components header {
-  @apply my-0;
+  @apply mb-[8px];
+}
+
+.system-components > article {
 }
 
 article.left {
   @apply flex-row;
+}
+
+section#core-technology p {
+  @apply text-[14px];
 }
 
 section#core-technology header {
@@ -435,7 +448,7 @@ section#core-technology h2 {
   /*top: 0;*/
   /*left: 0;*/
   /*width: 100%;*/
-  height: 63%;
+  height: 35%;
   object-fit: cover;
   object-position: center center;
 
@@ -492,17 +505,11 @@ section#core-technology h2 {
     to bottom,
     rgba(238, 238, 238, 1) 0%,
     rgba(238, 238, 238, 0.6) 5%,
-    rgba(238, 238, 238, 0.6) 80%,
-    rgba(238, 238, 238, 0.8) 90%,
+    rgba(238, 238, 238, 0.6) 70%,
+    rgba(238, 238, 238, 0.8) 80%,
     rgba(238, 238, 238, 1) 100%
   );
   pointer-events: none;
-}
-
-section#use-cases h2 {
-  @apply no-underline;
-  font-size: 16px;
-  @apply my-0;
 }
 
 section#use-cases article header {
@@ -514,7 +521,8 @@ section#use-cases article header {
 }
 
 section#use-cases article p {
-  @apply px-3;
+  @apply text-[12px];
+  line-height: normal;
 }
 
 section#use-cases .case-area {
@@ -523,8 +531,8 @@ section#use-cases .case-area {
 }
 
 section#use-cases .case-area p {
-  position: relative; /* Add this */
-  z-index: 10; /* Add this */
+  position: relative;
+  z-index: 10;
   @apply py-3;
 }
 
@@ -536,6 +544,11 @@ section#use-cases .title {
   @apply flex;
   @apply flex-col;
   @apply w-full;
+}
+
+section#use-cases .title > h2 {
+  @apply mt-[4px];
+  @apply mb-0;
 }
 
 section#use-cases .title .header-line {

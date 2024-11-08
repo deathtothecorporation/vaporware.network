@@ -22,17 +22,12 @@ export default function Nav() {
       // On homepage, check scroll position immediately
       const handleScroll = () => {
         const navbarHeight =
-          (document.getElementById("topNav") as HTMLElement)
-            ?.offsetHeight || 0;
-        const heroHeight = (
-          document.querySelector(".top-hero") as HTMLElement
-        )?.offsetHeight;
-        const scrolledPast =
-          window.scrollY > heroHeight - (navbarHeight - 20);
+          (document.getElementById("topNav") as HTMLElement)?.offsetHeight || 0;
+        const heroHeight = (document.querySelector(".top-hero") as HTMLElement)
+          ?.offsetHeight;
+        const scrolledPast = window.scrollY > heroHeight - (navbarHeight - 20);
         setIsScrolledDown(scrolledPast);
-        scrolledPast
-          ? setElementColor("black")
-          : setElementColor("white");
+        scrolledPast ? setElementColor("black") : setElementColor("white");
       };
 
       handleScroll(); // Check position immediately
@@ -93,7 +88,7 @@ export default function Nav() {
               <Logo size={50} color="black" className="mx-auto" />
             </Link>
             <Link
-              href="/system-overview"
+              href="/#system-overview"
               className="block text-lg hover:text-gray-600 text-center"
             >
               System and Uses

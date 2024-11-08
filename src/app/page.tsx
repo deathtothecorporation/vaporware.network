@@ -79,7 +79,7 @@ const UseCasesSection = ({ children }: UseCasesSectionProps) => {
   }
 
   return (
-    <div className="flex content-zone mx-auto flex-col gap-y-8 justify-items-stretch">
+    <div className="flex w-full px-2 md:px-0 md:content-zone mx-auto flex-col gap-y-8 justify-items-stretch">
       {rows.map((row, rowIndex) => (
         <div key={rowIndex} className="relative">
           {/* Background for this row */}
@@ -93,26 +93,19 @@ const UseCasesSection = ({ children }: UseCasesSectionProps) => {
               <div className="absolute inset-0 bg-gradient-to-b from-[#eeeeee] via-transparent to-[#eeeeee]"></div>
             </div>
           </div>
-          
-          {/* Row content */}
-              <div className="relative z-10 grid grid-cols-2">
-        {/* Left column */}
-        <div className="justify-self-start">
-          {row[0]}
-        </div>
-        {/* Right column */}
-        <div className="justify-self-end">
-          {row[1]}
-        </div>
-      </div>
 
+          {/* Row content */}
+          <div className="relative z-10 md:grid md:grid-cols-2 flex flex-col">
+            {/* Left column */}
+            <div className="justify-self-start">{row[0]}</div>
+            {/* Right column */}
+            <div className="justify-self-end">{row[1]}</div>
+          </div>
         </div>
       ))}
     </div>
   );
 };
-
-
 
 // import Image from "next/image";
 
@@ -161,20 +154,20 @@ export default function Home() {
   return (
     <div className="mb-10">
       <main className="">
-        <section className="top-hero relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mb-0 w-opfn mx-auto h-[1043px]">
+        <section className="top-hero relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mb-0 md:w-opfn w-full mx-auto md:h-[1043px]">
           <img
             src="/images/hero-forest.png"
             alt="Forest Background"
-            className="absolute inset-0 w-full h-full object-cover"
+    className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="relative z-10 mx-auto px-[52px]">
-            <h1 className="w-[744px]">
+          <div className="relative z-10 mx-auto pt-[147px] md:pt-0 md:px-[52px]">
+            <h1 className="md:w-[744px]">
               <Lockup className="mx-auto" size={300} color="white" />
             </h1>
-            <h2 className="no-underline font-bold berkeley text-[36px] mb-[150px]">
+            <h2 className="no-underline font-bold berkeley text-[16px] md:text-[36px] mb-[70px] md:mb-[150px]">
               The Operating Function Company
             </h2>
-            <div className="flex mb-0 justify-center">
+            <div className="flex mb-[50px] md:mb-0 justify-center">
               <Link href="#">
                 <button>Waitlist</button>
               </Link>
@@ -182,7 +175,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="border-b border-black narrow-zone mx-auto my-opfn-sm"></div>
+        <div className="border-b border-black w-[318px] md:w-opfn-narrow mx-10 md:mx-auto md:narrow-zone my-opfn-sm"></div>
 
         <section className="narrow-zone">
           <p className="">
@@ -249,34 +242,34 @@ export default function Home() {
           </article>
         </section>
 
-        <section className="content-zone mt-opfn-lg">
-          <div className="text-center flex md:mx-auto justify-center w-full gap-x-4">
-            <div className="pr-[43px]">
+        <section className="content-zone mt-opfn-lg mb-[64px]">
+          <div className="text-center flex mx-auto justify-center w-[286px] md:w-full gap-x-4">
+            <div className="md:pr-[43px] pr-[36px]">
               <Link href="https://opfn.gitbook.io/pallas" target="_blank">
                 <button className="fixed-w">Docs</button>
               </Link>
             </div>
             <div className="">
-              <Link href="/system-overview#use-cases">
+              <Link href="#use-cases">
                 <button className="fixed-w">Use Cases</button>
               </Link>
             </div>
           </div>
         </section>
 
-        <div className="content-zone my-opfn flex flex-row space-between items-center">
+        <div className="content-zone my-[64px] md:my-opfn flex flex-row space-between items-center">
           <div className="horizontal-bars"></div>
         </div>
 
         <section id="core-technology">
-          <header className="relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mx-auto w-[744px] h-[396px]">
+          <header className="relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mx-auto w-full h-[200px] md:w-[744px] md:h-[396px]">
             <img
               src="/images/field.png"
               alt="Forest Background"
-              className="absolute inset-0 object-cover mx-auto"
+    className="absolute inset-0 object-cover mx-auto px-2 md:px-0"
             />
             <div className="relative z-10 max-w-lg">
-              <h1 className="font-bold berkeley">Core Technology</h1>
+              <h1 className="font-bold berkeley md:text-[36px] text-[20px]">Core Technology</h1>
             </div>
           </header>
 
@@ -289,35 +282,34 @@ export default function Home() {
               />
               <div className="jungle-overlay"></div>
             </div>
-          <div className="px-4 grid grid-cols-2 mx-auto">
+            <div className="px-4 md:grid md:grid-cols-2 flex flex-col mx-auto">
+              <div className="justify-self-start core-content md:w-372">
+                <header>
+                  <h2 className="mt-0 mb-[14px]">PLAN is a calculus</h2>
+                </header>
 
-            <div className="justify-self-start core-content w-372">
-              <header>
-                <h2 className="mt-0 mb-[14px]">PLAN is a calculus</h2>
-              </header>
+                <main className="">
+                  <div className="p-2 bg-[#EEE] opacity-90">
+                    <div className="h-[400px]">
+                      <pre className="code">
+                        <code
+                          className="flex flex-col gap-y-2"
+                          style={{
+                            whiteSpace: "pre-wrap",
+                            wordWrap: "break-word",
+                          }}
+                        >
+                          <div className="">
+                            {`Each value is a pin x:<i>, a law x:{n a b}, an app x:(f g), or a nat x:@. `}
+                          </div>
 
-              <main className="">
-                <div className="p-2 bg-[#EEE] opacity-90">
-                  <div className="h-[400px]">
-                  <pre className="code">
-                    <code
-    className="flex flex-col gap-y-2"
-                      style={{
-                        whiteSpace: "pre-wrap",
-                        wordWrap: "break-word",
-                      }}
-                    >
-                    <div className="">
-                      {`Each value is a pin x:<i>, a law x:{n a b}, an app x:(f g), or a nat x:@. `}
-                      </div>
-
-                    <div className="">
-{`Treat this as a combinator system, and use normal-order evaluation to normalize.
+                          <div className="">
+                            {`Treat this as a combinator system, and use normal-order evaluation to normalize.
 Unmatched patterns diverge. `}
-                      </div>
+                          </div>
 
-                    <div className="">
-    {`(0 n a b) | NAT(a)>0 = {NAT(n) NAT(a) force(b)}  
+                          <div className="">
+                            {`(0 n a b) | NAT(a)>0 = {NAT(n) NAT(a) force(b)}  
 (1 p _ _ _ <x>)      = (p x)  
 (1 _ l _ _ {n a b})  = (l n a b)  
 (1 _ _ a _ (f x))    = (a f x)  
@@ -328,64 +320,69 @@ Unmatched patterns diverge. `}
 (f:{n a b} x0..xn)   = EXEC([f x0..xn], b)  
 (f:<{n a b}> x0..xn) = EXEC([f x0..xn], b)  
 (<i> ..)             = (i ..)
-`}</div>
+`}
+                          </div>
 
-                    <div className="">
-    {`NAT(x:@) = x
+                          <div className="">
+                            {`NAT(x:@) = x
 NAT(_)   = 0
-`}</div>
+`}
+                          </div>
 
-                    <div className="">
-  {`EXEC(e, n:@)     = e[n] or n if n>=len(e)
+                          <div className="">
+                            {`EXEC(e, n:@)     = e[n] or n if n>=len(e)
 EXEC(e, (0 x y)) = (EXEC(x) EXEC(y))  
 EXEC(e, (1 v b)) = EXEC(f,b) where f = e ++ [EXEC(f,v)]  
 EXEC(e, (2 x))   = x  
 EXEC(e, x)       = x`}
-</div>
-                    </code>
-                  </pre>
-                </div>
+                          </div>
+                        </code>
+                      </pre>
+                    </div>
 
-                <div>
-                <p className="">
-                  PLAN is the core innovation that makes a ubiquitous personal
-                  computer possible. It enables universal portability across
-                  devices, guarantees backward compatibility, and makes forward
-                  compatibility between runtimes tractable.
-                </p>
+                    <div>
+                      <p className="">
+                        PLAN is the core innovation that makes a ubiquitous
+                        personal computer possible. It enables universal
+                        portability across devices, guarantees backward
+                        compatibility, and makes forward compatibility between
+                        runtimes tractable.
+                      </p>
 
-                <p>PLAN is functional, lazy, and <em>reflective</em>.</p>
-                </div>
-                </div>
-              </main>
-            </div>
+                      <p>
+                        PLAN is functional, lazy, and <em>reflective</em>.
+                      </p>
+                    </div>
+                  </div>
+                </main>
+              </div>
 
-            <div className="core-content justify-self-end w-372">
-              <header>
-                <h2 className="mt-0 mb-[14px]">Cogs Run Forever</h2>
-              </header>
+              <div className="core-content justify-self-end md:w-372">
+                <header>
+                  <h2 className="mt-0 mb-[14px]">Cogs Run Forever</h2>
+                </header>
 
-              <main className="bg-[#EEE] p-2 opacity-90">
-                <div className="h-[400px]">
-                <div>
-                  <p>
-                    Cogs are programs that run forever. Even if you reboot, cogs
-                    will continue exactly where they left off because they
-                    persist state automatically. A personal computer should
-                    never become obsolete. And it should{" "}
-                    <span className="font-bold">never</span> lose your data.
-                  </p>
-                </div>
+                <main className="bg-[#EEE] p-2 opacity-90">
+                  <div className="h-[400px]">
+                    <div>
+                      <p>
+                        Cogs are programs that run forever. Even if you reboot,
+                        cogs will continue exactly where they left off because
+                        they persist state automatically. A personal computer
+                        should never become obsolete. And it should{" "}
+                        <span className="font-bold">never</span> lose your data.
+                      </p>
+                    </div>
 
-                <div className="">
-                  <pre className="code">
-                    <code
-                      style={{
-                        whiteSpace: "pre-wrap",
-                        wordWrap: "break-word",
-                      }}
-                    >
-                      {`type Worker   = Driver | Job
+                    <div className="">
+                      <pre className="code">
+                        <code
+                          style={{
+                            whiteSpace: "pre-wrap",
+                            wordWrap: "break-word",
+                          }}
+                        >
+                          {`type Worker   = Driver | Job
 type WorkerId = Nat
 type MsgId    = Nat
 type Input    = (WorkerId, PLAN)
@@ -399,240 +396,90 @@ type CogClosure =
   , query   :: WorkerID -> state -> PLAN -> PLAN
   , workers :: Array Worker
   }`}
-                    </code>
-                  </pre>
-                </div>
-              </div>
+                        </code>
+                      </pre>
+                    </div>
+                  </div>
 
-              <div className="">
-                <p>
-                  Notice that the cog is free to change itself. It can even
-                  replace itself with a completely new value.
-                </p>
-              </div>
-              <div className="w-full flex justify-around items-center mx-auto">
-                <div
-                  id="reflective"
-                  className="text-center h-[106px] w-[106px]"
-                >
-                  <img src="/images/reflective.png" />
-                </div>
-                </div>
-              </main>
-            </div>
-          </div>
-        </article>
-
-          <article className="md:hidden">
-            <div className="jungle-bg">
-              <img
-                src="/images/dithered-jungle.png"
-                alt="jungle background image"
-                className="jungle-bg-image"
-              />
-              <div className="jungle-overlay"></div>
-            </div>
-            <div className="core-content">
-              <header>
-                <h2 className="mt-0">PLAN is a calculus</h2>
-              </header>
-
-              <main>
-                <div className="p-4 bg-[#EEE] opacity-90">
-                  <pre className="code">
-                    <code
-                      style={{
-                        whiteSpace: "pre-wrap",
-                        wordWrap: "break-word",
-                      }}
+                  <div className="">
+                    <p>
+                      Notice that the cog is free to change itself. It can even
+                      replace itself with a completely new value.
+                    </p>
+                  </div>
+                  <div className="w-full flex justify-around items-center mx-auto">
+                    <div
+                      id="reflective"
+                      className="text-center h-[106px] w-[106px]"
                     >
-                      {`
-
-Each value is a pin x:<i>, a law x:{n a b}, an app x:(f g), or a nat x:@.
-
-Treat this as a combinator system, and use normal-order evaluation to normalize.
-Unmatched patterns diverge.
-
-(0 n a b) | NAT(a)>0 = {NAT(n) NAT(a) force(b)}  
-(1 p _ _ _ <x>)      = (p x)  
-(1 _ l _ _ {n a b})  = (l n a b)  
-(1 _ _ a _ (f x))    = (a f x)  
-(1 _ _ _ n x:@)      = (n x)  
-(2 z p x)            = n=NAT(x); if n=0 then z else p (n-1)  
-(3 x)                = NAT(x)+1  
-(4 x)                = <force(x)>  
-(f:{n a b} x0..xn)   = EXEC([f x0..xn], b)  
-(f:<{n a b}> x0..xn) = EXEC([f x0..xn], b)  
-(<i> ..)             = (i ..)
-
-NAT(x:@) = x  
-NAT(_)   = 0
-
-EXEC(e, n:@)     = e[n] or n if n>=len(e)
-EXEC(e, (0 x y)) = (EXEC(x) EXEC(y))  
-EXEC(e, (1 v b)) = EXEC(f,b) where f = e ++ [EXEC(f,v)]  
-EXEC(e, (2 x))   = x  
-EXEC(e, x)       = x
-                                    `}
-                    </code>
-                  </pre>
-                </div>
-
-                <p className="mt-8">
-                  PLAN is the core innovation that makes a ubiquitous personal
-                  computer possible. It enables universal portability across
-                  devices, guarantees backward compatibility, and makes forward
-                  compatibility between runtimes tractable.
-                </p>
-
-                <p>PLAN is functional, lazy, and reflective.</p>
-                <div
-                  id="reflective"
-                  className="absolute bottom-[80px] right-[-55px] h-[140px] w-[140px]"
-                >
-                  <img src="/images/reflective.png" />
-                </div>
-              </main>
-
-              <div className="flex mt-12 mb-10 justify-center">
-                <Link href="/system-overview">
-                  <button>System Overview</button>
-                </Link>
+                      <img src="/images/reflective.png" />
+                    </div>
+                  </div>
+                </main>
               </div>
             </div>
           </article>
 
-          <article className="md:hidden">
-            <div className="jungle-bg">
-              <img
-                src="/images/dithered-jungle.png"
-                alt="jungle background image"
-                className="jungle-bg-image"
-              />
-              <div className="jungle-overlay"></div>
-            </div>
-
-            <div className="core-content">
-              <header>
-                <h2 className="mt-0">Cogs Run Forever</h2>
-              </header>
-
-              <main className="p-2 bg-[#EEE]  opacity-90">
-                <div>
-                  <p>
-                    Cogs are programs that run forever. Even if you reboot, cogs
-                    will continue exactly where they left off because they
-                    persist state automatically. A personal computer should
-                    never become obsolete. And it should{" "}
-                    <span className="font-bold">never</span> lose your data.
-                  </p>
-                </div>
-
-                <div className="">
-                  <pre className="code">
-                    <code
-                      style={{
-                        whiteSpace: "pre-wrap",
-                        wordWrap: "break-word",
-                      }}
-                    >
-                      {`
-type Worker   = Driver | Job
-type WorkerId = Nat
-type MsgId    = Nat
-type Input    = (WorkerId, PLAN)
-type Output   = (WorkerId, MsgId, PLAN)
-
-type CogClosure =
-  { run     :: CogClosure 
-            -> Array Input 
-            -> (CogClosure, Array Output)
-  , state   :: state
-  , query   :: WorkerID -> state -> PLAN -> PLAN
-  , workers :: Array Worker
-  }
-
-                                    `}
-                    </code>
-                  </pre>
-                </div>
-
-                <p>
-                  Notice that the cog is free to change itself. It can even
-                  replace itself with a completely new value.
-                </p>
-              </main>
-
-              <div className="flex mt-6 justify-center">
-                <Link href="#">
-                  <button>Waitlist</button>
-                </Link>
-              </div>
-            </div>
-          </article>
         </section>
 
-        <div className="content-zone my-opfn flex flex-row space-between items-center">
+        <div className="content-zone my-[64px] md:my-opfn flex flex-row space-between items-center">
           <div className="horizontal-bars"></div>
         </div>
 
-        <section>
-          <header className="relative z-10 mt-0 mb-opfn overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mx-auto w-[744px] h-[396px]">
-          <img
-            src="/images/coast.png"
-            alt="Forest Background"
-            className="px-3 absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="relative z-10 max-w-lg">
-            <h1 className="font-bold berkeley">
-              System Overview
-            </h1>
-          </div>
-        </header>
-          
+        <section id="system-overview">
+          <header className="relative z-10 mt-0 mb-opfn overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mx-auto w-full md:w-[744px] h-[200px] md:h-[396px]">
+            <img
+              src="/images/coast.png"
+              alt="Forest Background"
+              className="px-3 absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="relative z-10 max-w-lg">
+              <h1 className="font-bold berkeley md:text-[36px] text-[20px]">System Overview</h1>
+            </div>
+          </header>
+
           <section className="content-zone w-opfn mx-auto container">
-          <p>
-            An operating function is a programming environment that
-            combines aspects of Erlang/OTP, the EVM, and Lisp. Like
-          </p>
-          <p>
-            Erlang, the system is functional, supports concurrency
-            through message passing, and programs can be hot reloaded
-            without downtime. Like the EVM, program state is
-            automatically persisted. Programs keep everything “in
-            memory” and will run forever (but there is no global
-            consensus). Like Lisp, programs can universally introspect
-            themselves and their environment, and dynamically introduce
-            new code.
-          </p>
-        </section>
-
-        <div className="border-b border-black narrow-zone mx-auto my-opfn-sm"></div>
-
-        <section className="system-components grid grid-cols-2 gap-y-[65px] content-zone">
-          <article className="w-opfn-xs left h-[360px] mb-[65px]">
-            <header className="mb-2 mt-0">
-              <h2 className="mb-0">PLAN</h2>
-            </header>
-            <p className="mb-[16px]">
-              PLAN is the foundation of our system software—the
-              operating function bootstraps from PLAN. It is a
-              functional, lazy, and reflective “bytecode” and is
-              designed to strike a reasonable balance between several
-              requirements: human readability, functional compile
-              target, efficient and stable memory representation, ease
-              of implementation, and extensibility and modifiability.
+            <p>
+              An operating function is a programming environment that combines
+              aspects of Erlang/OTP, the EVM, and Lisp. Like
             </p>
+            <p>
+              Erlang, the system is functional, supports concurrency through
+              message passing, and programs can be hot reloaded without
+              downtime. Like the EVM, program state is automatically persisted.
+              Programs keep everything “in memory” and will run forever (but
+              there is no global consensus). Like Lisp, programs can universally
+              introspect themselves and their environment, and dynamically
+              introduce new code.
+            </p>
+          </section>
 
-            <div className="w-full flex items-center justify-around">
-            <pre className="code">
-              <code
-                style={{
-                  whiteSpace: "pre-wrap",
-                  wordWrap: "break-word",
-                }}
-              >
-                {`PLAN ::= <PLAN>
+          <div className="border-b border-black md:w-[318px] md:w-opfn-narrow mx-10 md:mx-auto md:narrow-zone my-opfn-sm"></div>
+
+        <section className="system-components md:grid md:grid-cols-2 md:gap-y-[65px] flex flex-col content-zone">
+          <article className="md:w-opfn-xs left md:h-[360px] mb-[65px]">
+              <header className="mb-2 mt-0">
+                <h2 className="mb-0">PLAN</h2>
+              </header>
+              <p className="mb-[16px]">
+                PLAN is the foundation of our system software—the operating
+                function bootstraps from PLAN. It is a functional, lazy, and
+                reflective “bytecode” and is designed to strike a reasonable
+                balance between several requirements: human readability,
+                functional compile target, efficient and stable memory
+                representation, ease of implementation, and extensibility and
+                modifiability.
+              </p>
+
+              <div className="w-full flex items-center justify-around">
+                <pre className="code">
+                  <code
+                    style={{
+                      whiteSpace: "pre-wrap",
+                      wordWrap: "break-word",
+                    }}
+                  >
+                    {`PLAN ::= <PLAN>
          | {Nat Nat PLAN}
          | (PLAN PLAN)
          | Nat
@@ -640,124 +487,120 @@ Pins - subheaps: content addressed DAG nodes
 Laws - supercombinators: pure n-ary functions
 Apps - applications: closures or thunks
 Nats - natural numbers: opaque data or opcodes`}
-              </code>
-            </pre>
-          </div>
-          </article>
+                  </code>
+                </pre>
+              </div>
+            </article>
 
-          <article className="w-opfn-xs h-[360px] mb-[65px]">
-            <header className="content-zone">
-              <h2 className="text-right w-full">Machines</h2>
-            </header>
-            <div className="flex h-full flex-col justify-between">
-              <div>
-                <p className="content-zone">
-                  Because software in an operating function isn’t siloed in
-                  apps, you have full access to the codebase, backend
-                  included. “Inspect source” everything, and change anything
-                  you want.
+          <article className="md:w-opfn-xs left md:h-[360px] mb-[65px]">
+              <header className="content-zone">
+                <h2 className="text-right w-full">Machines</h2>
+              </header>
+              <div className="flex h-full flex-col justify-between">
+                <div>
+                  <p className="content-zone">
+                    Because software in an operating function isn’t siloed in
+                    apps, you have full access to the codebase, backend
+                    included. “Inspect source” everything, and change anything
+                    you want.
+                  </p>
+                </div>
+                <div className="shrink"></div>
+                <div className="relative bottom-[30px] h-[120px] self-end">
+                  <img height="120" src="/images/rocket.png" />
+                </div>
+              </div>
+            </article>
+
+            <article className="md:w-opfn-xs h-[360px]">
+              <header>
+                <h2>Cogs</h2>
+              </header>
+              <p>
+                Machines run cogs. Cogs are responsible for user programs and
+                managing the persistence of data. They do this automatically.
+                Within the system, cogs are closures which capture their full
+                environment. Cogs can upgrade themselves while running by
+                accepting a value which defines a new cog.
+              </p>
+              <div className="flex justify-center">
+                <img src="/images/blob.png" />
+              </div>
+            </article>
+
+            <article className="md:w-opfn-xs left md:h-[360px] md:mb-[65px]">
+              <div className="mb-[64px]">
+                <header>
+                  <h2 className="text-right w-full">Drivers</h2>
+                </header>
+                <p>
+                  Drivers are a special program that only a cog can create. Each
+                  cog can create and manage many drivers. Drivers interact with
+                  a small set of standardized virtual hardware devices and let
+                  an operating function connect to things like the web, a file
+                  system, or a GPU.
                 </p>
               </div>
-              <div className="shrink"></div>
-              <div className="relative bottom-[30px] h-[120px] self-end">
-                <img height="120" src="/images/rocket.png" />
+
+              <div className="">
+                <header>
+                  <h2 className="text-right w-full">Manifests</h2>
+                </header>
+                <p>
+                  Manifests are a special PLAN value that must be provided to a
+                  new machine. The manifest tells the machine what contents from
+                  a user’s existing network of operating functions it is
+                  responsible for: both programs and data.
+                </p>
               </div>
-            </div>
-          </article>
+            </article>
 
-          <article className="w-opfn-xs h-[360px]">
-            <header>
-              <h2>Cogs</h2>
-            </header>
-            <p>
-              Machines run cogs. Cogs are responsible for user programs
-              and managing the persistence of data. They do this
-              automatically. Within the system, cogs are closures which
-              capture their full environment. Cogs can upgrade
-              themselves while running by accepting a value which
-              defines a new cog.
-            </p>
-            <div className="flex justify-center">
-              <img src="/images/blob.png" />
+            <div className="col-span-2 mx-auto mt-opfn-lg mb-[50px] md:mb-0">
+              <a href="https://docs.opfn.co" target="_blank">
+                <button>Read the Docs</button>
+              </a>
             </div>
-          </article>
+          </section>
 
-          <article className="w-opfn-xs flex flex-col justify-between h-[360px]">
-            <div className="mb-[64px]">
-            <header>
-              <h2 className="text-right w-full">Drivers</h2>
-            </header>
-            <p>
-              Drivers are a special program that only a cog can create.
-              Each cog can create and manage many drivers. Drivers
-              interact with a small set of standardized virtual hardware
-              devices and let an operating function connect to things
-              like the web, a file system, or a GPU.
-            </p>
+          <div className="content-zone my-opfn flex flex-row space-between items-center">
+            <div className="horizontal-bars"></div>
           </div>
 
-          <div className="">
-            <header>
-              <h2 className="text-right w-full">Manifests</h2>
+          <section id="use-cases">
+            <header className="relative z-10 mt-0 mb-opfn overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mx-auto h-[200px] w-full md:w-[744px] md:h-[396px]">
+              <img
+                src="/images/river.png"
+                alt="Forest Background"
+                className="px-3 absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="relative z-10 max-w-lg">
+              <h1 className="font-bold berkeley md:text-[36px] text-[20px]">Use Cases</h1>
+              </div>
             </header>
-            <p>
-              Manifests are a special PLAN value that must be provided
-              to a new machine. The manifest tells the machine what
-              contents from a user’s existing network of operating
-              functions it is responsible for: both programs and data.
-            </p>
-          </div>
-          </article>
 
-          <div className="col-span-2 mx-auto mt-opfn-lg">
-            <a href="https://docs.opfn.co" target="_blank">
-              <button>Read the Docs</button>
-            </a>
-          </div>
-        </section>
-
-        <div className="content-zone my-opfn flex flex-row space-between items-center">
-          <div className="horizontal-bars"></div>
-        </div>
-
-        <section id="use-cases">
-          <header className="relative z-10 mt-0 mb-opfn overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mx-auto w-[744px] h-[396px]">
-            <img
-              src="/images/river.png"
-              alt="Forest Background"
-              className="px-3 absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="relative z-10 max-w-lg">
-              <h1 className="font-bold berkeley">
-                Use Cases
-              </h1>
-            </div>
-          </header>
-
-          <div className="">
-      <UseCasesSection>
-
-            {USE_CASES.map((caseItem, index) => (
-              <UseCase
-                className={`w-[357px] ${index % 2 !== 0 ? '' : ''}`}
-                number={`${(index + 1).toString().padStart(2, "0")}.`}
-                key={index}
-                title={caseItem.title}
-                hasBackground={false}
-              >
-                <div className={`w-[357px] ${index % 2 !== 0 ? '' : ''}`}>
-                  <p className="w-full">{caseItem.content}</p>
-                </div>
-              </UseCase>
-            ))}
-          </UseCasesSection>
+            <div className="">
+              <UseCasesSection>
+                {USE_CASES.map((caseItem, index) => (
+                  <UseCase
+                  className={`w-full md:w-[357px] ${index % 2 !== 0 ? "" : ""}`}
+                    number={`${(index + 1).toString().padStart(2, "0")}.`}
+                    key={index}
+                    title={caseItem.title}
+                    hasBackground={false}
+                  >
+                    <div className={`w-full md:w-[357px] ${index % 2 !== 0 ? "" : ""}`}>
+                      <p className="w-full">{caseItem.content}</p>
+                    </div>
+                  </UseCase>
+                ))}
+              </UseCasesSection>
               <div className="flex mt-opfn-lg mb-opfn justify-center">
                 <Link href="#">
                   <button>Waitlist</button>
                 </Link>
               </div>
-          </div>
-        </section>
+            </div>
+          </section>
         </section>
       </main>
     </div>

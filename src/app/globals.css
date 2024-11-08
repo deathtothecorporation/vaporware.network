@@ -177,7 +177,8 @@ a:visited {
 
 button {
   font-family: "BerkeleyMono";
-  font-size: 18px;
+  @apply text-[16px];
+  @apply md:text-[18px];
   @apply bg-black;
   @apply text-white;
   @apply whitespace-pre;
@@ -186,7 +187,8 @@ button {
 }
 
 button.fixed-w {
-  @apply w-[158px];
+  @apply w-[125px];
+  @apply md:w-[158px];
 }
 
 button:disabled {
@@ -214,7 +216,7 @@ section {
   @apply container;
   @apply mx-auto;
   /*@apply md:max-w-lg;*/
-  @apply max-w-opfn-narrow;
+  @apply md:max-w-opfn-narrow;
   @apply px-8;
   @apply md:px-0;
 }

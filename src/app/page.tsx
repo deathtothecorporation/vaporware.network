@@ -2,6 +2,7 @@
 
 import React, { ReactNode, useEffect } from "react";
 import Lockup from "@/components/Lockup";
+import WaitlistForm from "@/components/WaitlistForm";
 import Logo from "@/components/Logo";
 //<Logo size={100} color="white" className="bg-black" />
 //<Logo size={100} color="black" />
@@ -76,16 +77,15 @@ interface UseCasesSectionProps {
 
 const UseCasesSection = ({ children }: UseCasesSectionProps) => {
   // Group the cases into pairs (for rows)
-    const pairs = [];
+  const pairs = [];
   for (let i = 0; i < children.length; i += 2) {
     pairs.push(children.slice(i, Math.min(i + 2, children.length)));
   }
 
   return (
     <div className="flex w-full md:px-0 lg:content-zone mx-auto flex-col justify-items-stretch">
-
-    {/* desktop */}
-    <div className="hidden md:flex md:flex-col content-zone md:gap-y-[12px]">
+      {/* desktop */}
+      <div className="hidden md:flex md:flex-col content-zone md:gap-y-[12px]">
         {pairs.map((pair, pairIndex) => (
           <div key={pairIndex} className="relative">
             {/* Shared background for the pair */}
@@ -107,7 +107,7 @@ const UseCasesSection = ({ children }: UseCasesSectionProps) => {
         ))}
       </div>
 
-    {/* mobile */}
+      {/* mobile */}
       <div className="md:hidden flex flex-col gap-y-[24px]">
         {children.map((child, index) => (
           <div key={index} className="relative">
@@ -123,9 +123,7 @@ const UseCasesSection = ({ children }: UseCasesSectionProps) => {
               </div>
             </div>
             {/* Item content */}
-            <div className="relative z-10">
-              {child}
-            </div>
+            <div className="relative z-10">{child}</div>
           </div>
         ))}
       </div>
@@ -194,9 +192,7 @@ export default function Home() {
               The Operating Function Company
             </h2>
             <div className="flex mb-[50px] md:mb-[54px] lg:mb-[70px] justify-center">
-              <Link href="#">
-                <button>Waitlist</button>
-              </Link>
+              <WaitlistForm />
             </div>
           </div>
         </section>
@@ -295,9 +291,7 @@ export default function Home() {
               className="absolute inset-0 object-cover mx-auto px-2 md:px-0"
             />
             <div className="relative z-10 max-w-lg">
-              <h1 className="">
-                Core Technology
-              </h1>
+              <h1 className="">Core Technology</h1>
             </div>
           </header>
 
@@ -309,9 +303,10 @@ export default function Home() {
                   alt="jungle background image"
                   className="w-full h-full object-cover opacity-45 grayscale"
                 />
-    <div className="absolute inset-0 gradient-height"
-      style={{
-        background: `linear-gradient(
+                <div
+                  className="absolute inset-0 gradient-height"
+                  style={{
+                    background: `linear-gradient(
           to bottom,
           rgba(238, 238, 238, 1) 0%,
           rgba(238, 238, 238, 0) 5%,
@@ -321,9 +316,9 @@ export default function Home() {
           rgba(238, 238, 238, 0.8) 92%,
           rgba(238, 238, 238, 1) 96%,
           rgba(238, 238, 238, 1) 100%
-        )`
-      }}
-    ></div>
+        )`,
+                  }}
+                ></div>
               </div>
             </div>
 
@@ -332,13 +327,14 @@ export default function Home() {
                 <div className="absolute inset-0 block md:hidden">
                   <div className="jungle-bg">
                     <img
-    src="/images/dithered-jungle.png"
-    alt="background"
-    className="w-full gradient-image-height object-cover opacity-45 grayscale"
-    />
-    <div className="absolute inset-0 gradient-height"
-      style={{
-        background: `linear-gradient(
+                      src="/images/dithered-jungle.png"
+                      alt="background"
+                      className="w-full gradient-image-height object-cover opacity-45 grayscale"
+                    />
+                    <div
+                      className="absolute inset-0 gradient-height"
+                      style={{
+                        background: `linear-gradient(
           to bottom,
           rgba(238, 238, 238, 1) 0%,
           rgba(238, 238, 238, 0) 5%,
@@ -348,15 +344,17 @@ export default function Home() {
           rgba(238, 238, 238, 0.8) 92%,
           rgba(238, 238, 238, 1) 96%,
           rgba(238, 238, 238, 1) 100%
-        )`
-      }}
-    ></div>
-          </div>
-          </div>
+        )`,
+                      }}
+                    ></div>
+                  </div>
+                </div>
 
                 <div className="core-content">
                   <header>
-                    <h2 className="mt-0 mb-[14px] z-10 bg-[#EEE]">PLAN is a calculus</h2>
+                    <h2 className="mt-0 mb-[14px] z-10 bg-[#EEE]">
+                      PLAN is a calculus
+                    </h2>
                   </header>
 
                   <main className="content-zone md:px-0">
@@ -435,10 +433,10 @@ EXEC(e, x)       = x`}
                       </div>
                     </div>
                   </main>
-              </div>
-            </article>
+                </div>
+              </article>
 
-            <article className="relative">
+              <article className="relative">
                 <div className="absolute inset-0 block md:hidden">
                   <div className="jungle-bg">
                     <img
@@ -446,9 +444,10 @@ EXEC(e, x)       = x`}
                       alt="background"
                       className="w-full gradient-image-height object-cover opacity-45 grayscale"
                     />
-                  <div className="absolute inset-0 gradient-height"
-                    style={{
-                      background: `linear-gradient(
+                    <div
+                      className="absolute inset-0 gradient-height"
+                      style={{
+                        background: `linear-gradient(
                         to bottom,
                         rgba(238, 238, 238, 1) 0%,
                         rgba(238, 238, 238, 0) 5%,
@@ -458,39 +457,42 @@ EXEC(e, x)       = x`}
                         rgba(238, 238, 238, 0.8) 92%,
                         rgba(238, 238, 238, 1) 96%,
                         rgba(238, 238, 238, 1) 100%
-                      )`
-                    }}
-                  ></div>
+                      )`,
+                      }}
+                    ></div>
+                  </div>
                 </div>
-            </div>
 
-              <div className="core-content">
-                <header>
-                  <h2 className="mt-0 z-10 bg-[#EEE] mb-[14px]">Cogs Run Forever</h2>
-                </header>
+                <div className="core-content">
+                  <header>
+                    <h2 className="mt-0 z-10 bg-[#EEE] mb-[14px]">
+                      Cogs Run Forever
+                    </h2>
+                  </header>
 
-                <div className="content-zone md:px-0">
-                <main className="bg-[#EEE] pt-2 opacity-90">
-                  <div className="mb-[16px] px-4 core-tech-code">
-                    <div>
-                      <p>
-                        Cogs are programs that run forever. Even if you reboot,
-                        cogs will continue exactly where they left off because
-                        they persist state automatically. A personal computer
-                        should never become obsolete. And it should{" "}
-                        <span className="font-bold">never</span> lose your data.
-                      </p>
-                    </div>
+                  <div className="content-zone md:px-0">
+                    <main className="bg-[#EEE] pt-2 opacity-90">
+                      <div className="mb-[16px] px-4 core-tech-code">
+                        <div>
+                          <p>
+                            Cogs are programs that run forever. Even if you
+                            reboot, cogs will continue exactly where they left
+                            off because they persist state automatically. A
+                            personal computer should never become obsolete. And
+                            it should <span className="font-bold">never</span>{" "}
+                            lose your data.
+                          </p>
+                        </div>
 
-                    <div className="">
-                      <pre className="code">
-                        <code
-                          style={{
-                            whiteSpace: "pre-wrap",
-                            wordWrap: "break-word",
-                          }}
-                        >
-                          {`type Worker   = Driver | Job
+                        <div className="">
+                          <pre className="code">
+                            <code
+                              style={{
+                                whiteSpace: "pre-wrap",
+                                wordWrap: "break-word",
+                              }}
+                            >
+                              {`type Worker   = Driver | Job
 type WorkerId = Nat
 type MsgId    = Nat
 type Input    = (WorkerId, PLAN)
@@ -504,31 +506,30 @@ type CogClosure =
   , query   :: WorkerID -> state -> PLAN -> PLAN
   , workers :: Array Worker
   }`}
-                        </code>
-                      </pre>
-                    </div>
-                  </div>
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
 
-                  <div className="mb-0">
-                    <p className="mb-0 px-0">
-                      Notice that the cog is free to change itself. It can even
-                      replace itself with a completely new value.
-                    </p>
+                      <div className="mb-0">
+                        <p className="mb-0 px-0">
+                          Notice that the cog is free to change itself. It can
+                          even replace itself with a completely new value.
+                        </p>
+                      </div>
+                      <div className="hidden w-full flex justify-around items-center mx-auto">
+                        <div
+                          id="reflective"
+                          className="text-center h-[106px] w-[106px]"
+                        >
+                          <img src="/images/reflective.png" />
+                        </div>
+                      </div>
+                    </main>
                   </div>
-                  <div className="hidden w-full flex justify-around items-center mx-auto">
-                    <div
-                      id="reflective"
-                      className="text-center h-[106px] w-[106px]"
-                    >
-                      <img src="/images/reflective.png" />
-                    </div>
-                  </div>
-                </main>
-              </div>
-              </div>
-            </article>
-          </div>
-
+                </div>
+              </article>
+            </div>
           </div>
         </section>
 
@@ -544,9 +545,7 @@ type CogClosure =
               className="px-3 absolute inset-0 w-full h-full object-cover"
             />
             <div className="relative z-10 max-w-lg">
-              <h1 className="">
-                System Overview
-              </h1>
+              <h1 className="">System Overview</h1>
             </div>
           </header>
 
@@ -570,8 +569,8 @@ type CogClosure =
             <div className="horizontal-bars"></div>
           </div>
 
-          <section className="system-components md:grid md:grid-cols-2 md:gap-y-[65px] flex flex-col content-zone">
-            <article className="md:w-opfn-xs left mb-opfn-sm">
+          <section className="system-components md:grid md:grid-cols-2 md:gap-y-[65px] items-center flex flex-col content-zone">
+            <article className="left mb-opfn-sm">
               <header className="mb-2 mt-0">
                 <h2 className="mb-0">PLAN</h2>
               </header>
@@ -608,7 +607,7 @@ Nats - natural numbers: opaque data or opcodes`}
               </div>
             </article>
 
-            <article className="md:w-opfn-xs left md:h-[360px] mb-[24px]">
+            <article className="right md:h-[360px] mb-[24px]">
               <header className="">
                 <h2 className="text-right w-full">Machines</h2>
               </header>
@@ -629,7 +628,7 @@ Nats - natural numbers: opaque data or opcodes`}
               </div>
             </article>
 
-            <article className="md:w-opfn-xs h-[360px] mb-[24px]">
+            <article className="left h-[360px] mb-[24px]">
               <header>
                 <h2>Cogs</h2>
               </header>
@@ -645,7 +644,7 @@ Nats - natural numbers: opaque data or opcodes`}
               </div>
             </article>
 
-            <article className="md:w-opfn-xs left md:h-[360px] mb-0">
+            <article className="left md:h-[360px] mb-0">
               <div className="mb-opfn-sm">
                 <header>
                   <h2 className="text-right w-full">Drivers</h2>
@@ -691,9 +690,7 @@ Nats - natural numbers: opaque data or opcodes`}
                 className="px-3 absolute inset-0 w-full h-full object-cover"
               />
               <div className="relative z-10 max-w-lg">
-                <h1 className="">
-                  Use Cases
-                </h1>
+                <h1 className="">Use Cases</h1>
               </div>
             </header>
 
@@ -702,7 +699,9 @@ Nats - natural numbers: opaque data or opcodes`}
                 {USE_CASES.map((caseItem, index) => (
                   <UseCase
                     className={`w-full md:w-[357px] ${
-                      index % 2 !== 0 ? "md:justify-self-end" : "md:justify-self-start"
+                      index % 2 !== 0
+                        ? "md:justify-self-end"
+                        : "md:justify-self-start"
                     } ${index === useCaseTotal - 1 ? "mb-0" : ""}`}
                     number={`${(index + 1).toString().padStart(2, "0")}.`}
                     key={index}
@@ -717,12 +716,11 @@ Nats - natural numbers: opaque data or opcodes`}
               </UseCasesSection>
 
               <div className="flex mt-opfn mb-opfn-sm justify-center">
-                <Link href="#">
+                <Link href="mailto:founders@opfn.co">
                   <button>Contact Us</button>
                 </Link>
               </div>
             </div>
-
           </section>
         </section>
       </main>

@@ -176,7 +176,9 @@ a:visited {
   /* color: purple; */
 }
 
-button {
+button,
+[type="submit"],
+[type="button"] {
   font-family: "BerkeleyMono";
   @apply text-[16px];
   @apply md:text-[18px];
@@ -364,9 +366,9 @@ section.main-points {
 }
 
 section.main-points article {
-  @apply max-w-opfn-xs;
+  @apply max-w-[350px];
   @apply mb-opfn-sm;
-  @apply w-full;
+  /*@apply w-full;*/
 }
 
 section.main-points article header {
@@ -398,11 +400,22 @@ section.main-points > article.right {
   @apply self-end;
 }
 
+section.main-points > article.left {
+  /*@apply col-start-1;*/
+  /*@apply justify-self-start;*/
+}
+section.main-points > article.right {
+  /*@apply col-end-3;*/
+  /*@apply self-end;*/
+}
+
 .system-components header {
   @apply mb-[8px];
 }
 
 .system-components > article {
+  @apply max-w-[85vw];
+  @apply md:max-w-[350px];
 }
 
 article.left {
@@ -436,15 +449,15 @@ section#core-technology h2 {
 
 .jungle-gradient {
   background: linear-gradient(
-  to bottom,
-  rgba(238, 238, 238, 1) 0%,
-  rgba(238, 238, 238, 0) 5%,
-  transparent 4%,
-  transparent 80%,
-  rgba(238, 238, 238, 0.5) 90%,
-  rgba(238, 238, 238, 0.8) 92%,
-  rgba(238, 238, 238, 1) 96%,
-  rgba(238, 238, 238, 1) 100%
+    to bottom,
+    rgba(238, 238, 238, 1) 0%,
+    rgba(238, 238, 238, 0) 5%,
+    transparent 4%,
+    transparent 80%,
+    rgba(238, 238, 238, 0.5) 90%,
+    rgba(238, 238, 238, 0.8) 92%,
+    rgba(238, 238, 238, 1) 96%,
+    rgba(238, 238, 238, 1) 100%
   );
 }
 
@@ -540,7 +553,7 @@ section#core-technology h2 {
     rgba(238, 238, 238, 0.8) 92%,
     rgba(238, 238, 238, 1) 96%,
     rgba(238, 238, 238, 1) 100%
-  )
+  );
 }
 
 #use-cases .jungle-bg {
@@ -708,4 +721,8 @@ section#callouts > article.left > main {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+#vision p {
+  @apply mb-4;
 }

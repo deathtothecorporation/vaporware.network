@@ -279,26 +279,43 @@ export default function Home() {
             </div>
           </header>
 
-          <div className="grid grid-cols-2">
-            <article className="content-zone w-opfn mx-auto container">
-              <div className="md:grid md:grid-cols-2 flex flex-col mx-auto">
-                <div className="jungle-bg">
-                  <img
-                    src="/images/dithered-jungle.png"
-                    alt="jungle background image"
-                    className="jungle-bg-image"
-                  />
-                  <div className="jungle-overlay"></div>
-                </div>
-                <div className="justify-self-start core-content md:w-372">
+          <div className="relative content-zone pt-[40px]">
+            <div className="absolute inset-0 z-0">
+              <div className="gradient-height">
+                <img
+                  src="/images/dithered-jungle.png"
+                  alt="jungle background image"
+                  className="w-full h-full object-cover opacity-45 grayscale"
+                />
+    <div className="absolute inset-0 gradient-height"
+      style={{
+        background: `linear-gradient(
+          to bottom,
+          rgba(238, 238, 238, 1) 0%,
+          rgba(238, 238, 238, 0) 5%,
+          transparent 4%,
+          transparent 80%,
+          rgba(238, 238, 238, 0.5) 90%,
+          rgba(238, 238, 238, 0.8) 92%,
+          rgba(238, 238, 238, 1) 96%,
+          rgba(238, 238, 238, 1) 100%
+        )`
+      }}
+    ></div>
+              </div>
+            </div>
+
+            <div className="relative z-10 grid grid-cols-2 gap-x-opfn px-[18px]">
+              <article className="relative text-[16px]">
+                <div className="core-content">
                   <header>
                     <h2 className="mt-0 mb-[14px]">PLAN is a calculus</h2>
                   </header>
 
-                  <main className="h-[321px]">
+                  <main className="">
                     <div className="py-2 bg-[#EEE] opacity-90">
                       <div className="mb-[17px]">
-                        <pre className="code">
+                        <pre className="code core-tech-code">
                           <code
                             className="flex flex-col px-4 gap-y-4"
                             style={{
@@ -371,27 +388,16 @@ EXEC(e, x)       = x`}
                       </div>
                     </div>
                   </main>
-                </div>
               </div>
             </article>
 
-            <article className="content-zone w-opfn mx-auto container">
-              <div className="jungle-bg">
-                <img
-                  src="/images/dithered-jungle.png"
-                  alt="jungle background image"
-                  className="jungle-bg-image"
-                />
-                <div className="jungle-overlay"></div>
-              </div>
-              <div className="md:grid md:grid-cols-2 flex flex-col mx-auto">
-                <div className="justify-self-start core-content md:w-372">
-                  <header>
-                    <h2 className="mt-0 mb-[14px]">Cogs Run Forever</h2>
-                  </header>
-                </div>
+            <article className="relative">
+              <div className="core-content">
+                <header>
+                  <h2 className="mt-0 mb-[14px]">Cogs Run Forever</h2>
+                </header>
                 <main className="bg-[#EEE] px-2 pt-2 opacity-90">
-                  <div className="mb-[16px]">
+                  <div className="mb-[16px] core-tech-code">
                     <div>
                       <p>
                         Cogs are programs that run forever. Even if you reboot,
@@ -402,7 +408,7 @@ EXEC(e, x)       = x`}
                       </p>
                     </div>
 
-                    <div className="h-[321px]">
+                    <div className="">
                       <pre className="code">
                         <code
                           style={{
@@ -446,6 +452,8 @@ type CogClosure =
                 </main>
               </div>
             </article>
+          </div>
+
           </div>
         </section>
 

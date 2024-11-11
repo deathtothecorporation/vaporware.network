@@ -88,6 +88,7 @@ p {
   font-size: 16px;
   @apply md:text-base;
   @apply mb-0;
+  line-height: normal;
 }
 
 .berkeley {
@@ -383,7 +384,7 @@ article.left {
 }
 
 section#core-technology p {
-  @apply text-[14px];
+  @apply text-[16px];
 }
 
 section#core-technology header {
@@ -405,6 +406,13 @@ section#core-technology h2 {
 }
 
 #core-technology main {
+}
+
+.core-tech-code {
+  @apply h-[321px];
+}
+.gradient-height {
+  @apply h-[450px];
 }
 
 #core-technology article {

@@ -11,8 +11,6 @@
 /*font-size: calc(var(--font-size, 1rem) * var(--scale)) !important;*/
 /*}*/
 
-
-
 @media (prefers-color-scheme: dark) {
   :root {
   }
@@ -296,8 +294,7 @@ pre.code {
   /*@apply rounded-md;*/
   /*@apply p-2;*/
   /*@apply my-2;*/
-  @apply text-[10px];
-  @apply md:text-[10px];
+  @apply text-[9px];
 }
 
 section#callouts {
@@ -432,7 +429,7 @@ section#core-technology h2 {
   top: 0;
   left: 0;
   /*height: 10000px;*/
-  height: 100%;
+  /*height: 100%;*/
   width: 100%;
 
   overflow: hidden;
@@ -448,10 +445,9 @@ section#core-technology h2 {
   /*top: 0;*/
   /*left: 0;*/
   /*width: 100%;*/
-  height: 35%;
+  height: 400px;
   object-fit: cover;
   object-position: center center;
-
   /* Convert to black and white */
   filter: grayscale(100%);
   /*[> Optional: add some noise <]*/

@@ -67,8 +67,8 @@ const USE_CASES = [
   },
 ];
 
-const useCaseTotal = USE_CASES.length
-console.log('use case total', useCaseTotal)
+const useCaseTotal = USE_CASES.length;
+console.log("use case total", useCaseTotal);
 
 interface UseCasesSectionProps {
   children: ReactNode[];
@@ -279,43 +279,44 @@ export default function Home() {
             </div>
           </header>
 
-          <article className="content-zone w-opfn mx-auto container">
-            <div className="jungle-bg">
-              <img
-                src="/images/dithered-jungle.png"
-                alt="jungle background image"
-                className="jungle-bg-image"
-              />
-              <div className="jungle-overlay"></div>
-            </div>
-            <div className="md:grid md:grid-cols-2 flex flex-col mx-auto">
-              <div className="justify-self-start core-content md:w-372">
-                <header>
-                  <h2 className="mt-0 mb-[14px]">PLAN is a calculus</h2>
-                </header>
+          <div className="grid grid-cols-2">
+            <article className="content-zone w-opfn mx-auto container">
+              <div className="md:grid md:grid-cols-2 flex flex-col mx-auto">
+                <div className="jungle-bg">
+                  <img
+                    src="/images/dithered-jungle.png"
+                    alt="jungle background image"
+                    className="jungle-bg-image"
+                  />
+                  <div className="jungle-overlay"></div>
+                </div>
+                <div className="justify-self-start core-content md:w-372">
+                  <header>
+                    <h2 className="mt-0 mb-[14px]">PLAN is a calculus</h2>
+                  </header>
 
-                <main className="">
-                  <div className="py-2 bg-[#EEE] opacity-90">
-                    <div className="mb-[17px]">
-                      <pre className="code">
-                        <code
-                          className="flex flex-col px-4 gap-y-4"
-                          style={{
-                            whiteSpace: "pre-wrap",
-                            wordWrap: "break-word",
-                          }}
-                        >
-                          <div className="">
-                            {`Each value is a pin x:<i>, a law x:{n a b}, an app x:(f g), or a nat x:@. `}
-                          </div>
+                  <main className="h-[321px]">
+                    <div className="py-2 bg-[#EEE] opacity-90">
+                      <div className="mb-[17px]">
+                        <pre className="code">
+                          <code
+                            className="flex flex-col px-4 gap-y-4"
+                            style={{
+                              whiteSpace: "pre-wrap",
+                              wordWrap: "break-word",
+                            }}
+                          >
+                            <div className="">
+                              {`Each value is a pin x:<i>, a law x:{n a b}, an app x:(f g), or a nat x:@. `}
+                            </div>
 
-                          <div className="">
-                            {`Treat this as a combinator system, and use normal-order evaluation to normalize.
+                            <div className="">
+                              {`Treat this as a combinator system, and use normal-order evaluation to normalize.
 Unmatched patterns diverge. `}
-                          </div>
+                            </div>
 
-                          <div className="">
-                            {`(0 n a b) | NAT(a)>0 = {NAT(n) NAT(a) force(b)}  
+                            <div className="">
+                              {`(0 n a b) | NAT(a)>0 = {NAT(n) NAT(a) force(b)}  
 (1 p _ _ _ <x>)      = (p x)  
 (1 _ l _ _ {n a b})  = (l n a b)  
 (1 _ _ a _ (f x))    = (a f x)  
@@ -327,68 +328,68 @@ Unmatched patterns diverge. `}
 (f:<{n a b}> x0..xn) = EXEC([f x0..xn], b)  
 (<i> ..)             = (i ..)
 `}
-                          </div>
+                            </div>
 
-                          <div className="">
-                            {`NAT(x:@) = x
+                            <div className="">
+                              {`NAT(x:@) = x
 NAT(_)   = 0
 `}
-                          </div>
+                            </div>
 
-                          <div className="">
-                            {`EXEC(e, n:@)     = e[n] or n if n>=len(e)
+                            <div className="">
+                              {`EXEC(e, n:@)     = e[n] or n if n>=len(e)
 EXEC(e, (0 x y)) = (EXEC(x) EXEC(y))  
 EXEC(e, (1 v b)) = EXEC(f,b) where f = e ++ [EXEC(f,v)]  
 EXEC(e, (2 x))   = x  
 EXEC(e, x)       = x`}
-                          </div>
-                        </code>
-                      </pre>
-                    </div>
+                            </div>
+                          </code>
+                        </pre>
+                      </div>
 
-                    <div>
-                      <p className="">
-                        PLAN is the core innovation that makes a ubiquitous
-                        personal computer possible. It enables universal
-                        portability across devices, guarantees backward
-                        compatibility, and makes forward compatibility between
-                        runtimes tractable.
-                      </p>
+                      <div>
+                        <p className="">
+                          PLAN is the core innovation that makes a ubiquitous
+                          personal computer possible. It enables universal
+                          portability across devices, guarantees backward
+                          compatibility, and makes forward compatibility between
+                          runtimes tractable.
+                        </p>
 
-                      <p>
-                        PLAN is functional, lazy, and <em>reflective</em>.
-                      </p>
-                    </div>
+                        <p>
+                          PLAN is functional, lazy, and <em>reflective</em>.
+                        </p>
+                      </div>
 
-                    <div className="md:hidden w-full flex justify-around items-center mx-auto">
-                    <div
-                      id="reflective"
-                      className="text-center h-[106px] w-[106px]"
-                    >
-                      <img src="/images/reflective.png" />
+                      <div className="md:hidden w-full flex justify-around items-center mx-auto">
+                        <div
+                          id="reflective"
+                          className="text-center h-[106px] w-[106px]"
+                        >
+                          <img src="/images/reflective.png" />
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  </div>
-                </main>
-              </div>
+                  </main>
+                </div>
               </div>
             </article>
 
-          <article className="content-zone w-opfn mx-auto container">
-            <div className="jungle-bg">
-              <img
-                src="/images/dithered-jungle.png"
-                alt="jungle background image"
-                className="jungle-bg-image"
-              />
-              <div className="jungle-overlay"></div>
-            </div>
-            <div className="md:grid md:grid-cols-2 flex flex-col mx-auto">
-              <div className="justify-self-start core-content md:w-372">
-                <header>
-                  <h2 className="mt-0 mb-[14px]">Cogs Run Forever</h2>
-                </header>
+            <article className="content-zone w-opfn mx-auto container">
+              <div className="jungle-bg">
+                <img
+                  src="/images/dithered-jungle.png"
+                  alt="jungle background image"
+                  className="jungle-bg-image"
+                />
+                <div className="jungle-overlay"></div>
               </div>
+              <div className="md:grid md:grid-cols-2 flex flex-col mx-auto">
+                <div className="justify-self-start core-content md:w-372">
+                  <header>
+                    <h2 className="mt-0 mb-[14px]">Cogs Run Forever</h2>
+                  </header>
+                </div>
                 <main className="bg-[#EEE] px-2 pt-2 opacity-90">
                   <div className="mb-[16px]">
                     <div>
@@ -401,7 +402,7 @@ EXEC(e, x)       = x`}
                       </p>
                     </div>
 
-                    <div className="">
+                    <div className="h-[321px]">
                       <pre className="code">
                         <code
                           style={{
@@ -444,7 +445,8 @@ type CogClosure =
                   </div>
                 </main>
               </div>
-          </article>
+            </article>
+          </div>
         </section>
 
         <div className="content-zone mt-opfn mb-opfn-sm flex flex-row space-between items-center">
@@ -481,9 +483,9 @@ type CogClosure =
             </p>
           </section>
 
-        <div className="content-zone my-opfn-sm md:my-opfn flex flex-row space-between items-center">
-          <div className="horizontal-bars"></div>
-        </div>
+          <div className="content-zone my-opfn-sm md:my-opfn flex flex-row space-between items-center">
+            <div className="horizontal-bars"></div>
+          </div>
 
           <section className="system-components md:grid md:grid-cols-2 md:gap-y-[65px] flex flex-col content-zone">
             <article className="md:w-opfn-xs left mb-opfn-sm">
@@ -509,7 +511,7 @@ type CogClosure =
                       wordWrap: "break-word",
                     }}
                   >
-{`PLAN ::= <PLAN>
+                    {`PLAN ::= <PLAN>
        | {Nat Nat PLAN}
        | (PLAN PLAN)
        | Nat
@@ -530,7 +532,11 @@ Nats - natural numbers: opaque data or opcodes`}
               <div className="flex h-full flex-col justify-between">
                 <div className="mb-0">
                   <p className="mb-0">
-    Operating functions run on a virtual machine. The semantics of the machine are completely encoded within the system—like a runnable spec—which makes it tractable to implement and audit multiple competing versions. Each user device runs one machine; together they form a networked computer.
+                    Operating functions run on a virtual machine. The semantics
+                    of the machine are completely encoded within the system—like
+                    a runnable spec—which makes it tractable to implement and
+                    audit multiple competing versions. Each user device runs one
+                    machine; together they form a networked computer.
                   </p>
                 </div>
                 <div className="shrink mt-[24px]"></div>
@@ -612,7 +618,7 @@ Nats - natural numbers: opaque data or opcodes`}
               <UseCasesSection>
                 {USE_CASES.map((caseItem, index) => (
                   <UseCase
-                  className={`w-full md:w-[357px] ${index % 2 !== 0 ? "" : ""} ${ (index === (useCaseTotal - 1)) ? "mb-0" : "mb-[24px]"} ${index === (useCaseTotal - 1)} `}
+                    className={`w-full md:w-[357px] ${index % 2 !== 0 ? "" : ""} ${index === useCaseTotal - 1 ? "mb-0" : "mb-[24px]"} ${index === useCaseTotal - 1} `}
                     number={`${(index + 1).toString().padStart(2, "0")}.`}
                     key={index}
                     title={caseItem.title}

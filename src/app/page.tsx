@@ -215,7 +215,7 @@ export default function Home() {
           <div className="horizontal-bars"></div>
         </div>
 
-        <section className="main-points content-zone">
+        <section className="main-points flex flex-col items-center content-zone">
           <article className="left">
             <header className="">
               <h2>App-Less Software</h2>
@@ -569,7 +569,7 @@ type CogClosure =
             <div className="horizontal-bars"></div>
           </div>
 
-          <section className="system-components md:grid md:grid-cols-2 md:gap-y-[65px] items-center flex flex-col content-zone">
+          <section className="system-components md:grid md:grid-cols-2 md:jusitfy-between md:gap-y-[65px] items-center flex flex-col content-zone">
             <article className="left mb-opfn-sm">
               <header className="mb-2 mt-0">
                 <h2 className="mb-0">PLAN</h2>

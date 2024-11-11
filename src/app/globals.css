@@ -393,20 +393,21 @@ section.system-components > article.right > header {
 
 section.main-points > article.left {
   /*@apply col-start-1;*/
-  @apply justify-self-start;
+  @apply md:justify-self-start;
 }
 section.main-points > article.right {
   /*@apply col-end-3;*/
-  @apply self-end;
+  @apply md:justify-self-end;
 }
 
-section.main-points > article.left {
+section.system-components > article.left {
   /*@apply col-start-1;*/
   /*@apply justify-self-start;*/
 }
-section.main-points > article.right {
+section.system-components > article.right {
   /*@apply col-end-3;*/
   /*@apply self-end;*/
+  @apply justify-self-end;
 }
 
 .system-components header {

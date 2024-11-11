@@ -76,37 +76,59 @@ interface UseCasesSectionProps {
 
 const UseCasesSection = ({ children }: UseCasesSectionProps) => {
   // Group the cases into pairs (for rows)
-  const rows = [];
-
+    const pairs = [];
   for (let i = 0; i < children.length; i += 2) {
-    rows.push(children.slice(i, i + 2));
+    pairs.push(children.slice(i, Math.min(i + 2, children.length)));
   }
 
   return (
-    <div className="flex w-full md:px-0 md:content-zone mx-auto flex-col justify-items-stretch">
-      {rows.map((row, rowIndex) => (
-        <div key={rowIndex} className="relative">
-          {/* Background for this row */}
-          <div className="absolute inset-0 z-0">
-            <div className="jungle-bg h-full">
-              <img
-                src="/images/dithered-jungle.png"
-                alt="jungle background image"
-                className="w-full h-full object-cover opacity-20"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-[#eeeeee] via-transparent to-[#eeeeee]"></div>
+    <div className="flex w-full md:px-0 lg:content-zone mx-auto flex-col justify-items-stretch">
+
+    {/* desktop */}
+    <div className="hidden md:flex md:flex-col content-zone md:gap-y-[12px]">
+        {pairs.map((pair, pairIndex) => (
+          <div key={pairIndex} className="relative">
+            {/* Shared background for the pair */}
+            <div className="absolute inset-0">
+              <div className="jungle-bg">
+                <img
+                  src="/images/dithered-jungle.png"
+                  alt="background"
+                  className="mt-[12px] w-full object-cover opacity-15 grayscale"
+                />
+                <div className="use-case-gradient"></div>
+              </div>
+            </div>
+            {/* Pair content */}
+            <div className="relative z-10 grid grid-cols-2 gap-x-opfn">
+              {pair}
             </div>
           </div>
+        ))}
+      </div>
 
-          {/* Row content */}
-          <div className="relative z-10 md:grid md:grid-cols-2 flex flex-col">
-            {/* Left column */}
-            <div className="justify-self-start">{row[0]}</div>
-            {/* Right column */}
-            <div className="justify-self-end">{row[1]}</div>
+    {/* mobile */}
+      <div className="md:hidden flex flex-col gap-y-[24px]">
+        {children.map((child, index) => (
+          <div key={index} className="relative">
+            {/* Individual background per item */}
+            <div className="absolute inset-0">
+              <div className="jungle-bg">
+                <img
+                  src="/images/dithered-jungle.png"
+                  alt="background"
+                  className="mt-[12px] w-full object-cover opacity-15 grayscale"
+                />
+                <div className="use-case-gradient"></div>
+              </div>
+            </div>
+            {/* Item content */}
+            <div className="relative z-10">
+              {child}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
@@ -179,7 +201,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="border-b border-black w-[318px] md:w-opfn-narrow mx-10 md:mx-auto md:narrow-zone my-opfn-sm"></div>
+        <div className="border-b-2 border-black w-[318px] mx-auto md:w-opfn-narrow mx-10 md:mx-auto md:narrow-zone my-opfn-sm"></div>
 
         <section className="narrow-zone">
           <p className="">
@@ -266,20 +288,20 @@ export default function Home() {
         </div>
 
         <section id="core-technology">
-          <header className="relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mx-auto w-full h-[192px] md:w-[744px] md:h-[396px]">
+          <header className="section-header">
             <img
               src="/images/field.png"
               alt="Forest Background"
               className="absolute inset-0 object-cover mx-auto px-2 md:px-0"
             />
             <div className="relative z-10 max-w-lg">
-              <h1 className="font-bold berkeley md:text-[36px] text-[16px]">
+              <h1 className="">
                 Core Technology
               </h1>
             </div>
           </header>
 
-          <div className="relative content-zone pt-[40px]">
+          <div className="relative mx-auto max-w-lg md:container md:mx-auto md:max-w-opfn md:px-4 px-0 md:px-4 pt-[40px]">
             <div className="absolute inset-0 z-0 hidden md:px-4 md:block">
               <div className="gradient-height">
                 <img
@@ -488,7 +510,7 @@ type CogClosure =
                   </div>
 
                   <div className="mb-0">
-                    <p className="mb-0 px-4 md:px-0">
+                    <p className="mb-0 px-0">
                       Notice that the cog is free to change itself. It can even
                       replace itself with a completely new value.
                     </p>
@@ -515,14 +537,14 @@ type CogClosure =
         </div>
 
         <section id="system-overview">
-          <header className="relative z-10 mt-0 mb-opfn-sm overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mx-auto w-full md:w-[744px] h-[200px] md:h-[396px]">
+          <header className="section-header">
             <img
               src="/images/coast.png"
               alt="Forest Background"
               className="px-3 absolute inset-0 w-full h-full object-cover"
             />
             <div className="relative z-10 max-w-lg">
-              <h1 className="font-bold berkeley md:text-[36px] text-[20px]">
+              <h1 className="">
                 System Overview
               </h1>
             </div>
@@ -662,14 +684,14 @@ Nats - natural numbers: opaque data or opcodes`}
           </div>
 
           <section id="use-cases">
-            <header className="relative z-10 mt-0 mb-opfn-sm overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mx-auto h-[192px] w-full md:w-[744px] md:h-[396px]">
+            <header className="section-header">
               <img
                 src="/images/river.png"
                 alt="Forest Background"
                 className="px-3 absolute inset-0 w-full h-full object-cover"
               />
               <div className="relative z-10 max-w-lg">
-                <h1 className="font-bold berkeley md:text-[36px] text-[20px]">
+                <h1 className="">
                   Use Cases
                 </h1>
               </div>
@@ -679,15 +701,15 @@ Nats - natural numbers: opaque data or opcodes`}
               <UseCasesSection>
                 {USE_CASES.map((caseItem, index) => (
                   <UseCase
-                    className={`w-full md:w-[357px] ${index % 2 !== 0 ? "" : ""} ${index === useCaseTotal - 1 ? "mb-0" : "mb-[24px]"} ${index === useCaseTotal - 1} `}
+                    className={`w-full md:w-[357px] ${
+                      index % 2 !== 0 ? "md:justify-self-end" : "md:justify-self-start"
+                    } ${index === useCaseTotal - 1 ? "mb-0" : ""}`}
                     number={`${(index + 1).toString().padStart(2, "0")}.`}
                     key={index}
                     title={caseItem.title}
                     hasBackground={false}
                   >
-                    <div
-                      className={`w-full px-4 md:w-[357px] ${index % 2 !== 0 ? "" : ""}`}
-                    >
+                    <div className={`w-full px-4 md:w-[357px]`}>
                       <p className="w-full mb-0">{caseItem.content}</p>
                     </div>
                   </UseCase>
@@ -700,6 +722,7 @@ Nats - natural numbers: opaque data or opcodes`}
                 </Link>
               </div>
             </div>
+
           </section>
         </section>
       </main>

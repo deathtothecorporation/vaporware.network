@@ -250,6 +250,32 @@ h5 {
   @apply mb-0;
 }
 
+.section-header {
+  @apply relative;
+  @apply max-w-opfn-narrow;
+  @apply z-10;
+  @apply mt-0;
+  @apply mb-opfn-sm;
+  @apply overflow-hidden;
+  @apply flex;
+  @apply justify-center;
+  @apply text-white;
+  @apply text-center;
+  @apply flex-col;
+  @apply items-center;
+  @apply mx-auto;
+  @apply w-full;
+  @apply h-[40vw];
+  @apply md:h-[396px];
+}
+
+header.section-header h1 {
+  @apply md:text-[36px];
+  @apply text-[20px];
+  @apply berkeley;
+  @apply font-bold;
+}
+
 blockquote {
   @apply italic;
   @apply text-lg;
@@ -340,6 +366,7 @@ section.main-points {
 section.main-points article {
   @apply max-w-opfn-xs;
   @apply mb-opfn-sm;
+  @apply w-full;
 }
 
 section.main-points article header {
@@ -368,7 +395,7 @@ section.main-points > article.left {
 }
 section.main-points > article.right {
   /*@apply col-end-3;*/
-  @apply justify-self-end;
+  @apply self-end;
 }
 
 .system-components header {
@@ -386,7 +413,7 @@ section#core-technology p {
   @apply text-[16px];
 }
 
-section#core-technology header {
+section#core-technology article header {
   @apply inline-flex;
   @apply content-center;
   @apply justify-center;
@@ -497,6 +524,23 @@ section#core-technology h2 {
     rgba(238, 238, 238, 1) 100%
   );
   pointer-events: none;
+}
+
+.use-case-gradient {
+  @apply absolute;
+  @apply inset-0;
+  @apply mt-[12px];
+  background: linear-gradient(
+    to bottom,
+    rgba(238, 238, 238, 1) 0%,
+    rgba(238, 238, 238, 0) 10%,
+    transparent 4%,
+    transparent 80%,
+    rgba(238, 238, 238, 0.5) 90%,
+    rgba(238, 238, 238, 0.8) 92%,
+    rgba(238, 238, 238, 1) 96%,
+    rgba(238, 238, 238, 1) 100%
+  )
 }
 
 #use-cases .jungle-bg {

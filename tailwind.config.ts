@@ -8,8 +8,8 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      md: {min: '810px', max: '1727px'}, // tablet
-      lg: { min: "1728px" }, // start of "desktop"
+      md: '810px',    // 810px and up
+      lg: '1728px',   // 1728px and up
     },
     extend: {
       backgroundImage: {

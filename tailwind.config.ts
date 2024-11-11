@@ -8,7 +8,7 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      md: "834px",  // start of tablet.
+      md: "810px",  // start of tablet.
       lg: "1728px", // start of "desktop"
     },
     extend: {

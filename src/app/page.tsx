@@ -280,7 +280,7 @@ export default function Home() {
           </header>
 
           <div className="relative content-zone pt-[40px]">
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 hidden md:px-4 md:block">
               <div className="gradient-height">
                 <img
                   src="/images/dithered-jungle.png"
@@ -305,14 +305,39 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative z-10 grid grid-cols-2 gap-x-opfn px-[18px]">
+            <div className="md:content-zone relative z-10 flex md:px-4 flex-col md:grid md:grid-cols-2 md:gap-x-opfn gap-y-opfn md:gap-y-0">
               <article className="relative text-[16px]">
+                <div className="absolute inset-0 block md:hidden">
+                  <div className="jungle-bg">
+                    <img
+    src="/images/dithered-jungle.png"
+    alt="background"
+    className="w-full gradient-image-height object-cover opacity-45 grayscale"
+    />
+    <div className="absolute inset-0 gradient-height"
+      style={{
+        background: `linear-gradient(
+          to bottom,
+          rgba(238, 238, 238, 1) 0%,
+          rgba(238, 238, 238, 0) 5%,
+          transparent 4%,
+          transparent 80%,
+          rgba(238, 238, 238, 0.5) 90%,
+          rgba(238, 238, 238, 0.8) 92%,
+          rgba(238, 238, 238, 1) 96%,
+          rgba(238, 238, 238, 1) 100%
+        )`
+      }}
+    ></div>
+          </div>
+          </div>
+
                 <div className="core-content">
                   <header>
-                    <h2 className="mt-0 mb-[14px]">PLAN is a calculus</h2>
+                    <h2 className="mt-0 mb-[14px] z-10 bg-[#EEE]">PLAN is a calculus</h2>
                   </header>
 
-                  <main className="">
+                  <main className="content-zone md:px-0">
                     <div className="py-2 bg-[#EEE] opacity-90">
                       <div className="mb-[17px]">
                         <pre className="code core-tech-code">
@@ -392,12 +417,39 @@ EXEC(e, x)       = x`}
             </article>
 
             <article className="relative">
+                <div className="absolute inset-0 block md:hidden">
+                  <div className="jungle-bg">
+                    <img
+                      src="/images/dithered-jungle.png"
+                      alt="background"
+                      className="w-full gradient-image-height object-cover opacity-45 grayscale"
+                    />
+                  <div className="absolute inset-0 gradient-height"
+                    style={{
+                      background: `linear-gradient(
+                        to bottom,
+                        rgba(238, 238, 238, 1) 0%,
+                        rgba(238, 238, 238, 0) 5%,
+                        transparent 4%,
+                        transparent 80%,
+                        rgba(238, 238, 238, 0.5) 90%,
+                        rgba(238, 238, 238, 0.8) 92%,
+                        rgba(238, 238, 238, 1) 96%,
+                        rgba(238, 238, 238, 1) 100%
+                      )`
+                    }}
+                  ></div>
+                </div>
+            </div>
+
               <div className="core-content">
                 <header>
-                  <h2 className="mt-0 mb-[14px]">Cogs Run Forever</h2>
+                  <h2 className="mt-0 z-10 bg-[#EEE] mb-[14px]">Cogs Run Forever</h2>
                 </header>
-                <main className="bg-[#EEE] px-2 pt-2 opacity-90">
-                  <div className="mb-[16px] core-tech-code">
+
+                <div className="content-zone md:px-0">
+                <main className="bg-[#EEE] pt-2 opacity-90">
+                  <div className="mb-[16px] px-4 core-tech-code">
                     <div>
                       <p>
                         Cogs are programs that run forever. Even if you reboot,
@@ -436,7 +488,7 @@ type CogClosure =
                   </div>
 
                   <div className="mb-0">
-                    <p className="mb-0">
+                    <p className="mb-0 px-4 md:px-0">
                       Notice that the cog is free to change itself. It can even
                       replace itself with a completely new value.
                     </p>
@@ -450,6 +502,7 @@ type CogClosure =
                     </div>
                   </div>
                 </main>
+              </div>
               </div>
             </article>
           </div>

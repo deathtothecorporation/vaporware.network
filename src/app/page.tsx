@@ -580,8 +580,8 @@ type CogClosure =
             <div className="border-b border-black w-[318px] mx-auto md:w-opfn-narrow mx-10 md:mx-auto md:narrow-zone"></div>
           </div>
 
-          <section className="system-components md:grid md:grid-cols-2 md:gap-x-[96px] md:jusitfy-between md:gap-y-[65px] items-center flex flex-col content-zone">
-            <article className="left mb-opfn-sm">
+          <section className="system-components md:grid md:grid-cols-2 md:gap-x-[96px] items-start flex flex-col content-zone">
+            <article className="left mb-opfn-sm md:mb-0 md:mb-[85px]">
               <header className="mb-2 mt-0">
                 <h2 className="mb-0">PLAN</h2>
               </header>
@@ -618,8 +618,8 @@ Nats - natural numbers: opaque data or opcodes`}
               </div>
             </article>
 
-            <article className="right mb-[24px]">
-              <header className="">
+            <article className="right mb-opfn-sm md:mb-0 md:mb-[85px]">
+              <header className="mb-2 mt-0">
                 <h2 className="text-right w-full">Machines</h2>
               </header>
               <div className="flex h-full flex-col justify-between">
@@ -639,8 +639,8 @@ Nats - natural numbers: opaque data or opcodes`}
               </div>
             </article>
 
-            <article className="left mb-[24px]">
-              <header>
+            <article className="left mb-opfn-sm md:mb-0">
+              <header className="mb-2 mt-0">
                 <h2>Cogs</h2>
               </header>
               <p>
@@ -657,7 +657,7 @@ Nats - natural numbers: opaque data or opcodes`}
 
             <article className="right mb-0">
               <div className="mb-opfn-sm">
-                <header>
+              <header className="mb-2 mt-0">
                   <h2 className="text-right w-full">Drivers</h2>
                 </header>
                 <p>
@@ -670,10 +670,10 @@ Nats - natural numbers: opaque data or opcodes`}
               </div>
 
               <div className="mb-0">
-                <header>
+              <header className="mb-2 mt-0">
                   <h2 className="md:text-right w-full">Manifests</h2>
                 </header>
-                <p>
+                <p className="md:mb-0">
                   Manifests are a special PLAN value that must be provided to a
                   new machine. The manifest tells the machine what contents from
                   a user’s existing network of operating functions it is

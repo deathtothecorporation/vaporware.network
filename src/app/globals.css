@@ -378,27 +378,27 @@ section.main-points article header {
 
 section.main-points,
 section.system-components > article.left > header {
-  @apply justify-start;
-  @apply md:justify-start;
+  /*@apply justify-start;*/
+  /*@apply md:justify-start;*/
 }
 section.main-points > article.right > header > h2 {
-  @apply text-right;
-  @apply w-full;
-  @apply md:text-left;
+  /*@apply text-right;*/
+  /*@apply w-full;*/
+  /*@apply md:text-left;*/
 }
 
 section.system-components > article.right > header {
-  @apply justify-end;
-  @apply md:justify-start;
+  /*@apply justify-end;*/
+  /*@apply md:justify-start;*/
 }
 
 section.main-points > article.left {
   /*@apply col-start-1;*/
-  @apply md:justify-self-start;
+  /*@apply md:justify-self-start;*/
 }
 section.main-points > article.right {
   /*@apply col-end-3;*/
-  @apply md:justify-self-end;
+  /*@apply md:justify-self-end;*/
 }
 
 section.system-components > article.left {
@@ -408,7 +408,7 @@ section.system-components > article.left {
 section.system-components > article.right {
   /*@apply col-end-3;*/
   /*@apply self-end;*/
-  @apply justify-self-end;
+  /*@apply justify-self-end;*/
 }
 
 .system-components header {

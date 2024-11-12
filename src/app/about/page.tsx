@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function About() {
   return (
     <div>
-      <main id="vision" className="mt-24 min-h-[100vh] container mx-auto max-w-md px-4 md:px-0 mb-12">
+      <main id="vision" className="mt-24 content-zone mx-auto px-4 mb-12">
         <div>
           <h2 className="my-8">What motivates us</h2>
           <p>

@@ -51,7 +51,7 @@ const HamburgerMenu = ({ children, color = "white" }: HamburgerMenuProps) => {
   const bgColor = color === "black" ? "bg-black" : "bg-white";
 
   return (
-    <div className="">
+    <div className="relative right-[4px]">
       {/* Hamburger Button */}
       <button
         onClick={toggleMenu}

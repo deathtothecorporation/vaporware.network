@@ -197,7 +197,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="border-b-2 border-black w-[318px] mx-auto md:w-opfn-narrow mx-10 md:mx-auto md:narrow-zone my-opfn-sm"></div>
+        <div className="border-b border-black w-[318px] mx-auto md:w-opfn-narrow mx-10 md:mx-auto md:narrow-zone my-opfn-sm"></div>
 
         <section className="narrow-zone">
           <p className="">
@@ -517,7 +517,7 @@ type CogClosure =
                           even replace itself with a completely new value.
                         </p>
                       </div>
-                      <div className="hidden w-full flex justify-around items-center mx-auto">
+                      <div className="hidden w-full md:flex justify-around items-center mx-auto">
                         <div
                           id="reflective"
                           className="text-center h-[106px] w-[106px]"
@@ -559,11 +559,11 @@ type CogClosure =
   </p>
           </section>
 
-          <div className="content-zone my-opfn-sm md:my-opfn flex flex-row space-between items-center">
-            <div className="horizontal-bars"></div>
+          <div className="content-zone mt-opfn-sm mb-[59px] flex flex-row space-between items-center">
+            <div className="border-b border-black w-[318px] mx-auto md:w-opfn-narrow mx-10 md:mx-auto md:narrow-zone"></div>
           </div>
 
-          <section className="system-components lg:grid lg:grid-cols-2 lg:gap-[168px] lg:jusitfy-between lg:gap-y-[65px] items-center flex flex-col content-zone">
+          <section className="system-components md:grid md:grid-cols-2 md:gap-[168px] md:jusitfy-between md:gap-y-[65px] items-center flex flex-col content-zone">
             <article className="left mb-opfn-sm">
               <header className="mb-2 mt-0">
                 <h2 className="mb-0">PLAN</h2>

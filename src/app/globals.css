@@ -275,8 +275,8 @@ h5 {
 }
 
 header.section-header h1 {
-  @apply md:text-[36px];
-  @apply text-[20px];
+  @apply md:text-[24px];
+  @apply text-[24px];
   @apply berkeley;
   @apply font-bold;
 }
@@ -623,7 +623,7 @@ section#use-cases .case-area p {
 }
 
 section#use-cases .number {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 section#use-cases .title {

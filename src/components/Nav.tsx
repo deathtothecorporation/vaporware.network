@@ -56,7 +56,7 @@ export default function Nav() {
     }
   `}
     >
-      <div className="flex container mx-auto max-w-2xl items-center justify-between">
+      <div className="flex container mx-auto max-w-opfn lg:px-2 items-center justify-between">
         <Link
           id="headLogo"
           href="/"

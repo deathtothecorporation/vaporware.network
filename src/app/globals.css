@@ -85,10 +85,12 @@ body {
 
 p {
   /*@apply text-xl;*/
-  font-size: 16px;
-  @apply md:text-base;
+  /*font-size: 16px;*/
+  @apply md:text-opmd;
+  @apply text-opmd-mobile;
+  /*@apply md:text-base;*/
   @apply mb-0;
-  line-height: normal;
+  /*line-height: normal;*/
 }
 
 .berkeley {
@@ -123,6 +125,10 @@ section header h1 {
   line-height: normal;
 }
 
+#vision p {
+  font-size: 14px;
+}
+
 nav#site-nav ul {
   @apply list-none !important;
   @apply flex;
@@ -139,7 +145,7 @@ nav#site-nav a {
 }
 
 footer#site-footer {
-  @apply text-[20px];
+  @apply text-opmd;
   @apply font-bold;
 }
 
@@ -180,8 +186,9 @@ button,
 [type="submit"],
 [type="button"] {
   font-family: "BerkeleyMono";
-  @apply text-[16px];
-  @apply md:text-[18px];
+  @apply text-opmd-mobile;
+  /*@apply text-[16px];*/
+  /*@apply md:text-[18px];*/
   @apply bg-black;
   @apply text-white;
   @apply whitespace-pre;
@@ -237,7 +244,7 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  @apply text-ophead2;
   @apply my-0;
   /*@apply md:text-lg;*/
   /*@apply underline;*/
@@ -322,7 +329,8 @@ pre.code {
   /*@apply rounded-md;*/
   /*@apply p-2;*/
   /*@apply my-2;*/
-  @apply text-[9px];
+  /*@apply text-opxs;*/
+  @apply text-opcode;
 }
 
 section#callouts {
@@ -366,7 +374,6 @@ section.main-points {
 }
 
 section.main-points article {
-  @apply max-w-[350px];
   @apply mb-opfn-sm;
   /*@apply w-full;*/
 }
@@ -415,7 +422,7 @@ section.system-components > article.right {
 }
 
 .system-components > article {
-  @apply max-w-[85vw];
+  @apply w-full;
   @apply md:max-w-[350px];
 }
 
@@ -424,7 +431,8 @@ article.left {
 }
 
 section#core-technology p {
-  @apply text-[16px];
+  @apply md:text-opmd;
+  @apply text-opmd-mobile;
 }
 
 section#core-technology article header {
@@ -597,12 +605,14 @@ section#use-cases article header {
   @apply flex;
   @apply items-start;
   @apply px-3;
-  @apply my-0;
+  @apply mt-0;
+  @apply mb-2;
+  @apply md:mb-0;
 }
 
 section#use-cases article p {
-  @apply text-[12px];
-  line-height: normal;
+  @apply md:text-opmd;
+  @apply text-opmd-mobile;
 }
 
 section#use-cases .case-area {

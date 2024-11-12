@@ -1,21 +1,13 @@
 "use client";
 
-import React, {
-  useState,
-  Children,
-  ReactNode,
-  ReactElement,
-} from "react";
+import React, { useState, Children, ReactNode, ReactElement } from "react";
 
 interface HamburgerMenuProps {
   children: ReactNode;
   color?: string;
 }
 
-const HamburgerMenu = ({
-  children,
-  color = "white",
-}: HamburgerMenuProps) => {
+const HamburgerMenu = ({ children, color = "white" }: HamburgerMenuProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -74,15 +66,9 @@ const HamburgerMenu = ({
           </>
         ) : (
           <>
-            <div
-              className={`border-${color} border-b-2 w-[32px]`}
-            ></div>
-            <div
-              className={`border-${color} border-b-2 w-[32px]`}
-            ></div>
-            <div
-              className={`border-${color} border-b-2 w-[32px]`}
-            ></div>
+            <div className={`border-${color} border-b-2 w-[32px]`}></div>
+            <div className={`border-${color} border-b-2 w-[32px]`}></div>
+            <div className={`border-${color} border-b-2 w-[32px]`}></div>
           </>
         )}
       </button>
@@ -99,10 +85,8 @@ const HamburgerMenu = ({
 
       {/* Menu Panel */}
       <div
-        className={`fixed z-[50] top-0 right-0 h-full w-full md:w-1/3 bg-white transform transition-transform duration-300 ease-in-out ${
-          isOpen
-            ? "shadow-lg translate-x-0"
-            : "shadow-none translate-x-full"
+        className={`bg-[#EEE] fixed z-[50] top-0 right-0 h-full w-full md:w-1/3 bg-white transform transition-transform duration-300 ease-in-out ${
+          isOpen ? "shadow-lg translate-x-0" : "shadow-none translate-x-full"
         }`}
       >
         <div className="">{addCloseHandler(children)}</div>

@@ -108,7 +108,7 @@ const UseCasesSection = ({ children }: UseCasesSectionProps) => {
       </div>
 
       {/* mobile */}
-      <div className="md:hidden flex flex-col gap-y-[24px]">
+      <div className="md:hidden flex flex-col gap-y-[32px]">
         {children.map((child, index) => (
           <div key={index} className="relative">
             {/* Individual background per item */}
@@ -188,7 +188,7 @@ export default function Home() {
             <h1 className="md:w-[744px]">
               <Lockup className="mx-auto" size={200} color="white" />
             </h1>
-            <h2 className="no-underline font-bold berkeley text-[16px] md:text-[24px] mb-[60px] md:mb-[44px] lg:mb-[81px]">
+            <h2 className="no-underline font-bold berkeley text-opmd md:text-oplg mb-[60px] md:mb-[44px] lg:mb-[81px]">
               The Operating Function Company
             </h2>
             <div className="flex mb-[50px] md:mb-[54px] lg:mb-[70px] justify-center">
@@ -220,7 +220,7 @@ export default function Home() {
             <header className="">
               <h2>App-Less Software</h2>
             </header>
-            <p>
+            <p className="">
               Because software in an operating function isn’t siloed in apps,
               you have full access to the codebase, backend included. “Inspect
               source” everything, and change anything you want.
@@ -323,7 +323,7 @@ export default function Home() {
             </div>
 
             <div className="md:content-zone relative z-10 flex md:px-4 flex-col md:grid md:grid-cols-2 md:gap-x-opfn gap-y-opfn md:gap-y-0">
-              <article className="relative text-[16px]">
+              <article className="relative text-opmd">
                 <div className="absolute inset-0 block md:hidden">
                   <div className="jungle-bg">
                     <img
@@ -511,7 +511,7 @@ type CogClosure =
                         </div>
                       </div>
 
-                      <div className="mb-0">
+                      <div className="mb-0 pd:mt-0 pt-4">
                         <p className="mb-0 px-0">
                           Notice that the cog is free to change itself. It can
                           even replace itself with a completely new value.
@@ -552,17 +552,11 @@ type CogClosure =
           <section className="content-zone w-opfn mx-auto container">
             <p>
               An operating function is a programming environment that combines
-              aspects of Erlang/OTP, the EVM, and Lisp. Like
+              aspects of Erlang/OTP, the EVM, and Lisp.
             </p>
             <p>
-              Erlang, the system is functional, supports concurrency through
-              message passing, and programs can be hot reloaded without
-              downtime. Like the EVM, program state is automatically persisted.
-              Programs keep everything “in memory” and will run forever (but
-              there is no global consensus). Like Lisp, programs can universally
-              introspect themselves and their environment, and dynamically
-              introduce new code.
-            </p>
+    Like Erlang, the system is functional, supports concurrency through message passing, and programs can be hot reloaded without downtime. Like the EVM, program state is automatically persisted. Programs keep everything “in memory” and will run forever (but there is no global consensus). Like Lisp, programs can universally introspect themselves and their environment, and dynamically introduce new code.
+  </p>
           </section>
 
           <div className="content-zone my-opfn-sm md:my-opfn flex flex-row space-between items-center">
@@ -587,7 +581,7 @@ type CogClosure =
               <div className="w-full flex items-center justify-around">
                 <pre className="code">
                   <code
-                    className="text-[12px]"
+                    className="text-opsm"
                     style={{
                       whiteSpace: "pre-wrap",
                       wordWrap: "break-word",

@@ -23,7 +23,7 @@ export default function CaseArticle({
         <div className="number">{number}</div>
         <div className="title">
           <div className="header-line"></div>
-          <h2 className="mb-[8px] text-[16px]">{title}</h2>
+          <h2 className="md:text-opmd text-opmd-mobile">{title}</h2>
         </div>
       </header>
       {hasBackground ? (

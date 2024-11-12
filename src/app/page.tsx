@@ -179,7 +179,7 @@ export default function Home() {
       <main className="">
         <section className="top-hero relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mb-0 md:w-opfn w-full mx-auto h-[439px] md:h-[591px] lg:h-[800px]">
           <Image
-            src="/images/hero-forest-large.jpeg"
+            src="/images/hero-forest-large.png"
             alt="Forest Background"
             fill
             className="absolute inset-0 w-full h-full object-cover scale-[1.1] md:scale-[1.05]"
@@ -220,7 +220,7 @@ export default function Home() {
           <div className="horizontal-bars"></div>
         </div>
 
-        <section className="main-points flex flex-col items-center md:gap-x-[86px] lg:gap-x-[168px] content-zone">
+        <section className="main-points flex flex-col items-center md:gap-x-[96px] content-zone">
           <article className="left">
             <header className="">
               <h2>App-Less Software</h2>
@@ -333,8 +333,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="md:content-zone relative z-10 flex md:px-4 flex-col md:flex md:flex-row md:gap-x-opfn gap-y-opfn md:gap-y-0 md:justify-between">
-              <article className="relative text-opmd md:justify-self-start md:w-[372px]">
+            <div className="md:content-zone relative z-10 flex md:px-4 flex-col md:flex md:flex-row md:gap-x-[96px] gap-y-opfn md:gap-y-0 md:justify-between">
+              <article className="relative text-opmd md:justify-self-start">
                 <div className="absolute inset-0 block md:hidden">
                   <div className="jungle-bg">
                     <img
@@ -447,7 +447,7 @@ EXEC(e, x)       = x`}
                 </div>
               </article>
 
-              <article className="relative md:mt-0 -mt-[40px] md:justify-self-end md:w-[372px]">
+              <article className="relative md:mt-0 -mt-[40px] md:justify-self-end">
                 <div className="absolute inset-0 block md:hidden">
                   <div className="jungle-bg">
                     <img
@@ -580,7 +580,7 @@ type CogClosure =
             <div className="border-b border-black w-[318px] mx-auto md:w-opfn-narrow mx-10 md:mx-auto md:narrow-zone"></div>
           </div>
 
-          <section className="system-components md:grid md:grid-cols-2 md:gap-[168px] md:jusitfy-between md:gap-y-[65px] items-center flex flex-col content-zone">
+          <section className="system-components md:grid md:grid-cols-2 md:gap-x-[96px] md:jusitfy-between md:gap-y-[65px] items-center flex flex-col content-zone">
             <article className="left mb-opfn-sm">
               <header className="mb-2 mt-0">
                 <h2 className="mb-0">PLAN</h2>
@@ -726,7 +726,7 @@ Nats - natural numbers: opaque data or opcodes`}
                     title={caseItem.title}
                     hasBackground={false}
                   >
-                    <div className={`w-full px-4`}>
+                    <div className={`w-full pl-4 pr-4 ${ index % 2 !== 0 ? "md:pr-4 md:pl-0" : "md:pl-4 md:pr-0"}`}>
                       <p className="w-full mb-0">{caseItem.content}</p>
                     </div>
                   </UseCase>

@@ -141,7 +141,7 @@ nav#site-nav a {
 }
 
 footer#site-footer {
-  @apply text-opsm;
+  @apply text-[16px];
   @apply font-bold;
 }
 
@@ -158,9 +158,7 @@ footer#site-footer ul {
 }
 footer#site-footer li {
   @apply list-none !important;
-  @apply mb-[14px] !important;
   @apply mx-auto;
-  @apply px-0 !important;
   @apply text-center;
 }
 

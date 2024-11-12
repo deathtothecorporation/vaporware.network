@@ -1,6 +1,7 @@
 "use client";
 
 import React, { ReactNode, useEffect } from "react";
+import Image from "next/image";
 import Lockup from "@/components/Lockup";
 import WaitlistForm from "@/components/WaitlistForm";
 import Logo from "@/components/Logo";
@@ -131,8 +132,6 @@ const UseCasesSection = ({ children }: UseCasesSectionProps) => {
   );
 };
 
-// import Image from "next/image";
-
 // Cosmetics, for later
 // import WebGLTest from "@/components/WebGLTest";
 //
@@ -179,11 +178,17 @@ export default function Home() {
     <div className="mb-10">
       <main className="">
         <section className="top-hero relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mb-0 md:w-opfn w-full mx-auto h-[439px] md:h-[591px] lg:h-[800px]">
-          <img
-            src="/images/hero-forest.png"
+          <Image
+            src="/images/hero-forest-large.jpeg"
             alt="Forest Background"
-            className="absolute inset-0 w-full h-full object-cover"
+            fill
+            className="absolute inset-0 w-full h-full object-cover scale-[1.1] md:scale-[1.05]"
+            sizes="(max-width: 810px) 100vw,
+            (max-width: 1728px) 1200px,
+            1800px"
+            quality={100}
           />
+
           <div className="relative z-10 mx-auto pt-[120px] md:pt-0 md:px-[52px]">
             <h1 className="md:w-[744px]">
               <Lockup className="mx-auto" size={200} color="white" />
@@ -285,10 +290,16 @@ export default function Home() {
 
         <section id="core-technology">
           <header className="section-header">
-            <img
-              src="/images/field.png"
-              alt="Forest Background"
-              className="absolute inset-0 object-cover mx-auto px-2 md:px-0"
+
+            <Image
+              src="/images/field-large.png"
+              alt="Field"
+              fill
+              className="absolute inset-0 object-cover mx-auto px-4 md:px-0 scale-[1.0]"
+              sizes="(max-width: 810px) 100vw,
+              (max-width: 1728px) 1200px,
+              1800px"
+              quality={100}
             />
             <div className="relative z-10 max-w-lg">
               <h1 className="">Core Technology</h1>
@@ -539,11 +550,17 @@ type CogClosure =
 
         <section id="system-overview">
           <header className="section-header">
-            <img
-              src="/images/coast.png"
-              alt="Forest Background"
-              className="px-3 absolute inset-0 w-full h-full object-cover"
+            <Image
+              src="/images/coast-large.png"
+              alt="Coast"
+              fill
+              className="absolute inset-0 object-cover mx-auto px-4 md:px-0 scale-[1.0]"
+              sizes="(max-width: 810px) 100vw,
+              (max-width: 1728px) 1200px,
+              1800px"
+              quality={100}
             />
+
             <div className="relative z-10 max-w-lg">
               <h1 className="">System Overview</h1>
             </div>
@@ -678,11 +695,18 @@ Nats - natural numbers: opaque data or opcodes`}
 
           <section id="use-cases">
             <header className="section-header">
-              <img
-                src="/images/river.png"
-                alt="Forest Background"
-                className="px-3 absolute inset-0 w-full h-full object-cover"
+
+              <Image
+                src="/images/river-large.png"
+                alt="River"
+                fill
+                className="absolute inset-0 object-cover mx-auto px-4 md:px-0 scale-[1.0]"
+                sizes="(max-width: 810px) 100vw,
+                (max-width: 1728px) 1200px,
+                1800px"
+                quality={100}
               />
+
               <div className="relative z-10 max-w-lg">
                 <h1 className="">Use Cases</h1>
               </div>

@@ -1,25 +1,30 @@
 import React from "react";
 import Logo from "@/components/Logo";
-import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer id="site-footer" className="z-50 py-1 relative">
-      <div className="absolute inset-0 w-full h-full">
-        <img
-          src="/images/cove.png"
-          alt="Coastal landscape"
-          className="w-full h-full object-cover"
+    <footer id="site-footer" className="z-50 container h-[135px] max-w-opfn mx-auto relative">
+      <div className="absolute overflow-hidden inset-0 w-full h-full">
+        <Image
+          src="/images/cove-large.png"
+          alt="Cove"
+          fill
+          className="absolute h-full w-full inset-0 object-cover mx-auto px-4 md:px-0 scale-[1.1]"
+          sizes="(max-width: 810px) 100vw,
+          (max-width: 1728px) 1200px,
+          1800px"
+          quality={100}
         />
       </div>
 
-      <nav className="relative z-10 px-4 py-2 flex flex-row justify-between text-center items-center">
-        <div>
+      <nav className="relative z-10 px-4 flex flex-row h-full justify-between text-center items-center">
+        <div className="flex items-center h-full">
           <a href="/" className="">
             <Logo size={30} color="white" />
           </a>
         </div>
-        <ul className="list-none text-center flex flex-col space-y-2 mb-0 text-white">
+        <ul className="list-none flex flex-col justify-evenly h-full mb-0 text-white py-4">
           <li>
             <a href="https://docs.opfn.co" target="_blank" className="">
               Documentation
@@ -36,7 +41,7 @@ export default function Footer() {
             </a>
           </li>
         </ul>
-        <div>
+        <div className="flex items-center h-full">
           <a href="/" className="">
             <Logo size={30} color="white" />
           </a>

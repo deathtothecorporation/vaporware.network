@@ -85,7 +85,7 @@ const HamburgerMenu = ({ children, color = "white" }: HamburgerMenuProps) => {
 
       {/* Menu Panel */}
       <div
-        className={`bg-[#EEE] fixed z-[50] top-0 right-0 h-full w-full md:w-1/3 bg-white transform transition-transform duration-300 ease-in-out ${
+        className={`bg-[#EEE] fixed z-[50] top-0 right-0 h-full w-full md:w-1/3 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "shadow-lg translate-x-0" : "shadow-none translate-x-full"
         }`}
       >

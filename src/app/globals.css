@@ -145,7 +145,7 @@ nav#site-nav a {
 }
 
 footer#site-footer {
-  @apply text-opmd;
+  @apply text-opsm;
   @apply font-bold;
 }
 
@@ -423,7 +423,7 @@ section.system-components > article.right {
 
 .system-components > article {
   @apply w-full;
-  @apply md:max-w-[350px];
+  /*@apply md:max-w-[350px];*/
 }
 
 article.left {
@@ -484,7 +484,7 @@ section#core-technology h2 {
 
 #core-technology article {
   position: relative;
-  width: 100%;
+  /*width: 100%;*/
   /*min-height: 400px; [> Adjust as needed <]*/
   /*min-height: max-content;*/
   overflow: hidden;

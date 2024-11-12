@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer id="site-footer" className="z-50 py-[25px] relative">
+    <footer id="site-footer" className="z-50 py-1 relative">
       <div className="absolute inset-0 w-full h-full">
         <img
           src="/images/cove.png"
@@ -16,7 +16,7 @@ export default function Footer() {
       <nav className="relative z-10 px-4 py-2 flex flex-row justify-between text-center items-center">
         <div>
           <a href="/" className="">
-            <Logo size={24} color="white" />
+            <Logo size={30} color="white" />
           </a>
         </div>
         <ul className="list-none text-center flex flex-col space-y-2 mb-0 text-white">
@@ -38,7 +38,7 @@ export default function Footer() {
         </ul>
         <div>
           <a href="/" className="">
-            <Logo size={24} color="white" />
+            <Logo size={30} color="white" />
           </a>
         </div>
       </nav>

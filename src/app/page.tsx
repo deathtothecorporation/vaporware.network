@@ -85,7 +85,7 @@ const UseCasesSection = ({ children }: UseCasesSectionProps) => {
   return (
     <div className="flex w-full md:px-0 lg:content-zone mx-auto flex-col justify-items-stretch">
       {/* desktop */}
-      <div className="hidden md:flex md:flex-col content-zone md:gap-y-[12px]">
+      <div className="hidden md:flex md:flex-col w-full container mx-auto max-w-opfn md:gap-y-[12px]">
         {pairs.map((pair, pairIndex) => (
           <div key={pairIndex} className="relative">
             {/* Shared background for the pair */}
@@ -100,7 +100,7 @@ const UseCasesSection = ({ children }: UseCasesSectionProps) => {
               </div>
             </div>
             {/* Pair content */}
-            <div className="relative z-10 grid grid-cols-2 gap-x-opfn">
+            <div className="relative z-10 grid px-4 grid-cols-2 gap-x-[96px]">
               {pair}
             </div>
           </div>
@@ -215,7 +215,7 @@ export default function Home() {
           <div className="horizontal-bars"></div>
         </div>
 
-        <section className="main-points flex flex-col items-center content-zone">
+        <section className="main-points flex flex-col items-center md:gap-x-[86px] lg:gap-x-[168px] content-zone">
           <article className="left">
             <header className="">
               <h2>App-Less Software</h2>
@@ -295,7 +295,7 @@ export default function Home() {
             </div>
           </header>
 
-          <div className="relative mx-auto max-w-lg md:container md:mx-auto md:max-w-opfn md:px-4 px-0 md:px-4 pt-[40px]">
+          <div className="relative mx-auto max-w-lg md:container md:mx-auto md:max-w-opfn md:px-4 px-0 md:px-4 -mt-[20px] -mt-[20px] md:pt-[40px]">
             <div className="absolute inset-0 z-0 hidden md:px-4 md:block">
               <div className="gradient-height">
                 <img
@@ -322,8 +322,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="md:content-zone relative z-10 flex md:px-4 flex-col md:grid md:grid-cols-2 md:gap-x-opfn gap-y-opfn md:gap-y-0">
-              <article className="relative text-opmd">
+            <div className="md:content-zone relative z-10 flex md:px-4 flex-col md:flex md:flex-row md:gap-x-opfn gap-y-opfn md:gap-y-0 md:justify-between">
+              <article className="relative text-opmd md:justify-self-start md:w-[372px]">
                 <div className="absolute inset-0 block md:hidden">
                   <div className="jungle-bg">
                     <img
@@ -359,7 +359,7 @@ export default function Home() {
 
                   <main className="content-zone md:px-0">
                     <div className="py-2 bg-[#EEE] opacity-90">
-                      <div className="mb-[17px]">
+                      <div className="mb-[17px] h-[333px]">
                         <pre className="code core-tech-code">
                           <code
                             className="flex flex-col px-4 gap-y-4"
@@ -436,7 +436,7 @@ EXEC(e, x)       = x`}
                 </div>
               </article>
 
-              <article className="relative">
+              <article className="relative md:mt-0 -mt-[40px] md:justify-self-end md:w-[372px]">
                 <div className="absolute inset-0 block md:hidden">
                   <div className="jungle-bg">
                     <img
@@ -465,7 +465,7 @@ EXEC(e, x)       = x`}
 
                 <div className="core-content">
                   <header>
-                    <h2 className="mt-0 z-10 bg-[#EEE] mb-[14px]">
+                    <h2 className="md:mt-0 z-10 bg-[#EEE] mb-[14px]">
                       Cogs Run Forever
                     </h2>
                   </header>
@@ -563,7 +563,7 @@ type CogClosure =
             <div className="horizontal-bars"></div>
           </div>
 
-          <section className="system-components md:grid md:grid-cols-2 md:jusitfy-between md:gap-y-[65px] items-center flex flex-col content-zone">
+          <section className="system-components lg:grid lg:grid-cols-2 lg:gap-[168px] lg:jusitfy-between lg:gap-y-[65px] items-center flex flex-col content-zone">
             <article className="left mb-opfn-sm">
               <header className="mb-2 mt-0">
                 <h2 className="mb-0">PLAN</h2>
@@ -601,7 +601,7 @@ Nats - natural numbers: opaque data or opcodes`}
               </div>
             </article>
 
-            <article className="right md:h-[360px] mb-[24px]">
+            <article className="right mb-[24px]">
               <header className="">
                 <h2 className="text-right w-full">Machines</h2>
               </header>
@@ -622,7 +622,7 @@ Nats - natural numbers: opaque data or opcodes`}
               </div>
             </article>
 
-            <article className="left h-[360px] mb-[24px]">
+            <article className="left mb-[24px]">
               <header>
                 <h2>Cogs</h2>
               </header>
@@ -638,7 +638,7 @@ Nats - natural numbers: opaque data or opcodes`}
               </div>
             </article>
 
-            <article className="left md:h-[360px] mb-0">
+            <article className="right mb-0">
               <div className="mb-opfn-sm">
                 <header>
                   <h2 className="text-right w-full">Drivers</h2>
@@ -692,7 +692,7 @@ Nats - natural numbers: opaque data or opcodes`}
               <UseCasesSection>
                 {USE_CASES.map((caseItem, index) => (
                   <UseCase
-                    className={`w-full md:w-[357px] ${
+                    className={`w-full ${
                       index % 2 !== 0
                         ? "md:justify-self-end"
                         : "md:justify-self-start"
@@ -702,7 +702,7 @@ Nats - natural numbers: opaque data or opcodes`}
                     title={caseItem.title}
                     hasBackground={false}
                   >
-                    <div className={`w-full px-4 md:w-[357px]`}>
+                    <div className={`w-full px-4`}>
                       <p className="w-full mb-0">{caseItem.content}</p>
                     </div>
                   </UseCase>

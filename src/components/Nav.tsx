@@ -22,12 +22,17 @@ export default function Nav() {
       // On homepage, check scroll position immediately
       const handleScroll = () => {
         const navbarHeight =
-          (document.getElementById("topNav") as HTMLElement)?.offsetHeight || 0;
-        const heroHeight = (document.querySelector(".top-hero") as HTMLElement)
-          ?.offsetHeight;
-        const scrolledPast = window.scrollY > heroHeight - (navbarHeight - 20);
+          (document.getElementById("topNav") as HTMLElement)
+            ?.offsetHeight || 0;
+        const heroHeight = (
+          document.querySelector(".top-hero") as HTMLElement
+        )?.offsetHeight;
+        const scrolledPast =
+          window.scrollY > heroHeight - (navbarHeight - 20);
         setIsScrolledDown(scrolledPast);
-        scrolledPast ? setElementColor("black") : setElementColor("white");
+        scrolledPast
+          ? setElementColor("black")
+          : setElementColor("white");
       };
 
       handleScroll(); // Check position immediately
@@ -69,7 +74,7 @@ export default function Nav() {
             <div className="text-right pr-3 pt-3">
               <Link href="">
                 <button
-                  className="relative w-[32px] h-[32px] bg-white"
+                  className="relative w-[32px] h-[32px] bg-[#EEE]"
                   aria-label="Close menu"
                 >
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -86,12 +91,6 @@ export default function Nav() {
               className="block text-lg hover:text-gray-600 text-center"
             >
               <Logo size={50} color="black" className="mx-auto" />
-            </Link>
-            <Link
-              href="/#system-overview"
-              className="block text-lg hover:text-gray-600 text-center"
-            >
-              System and Uses
             </Link>
             <ExternalLink
               href="https://github.com/operating-function/pallas/issues?q=is%3Aissue+is%3Aopen+label%3Acontributor_challenge"

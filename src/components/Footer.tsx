@@ -1,20 +1,21 @@
+"use client";
 import React from "react";
 import Logo from "@/components/Logo";
-import Image from "next/image";
+import BlurImage from "@/components/BlurImage";
 
 export default function Footer() {
   return (
     <footer id="site-footer" className="z-50 container h-[135px] max-w-opfn mx-auto relative">
       <div className="absolute overflow-hidden inset-0 w-full h-full">
-        <Image
-          src="/images/cove-large.png"
+        <BlurImage
+          highQualitySrc="/images/cove-large.png"
+          lowQualitySrc="/images/cove-small.png"
           alt="Cove"
           fill
           className="absolute h-full w-full inset-0 object-cover mx-auto px-4 md:px-0 scale-[1.1]"
           sizes="(max-width: 810px) 100vw,
           (max-width: 1728px) 1200px,
           1800px"
-          quality={100}
         />
       </div>
 

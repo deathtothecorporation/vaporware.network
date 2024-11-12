@@ -3,6 +3,7 @@
 import React, { ReactNode, useEffect } from "react";
 import Image from "next/image";
 import Lockup from "@/components/Lockup";
+import BlurImage from "@/components/BlurImage";
 import WaitlistForm from "@/components/WaitlistForm";
 import Logo from "@/components/Logo";
 //<Logo size={100} color="white" className="bg-black" />
@@ -70,7 +71,6 @@ const USE_CASES = [
 ];
 
 const useCaseTotal = USE_CASES.length;
-console.log("use case total", useCaseTotal);
 
 interface UseCasesSectionProps {
   children: ReactNode[];
@@ -178,15 +178,13 @@ export default function Home() {
     <div className="mb-10">
       <main className="">
         <section className="top-hero relative z-10 overflow-hidden flex justify-center text-white text-center flex-col items-center align-center mb-0 md:w-opfn w-full mx-auto h-[439px] md:h-[591px] lg:h-[800px]">
-          <Image
-            src="/images/hero-forest-large.png"
+          <BlurImage
+            highQualitySrc="/images/hero-forest-large.png"
+            lowQualitySrc="/images/hero-forest-small.png"
             alt="Forest Background"
             fill
             className="absolute inset-0 w-full h-full object-cover scale-[1.1] md:scale-[1.05]"
-            sizes="(max-width: 810px) 100vw,
-            (max-width: 1728px) 1200px,
-            1800px"
-            quality={100}
+            sizes="(max-width: 810px) 100vw, (max-width: 1728px) 1200px, 1800px"
           />
 
           <div className="relative z-10 mx-auto pt-[120px] md:pt-0 md:px-[52px]">
@@ -291,7 +289,9 @@ export default function Home() {
         <section id="core-technology">
           <header className="section-header">
 
-            <Image
+            <BlurImage
+              highQualitySrc="/images/field-large.png"
+              lowQualitySrc="/images/field-small.png"
               src="/images/field-large.png"
               alt="Field"
               fill
@@ -299,7 +299,6 @@ export default function Home() {
               sizes="(max-width: 810px) 100vw,
               (max-width: 1728px) 1200px,
               1800px"
-              quality={100}
             />
             <div className="relative z-10 max-w-lg">
               <h1 className="">Core Technology</h1>
@@ -550,15 +549,15 @@ type CogClosure =
 
         <section id="system-overview">
           <header className="section-header">
-            <Image
-              src="/images/coast-large.png"
+            <BlurImage
+              highQualitySrc="/images/coast-large.png"
+              lowQualitySrc="/images/coast-small.png"
               alt="Coast"
               fill
               className="absolute inset-0 object-cover mx-auto px-4 md:px-0 scale-[1.0]"
               sizes="(max-width: 810px) 100vw,
               (max-width: 1728px) 1200px,
               1800px"
-              quality={100}
             />
 
             <div className="relative z-10 max-w-lg">
@@ -696,8 +695,9 @@ Nats - natural numbers: opaque data or opcodes`}
           <section id="use-cases">
             <header className="section-header">
 
-              <Image
-                src="/images/river-large.png"
+              <BlurImage
+                highQualitySrc="/images/river-large.png"
+                lowQualitySrc="/images/river-small.png"
                 alt="River"
                 fill
                 className="absolute inset-0 object-cover mx-auto px-4 md:px-0 scale-[1.0]"

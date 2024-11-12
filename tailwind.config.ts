@@ -32,7 +32,7 @@ const config: Config = {
           letterSpacing: "-0.011em", // slight tightening for clarity
           fontWeight: "400",
         }],
-        "opmd-mobile": ['20px', {
+        "opmd-mobile": ['17px', {
           lineHeight: "normal", // 25.6px - optimal for body text
           letterSpacing: "-0.011em", // slight tightening for clarity
           fontWeight: "400",

@@ -1,0 +1,7 @@
+title: Upgrade from HTTP/1.0 to HTTP/1.1 or HTTP/2.0
+description:
+  Description needed
+issue_link: "https://github.com/operating-function/pallas/issues/25"
+experience:
+- Runtime
+- Haskell

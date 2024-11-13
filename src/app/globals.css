@@ -1,0 +1,750 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --scale: 1.5;
+  --bgColor: #eeeeee;
+}
+
+/*[class*="text-"] {*/
+/*font-size: calc(var(--font-size, 1rem) * var(--scale)) !important;*/
+/*}*/
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}
+
+@font-face {
+  font-family: "BerkeleyMono";
+  src:
+    url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/BerkeleyMonoVariable-Italic.woff")
+      format("woff"),
+    url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/BerkeleyMonoVariable-Italic.woff2")
+      format("woff2");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BerkeleyMono";
+  src:
+    url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/BerkeleyMonoVariable-Regular.woff2")
+      format("woff2"),
+    url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/BerkeleyMonoVariable-Regular.woff")
+      format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BerkeleyMono";
+  src:
+    url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/BerkeleyMonoVariable-Regular.woff2")
+      format("woff2"),
+    url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/BerkeleyMonoVariable-Regular.woff")
+      format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LatinModern";
+  src: url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/lmmonoproplt10-regular.otf")
+    format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LatinModern";
+  src: url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/lmmonoproplt10-bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LatinModern";
+  src: url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/lmmonoproplt10-oblique.otf")
+    format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "LatinModern";
+  src: url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/lmmonoproplt10-boldoblique.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LatinModernRomanCaps";
+  src: url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/lmromancaps10-regular.otf")
+    format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  /*font-family: "BerkeleyMono", monospace;*/
+  font-family: "LatinModern", monospace;
+  /*@apply bg-white;*/
+  background: var(--bgColor) !important;
+  line-height: normal;
+}
+
+p {
+  /*@apply text-xl;*/
+  /*font-size: 16px;*/
+  @apply md:text-opmd;
+  @apply text-opmd-mobile;
+  /*@apply md:text-base;*/
+  @apply mb-0;
+  /*line-height: normal;*/
+}
+
+.berkeley {
+  font-family: "BerkeleyMono", monospace;
+}
+
+section {
+  /*@apply bg-white;*/
+  background: var(--bgColor);
+}
+
+section header h1 {
+  /*font-size: 18px;*/
+}
+
+.key-term {
+  @apply bg-black;
+  @apply text-white;
+  @apply italic;
+  @apply px-0.5;
+}
+
+.fade-transition {
+  transition: opacity 0.1s ease;
+}
+
+.hero {
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+
+nav#site-nav ul {
+  @apply list-none !important;
+  @apply flex;
+  @apply flex-row;
+}
+
+nav#site-nav ul > li {
+  @apply list-none !important;
+}
+
+nav#site-nav a {
+  @apply text-black;
+  @apply no-underline;
+}
+
+footer#site-footer {
+  @apply text-[16px];
+  @apply font-bold;
+}
+
+footer#site-footer a {
+  @apply text-white;
+  @apply no-underline;
+  font-family: "BerkeleyMono";
+}
+
+footer#site-footer ul {
+  @apply list-none !important;
+  @apply px-0 !important;
+  @apply mx-auto;
+}
+footer#site-footer li {
+  @apply list-none !important;
+  @apply mx-auto;
+  @apply text-center;
+}
+
+a {
+  color: #00e;
+  @apply underline;
+}
+
+a:hover {
+  @apply cursor-pointer;
+  @apply font-semibold;
+}
+
+a:visited {
+  /* color: purple; */
+}
+
+button,
+[type="submit"],
+[type="button"] {
+  font-family: "BerkeleyMono";
+  @apply text-opmd-mobile;
+  /*@apply text-[16px];*/
+  /*@apply md:text-[18px];*/
+  @apply bg-black;
+  @apply text-white;
+  @apply whitespace-pre;
+  @apply py-[8px];
+  @apply px-[20px];
+}
+
+button.fixed-w {
+  @apply w-[125px];
+  @apply md:w-[158px];
+}
+
+button:disabled {
+  @apply cursor-not-allowed;
+  @apply opacity-60;
+}
+
+.content-zone {
+  @apply container;
+  @apply mx-auto;
+  /*@apply md:max-w-xl;*/
+  @apply max-w-opfn;
+  @apply px-4;
+}
+
+.narrow-zone {
+  @apply container;
+  @apply mx-auto;
+  /*@apply md:max-w-lg;*/
+  @apply md:max-w-opfn-narrow;
+  @apply px-4;
+  @apply md:px-0;
+}
+
+p {
+  /*@apply mb-4;*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply my-8;
+  /*@apply font-semibold;*/
+  font-family: "LatinModernRomanCaps";
+}
+
+h1 {
+  font-size: 36px;
+  /*@apply md:text-2xl;*/
+  /*@apply mb-8;*/
+}
+
+h2 {
+  @apply text-ophead2;
+  @apply my-0;
+  /*@apply md:text-lg;*/
+  /*@apply underline;*/
+}
+
+h3 {
+}
+
+h5 {
+  @apply text-2xl;
+  @apply md:text-lg;
+  @apply mb-0;
+}
+
+.section-header {
+  @apply relative;
+  @apply max-w-opfn-narrow;
+  @apply z-10;
+  @apply mt-0;
+  @apply mb-opfn-sm;
+  @apply overflow-hidden;
+  @apply flex;
+  @apply justify-center;
+  @apply text-white;
+  @apply text-center;
+  @apply flex-col;
+  @apply items-center;
+  @apply mx-auto;
+  @apply w-full;
+  @apply h-[40vw];
+  @apply md:h-[396px];
+}
+
+header.section-header h1 {
+  @apply md:text-[24px];
+  @apply text-[24px];
+  @apply berkeley;
+  @apply font-bold;
+}
+
+blockquote {
+  @apply italic;
+  @apply text-lg;
+  @apply opacity-50;
+}
+
+section header {
+  /*@apply mb-4;*/
+  /*@apply font-semibold;*/
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+}
+
+section header h1 {
+  /*@apply text-xl;*/
+}
+
+.main-points section header {
+  @apply mb-[8px];
+  /*@apply text-lg;*/
+}
+
+section p {
+  @apply mb-4;
+  @apply text-justify;
+}
+
+ul {
+  @apply mb-4;
+  @apply list-disc;
+}
+
+li {
+  @apply ml-8;
+  @apply text-left;
+  @apply list-disc;
+}
+
+pre.code {
+  /*@apply border;*/
+  /*@apply rounded-md;*/
+  /*@apply p-2;*/
+  /*@apply my-2;*/
+  /*@apply text-opxs;*/
+  @apply text-opcode;
+}
+
+section#callouts {
+  @apply flex;
+  @apply flex-col;
+  @apply md:space-y-10;
+  @apply space-y-8;
+}
+
+section#callouts article {
+  @apply flex;
+  @apply flex-col;
+  @apply md:flex-row;
+  @apply border-b-2;
+  @apply md:border-b-0;
+  @apply pb-2;
+  @apply md:pb-0;
+}
+
+section#callouts > article > header {
+  @apply text-lg;
+  @apply mb-4;
+  @apply md:mb-0;
+  @apply md:flex-[1];
+  @apply md:items-start;
+}
+
+section#callouts > article > main {
+  @apply md:flex-[4];
+}
+
+section.main-points {
+  @apply flex;
+  @apply flex-col;
+  @apply md:grid;
+  @apply md:grid-cols-2;
+  /*@apply md:gap-opfn;*/
+  @apply md:items-start;
+  @apply md:mx-auto;
+  /*@apply max-w-opfn-xs;*/
+}
+
+section.main-points article {
+  @apply mb-opfn-sm;
+  /*@apply w-full;*/
+}
+
+section.main-points article header {
+  @apply mb-[8px];
+}
+
+section.main-points,
+section.system-components > article.left > header {
+  /*@apply justify-start;*/
+  /*@apply md:justify-start;*/
+}
+section.main-points > article.right > header > h2 {
+  /*@apply text-right;*/
+  /*@apply w-full;*/
+  /*@apply md:text-left;*/
+}
+
+section.system-components > article.right > header {
+  /*@apply justify-end;*/
+  /*@apply md:justify-start;*/
+}
+
+section.main-points > article.left {
+  /*@apply col-start-1;*/
+  /*@apply md:justify-self-start;*/
+}
+section.main-points > article.right {
+  /*@apply col-end-3;*/
+  /*@apply md:justify-self-end;*/
+}
+
+section.system-components > article.left {
+  /*@apply col-start-1;*/
+  /*@apply justify-self-start;*/
+}
+section.system-components > article.right {
+  /*@apply col-end-3;*/
+  /*@apply self-end;*/
+  /*@apply justify-self-end;*/
+}
+
+.system-components header {
+  @apply mb-[8px];
+}
+
+.system-components > article {
+  @apply w-full;
+  /*@apply md:max-w-[350px];*/
+}
+
+article.left {
+  @apply flex-row;
+}
+
+section#core-technology p {
+  @apply md:text-opmd;
+  @apply text-opmd-mobile;
+}
+
+section#core-technology article header {
+  @apply inline-flex;
+  @apply content-center;
+  @apply justify-center;
+  @apply items-center;
+  @apply w-full;
+  @apply my-2;
+}
+
+section#core-technology h2 {
+  font-family: "LatinModernRomanCaps";
+  @apply no-underline;
+  @apply text-center;
+  @apply px-6;
+  /*@apply bg-white;*/
+  background: var(--bgColor);
+}
+
+#core-technology main {
+}
+
+.jungle-gradient {
+  background: linear-gradient(
+    to bottom,
+    rgba(238, 238, 238, 1) 0%,
+    rgba(238, 238, 238, 0) 5%,
+    transparent 4%,
+    transparent 80%,
+    rgba(238, 238, 238, 0.5) 90%,
+    rgba(238, 238, 238, 0.8) 92%,
+    rgba(238, 238, 238, 1) 96%,
+    rgba(238, 238, 238, 1) 100%
+  );
+}
+
+.core-tech-code {
+  @apply h-[321px];
+}
+.gradient-height {
+  @apply h-[400px];
+  @apply md:h-[450px];
+}
+.gradient-image-height {
+  @apply h-[400px];
+  @apply md:h-[321px];
+}
+
+#core-technology article {
+  position: relative;
+  /*width: 100%;*/
+  /*min-height: 400px; [> Adjust as needed <]*/
+  /*min-height: max-content;*/
+  overflow: hidden;
+}
+
+#core-technology .core-content {
+  /*@apply relative;*/
+  @apply bg-transparent;
+  /*z-index: 1;*/
+  /*@apply px-6;*/
+  z-index: 1;
+  /*padding: 1.5rem;*/
+}
+
+#core-technology .jungle-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*height: 10000px;*/
+  /*height: 100%;*/
+  width: 100%;
+
+  overflow: hidden;
+  /*left: -40%; [> Increase the overflow <]*/
+  /*width: 100%; [> Make container even wider <]*/
+  /*height: 100%;*/
+  /*overflow: hidden;*/
+}
+
+#core-technology .jungle-bg-image {
+  @apply w-full;
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*width: 100%;*/
+  height: 400px;
+  object-fit: cover;
+  object-position: center center;
+  /* Convert to black and white */
+  filter: grayscale(100%);
+  /*[> Optional: add some noise <]*/
+  opacity: 0.45;
+}
+
+#core-technology .jungle-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64%;
+  background: linear-gradient(
+    to bottom,
+    rgba(238, 238, 238, 1) 0%,
+    rgba(238, 238, 238, 0) 2%,
+    transparent 4%,
+    transparent 80%,
+    rgba(238, 238, 238, 0.5) 90%,
+    rgba(238, 238, 238, 1) 95%,
+    rgba(238, 238, 238, 1) 100%
+  );
+  pointer-events: none;
+}
+
+.use-case-gradient {
+  @apply absolute;
+  @apply inset-0;
+  @apply mt-[12px];
+  background: linear-gradient(
+    to bottom,
+    rgba(238, 238, 238, 1) 0%,
+    rgba(238, 238, 238, 0) 10%,
+    transparent 4%,
+    transparent 80%,
+    rgba(238, 238, 238, 0.5) 90%,
+    rgba(238, 238, 238, 0.8) 92%,
+    rgba(238, 238, 238, 1) 96%,
+    rgba(238, 238, 238, 1) 100%
+  );
+}
+
+#use-cases .jungle-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#use-cases .jungle-bg-image {
+  @apply w-full;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  opacity: 0.4;
+  transform: scale(1.5);
+}
+
+#use-cases .jungle-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(238, 238, 238, 1) 0%,
+    rgba(238, 238, 238, 0.6) 5%,
+    rgba(238, 238, 238, 0.6) 70%,
+    rgba(238, 238, 238, 0.8) 80%,
+    rgba(238, 238, 238, 1) 100%
+  );
+  pointer-events: none;
+}
+
+section#use-cases article header {
+  @apply gap-x-2;
+  @apply flex;
+  @apply items-start;
+  @apply px-3;
+  @apply mt-0;
+  @apply mb-2;
+  @apply md:mb-0;
+}
+
+section#use-cases article p {
+  @apply md:text-opmd;
+  @apply text-opmd-mobile;
+}
+
+section#use-cases .case-area {
+  position: relative;
+  /*min-height: 100%;*/
+}
+
+section#use-cases .case-area p {
+  position: relative;
+  z-index: 10;
+  @apply py-3;
+}
+
+section#use-cases .number {
+  font-size: 12px;
+}
+
+section#use-cases .title {
+  @apply flex;
+  @apply flex-col;
+  @apply w-full;
+}
+
+section#use-cases .title > h2 {
+  @apply mt-[4px];
+  @apply mb-0;
+}
+
+section#use-cases .title .header-line {
+  @apply border-b;
+  @apply border-black;
+  @apply pt-[8px];
+  @apply mr-[35px];
+}
+
+section#callouts > article.right {
+  @apply md:flex-row-reverse;
+}
+
+section#callouts > article.left {
+}
+
+section#callouts > article.right > header {
+  @apply text-right;
+  @apply md:items-start;
+  @apply md:text-right;
+  @apply md:justify-end;
+  @apply md:border-l-2;
+  @apply md:ml-2;
+}
+
+section#callouts > article > header > h3 {
+  @apply w-full;
+  @apply my-0;
+}
+
+section#callouts > article.right > header > h3 {
+  @apply w-full;
+  @apply text-right;
+}
+
+section#callouts > article.left > header > h3 {
+  @apply w-full;
+  @apply text-left;
+}
+
+section#callouts > article.left > header {
+  @apply md:text-right;
+  @apply md:justify-start;
+  @apply md:border-r-2;
+  @apply md:mr-2;
+}
+
+section#callouts > article.right > main {
+  @apply md:text-left;
+  @apply md:pr-2;
+}
+
+section#callouts > article.left > main {
+  @apply md:text-left;
+  @apply md:pl-2;
+}
+
+.horizontal-bars {
+  background-image: repeating-linear-gradient(
+    0deg,
+    #000000 0px,
+    #000000 1px,
+    transparent 1px,
+    transparent 2px,
+    #000000 2px,
+    #000000 3px,
+    transparent 3px,
+    transparent 4px,
+    #000000 4px,
+    #000000 5px,
+    transparent 5px,
+    transparent 6px,
+    #000000 6px,
+    #000000 7px,
+    #696868 7px,
+    #696868 8px,
+    transparent 8px,
+    transparent 9px,
+    #000000 9px,
+    #000000 10px,
+    transparent 10px,
+    transparent 11px
+  );
+  background-size: 100% 13px; /* Set the size of your "sprite" */
+  height: 13px; /* At least the height of your "sprite" */
+  width: 100%; /* Full width of the container */
+  background-position: left top; /* Start the pattern from the bottom-left corner */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+#vision p {
+  @apply mb-4;
+  font-size: 17px;
+}

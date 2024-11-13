@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from "react";
-
-const getAssetPath = (path: string): string => {
-  if (process.env.NODE_ENV !== "production") {
-    //return `https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets${path}`;
-    // TODO: reverse these comments to test DO images on localhost:
-    return path;
-  }
-  return `https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets${path}`;
-};
+import { getImagePath } from "@/utils/assets";
 
 interface BlurImageProps {
   lowQualitySrc: string;
@@ -27,8 +19,8 @@ const BlurImage = ({
   const [isLoaded, setIsLoaded] = useState(false);
 
   // Get the correct URLs for both environments
-  const lowQualityUrl = getAssetPath(lowQualitySrc);
-  const highQualityUrl = getAssetPath(highQualitySrc);
+  const lowQualityUrl = getImagePath(lowQualitySrc);
+  const highQualityUrl = getImagePath(highQualitySrc);
 
   useEffect(() => {
     const img = new Image();

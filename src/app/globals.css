@@ -19,60 +19,76 @@
 @font-face {
   font-family: "BerkeleyMono";
   src:
-    url("/fonts/BerkeleyMonoVariable-Italic.woff2") format("woff2"),
-    url("/fonts/BerkeleyMonoVariable-Italic.woff") format("woff");
+    url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/BerkeleyMonoVariable-Italic.woff")
+      format("woff"),
+    url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/BerkeleyMonoVariable-Italic.woff2")
+      format("woff2");
   font-weight: 100;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "BerkeleyMono";
   src:
-    url("/fonts/BerkeleyMonoVariable-Regular.woff2") format("woff2"),
-    url("/fonts/BerkeleyMonoVariable-Regular.woff") format("woff");
+    url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/BerkeleyMonoVariable-Regular.woff2")
+      format("woff2"),
+    url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/BerkeleyMonoVariable-Regular.woff")
+      format("woff");
   font-weight: 100;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "BerkeleyMono";
   src:
-    url("/fonts/BerkeleyMonoVariable-Regular.woff2") format("woff2"),
-    url("/fonts/BerkeleyMonoVariable-Regular.woff") format("woff");
+    url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/BerkeleyMonoVariable-Regular.woff2")
+      format("woff2"),
+    url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/BerkeleyMonoVariable-Regular.woff")
+      format("woff");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "LatinModern";
-  src: url("/fonts/lmmonoproplt10-regular.otf") format("opentype");
+  src: url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/lmmonoproplt10-regular.otf")
+    format("opentype");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
   font-family: "LatinModern";
-  src: url("/fonts/lmmonoproplt10-bold.otf") format("opentype");
+  src: url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/lmmonoproplt10-bold.otf")
+    format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "LatinModern";
-  src: url("/fonts/lmmonoproplt10-oblique.otf") format("opentype");
+  src: url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/lmmonoproplt10-oblique.otf")
+    format("opentype");
   font-weight: 100;
   font-style: italic;
 }
 @font-face {
   font-family: "LatinModern";
-  src: url("/fonts/lmmonoproplt10-boldoblique.otf") format("opentype");
+  src: url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/lmmonoproplt10-boldoblique.otf")
+    format("opentype");
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "LatinModernRomanCaps";
-  src: url("/fonts/lmromancaps10-regular.otf") format("opentype");
+  src: url("https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets/fonts/lmromancaps10-regular.otf")
+    format("opentype");
   font-weight: 100;
   font-style: normal;
+  font-display: swap;
 }
 
 body {

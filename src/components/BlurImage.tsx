@@ -1,4 +1,13 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
+
+const getAssetPath = (path: string): string => {
+  if (process.env.NODE_ENV !== "production") {
+    //return `https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets${path}`;
+    // TODO: reverse these comments to test DO images on localhost:
+    return path;
+  }
+  return `https://general-static-assets.nyc3.digitaloceanspaces.com/website-assets${path}`;
+};
 
 interface BlurImageProps {
   lowQualitySrc: string;
@@ -13,37 +22,39 @@ const BlurImage = ({
   highQualitySrc,
   alt,
   className,
-  sizes
-}: BlurImageProps ) => {
+  sizes,
+}: BlurImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
+
+  // Get the correct URLs for both environments
+  const lowQualityUrl = getAssetPath(lowQualitySrc);
+  const highQualityUrl = getAssetPath(highQualitySrc);
 
   useEffect(() => {
     const img = new Image();
-    img.src = highQualitySrc;
+    img.src = highQualityUrl;
     img.onload = () => {
-      console.log('High quality image loaded');
+      console.log("High quality image loaded");
       setIsLoaded(true);
     };
-  }, [highQualitySrc]);
+  }, [highQualityUrl]);
 
   return (
     <div className="absolute w-full h-full">
       <img
-        src={lowQualitySrc}
+        src={lowQualityUrl}
         alt={alt}
         sizes={sizes}
         className={`${className} absolute inset-0 transition-opacity duration-700 ease-in-out ${
-          isLoaded ? 'opacity-0' : 'opacity-100'
+          isLoaded ? "opacity-0" : "opacity-100"
         }`}
-
-
       />
       <img
-        src={highQualitySrc}
+        src={highQualityUrl}
         alt={alt}
         sizes={sizes}
         className={`${className} absolute inset-0 transition-opacity duration-700 ease-in-out ${
-          isLoaded ? 'opacity-100' : 'opacity-0'
+          isLoaded ? "opacity-100" : "opacity-0"
         }`}
         onLoad={() => {
           setIsLoaded(true);

@@ -14,6 +14,21 @@ const description = "Digital membranes and Nock heresy";
 
 const metadataBase = new URL(process.env.BASE_URL as string);
 
+const criticalFonts = [
+  {
+    path: "/website-assets/fonts/lmmonoproplt10-regular.otf",
+    type: "font/otf",
+  },
+  {
+    path: "/website-assets/fonts/BerkeleyMonoVariable-Regular.woff2",
+    type: "font/woff2",
+  },
+  {
+    path: "/website-assets/fonts/lmromancaps10-regular.otf",
+    type: "font/otf",
+  },
+];
+
 export const viewport = {
   width: "device-width",
   initialScale: 1.0,
@@ -77,6 +92,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {criticalFonts.map((font) => (
+          <link
+            key={font.path}
+            rel="preload"
+            href={`https://general-static-assets.nyc3.digitaloceanspaces.com${font.path}`}
+            as="font"
+            type={font.type}
+            crossOrigin="anonymous"
+          />
+        ))}
+      </head>
+
       <body>
         <noscript>
           {/* Global fallback content for the entire application */}

@@ -10,7 +10,8 @@ import Footer from "@/components/Footer";
 
 import "./globals.css";
 
-const description = "Digital membranes and Nock heresy";
+const description =
+  "An Operating function isn’t a device - it’s a computer defined as software. And it runs everywhere simultaneously.";
 
 const metadataBase = new URL(process.env.BASE_URL as string);
 
@@ -38,16 +39,16 @@ export const viewport = {
 
 export const metadata: Metadata = {
   metadataBase,
-  title: "Vaporware",
+  title: "The Operating Function Company",
   description,
   // "image": "https://vaporware-network-git-relaunch-2024-vaporware.vercel.app/images/vaporware-devices-preview.png",
   category: "technology",
 
   twitter: {
     card: "summary_large_image",
-    site: "@__vaporware__",
-    creator: "@__vaporware__",
-    title: "Vaporware",
+    site: "@opfnco",
+    creator: "@opfnco",
+    title: "The Operating Function Company",
     description,
     images: "/twitter-image.jpeg",
     // images: ["https://vaporware.network/images/vaporware-devices-30s-preview.jpeg"],
@@ -61,10 +62,10 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Vaporware",
+    title: "The Operating Function Company",
     description,
-    url: "https://vaporware.network",
-    siteName: "Vaporware.network",
+    url: "https://opfn.co",
+    siteName: "opfn.co",
     images: "/opengraph-image.jpeg",
     // images: ["https://vaporware.network/images/vaporware-devices-30s-preview.jpeg"],
     // images: [
@@ -109,7 +110,7 @@ export default function RootLayout({
         <noscript>
           {/* Global fallback content for the entire application */}
           <div>
-            <p className="mb-2">Reach us at: founders@vaporware.network</p>
+            <p className="mb-2">Reach us at: founders@opfn.co</p>
             <ul>
               <li>
                 <a href="https://twitter.com/__vaporware__" target="_blank">

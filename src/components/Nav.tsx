@@ -10,51 +10,50 @@ import ExternalLink from "@/components/ExternalLink";
 export default function Nav() {
   const pathname = usePathname();
   const isHomePage = pathname === "/";
+  const [isVisible, setIsVisible] = useState(!isHomePage); // Start visible only if not home
+  const [isScrolledDown, setIsScrolledDown] = useState(false);
+  const [elementColor, setElementColor] = useState("white");
 
-  const [isScrolledDown, setIsScrolledDown] = useState(true); // Start visible
-  const [elementColor, setElementColor] = useState("black"); // Start with black
+    useEffect(() => {
+      if (!isHomePage) {
+        setIsScrolledDown(true);
+        setElementColor("black");
+        return;
+      }
 
-  useEffect(() => {
-    if (!isHomePage) {
-      setIsScrolledDown(true);
-      setElementColor("black");
-    } else {
-      // On homepage, check scroll position immediately
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+      }, 250);
+
       const handleScroll = () => {
-        const navbarHeight =
-          (document.getElementById("topNav") as HTMLElement)
-            ?.offsetHeight || 0;
-        const heroHeight = (
-          document.querySelector(".top-hero") as HTMLElement
-        )?.offsetHeight;
-        const scrolledPast =
-          window.scrollY > heroHeight - (navbarHeight - 20);
+        const navbarHeight = (document.getElementById("topNav") as HTMLElement)?.offsetHeight || 0;
+        const heroHeight = (document.querySelector(".top-hero") as HTMLElement)?.offsetHeight;
+        const scrolledPast = window.scrollY > heroHeight - (navbarHeight - 20);
         setIsScrolledDown(scrolledPast);
-        scrolledPast
-          ? setElementColor("black")
-          : setElementColor("white");
+        scrolledPast ? setElementColor("black") : setElementColor("white");
       };
 
-      handleScroll(); // Check position immediately
-
       window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-    }
-  }, [pathname, isHomePage]); // Respond to pathname changes
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+        clearTimeout(timer);
+      };
+    }, [pathname, isHomePage]);
+
 
   return (
     <div
       id="topNav"
       className={`
-    flex absolute top-0 justify-between items-center w-full pl-4 h-[64px]
-    before:absolute before:inset-0 before:transition-all before:duration-200 before:ease-in-out
-    before:-z-10
-    ${
-      isScrolledDown
-        ? "before:translate-y-0 before:bg-[#EEE] before:shadow-md"
-        : "before:-translate-y-full before:bg-transparent"
-    }
-  `}
+        flex absolute top-0 justify-between items-center w-full pl-4 h-[64px]
+        before:absolute before:inset-0 before:transition-all before:ease-in-out
+        before:-z-10
+        transition-opacity duration-500 ease-in-out
+        ${!isVisible ? 'opacity-0' : 'opacity-100'}
+        ${isScrolledDown 
+          ? "before:translate-y-0 before:bg-[#EEE] before:shadow-md" 
+          : "before:-translate-y-full before:bg-transparent"}
+      `}
     >
       <div className="flex container mx-auto max-w-opfn lg:px-2 items-center justify-between">
         <Link

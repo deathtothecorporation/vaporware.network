@@ -409,14 +409,14 @@ export default function Home() {
         <section className="text-center">
           <p className="text-center mt-12 mb-8">
             Reach us at: <br />
-            founders@vaporware.network
+            founders@opfn.co
           </p>
         </section>
       </main>
       <footer className="z-50 bg-white pt-2 text-[14px] mx-auto md:max-w-xl md:px-0 px-8">
         <div className="flex flex-row justify-between mb-4">
           <div>
-            <a href="https://twitter.com/__vaporware__" target="_blank">
+            <a href="https://twitter.com/opfnco" target="_blank">
               Twitter
             </a>
           </div>
@@ -427,7 +427,7 @@ export default function Home() {
               </a>
             </div>
             <div>
-              <a href="https://vaporware.gitbook.io/vaporware" target="_blank">
+              <a href="https://docs.opfn.co" target="_blank">
                 Documentation
               </a>
             </div>

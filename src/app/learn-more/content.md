@@ -18,7 +18,7 @@ Realizing this vision means revolution, both in the Copernican-sense and the soc
 To find out:
 
 <div class="text-center w-full" style="margin-top: 2em; margin-bottom: 4em;">
-  <a href="https://opfn.gitbook.io/pallas" target="_blank">
+  <a href="https://docs.opfn.co" target="_blank">
   <button class="mt-8">
     Read the PLAN
   </button>
@@ -170,7 +170,7 @@ human coordination requires free exchange of information
 
 
 <div class="text-center w-full mt-8" style="margin-top: 2em;">
-  <a href="https://opfn.gitbook.io/pallas" target="_blank">
+  <a href="https://docs.opfn.co" target="_blank">
   <button class="mt-8">
     Read the docs
   </button>

@@ -1,14 +1,9 @@
 "use client";
 
 import React, { ReactNode, useEffect } from "react";
-import Image from "next/image";
 import Lockup from "@/components/Lockup";
 import BlurImage from "@/components/BlurImage";
 import WaitlistForm from "@/components/WaitlistForm";
-import Logo from "@/components/Logo";
-//<Logo size={100} color="white" className="bg-black" />
-//<Logo size={100} color="black" />
-//
 import Link from "next/link";
 
 import UseCase from "@/components/UseCase";
@@ -132,37 +127,6 @@ const UseCasesSection = ({ children }: UseCasesSectionProps) => {
   );
 };
 
-// Cosmetics, for later
-// import WebGLTest from "@/components/WebGLTest";
-//
-//        <WebGLTest
-//          speed={0.5}
-//          color={[0.5, 0.3, 1.0]}
-//          size={0.1}
-//          targetSelectors={["#test", "#thing"]}
-//          debug={true} // Enable this temporarily to see what's happening
-//        />
-//
-// import ScrollSequence from "@/components/ScrollSequence";
-//
-//          <div className="text-center relative">
-//            <ScrollSequence
-//              frameDir="forest_frames"
-//              frameCount={100}
-//              width={698}
-//              height={1081}
-//              backgroundImage="/images/wide-forest.jpeg"
-//            >
-//              <section className="flex justify-center text-center flex-col items-center align-center transparent text-white h-[90vh]">
-//                <div>
-//                  <h1 className="text-6xl">
-//                    <OpfnSvg />
-//                  </h1>
-//                  <h2 className="no-underline">Sub header</h2>
-//                </div>
-//              </section>
-//            </ScrollSequence>
-
 export default function Home() {
   useEffect(() => {
     const handleScroll = () => {};
@@ -270,7 +234,7 @@ export default function Home() {
         <section className="content-zone">
           <div className="text-center flex mx-auto justify-center :w-full">
             <div className="">
-              <Link href="https://opfn.gitbook.io/pallas" target="_blank">
+              <Link href="https://docs.opfn.co" target="_blank">
                 <button className="py-[8px] px-[20px]">Read the Docs</button>
               </Link>
             </div>
@@ -288,7 +252,6 @@ export default function Home() {
 
         <section id="core-technology">
           <header className="section-header">
-
             <BlurImage
               highQualitySrc="/images/field-large.png"
               lowQualitySrc="/images/field-small.png"
@@ -571,8 +534,14 @@ type CogClosure =
               aspects of Erlang/OTP, the EVM, and Lisp.
             </p>
             <p>
-    Like Erlang, the system is functional, supports concurrency through message passing, and programs can be hot reloaded without downtime. Like the EVM, program state is automatically persisted. Programs keep everything “in memory” and will run forever (but there is no global consensus). Like Lisp, programs can universally introspect themselves and their environment, and dynamically introduce new code.
-  </p>
+              Like Erlang, the system is functional, supports concurrency
+              through message passing, and programs can be hot reloaded without
+              downtime. Like the EVM, program state is automatically persisted.
+              Programs keep everything “in memory” and will run forever (but
+              there is no global consensus). Like Lisp, programs can universally
+              introspect themselves and their environment, and dynamically
+              introduce new code.
+            </p>
           </section>
 
           <div className="content-zone mt-opfn-sm mb-[59px] flex flex-row space-between items-center">
@@ -656,7 +625,7 @@ Nats - natural numbers: opaque data or opcodes`}
 
             <article className="right mb-0">
               <div className="mb-opfn-sm">
-              <header className="mb-2 mt-0">
+                <header className="mb-2 mt-0">
                   <h2 className="text-right w-full">Drivers</h2>
                 </header>
                 <p>
@@ -669,7 +638,7 @@ Nats - natural numbers: opaque data or opcodes`}
               </div>
 
               <div className="mb-0">
-              <header className="mb-2 mt-0">
+                <header className="mb-2 mt-0">
                   <h2 className="md:text-right w-full">Manifests</h2>
                 </header>
                 <p className="md:mb-0">
@@ -694,7 +663,6 @@ Nats - natural numbers: opaque data or opcodes`}
 
           <section id="use-cases">
             <header className="section-header">
-
               <BlurImage
                 highQualitySrc="/images/river-large.png"
                 lowQualitySrc="/images/river-small.png"
@@ -726,7 +694,9 @@ Nats - natural numbers: opaque data or opcodes`}
                     title={caseItem.title}
                     hasBackground={false}
                   >
-                    <div className={`w-full pl-4 pr-4 ${ index % 2 !== 0 ? "md:pr-4 md:pl-0" : "md:pl-4 md:pr-0"}`}>
+                    <div
+                      className={`w-full pl-4 pr-4 ${index % 2 !== 0 ? "md:pr-4 md:pl-0" : "md:pl-4 md:pr-0"}`}
+                    >
                       <p className="w-full mb-0">{caseItem.content}</p>
                     </div>
                   </UseCase>

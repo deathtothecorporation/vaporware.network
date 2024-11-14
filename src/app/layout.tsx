@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import Logo from "@/components/Logo";
-
-import Link from "next/link";
 import React from "react";
 
 import Nav from "@/components/Nav";
@@ -96,6 +93,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+          body { display: none; }
+          `,
+          }}
+        />
+
         {criticalFonts.map((font) => (
           <link
             key={font.path}
@@ -109,26 +114,30 @@ export default function RootLayout({
       </head>
 
       <body>
+        <Script strategy="beforeInteractive">
+          {`document.body.style.display = 'block';`}
+        </Script>
+
         <noscript>
           {/* Global fallback content for the entire application */}
           <div>
             <p className="mb-2">Reach us at: founders@opfn.co</p>
             <ul>
               <li>
-                <a href="https://twitter.com/__vaporware__" target="_blank">
+                <a href="https://twitter.com/opfnco" target="_blank">
                   Twitter
                 </a>
               </li>
               <li>
-                <a
-                  href="https://vaporware.gitbook.io/vaporware"
-                  target="_blank"
-                >
+                <a href="https://docs.opfn.co" target="_blank">
                   Documentation
                 </a>
               </li>
               <li>
-                <a href="https://blog.vaporware.network" target="_blank">
+                <a
+                  href="https://blog.vaporware.network"
+                  target="_blank"
+                >
                   Blog/Podcast
                 </a>
               </li>

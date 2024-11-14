@@ -5,6 +5,9 @@
 :root {
   --scale: 1.5;
   --bgColor: #eeeeee;
+  --font-latin: "LatinModern", Consolas, "Courier New", monospace;
+  --font-berkeley: "BerkeleyMono", Monaco, "Lucida Console", monospace;
+  --font-caps: "LatinModernRomanCaps", "Courier New", "Courier", serif;
 }
 
 /*[class*="text-"] {*/
@@ -92,8 +95,7 @@
 }
 
 body {
-  /*font-family: "BerkeleyMono", monospace;*/
-  font-family: "LatinModern", monospace;
+  font-family: var(--font-latin);
   /*@apply bg-white;*/
   background: var(--bgColor) !important;
   line-height: normal;
@@ -110,7 +112,7 @@ p {
 }
 
 .berkeley {
-  font-family: "BerkeleyMono", monospace;
+  font-family: var(--font-berkeley);
 }
 
 section {
@@ -243,8 +245,7 @@ h3,
 h4,
 h5 {
   @apply my-8;
-  /*@apply font-semibold;*/
-  font-family: "LatinModernRomanCaps";
+  font-family: var(--font-caps);
 }
 
 h1 {

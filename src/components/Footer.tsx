@@ -5,7 +5,10 @@ import BlurImage from "@/components/BlurImage";
 
 export default function Footer() {
   return (
-    <footer id="site-footer" className="z-50 container h-[135px] max-w-opfn mx-auto relative">
+    <footer
+      id="site-footer"
+      className="z-50 container h-[135px] max-w-opfn mx-auto relative"
+    >
       <div className="absolute overflow-hidden inset-0 w-full h-full">
         <BlurImage
           highQualitySrc="/images/cove-large.png"
